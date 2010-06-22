@@ -1,7 +1,7 @@
 <?php
 
 //defines
-define('SMARTY_DIR', 		dirname(__FILE__) . 'smarty');
+define('SMARTY_DIR', 		dirname(__FILE__) . '/smarty');
 define('TEMPLATE_DIR', 		SMARTY_DIR . '/templates');
 define('COMPILED_TEMPLATE_DIR', SMARTY_DIR . '/templates_compiled');
 define('CACHE_DIR', 		SMARTY_DIR . '/cache');
