@@ -1,0 +1,3 @@
+smarty/*
+!smarty/templates/*
+!smarty/config/*
