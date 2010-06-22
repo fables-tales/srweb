@@ -1,4 +1,5 @@
 git clone
 ensure php-Smarty is installed
+get php markdown and put it in smarty's plugins -- corectly named!
 configure directories with config.inc.php
 ensure 'templates_compiled' is owned by apache user
