@@ -1,0 +1,4 @@
+git clone
+ensure php-Smarty is installed
+configure directories with config.inc.php
+ensure 'templates_compiled' is owned by apache user
