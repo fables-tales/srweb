@@ -14,44 +14,66 @@ $smarty->template_dir = TEMPLATE_DIR;
 $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 
 
-$page = 'home';
+function correctlyTypedFileExists($page){
+
+	$ALLOWED_TYPES = Array('md', 'html');
+	
+	foreach ($ALLOWED_TYPES as $type){
+
+		if (file_exists(CONTENT_DIR . '/' . $page . '.' . $type))
+			return $type;
+
+	}//foreach
+
+	return false;
+
+}
+
+
+function pageIsAllowed($page){
+
+	global $ALLOWED_PAGES;
+	return in_array($page, $ALLOWED_PAGES);
+
+}
+
+
 if (isset($_GET['page'])){
 
- 	if ( in_array($_GET['page'], $ALLOWED_PAGES) ){ //is page allowed
-
-		//make sure file exists
-		if ( file_exists(CONTENT_DIR . '/' . $_GET['page'] . '.md') 
-	  	  || file_exists(CONTENT_DIR . '/' . $_GET['page'] . '.html') ){		
-			$page = $_GET['page'];		
-		
-		} else {
-
-			//no markdown or html for specified page (but it's in the array)
-			$page = '404';
-			//Header("Location: index.php?page=404");
-		
-		}//if-else file_exists
-
-	} else {	
-
-		//404 page not found
+	if (pageIsAllowed($_GET['page']))
+		$page = $_GET['page'];
+	else
 		$page = '404';
-		//Header("Location: index.php?page=404");
+	
+} else {
 
-	}//if-else in_array
+	$page = 'home';
+
+}//if isset
+
+
+
+//set type
+$type = correctlyTypedFileExists($page);
+
+if ($type){
+
+	$smarty->assign('type', $type);
 
 } else {
 
-	//page not specified, go home
-	$page = 'home';
+	$page = '404';
+	$smarty->assign('type', correctlyTypedFileExists($page));
 
-}//if-else isset
+}
+
 
 
 
 
 //display the index smarty template
 $smarty->assign('page', $page);
+$smarty->assign('content_dir', CONTENT_DIR);
 $smarty->display('index.tpl');
 
 

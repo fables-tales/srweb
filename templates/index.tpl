@@ -3,6 +3,13 @@
 <title>{$page}</title>
 </head>
 <body>
-{$page}
+
+{if file_exists("$content_dir/$page.$type")}
+	
+	{include file="$content_dir/$page.$type"}
+
+{/if}
+
 </body>
 </html>
+
