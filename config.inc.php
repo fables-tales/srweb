@@ -15,7 +15,7 @@ define('TEMPLATE_DIR', 		ROOT_DIR . '/templates');
 define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
-$ALLOWED_PAGES = Array(
+$ALLOWED_PAGES = array(
 	'home',
 	'404',
 	'test', 
@@ -23,12 +23,12 @@ $ALLOWED_PAGES = Array(
 	'a/very/long/content/path'
 );
 
-$ALLOWED_TYPES = Array(
+$ALLOWED_TYPES = array(
 	'md',
 	'html'
 );
 
-$MENU_PAGES = Array(
+$MENU_PAGES = array(
 	'home', 
 	'test',
 	'dir/tester',
