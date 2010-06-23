@@ -2,9 +2,11 @@
 
 //get user configuration
 require('config.inc.php');
+require(SMARTY_DIR . '/Smarty.class.php');
+require('classes/MenuItem.class.php');
+require('classes/Menu.class.php');
 
 //get instance of smarty
-require(SMARTY_DIR . '/Smarty.class.php');
 $smarty = new Smarty();
 
 //$smarty->debugging = true;
@@ -14,9 +16,11 @@ $smarty->template_dir = TEMPLATE_DIR;
 $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 
 
+
+
 function correctlyTypedFileExists($page){
 
-	$ALLOWED_TYPES = Array('md', 'html');
+	global $ALLOWED_TYPES;
 	
 	foreach ($ALLOWED_TYPES as $type){
 
@@ -30,12 +34,39 @@ function correctlyTypedFileExists($page){
 }
 
 
+
+
 function pageIsAllowed($page){
 
 	global $ALLOWED_PAGES;
 	return in_array($page, $ALLOWED_PAGES);
 
 }
+
+
+function constructMenuHierachy(){
+
+	global $MENU_PAGES;
+	global $ALLOWED_PAGES;
+
+	$menu = new Menu();
+
+	$menu_pages = array_intersect($MENU_PAGES, $ALLOWED_PAGES);
+
+	foreach($menu_pages as $path){
+		$menu->addToHierachy($path);
+	}
+
+	return $menu;
+
+}
+
+
+
+
+
+
+
 
 
 if (isset($_GET['page'])){
@@ -68,10 +99,8 @@ if ($type){
 }
 
 
-
-
-
-//display the index smarty template
+//get ready to display the template
+$smarty->assign('menu', constructMenuHierachy());
 $smarty->assign('page', $page);
 $smarty->assign('content_dir', CONTENT_DIR);
 $smarty->display('index.tpl');
