@@ -20,6 +20,7 @@ $ALLOWED_PAGES = array(
 	'404',
 	'test', 
 	'dir/tester',
+	'dir/tester2',
 	'a/very/long/content/path'
 );
 
@@ -32,6 +33,7 @@ $MENU_PAGES = array(
 	'home', 
 	'test',
 	'dir/tester',
+	'dir/tester2',
 	'a/very/long/content/path'
 );
 
