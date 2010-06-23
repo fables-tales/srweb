@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /srweb
+RewriteRule ^$ 		index.php?page=home 	[QSA]
+RewriteRule ^(.*) 	index.php?page=$1 	[L,QSA]
+
+
+Options -Indexes +FollowSymLinks
+#Order allow,deny
+#Deny from all
