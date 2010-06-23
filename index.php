@@ -24,7 +24,7 @@ function correctlyTypedFileExists($page){
 	
 	foreach ($ALLOWED_TYPES as $type){
 
-		if (file_exists(CONTENT_DIR . '/' . $page . '.' . $type))
+		if (CONTENT_DIR . '/' . $page . '.' . $type === realpath(CONTENT_DIR . '/' . $page . '.' . $type))
 			return $type;
 
 	}//foreach
