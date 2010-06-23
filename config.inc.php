@@ -22,4 +22,9 @@ $ALLOWED_PAGES = Array(
 	'dir/tester'
 );
 
+$MENU_PAGES = Array(
+	'home', 
+	'test'
+);
+
 ?>
