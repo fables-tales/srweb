@@ -18,16 +18,16 @@ class MenuItem {
 		$output = "<li><a href='$this->link'>$this->text</a>";
 		if ($this->subMenuItems != NULL){
 			
-			$output .= "<ul>";
+			$output .= "\n<ul>\n";
 
 			foreach ($this->subMenuItems as $item){
 				$output .= $item->getItemHtml();
 			}
 
-			$output .= "</ul>";
+			$output .= "</ul>\n";
 		}
 
-		$output .= "</li>";
+		$output .= "</li>\n";
 
 		return $output;
 
