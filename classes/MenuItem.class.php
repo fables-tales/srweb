@@ -2,11 +2,14 @@
 
 class MenuItem {
 
-	function __construct($text, $link, $subMenuItems = NULL){
+	function __construct($name, $text, $link, $subMenuItems = NULL){
 
 		$this->text = $text;
 		$this->link = $link;
-		$this->subMenuItems = $subMenuItems;
+		$this->name = $name;
+		$this->subMenuItems = Array();
+		if ($subMenuItems != NULL)
+			$this->subMenuItems = $subMenuItems;
 
 	}//__construct
 
@@ -37,6 +40,19 @@ class MenuItem {
 		$this->subMenuItems[] = $item;
 
 	}//addSubMenuItem
+
+
+
+
+	function getSubMenuItemByName($name){
+
+		foreach($this->subMenuItems as $item)
+			if ($item->name == $name)
+				return $item;
+
+		return NULL;
+	
+	}
 
 }//class
 
