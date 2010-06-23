@@ -14,7 +14,7 @@ $smarty = new Smarty();
 //configure smarty
 $smarty->template_dir = TEMPLATE_DIR;
 $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
-
+$smarty->cache_dir = CACHE_DIR;
 
 
 
