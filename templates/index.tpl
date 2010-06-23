@@ -10,6 +10,8 @@
 
 {/if}
 
+{makemenu menu=$menu}
+
 </body>
 </html>
 
