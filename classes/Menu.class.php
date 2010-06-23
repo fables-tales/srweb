@@ -11,7 +11,7 @@ class Menu {
 
 	function getMenuHtml(){
 
-		$output = "<ul>";
+		$output = "<ul>\n";
 
 		foreach ($this->root->subMenuItems as $item){
 
@@ -19,7 +19,7 @@ class Menu {
 
 		}//foreach
 
-		$output .= "</ul>";
+		$output .= "</ul>\n";
 
 		return $output;
 		
@@ -37,11 +37,13 @@ class Menu {
 		$path_tmp = "";
 		foreach($matches as $name){
 
-			if ($previous_item->getSubMenuItemByName($name) == NULL)
-				$previous_item->addSubMenuItem(new MenuItem($name, $name, $path_tmp.'/'.$name));
+			if ($previous_item->getSubMenuItemByName($name) == NULL){
+				$path_tmp .= $name;
+				$previous_item->addSubMenuItem(new MenuItem($name, $name, 'index.php?page='.$path_tmp));
+			}
 				
 			$previous_item = $previous_item->getSubMenuItemByName($name);
-			$path_tmp = $path_tmp.'/'.$name;
+			$path_tmp = $path_tmp.'/';
 
 		}//foreach
 
