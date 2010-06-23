@@ -19,12 +19,20 @@ $ALLOWED_PAGES = Array(
 	'home',
 	'404',
 	'test', 
-	'dir/tester'
+	'dir/tester',
+	'a/very/long/content/path'
+);
+
+$ALLOWED_TYPES = Array(
+	'md',
+	'html'
 );
 
 $MENU_PAGES = Array(
 	'home', 
-	'test'
+	'test',
+	'dir/tester',
+	'a/very/long/content/path'
 );
 
 ?>
