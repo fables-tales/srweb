@@ -5,26 +5,49 @@
 
 <head>
 	<title>{$page}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
 
 </head>
 
 <body>
 
-	{if file_exists("$content_dir/$page.$type")}
+<div id="pageWrapper">
 
-		{if $type == "md"}
-			{include file="$content_dir/$page.$type" assign=md_input}
-			{$md_input|markdown}
-		{else}
+	<div id="header">
+		header
+	</div>
+
+
+	<div id="navigation">
+		{makemenu menu=$menu}
+	</div>
+
+
+	<div id="content">
+
+		{if file_exists("$content_dir/$page.$type")}
+
+			{if $type == "md"}
+				{include file="$content_dir/$page.$type" assign=md_input}
+				{$md_input|markdown}
+			{else}
 	
-			{include file="$content_dir/$page.$type"}
+				{include file="$content_dir/$page.$type"}
+
+			{/if}
 
 		{/if}
 
-	{/if}
+	</div>
 
-	{makemenu menu=$menu}
+
+	<div id="footer">
+		footer
+	</div>
+
+</div>
 
 </body>
 
