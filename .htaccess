@@ -1,7 +1,8 @@
 RewriteEngine On
-RewriteBase /srweb
-RewriteRule ^$ 		index.php?page=home 	[QSA]
-RewriteRule ^(.*) 	index.php?page=$1 	[L,QSA]
+RewriteBase /~chris/srweb
+
+RewriteCond %{REQUEST_FILENAME}	!-f
+RewriteRule ^(.+)$ 		index.php?page=$1	[L]
 
 
 Options -Indexes +FollowSymLinks
