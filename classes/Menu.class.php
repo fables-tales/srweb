@@ -5,7 +5,7 @@ class Menu {
 	function __construct(){
 
 		$this->root = new MenuItem(NULL, NULL, NULL);
-	
+
 	}
 
 
@@ -15,7 +15,7 @@ class Menu {
 
 		foreach ($this->root->subMenuItems as $item){
 
-			$output .= $item->getItemHtml();
+			$output .= $item->getItemHtml($this->root_uri);
 
 		}//foreach
 
@@ -27,23 +27,21 @@ class Menu {
 
 
 
-	function addToHierachy($path){
+	function addToHierachy($path, $root_uri){
 		
 		preg_match_all( '/([a-zA-Z0-9\-\.]+)\/?/' , $path, $matches);
 		$matches = $matches[1];
 
 		$previous_item = $this->root;
 
-		$path_tmp = "";
+		$path_tmp = $root_uri;
 		foreach($matches as $name){
-
+			//echo($name.'__');
 			if ($previous_item->getSubMenuItemByName($name) == NULL){
-				$path_tmp .= $name;
-				$previous_item->addSubMenuItem(new MenuItem($name, $name, 'index.php?page='.$path_tmp));
+				$previous_item->addSubMenuItem(new MenuItem($name, $name, $path_tmp.$name));
 			}
-				
+			$path_tmp .= $name . '/';
 			$previous_item = $previous_item->getSubMenuItemByName($name);
-			$path_tmp = $path_tmp.'/';
 
 		}//foreach
 
