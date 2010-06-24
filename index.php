@@ -103,6 +103,7 @@ if ($type){
 $smarty->assign('menu', constructMenuHierachy());
 $smarty->assign('page', $page);
 $smarty->assign('content_dir', CONTENT_DIR);
+$smarty->assign('root_uri', ROOT_URI);
 $smarty->display('index.tpl');
 
 
