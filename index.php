@@ -44,6 +44,38 @@ function pageIsAllowed($page){
 }
 
 
+function getAllowedPages($directory) {
+	$array_items = array();
+	if ($handle = opendir($directory)) {
+		while (false !== ($file = readdir($handle))) {
+			if ($file != "." && $file != "..") {
+				if (is_dir($directory. "/" . $file)){
+					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));	
+					//$array_items[] = $directory. "/" . $file . '______';
+					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
+					preg_match($pattern, $directory. "/" . $file, $matches);
+					$array_items[] = $matches[1] . '/';
+				}
+				$file = $directory . "/" . $file;
+				$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)\..+$/';
+				preg_match($pattern, $file, $matches);
+				$array_items[] = $matches[1];
+
+			}
+		}
+		closedir($handle);
+	}
+
+	for ($i=0; $i<count($array_items); $i++)
+		if ($array_items[$i] === NULL)
+			unset($array_items[$i]);
+
+	return $array_items;
+}
+
+
+
+
 function constructMenuHierachy(){
 
 	global $MENU_PAGES;
@@ -66,7 +98,7 @@ function constructMenuHierachy(){
 
 
 
-
+$ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
 
 
 if (isset($_GET['page'])){
