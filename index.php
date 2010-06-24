@@ -54,7 +54,7 @@ function constructMenuHierachy(){
 	$menu_pages = array_intersect($MENU_PAGES, $ALLOWED_PAGES);
 
 	foreach($menu_pages as $path){
-		$menu->addToHierachy($path);
+		$menu->addToHierachy($path, ROOT_URI);
 	}
 
 	return $menu;
