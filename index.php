@@ -51,7 +51,6 @@ function getAllowedPages($directory) {
 			if ($file != "." && $file != "..") {
 				if (is_dir($directory. "/" . $file)){
 					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));	
-					//$array_items[] = $directory. "/" . $file . '______';
 					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
 					preg_match($pattern, $directory. "/" . $file, $matches);
 					$array_items[] = $matches[1] . '/';
