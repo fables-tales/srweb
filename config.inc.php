@@ -18,15 +18,6 @@ define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
 define('ROOT_URI', 		'http://localhost/~chris/srweb/');
 
-$ALLOWED_PAGES = array(
-	'home',
-	'404',
-	'test', 
-	'dir/tester',
-	'dir/tester2',
-	'a/very/long/content/path'
-);
-
 $ALLOWED_TYPES = array(
 	'md',
 	'html'
