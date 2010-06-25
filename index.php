@@ -21,10 +21,11 @@ $smarty->cache_dir = CACHE_DIR;
 function correctlyTypedFileExists($page){
 
 	global $ALLOWED_TYPES;
-	
+	$p = $page;
+	if (substr($p, -1) == '/'){$p .= 'index';}
 	foreach ($ALLOWED_TYPES as $type){
 
-		if (CONTENT_DIR . '/' . $page . '.' . $type === realpath(CONTENT_DIR . '/' . $page . '.' . $type))
+		if (CONTENT_DIR . '/' . $p . '.' . $type === realpath(CONTENT_DIR . '/' . $p . '.' . $type))
 			return $type;
 
 	}//foreach
@@ -113,7 +114,7 @@ if (isset($_GET['page'])){
 
 }//if isset
 
-
+if (substr($page, -1) == '/'){$page .= 'index';}
 
 //set type
 $type = correctlyTypedFileExists($page);
@@ -129,6 +130,7 @@ if ($type){
 
 }
 
+echo $_GET['page'];
 
 //get ready to display the template
 $smarty->assign('menu', constructMenuHierachy());
