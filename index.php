@@ -46,7 +46,7 @@ if ($type){
 	 * the future. When a request looks like it's for a file, but
 	 * the file doesn't exist, but there is a directory with the
 	 * same name, redirect there */
-	Header("HTTP/1.1 301 Moved Permanently");
+	Header("HTTP/1.1 302 Found");
 	Header("Location: " . ROOT_URI . $page . '/');
 
 } else {
