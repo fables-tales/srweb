@@ -88,7 +88,10 @@ function correctlyTypedFileExists($page){
 
 	global $ALLOWED_TYPES;
 	$p = $page;
-	if (substr($p, -1) == '/'){$p .= 'index';}
+
+	if (substr($p, -1) == '/') $p .= 'index'; //append 'index' if dir request
+
+	//find the correct type for the file, return if found. 
 	foreach ($ALLOWED_TYPES as $type){
 
 		if (CONTENT_DIR . '/' . $p . '.' . $type === realpath(CONTENT_DIR . '/' . $p . '.' . $type))
