@@ -161,15 +161,17 @@ function constructMenuHierachy(){
 
 	$menu = new Menu();
 
+	//ignore any menu page that doesn't exist
 	$menu_pages = array_intersect($MENU_PAGES, $ALLOWED_PAGES);
 
+	//add each to the hierachy
 	foreach($menu_pages as $path){
 		$menu->addToHierachy($path, ROOT_URI);
 	}
 
 	return $menu;
 
-}
+}//constructMenuHeirachy
 
 
 ?>
