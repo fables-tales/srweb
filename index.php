@@ -2,7 +2,11 @@
 
 //get user configuration
 require('config.inc.php');
+
+//get smarty code
 require(SMARTY_DIR . '/Smarty.class.php');
+
+//get classes for constructing hierachical menu
 require('classes/MenuItem.class.php');
 require('classes/Menu.class.php');
 
@@ -17,7 +21,11 @@ $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 $smarty->cache_dir = CACHE_DIR;
 
 
-
+/*
+ * Determines whether or not a particular file/dir exists
+ * within the content dir. If it does, it returns its type
+ * (file extension); if not, it returns false.
+ */
 function correctlyTypedFileExists($page){
 
 	global $ALLOWED_TYPES;
@@ -32,19 +40,27 @@ function correctlyTypedFileExists($page){
 
 	return false;
 
-}
+}//correctlyTypedFileExists
 
 
 
-
+/*
+ * Determines whether or not a particular page can be viewed
+ * (does it exist) returning a boolean value accordingly.
+ */
 function pageIsAllowed($page){
 
 	global $ALLOWED_PAGES;
 	return in_array($page, $ALLOWED_PAGES) || in_array($page . '/', $ALLOWED_PAGES);
 
-}
+}//pageIsAllowed
 
 
+
+/*
+ * Returns a list of allowed files/directories, recursively,
+ * from the given $directory. Mmmmm... recursion.
+ */
 function getAllowedPages($directory) {
 	$array_items = array();
 	if ($handle = opendir($directory)) {
@@ -75,7 +91,11 @@ function getAllowedPages($directory) {
 
 
 
-
+/*
+ * Constructs a Menu (object) with a load of MenuItems (objects)
+ * and to pass to the makemenu plugin (function.makemenu.php)
+ * in the plugins/ dir. (For producing a ul/li-based menu).
+ */
 function constructMenuHierachy(){
 
 	global $MENU_PAGES;
