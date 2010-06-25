@@ -15,7 +15,7 @@ define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
 
 /* The root of the website when hosted (Where you would navigate to
  * to find index.php) */
-define('ROOT_URI', 		'http://localhost/~chris/srweb/');
+define('ROOT_URI', 		'http://zarquon/~chris/srweb/');
 
 /* The allowed file extensions. Anything where no parsing is invoved,
  * can just be added. However, if parsing is required, then a smarty
