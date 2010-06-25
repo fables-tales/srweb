@@ -123,32 +123,52 @@ function pageIsAllowed($page){
  * from the given $directory. Mmmmm... recursion.
  */
 function getAllowedPages($directory) {
+
 	$array_items = array();
+
 	if ($handle = opendir($directory)) {
+
+		//read each item (file/dir) in $directory
 		while (false !== ($file = readdir($handle))) {
+
+			//ignore . and ..
 			if ($file != "." && $file != "..") {
+
 				if (is_dir($directory. "/" . $file)){
-					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));	
-					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
+
+					//get the listing for the directory as well
+					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));
+
+					//get the bit of path after the content dir	
+					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/'; 
 					preg_match($pattern, $directory. "/" . $file, $matches);
 					$array_items[] = $matches[1] . '/';
-				}
+
+				}//if is_dir
+
 				$file = $directory . "/" . $file;
+
+				//ignore the extension fof the file paths, and get just the bit after 'content/'
 				$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)\..+$/';
 				preg_match($pattern, $file, $matches);
 				$array_items[] = $matches[1];
 
-			}
-		}
-		closedir($handle);
-	}
+			}//if (not . or ..)
 
+		}//while
+
+		closedir($handle);
+
+	}//if opened
+
+	//remove spurious NULLs
 	for ($i=0; $i<count($array_items); $i++)
 		if ($array_items[$i] === NULL)
 			unset($array_items[$i]);
 
 	return $array_items;
-}
+
+}//getAllowedPages
 
 
 
