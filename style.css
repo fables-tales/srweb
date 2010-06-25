@@ -59,6 +59,22 @@ div#content {
 	padding-left:10px;
 }
 
+div#original {
+	float:right;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:0.8em;
+	color:grey;
+	font-variant:small-caps;
+}
+
+div#original a {
+	text-decoration:none;
+	color:grey;
+	font-variant:normal;
+	font-style:italic;
+}
+
 div#footer {
 	clear:both;
 	width:960px;
