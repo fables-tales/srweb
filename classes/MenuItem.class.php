@@ -1,18 +1,36 @@
 <?php
 
+/*
+ * A class to represent a node in a menu hierachy. One MenuItem
+ * instance has an array (which can be empty) of MenuItems below
+ * it in the hierachy -- i.e. representing the tree.
+ */
 class MenuItem {
 
+	/*
+	 * Constructor. Stores passed arguments, and initialises
+	 * the subMenuItems array.
+	 */
 	function __construct($name, $text, $link, $subMenuItems = NULL){
 
 		$this->text = $text;
 		$this->link = $link;
 		$this->name = $name;
+
 		$this->subMenuItems = Array();
 		if ($subMenuItems != NULL)
 			$this->subMenuItems = $subMenuItems;
 
 	}//__construct
 
+
+
+	/*
+	 * Returns a string representing the menu hierachy at and
+	 * below the current item. The hierachy is produced 
+	 * recursively, with MenuItems represented with ULs in 
+	 * the LIs of ULs.
+	 */
 	function getItemHtml(){
 
 		$output = "<li><a href='$this->link'>$this->text</a>";
@@ -35,6 +53,9 @@ class MenuItem {
 
 
 
+	/*
+	 * Adds an item, $item, to the array. 
+	 */
 	function addSubMenuItem($item){
 
 		$this->subMenuItems[] = $item;
@@ -43,7 +64,10 @@ class MenuItem {
 
 
 
-
+	/*
+	 * Try to find an item in $this->subMenuItems and if 
+	 * it exists, return the item. 
+	 */
 	function getSubMenuItemByName($name){
 
 		foreach($this->subMenuItems as $item)
@@ -52,7 +76,7 @@ class MenuItem {
 
 		return NULL;
 	
-	}
+	}//getSubMenuItemByName
 
 }//class
 
