@@ -27,7 +27,6 @@ $MENU_PAGES = array(
 	'home', 
 	'test',
 	'dir/tester',
-	'dir/tester2',
 	'a/very/long/content/path'
 );
 
