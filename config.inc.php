@@ -26,7 +26,9 @@ $ALLOWED_TYPES = array(
 $MENU_PAGES = array(
 	'home', 
 	'test',
+	'dir',
 	'dir/tester',
+	'dir/tester2',
 	'a/very/long/content/path'
 );
 
