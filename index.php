@@ -40,7 +40,7 @@ function correctlyTypedFileExists($page){
 function pageIsAllowed($page){
 
 	global $ALLOWED_PAGES;
-	return in_array($page, $ALLOWED_PAGES);
+	return in_array($page, $ALLOWED_PAGES) || in_array($page . '/', $ALLOWED_PAGES);
 
 }
 
@@ -100,7 +100,6 @@ function constructMenuHierachy(){
 
 $ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
 
-
 if (isset($_GET['page'])){
 
 	if (pageIsAllowed($_GET['page']))
@@ -123,6 +122,11 @@ if ($type){
 
 	$smarty->assign('type', $type);
 
+} else if (correctlyTypedFileExists($page) . '/'){
+
+	Header("HTTP/1.1 301 Moved Permanently");
+	Header("Location: " . ROOT_URI . $page . '/');
+
 } else {
 
 	$page = '404';
@@ -130,7 +134,6 @@ if ($type){
 
 }
 
-echo $_GET['page'];
 
 //get ready to display the template
 $smarty->assign('menu', constructMenuHierachy());
