@@ -20,6 +20,64 @@ $smarty->template_dir = TEMPLATE_DIR;
 $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 $smarty->cache_dir = CACHE_DIR;
 
+//get the allowed pages by traversing the content dir
+$ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
+
+
+
+if (isset($_GET['page']))
+	if (pageIsAllowed($_GET['page'])) $page = $_GET['page']; else $page = '404';
+ else
+	$page = 'home';
+
+//append 'index' if there is a trailing slash
+if (substr($page, -1) == '/') $page .= 'index';
+
+//get type of page
+$type = correctlyTypedFileExists($page);
+
+if ($type){
+	//make sure smarty knows
+	$smarty->assign('type', $type);
+
+} else if (correctlyTypedFileExists($page) . '/'){
+
+	/* redirect -- tell the browser to use the trailing slash in
+	 * the future. When a request looks like it's for a file, but
+	 * the file doesn't exist, but there is a directory with the
+	 * same name, redirect there */
+	Header("HTTP/1.1 301 Moved Permanently");
+	Header("Location: " . ROOT_URI . $page . '/');
+
+} else {
+
+	//get the type of the 404 page
+	$page = '404';
+	$smarty->assign('type', correctlyTypedFileExists($page));
+
+}
+
+
+//get ready to display the template
+$smarty->assign('menu', constructMenuHierachy());
+$smarty->assign('page', $page);
+$smarty->assign('content_dir', CONTENT_DIR);
+$smarty->assign('root_uri', ROOT_URI);
+
+//display template
+$smarty->display('index.tpl');
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  * Determines whether or not a particular file/dir exists
@@ -112,55 +170,6 @@ function constructMenuHierachy(){
 	return $menu;
 
 }
-
-
-
-
-
-
-$ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
-
-if (isset($_GET['page'])){
-
-	if (pageIsAllowed($_GET['page']))
-		$page = $_GET['page'];
-	else
-		$page = '404';
-	
-} else {
-
-	$page = 'home';
-
-}//if isset
-
-if (substr($page, -1) == '/'){$page .= 'index';}
-
-//set type
-$type = correctlyTypedFileExists($page);
-
-if ($type){
-
-	$smarty->assign('type', $type);
-
-} else if (correctlyTypedFileExists($page) . '/'){
-
-	Header("HTTP/1.1 301 Moved Permanently");
-	Header("Location: " . ROOT_URI . $page . '/');
-
-} else {
-
-	$page = '404';
-	$smarty->assign('type', correctlyTypedFileExists($page));
-
-}
-
-
-//get ready to display the template
-$smarty->assign('menu', constructMenuHierachy());
-$smarty->assign('page', $page);
-$smarty->assign('content_dir', CONTENT_DIR);
-$smarty->assign('root_uri', ROOT_URI);
-$smarty->display('index.tpl');
 
 
 ?>
