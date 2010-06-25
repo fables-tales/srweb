@@ -41,7 +41,7 @@ $MENU_PAGES = array(
 
 /* ===================================
  * IF YOU ENJOY MILD PERIL, EDIT BELOW
- *    Dont say I didn't warn you!
+ *    Don't say I didn't warn you!
  * ===================================
  */
 //extract the current directory
