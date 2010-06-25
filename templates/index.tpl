@@ -6,7 +6,7 @@
 <head>
 	<title>{$page}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="stylesheet" type="text/css" href="{$root_uri}/style.css" />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 
 
 </head>
@@ -40,6 +40,10 @@
 
 		{/if}
 
+	</div>
+
+	<div id="original">
+		Original: <a href="{$root_uri}content/{"$page.$type"}">{"$page.$type"}</a>
 	</div>
 
 
