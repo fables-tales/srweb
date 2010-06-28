@@ -7,7 +7,7 @@
 	<title>{$page}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
-
+	<base href='{"$root_uri/content/"}' />
 
 </head>
 
