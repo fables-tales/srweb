@@ -34,7 +34,8 @@ $MENU_PAGES = array(
 	'dir',
 	'dir/tester',
 	'dir/tester2',
-	'a/very/long/content/path'
+	'a/very/long/content/path',
+	'mission'
 );
 
 
