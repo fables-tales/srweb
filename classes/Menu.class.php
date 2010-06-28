@@ -48,8 +48,8 @@ class Menu {
 	 * excluding any extension. $root_uri is the URI that would be
 	 * used to access the directory containing index.php.
 	 */
-	function addToHierachy($path, $root_uri){
-		
+	function addToHierachy($path, $root_uri, $text=""){
+
 		//get all parts of the path (e.g. 'dir/dir2/file' => array(dir, dir2, file))
 		preg_match_all( '/([a-zA-Z0-9\-\.]+)\/?/' , $path, $matches);
 		$matches = $matches[1];
@@ -63,7 +63,11 @@ class Menu {
 
 			//if the menuitem doesn't exist, add it
 			if ($previous_item->getSubMenuItemByName($name) == NULL){
-				$previous_item->addSubMenuItem(new MenuItem($name, $name, $path_tmp.$name));
+				if ($text != "" && $name == end($matches))
+					$previous_item->addSubMenuItem(new MenuItem($name, $text, $path_tmp.$name));
+				else
+					$previous_item->addSubMenuItem(new MenuItem($name, $name, $path_tmp.$name));
+
 			}
 
 			//append the current part of the path to the previous, and update $previous_item
