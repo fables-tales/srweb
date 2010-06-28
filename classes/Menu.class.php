@@ -46,7 +46,8 @@ class Menu {
 	 * Adds a path (such as 'dir/file') to the hierachy. $path is
 	 * the path to the file, relative to the content dir, and
 	 * excluding any extension. $root_uri is the URI that would be
-	 * used to access the directory containing index.php.
+	 * used to access the directory containing index.php. $text is
+	 * is the text you wish to be displayed on the page.
 	 */
 	function addToHierachy($path, $root_uri, $text=""){
 
