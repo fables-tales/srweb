@@ -188,8 +188,16 @@ function constructMenuHierachy(){
 	$menu_pages = array_intersect($MENU_PAGES, $ALLOWED_PAGES);
 
 	//add each to the hierachy
-	foreach($menu_pages as $path){
-		$menu->addToHierachy($path, ROOT_URI);
+	foreach (array_keys($menu_pages) as $index){
+
+		$path = $menu_pages[$index];
+
+		if (gettype($index) == 'string'){
+			$menu->addToHierachy($path, ROOT_URI, $index);
+		} else {
+			$menu->addToHierachy($path, ROOT_URI);
+		}
+
 	}
 
 	return $menu;
