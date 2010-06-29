@@ -26,7 +26,14 @@ $ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
 
 
 if (isset($_GET['page']))
-	if (pageIsAllowed($_GET['page'])) $page = $_GET['page']; else $page = '404';
+
+	if (pageIsAllowed($_GET['page'])) {
+		$page = $_GET['page'];
+	} else {
+		$page = '404';
+		Header("HTTP/1.1 404 Not Found");
+	}
+
  else
 	$page = 'home';
 
@@ -54,6 +61,7 @@ if ($type){
 	//get the type of the 404 page
 	$page = '404';
 	$smarty->assign('type', correctlyTypedFileExists($page));
+	Header("HTTP/1.1 404 Not Found");
 
 }
 
