@@ -10,6 +10,9 @@ require(SMARTY_DIR . '/Smarty.class.php');
 require('classes/MenuItem.class.php');
 require('classes/Menu.class.php');
 
+//get class from extracting metadata and content
+require('classes/Content.class.php');
+
 //get instance of smarty
 $smarty = new Smarty();
 
