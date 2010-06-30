@@ -22,6 +22,10 @@ div#navigation ul {
 	list-style:none;
 }
 
+div#navigation > ul > li {
+	margin-top:10px;
+}
+
 div#navigation ul li a {
 	text-decoration:none;
 }
