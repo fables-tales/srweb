@@ -31,11 +31,25 @@ $ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
 if (isset($_GET['page']))
 
 	if (pageIsAllowed($_GET['page'])) {
+
 		$page = $_GET['page'];
+
+	} else if (pageIsAllowed($_GET['page'].'/')){
+
+		//a file of that name doesn't exist, but a dir does.
+		$page = $_GET['page'].'/';
+
+		//perform a temporary redirect
+		Header("HTTP/1.1 302 Found");
+		Header("Location: " . ROOT_URI . $page);
+
 	} else {
+
+		//page not found/allowed
 		$page = '404';
 		Header("HTTP/1.1 404 Not Found");
-	}
+
+	}//if-elseif-else pageIsAllowed
 
  else
 	$page = 'home';
@@ -43,36 +57,19 @@ if (isset($_GET['page']))
 //append 'index' if there is a trailing slash
 if (substr($page, -1) == '/') $page .= 'index';
 
-//get type of page
-$type = correctlyTypedFileExists($page);
+if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page))
+	$content = new Content(CONTENT_DIR . '/' . $page);
 
-if ($type){
-	//make sure smarty knows
-	$smarty->assign('type', $type);
+ else
+	Header("Location: " . ROOT_URI . "/404");
 
-} else if (correctlyTypedFileExists($page) . '/'){
-
-	/* redirect -- tell the browser to use the trailing slash in
-	 * the future. When a request looks like it's for a file, but
-	 * the file doesn't exist, but there is a directory with the
-	 * same name, redirect there */
-	Header("HTTP/1.1 302 Found");
-	Header("Location: " . ROOT_URI . $page . '/');
-
-} else {
-
-	//get the type of the 404 page
-	$page = '404';
-	$smarty->assign('type', correctlyTypedFileExists($page));
-	Header("HTTP/1.1 404 Not Found");
-
-}
 
 
 //get ready to display the template
 $smarty->assign('menu', constructMenuHierachy());
 $smarty->assign('page', $page);
 $smarty->assign('content_dir', CONTENT_DIR);
+$smarty->assign('content', $content);
 $smarty->assign('root_uri', ROOT_URI);
 
 //display template
@@ -123,7 +120,7 @@ function correctlyTypedFileExists($page){
 function pageIsAllowed($page){
 
 	global $ALLOWED_PAGES;
-	return in_array($page, $ALLOWED_PAGES) || in_array($page . '/', $ALLOWED_PAGES);
+	return in_array($page, $ALLOWED_PAGES);
 
 }//pageIsAllowed
 
