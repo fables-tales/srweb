@@ -84,35 +84,6 @@ $smarty->display('index.tpl');
 
 
 
-
-
-
-/*
- * Determines whether or not a particular file/dir exists
- * within the content dir. If it does, it returns its type
- * (file extension); if not, it returns false.
- */
-function correctlyTypedFileExists($page){
-
-	global $ALLOWED_TYPES;
-	$p = $page;
-
-	if (substr($p, -1) == '/') $p .= 'index'; //append 'index' if dir request
-
-	//find the correct type for the file, return if found. 
-	foreach ($ALLOWED_TYPES as $type){
-
-		if (CONTENT_DIR . '/' . $p . '.' . $type === realpath(CONTENT_DIR . '/' . $p . '.' . $type))
-			return $type;
-
-	}//foreach
-
-	return false;
-
-}//correctlyTypedFileExists
-
-
-
 /*
  * Determines whether or not a particular page can be viewed
  * (does it exist) returning a boolean value accordingly.
