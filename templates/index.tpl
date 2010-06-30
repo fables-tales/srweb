@@ -6,6 +6,7 @@
 <head>
 	<title>{getFromContent get="title"} | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="{getFromContent get='keywords'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 	<base href="{$root_uri}content/" />
 
