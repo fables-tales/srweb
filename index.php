@@ -155,12 +155,14 @@ function getAllowedPages($directory) {
 					preg_match($pattern, $directory. "/" . $file, $matches);
 					$array_items[] = $matches[1] . '/';
 
+					continue;
+
 				}//if is_dir
 
 				$file = $directory . "/" . $file;
 
 				//ignore the extension fof the file paths, and get just the bit after 'content/'
-				$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)\..+$/';
+				$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
 				preg_match($pattern, $file, $matches);
 				$array_items[] = $matches[1];
 
