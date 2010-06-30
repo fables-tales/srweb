@@ -61,7 +61,7 @@ if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page))
 	$content = new Content(CONTENT_DIR . '/' . $page);
 
  else
-	Header("Location: " . ROOT_URI . "/404");
+	Header("Location: " . ROOT_URI . "404");
 
 
 
