@@ -57,12 +57,15 @@ if (isset($_GET['page']))
 //append 'index' if there is a trailing slash
 if (substr($page, -1) == '/') $page .= 'index';
 
-if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page))
+if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page)){
+
 	$content = new Content(CONTENT_DIR . '/' . $page);
 
- else
-	Header("Location: " . ROOT_URI . "404");
+} else {
 
+	Header("HTTP/1.1 404 Not Found");
+	$content = new Content(CONTENT_DIR . '/404');
+}
 
 
 //get ready to display the template
