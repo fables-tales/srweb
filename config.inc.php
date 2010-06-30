@@ -17,13 +17,6 @@ define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
  * to find index.php) */
 define('ROOT_URI', 		'http://zarquon/~chris/srweb/');
 
-/* The allowed file extensions. Anything where no parsing is invoved,
- * can just be added. However, if parsing is required, then a smarty
- * plugin will need to be written. (But don't worry, it's very easy.) */
-$ALLOWED_TYPES = array(
-	'md',
-	'html'
-);
 
 /* The pages that you wish to appear in the menu should be listed here.
  * There are two way to add a page to the menu:
