@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>{$page}</title>
+	<title>{getFromContent get="title"} | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 	<base href='{"$root_uri/content/"}' />
@@ -27,18 +27,7 @@
 
 	<div id="content">
 
-		{if file_exists("$content_dir/$page.$type")}
-
-			{if $type == "md"}
-				{include file="$content_dir/$page.$type" assign=md_input}
-				{$md_input|markdown}
-			{else}
-	
-				{include file="$content_dir/$page.$type"}
-
-			{/if}
-
-		{/if}
+		{getFromContent get="content"}
 
 	</div>
 
