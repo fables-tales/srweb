@@ -16,6 +16,11 @@ setfacl -m u:$APACHE_USER:rwx templates_compiled/
 echo "  - 'cache'"
 setfacl -m u:$APACHE_USER:rwx cache/
 
+if [[ $EDITOR == "" ]]
+then
+	EDITOR=vi
+fi
+
 echo ""
 echo -e "Have you checked the settings in 'config.inc.php'? [Y/n]: \c"
 read input
@@ -28,11 +33,6 @@ then
 	echo "Perhaps, one day, this script will do that for you."
 	echo ""
 
-	if [[ $EDITOR == "" ]]
-	then
-		EDITOR=vi
-	fi
-
 	echo -e "\nEdit in $EDITOR now? [Y/n]: \c"
 	read input2
 
@@ -40,6 +40,31 @@ then
 	then
 		$EDITOR config.inc.php
 	fi
+else
+	echo "Well done!"
+fi
+
+
+echo ""
+echo -e "Have you checked the the '.htaccess' file? [Y/n]: \c"
+read input
+
+if [[ $input == "n" ]]
+then
+
+	echo ""
+	echo "You should!"
+	echo "The thing that'll need changing is mod_rewrite's 'RewriteBase'."
+	echo ""
+
+	echo -e "\nEdit in $EDITOR now? [Y/n]: \c"
+	read input2
+
+	if [[ ! $input2 == "n" ]]
+	then
+		$EDITOR .htaccess
+	fi
+
 else
 	echo "Well done!"
 fi
