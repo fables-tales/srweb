@@ -1,13 +1,20 @@
 #!/bin/bash
 
 clear
-echo "Adding write permissions for apache in the following directories:"
+
+APACHE_USER=$(ps --pid $(pgrep httpd | tail -n 1) -o user | tail -n 1)
+if [ ! "$APACHE_USER" == "" ]
+then
+	APACHE_USER="apache"
+fi
+
+echo "Adding write permissions for '$APACHE_USER' in the following directories:"
 
 echo "  - 'templates_compiled'"
-setfacl -m u:apache:rwx templates_compiled/
+setfacl -m u:$APACHE_USER:rwx templates_compiled/
 
 echo "  - 'cache'"
-setfacl -m u:apache:rwx cache/
+setfacl -m u:$APACHE_USER:rwx cache/
 
 echo ""
 echo -e "Have you checked the settings in 'config.inc.php'? [Y/n]: \c"
