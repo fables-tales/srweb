@@ -48,13 +48,23 @@ $MENU_PAGES = array(
 	'Home' 			=> 'home',
 
 	'Schools & Colleges'	=> 'schools/',
+	'Competition Info'	=> 'schools/competitioninfo',
+	'Joining'		=> 'schools/joining',
+	'Documentation'		=> 'schools/docs/',
+	'Kit'			=> 'schools/kit/',
 
 	'Uni Students'		=> 'uni/',
+	'Getting Involved'	=> 'uni/gettinginvolved',
 
 	'Sponsors'		=> 'sponsors/',
+	'Why Sponsor?'		=> 'sponsors/whysponsor',
+	'Current Sponsors'	=> 'sponsors/currentsponsors',
 
 	'About Us'		=> 'about/',
+	'The Team'		=> 'about/team',
+	'Media'			=> 'about/media',
 	'Mission Statement'	=> 'about/mission',
+	'Public Documents'	=> 'about/publicdocs',
 	'Contact Us'		=> 'about/contactus'
 );
 
