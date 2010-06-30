@@ -32,7 +32,7 @@
 	</div>
 
 	<div id="original">
-		Original: <a href="{$root_uri}content/{"$page.$type"}">{"$page.$type"}</a>
+		Original: <a href="{$root_uri}content/{$page}">{$page}</a>
 	</div>
 
 
