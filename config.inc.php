@@ -46,13 +46,16 @@ $MENU_PAGES = array(
 //	TITLE/NAME		=>  PATH
 //     =====================================================
 	'Home' 			=> 'home',
-	'Documentation \'09' 	=> 'dir/',
-	'Motor Board Docs' 	=> 'dir/tester',
-	'TESTER 2' 		=> 'dir/tester2/',
-	'Another File' 		=> 'dir/tester2/anotherfile',
-	'Mission Statement' 	=> 'mission',
-	'Sponsors' 		=> 'sponsors',
-	'Contact Us' 		=> 'contactus'
+
+	'Schools & Colleges'	=> 'schools/',
+
+	'Uni Students'		=> 'uni/',
+
+	'Sponsors'		=> 'sponsors/',
+
+	'About Us'		=> 'about/',
+	'Mission Statement'	=> 'about/mission',
+	'Contact Us'		=> 'about/contactus'
 );
 
 
