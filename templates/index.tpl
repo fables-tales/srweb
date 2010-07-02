@@ -47,7 +47,8 @@
 
 
 	<div id="footer">
-		footer
+		<span class="rss">RSS</span>
+		<span class="copyright">&copy; Student Robotics</span>
 	</div>
 
 </div>
