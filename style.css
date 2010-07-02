@@ -63,6 +63,10 @@ table {
 /* END OF RESET */
 
 
+body {
+	font: 16px/20px Helvetica,Arial,sans-serif;
+}
+
 
 div#pageWrapper {
 	width:960px;
