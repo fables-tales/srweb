@@ -102,8 +102,42 @@ div#content{
 	clear:both;
 	border-bottom:1px solid grey;
 	padding-bottom:10px;
+	height:auto;
+	overflow:auto;
 }
 
+div#content div#topBanner {
+	background-color:orange;
+	height:200px;
+}
+
+div#content div#latestNews {
+	margin:0 50px 50px 50px;
+	padding:50px 0 50px 0;
+	border-bottom:1px solid silver;
+}
+
+div#content div#expandedMenu {
+	float:left;
+	width:260px;
+	border-right:1px solid silver;
+}
+
+div#content div#boxWrapper {
+	float:left;
+	width:699px;
+}
+
+div#content div#boxWrapper div.box {
+	width:320px;
+	float:left;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+div#content div#boxWrapper div.box h3 {
+	border-bottom:1px solid silver;
+}
 
 div#original {
 	float:right;
