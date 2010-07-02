@@ -92,3 +92,8 @@ div#header > ul > li {
 	float:left;
 	margin-left:10px;
 }
+
+
+div#content{
+	clear:both;
+}
