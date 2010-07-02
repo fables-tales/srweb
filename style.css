@@ -93,7 +93,30 @@ div#header > ul > li {
 	margin-left:10px;
 }
 
+div#header > ul > li > a {
+	text-decoration:none;
+}
+
 
 div#content{
 	clear:both;
+}
+
+
+div#footer {
+	width:960px;
+	margin-top:10px;
+	position:relative;
+}
+
+div#footer > span.rss {
+	position:absolute;
+	right:0px;
+}
+
+div#footer > span.copyright {
+	display:block;
+	margin:0 auto;
+	width:200px;
+	text-align:center;
 }
