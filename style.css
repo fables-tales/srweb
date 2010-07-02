@@ -68,3 +68,27 @@ div#pageWrapper {
 	width:960px;
 	margin:0 auto;
 }
+
+
+div#header {
+	width:960px;
+}
+
+div#header > a {
+	float:left;
+}
+
+div#header > form {
+	float:right;
+	margin-top:30px;
+}
+
+div#header > ul {
+	clear:both;
+	float:right;
+}
+
+div#header > ul > li {
+	float:left;
+	margin-left:10px;
+}
