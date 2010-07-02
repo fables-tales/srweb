@@ -83,5 +83,6 @@ define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
 
+date_default_timezone_set("Europe/London");
 
 ?>
