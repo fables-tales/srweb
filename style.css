@@ -154,6 +154,8 @@ div#content div#boxWrapper div.box {
 
 div#content div#boxWrapper div.box h3 {
 	border-bottom:1px solid silver;
+	font-size:20px;
+	line-height:30px;
 }
 
 div#original {
