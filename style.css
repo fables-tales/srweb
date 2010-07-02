@@ -121,6 +121,11 @@ div#content div#latestNews {
 	border-bottom:1px solid silver;
 }
 
+div#content div#latestNews h2 {
+	font-size:30px;
+	line-height:40px;
+}
+
 div#content div#expandedMenu {
 	float:left;
 	width:260px;
