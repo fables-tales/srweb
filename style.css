@@ -56,3 +56,15 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
+
+/* END OF RESET */
+
+
+
+div#pageWrapper {
+	width:960px;
+	margin:0 auto;
+}
