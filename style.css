@@ -128,8 +128,16 @@ div#content div#latestNews h2 {
 
 div#content div#expandedMenu {
 	float:left;
-	width:260px;
+	width:240px;
 	border-right:1px solid silver;
+	padding-right:20px;
+}
+
+div#content div#expandedMenu h3 {
+	border-bottom:1px solid silver;
+	margin-bottom:10px;
+	font-size:20px;
+	line-height:30px;
 }
 
 div#content div#boxWrapper {
