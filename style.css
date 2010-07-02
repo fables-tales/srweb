@@ -140,6 +140,19 @@ div#content div#expandedMenu h3 {
 	line-height:30px;
 }
 
+div#content div#expandedMenu ul li a {
+	text-decoration:none;
+}
+
+div#content div#expandedMenu > ul > li {
+	margin-bottom:10px;
+	font-size:18px;
+}
+
+div#content div#expandedMenu > ul > li > ul > li {
+	font-size:16px;
+}
+
 div#content div#boxWrapper {
 	float:left;
 	width:699px;
