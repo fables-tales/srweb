@@ -35,11 +35,6 @@
 	</div>
 
 
-	<div id="navigation">
-		{makemenu menu=$menu}
-	</div>
-
-
 	<div id="content">
 
 		{getFromContent get="content"}
