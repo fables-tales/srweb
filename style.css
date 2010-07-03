@@ -154,6 +154,7 @@ div#content div#latestNews {
 div#content div#latestNews h2 {
 	font-size:30px;
 	line-height:40px;
+	clear:both;
 }
 
 div#content div#expMenuAndBoxWrapper {
