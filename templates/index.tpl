@@ -21,7 +21,7 @@
 
 		<form action="" method="get">
 			<input type="text" name="q" />
-			<input type="submit" />
+			<input type="submit" value="" />
 		</form>
 
 		<ul>

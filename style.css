@@ -88,6 +88,25 @@ div#header > form {
 	margin-top:30px;
 }
 
+div#header > form > input {
+	border:1px solid silver;
+}
+
+div#header > form > input[type=text]{
+	font-size:16px;
+	line-height:16px;
+}
+
+div#header > form > input[type=submit]{
+	background-image:url('http://localhost/srweb/content/magnifier.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	height:24px;
+	width:24px;
+	position:relative;
+	top:-1px;
+}
+
 div#header > ul {
 	clear:both;
 	float:right;
