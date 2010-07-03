@@ -107,12 +107,41 @@ div#content{
 	border-bottom:1px solid grey;
 	padding-bottom:10px;
 	height:auto;
-	overflow:auto;
+	overflow:visible;
 }
 
 div#content div#topBanner {
 	background-color:orange;
 	height:200px;
+}
+
+div#content div#topBanner img {
+	width:250px;
+	height:220px;
+	overflow:visible;
+	float:left;
+	position:relative;
+	top:-22px;
+	left:30px;
+}
+
+div#content div#topBanner h1 {
+	font-size:30px;
+	line-height:40px;
+	color:white;
+	font-weight:normal;
+	width:500px;
+	float:right;
+	margin-right:50px;
+	margin-top:20px;
+}
+
+div#content div#topBanner p {
+	color:white;
+	font-style:italic;
+	width:500px;
+	float:right;
+	margin-right:30px;
 }
 
 div#content div#latestNews {
