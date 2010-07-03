@@ -159,7 +159,8 @@ div#content div#expandedMenu > ul > li > ul > li {
 
 div#content div#boxWrapper {
 	float:left;
-	width:699px;
+	width:700px;
+	margin-left:-1px;
 }
 
 div#content div#boxWrapper div.box {
