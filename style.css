@@ -99,7 +99,7 @@ div#header > form > input[type=text]{
 
 div#header > form > input[type=submit]{
 	/* Thanks to http://www.famfamfam.com/lab/icons/silk/ for the image */
-	background-image:url('http://localhost/srweb/content/magnifier.png');
+	background-image:url('content/magnifier.png');
 	background-repeat:no-repeat;
 	background-position:center;
 	height:24px;
