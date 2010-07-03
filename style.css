@@ -65,6 +65,7 @@ table {
 
 body {
 	font: 16px/20px Helvetica,Arial,sans-serif;
+	background:#F5F3F4;
 }
 
 
@@ -156,7 +157,7 @@ div#content div#latestNews h2 {
 }
 
 div#content div#expMenuAndBoxWrapper {
-	overflow:auto;
+			overflow:auto;
 }
 
 div#content div#expandedMenu {
