@@ -114,16 +114,17 @@ div#content{
 div#content div#topBanner {
 	background-color:orange;
 	height:200px;
+	border-bottom:3px solid #F8885D;
 }
 
 div#content div#topBanner img {
-	width:250px;
-	height:220px;
+	width:374px;
+	height:260px;
 	overflow:visible;
 	float:left;
 	position:relative;
-	top:-22px;
-	left:30px;
+	top:-60px;
+	left:0px;
 }
 
 div#content div#topBanner h1 {
