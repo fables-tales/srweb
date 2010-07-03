@@ -238,6 +238,13 @@ div#content div#boxWrapper div.box h3 {
 	color:#0d1f61;
 }
 
+div#content div#boxWrapper div.box img {
+	border:1px solid silver;
+	padding:2px;
+	float:right;
+	margin-left:5px;
+}
+
 div#original {
 	float:right;
 	height:auto;
