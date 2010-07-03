@@ -128,8 +128,8 @@ div#header > ul > li > a {
 
 div#content{
 	clear:both;
-	border-bottom:1px solid grey;
-	padding-bottom:10px;
+	border-bottom:1px solid silver;
+	padding-bottom:20px;
 	height:auto;
 	overflow:visible;
 }
