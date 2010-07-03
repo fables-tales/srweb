@@ -4,7 +4,15 @@
 //CONTENT_TYPE:	HTML
 
 <div id="topBanner">
-	top banner
+	<img src="" alt="" />
+	
+	<h1>Welcome to Student Robotics</h1>
+	
+	<p>Student Robotics is an exciting competition between sixth form schools 
+	and colleges in the Southampton area to build fully autonomous robots. Led 
+	by a group of students from the University of Southampton, the teams in the 
+	competition will have to design, build and test their robots ready to 
+	compete against other local teams.</p>
 </div>
 
 <div id="latestNews">
