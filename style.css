@@ -91,6 +91,7 @@ div#header > form {
 div#header > ul {
 	clear:both;
 	float:right;
+	margin-bottom:10px;
 }
 
 div#header > ul > li {
@@ -100,6 +101,8 @@ div#header > ul > li {
 
 div#header > ul > li > a {
 	text-decoration:none;
+	color:#8b8884;
+	padding:10px;
 }
 
 
