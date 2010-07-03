@@ -178,6 +178,7 @@ div#content div#latestNews h2 {
 	font-size:30px;
 	line-height:40px;
 	clear:both;
+	color:#0d1f61;
 }
 
 div#content div#expMenuAndBoxWrapper {
@@ -196,6 +197,7 @@ div#content div#expandedMenu h3 {
 	margin-bottom:10px;
 	font-size:20px;
 	line-height:30px;
+	color:#0d1f61;
 }
 
 div#content div#expandedMenu ul li a {
@@ -233,6 +235,7 @@ div#content div#boxWrapper div.box h3 {
 	font-size:20px;
 	line-height:30px;
 	margin-bottom:10px;
+	color:#0d1f61;
 }
 
 div#original {
