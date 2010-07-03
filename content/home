@@ -32,6 +32,8 @@
 
 </div>
 
+<div id="expMenuAndBoxWrapper">
+
 <div id="expandedMenu">
 
 <h3>Take a Look Around</h3>
@@ -97,5 +99,7 @@
         </div>
 
 
+
+</div>
 
 </div>

@@ -155,6 +155,10 @@ div#content div#latestNews h2 {
 	line-height:40px;
 }
 
+div#content div#expMenuAndBoxWrapper {
+	overflow:auto;
+}
+
 div#content div#expandedMenu {
 	float:left;
 	width:240px;
