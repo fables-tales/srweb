@@ -114,7 +114,6 @@ div#content{
 div#content div#topBanner {
 	background-color:orange;
 	height:200px;
-	border-bottom:3px solid #F8885D;
 }
 
 div#content div#topBanner img {
@@ -124,7 +123,7 @@ div#content div#topBanner img {
 	float:left;
 	position:relative;
 	top:-60px;
-	left:0px;
+	left:30px;
 }
 
 div#content div#topBanner h1 {
