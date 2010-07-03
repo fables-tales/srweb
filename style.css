@@ -1,86 +1,206 @@
 
+
+
+/* Thanks to http://meyerweb.com/eric/tools/css/reset/ for the reset styling */
+
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/* END OF RESET */
+
+
+body {
+	font: 16px/20px Helvetica,Arial,sans-serif;
+}
+
+
 div#pageWrapper {
 	width:960px;
 	margin:0 auto;
 }
 
+
 div#header {
 	width:960px;
-	background:#3e6eFF;
 }
 
-div#navigation {
-	width:160px;
+div#header > a {
 	float:left;
-	margin-top:10px;
-	margin-bottom:10px;
 }
 
-div#navigation ul {
-	margin:0; 
-	padding:0;
-	list-style:none;
+div#header > form {
+	float:right;
+	margin-top:30px;
 }
 
-div#navigation > ul > li {
-	margin-top:10px;
+div#header > ul {
+	clear:both;
+	float:right;
 }
 
-div#navigation ul li a {
+div#header > ul > li {
+	float:left;
+	margin-left:10px;
+}
+
+div#header > ul > li > a {
 	text-decoration:none;
 }
 
-div#navigation ul > li > ul li {
-	padding-left:10px;
-	height:0;
-	overflow:hidden;
-}
 
-
-div#navigation > ul > li > ul > li {
+div#content{
+	clear:both;
+	border-bottom:1px solid grey;
+	padding-bottom:10px;
 	height:auto;
 	overflow:auto;
 }
 
-div#navigation > ul > li > ul > li > ul > li {
-	height:auto;
-	overflow:auto;
+div#content div#topBanner {
+	background-color:orange;
+	height:200px;
 }
 
-div#navigation > ul > li > ul > li > ul > li > ul > li {
-	height:auto;
-	overflow:auto;
+div#content div#latestNews {
+	margin:0 50px 50px 50px;
+	padding:50px 0 50px 0;
+	border-bottom:1px solid silver;
 }
 
-div#navigation > ul > li > ul > li > ul > li > ul > li > ul > li {
-	height:auto;
-	overflow:auto;
+div#content div#latestNews h2 {
+	font-size:30px;
+	line-height:40px;
 }
 
-div#content {
-	width:790px;
+div#content div#expandedMenu {
 	float:left;
-	padding-left:10px;
+	width:240px;
+	border-right:1px solid silver;
+	padding-right:20px;
+}
+
+div#content div#expandedMenu h3 {
+	border-bottom:1px solid silver;
+	margin-bottom:10px;
+	font-size:20px;
+	line-height:30px;
+}
+
+div#content div#expandedMenu ul li a {
+	text-decoration:none;
+}
+
+div#content div#expandedMenu > ul > li {
+	margin-bottom:10px;
+	font-size:18px;
+}
+
+div#content div#expandedMenu > ul > li > ul {
+	margin-left:5px;
+}
+
+div#content div#expandedMenu > ul > li > ul > li {
+	font-size:16px;
+}
+
+div#content div#boxWrapper {
+	float:left;
+	width:700px;
+	margin-left:-1px;
+}
+
+div#content div#boxWrapper div.box {
+	width:320px;
+	float:left;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+div#content div#boxWrapper div.box h3 {
+	border-bottom:1px solid silver;
+	font-size:20px;
+	line-height:30px;
+	margin-bottom:10px;
 }
 
 div#original {
 	float:right;
-	margin-top:10px;
-	margin-bottom:10px;
-	font-size:0.8em;
-	color:grey;
-	font-variant:small-caps;
+	height:auto;
+	padding:2px;
+	padding-right:0px;
+	margin-top:1px;
 }
 
-div#original a {
-	text-decoration:none;
-	color:grey;
-	font-variant:normal;
-	font-style:italic;
-}
 
 div#footer {
 	clear:both;
 	width:960px;
-	background:#3e6eFF;
+	margin-top:30px;
+	position:relative;
+}
+
+div#footer > span.rss {
+	position:absolute;
+	right:0px;
+}
+
+div#footer > span.copyright {
+	display:block;
+	margin:0 auto;
+	width:200px;
+	text-align:center;
 }

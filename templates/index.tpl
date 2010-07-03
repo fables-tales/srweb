@@ -17,12 +17,21 @@
 <div id="pageWrapper">
 
 	<div id="header">
-		header
-	</div>
+		<a href=""><img src="https://www.studentrobotics.org/sites/all/themes/robogrid/logo.png" alt="Student Robotics Logo"></a>
 
+		<form action="" method="get">
+			<input type="text" name="q" />
+			<input type="submit" />
+		</form>
 
-	<div id="navigation">
-		{makemenu menu=$menu}
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">IDE</a></li>
+			<li><a href="">Schools</a></li>
+			<li><a href="">Sponsors</a></li>
+			<li><a href="">Get Involved</a></li>
+			<li><a href="">About Us</a></li>
+		</ul>
 	</div>
 
 
@@ -38,7 +47,8 @@
 
 
 	<div id="footer">
-		footer
+		<span class="rss">RSS</span>
+		<span class="copyright">&copy; Student Robotics</span>
 	</div>
 
 </div>
