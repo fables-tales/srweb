@@ -264,14 +264,16 @@ div#original {
 
 div#footer {
 	clear:both;
-	width:960px;
-	margin-top:30px;
+	width:940px;
+	margin-top:40px;
+	padding:10px;
 	position:relative;
+	background-color:#dfdcd7;
 }
 
 div#footer > span.rss {
 	position:absolute;
-	right:0px;
+	right:10px;
 }
 
 div#footer > span.copyright {
