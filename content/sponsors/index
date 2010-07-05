@@ -1,30 +1,35 @@
 //TITLE: 	Sponsors
 //DESCRIPTION:	Sponsors: the people that make Student Robotics possible.
 //KEYWORDS:	student, robotics, sponsors
-//CONTENT_TYPE:	markdown
+//CONTENT_TYPE:	HTML
 
-Sponsors
-========
+<h1>Sponsors</h1>
 
-Sponsors who make the dream of Student Robotics a Reality
----------------------------------------------------------
+<h2>Sponsors who make the dream of Student Robotics a Reality</h2>
 
-Student Robotics depends entirely on the generous donations from Southampton University, ECS & Engineering companies. The following companies were heavily involved in the 2008-09 competition sponsorship.
+<p>Student Robotics depends entirely on the generous donations from Southampton University, ECS & Engineering companies. The following companies were heavily involved in the 2008-09 competition sponsorship.</p>
 
+<p>
+	<img src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/motofoundation.jpg" alt="Motorola" title="Motorola" class="right" />
 
-![Motorola Foundation](https://www.studentrobotics.org/sites/all/themes/robogrid/photos/motofoundation.jpg)
+	The Motorola Foundation is the primary sponsor of Student Robotics
+</p>
 
-The Motorola Foundation is the primary sponsor of Student Robotics
+<p>
+	<img src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/community-volunteering.png" alt="Community Volunteering" title="Comunity Volunteering" class="right" width="400" />
 
-![Community Volunteering](https://www.studentrobotics.org/sites/all/themes/robogrid/photos/community-volunteering.png)
+	Southampton University Community Volunteering
+</p>
 
-Southampton University Community Volunteering
+<p>
+	<img src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/soton.png" alt="University of Southampton" title="University of Southampton" class="right" width="400" />
 
-![Southampton University](https://www.studentrobotics.org/sites/all/themes/robogrid/photos/soton.png)
+	Southampton University & Southampton University Students Union (SUSU)
+</p>
 
-Southampton University & Southampton University Students Union (SUSU)
+<p>
+	<img src="http://www.studentrobotics.org/sites/default/files/images/ams_logo08.preview.jpg" alt="austriamicrosystems" title="austriamicrosystems" class="right" width="400" />
 
-![austriamicrosystems](http://www.studentrobotics.org/sites/default/files/images/ams_logo08.preview.jpg)
-
-austriamicrosystems donated the magnetic rotary encoders which form part of the Student Robotics kits
+	austriamicrosystems donated the magnetic rotary encoders which form part of the Student Robotics kits
+</p>
 
