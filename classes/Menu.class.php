@@ -8,6 +8,8 @@
  */
 class Menu {
 
+	private $root;
+
 	/*
 	 * Constructor. Instantiates the root MenuItem.
 	 */
