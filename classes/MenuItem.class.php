@@ -7,6 +7,11 @@
  */
 class MenuItem {
 
+	private $name;
+	private $text;
+	private $link;
+	private $subMenuItems = array();
+
 	/*
 	 * Constructor. Stores passed arguments, and initialises
 	 * the subMenuItems array.
@@ -17,7 +22,6 @@ class MenuItem {
 		$this->link = $link;
 		$this->name = $name;
 
-		$this->subMenuItems = Array();
 		if ($subMenuItems != NULL)
 			$this->subMenuItems = $subMenuItems;
 
