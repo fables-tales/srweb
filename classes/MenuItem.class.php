@@ -7,6 +7,11 @@
  */
 class MenuItem {
 
+	private $name;
+	private $text;
+	private $link;
+	private $subMenuItems = array();
+
 	/*
 	 * Constructor. Stores passed arguments, and initialises
 	 * the subMenuItems array.
@@ -17,7 +22,6 @@ class MenuItem {
 		$this->link = $link;
 		$this->name = $name;
 
-		$this->subMenuItems = Array();
 		if ($subMenuItems != NULL)
 			$this->subMenuItems = $subMenuItems;
 
@@ -31,7 +35,7 @@ class MenuItem {
 	 * recursively, with MenuItems represented with ULs in 
 	 * the LIs of ULs.
 	 */
-	function getItemHtml(){
+	function getItemHTML(){
 
 		$output = "<li><a href='$this->link'>$this->text</a>";
 		if ($this->subMenuItems != NULL){
@@ -39,7 +43,7 @@ class MenuItem {
 			$output .= "\n<ul>\n";
 
 			foreach ($this->subMenuItems as $item){
-				$output .= $item->getItemHtml();
+				$output .= $item->getItemHTML();
 			}
 
 			$output .= "</ul>\n";
@@ -49,7 +53,7 @@ class MenuItem {
 
 		return $output;
 
-	}//getItemHtml
+	}//getItemHTML
 
 
 
