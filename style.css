@@ -154,6 +154,11 @@ div#content h3 {
 	margin-bottom:5px;
 }
 
+div#content > p > img {
+	border:1px solid silver;
+	padding:3px;
+}
+
 div#content div#topBanner {
 	background-color:orange;
 	height:200px;
