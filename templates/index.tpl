@@ -38,6 +38,7 @@
 	<div id="content">
 
 		{getFromContent get="content"}
+		<p></p>
 
 	</div>
 
