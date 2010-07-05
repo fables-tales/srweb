@@ -17,7 +17,7 @@
 <div id="pageWrapper">
 
 	<div id="header">
-		<a href=""><img src="images/template/logo.png" alt="Student Robotics Logo" /></a>
+		<a href=""><img src="images/template/website_logo.png" alt="Student Robotics Logo" /></a>
 
 		<form action="" method="get">
 			<input type="text" name="q" />

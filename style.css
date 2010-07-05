@@ -81,6 +81,8 @@ div#header {
 
 div#header > a {
 	float:left;
+	margin-top:20px;
+	margin-left:20px;
 }
 
 div#header > form {
