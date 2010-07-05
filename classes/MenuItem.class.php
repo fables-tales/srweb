@@ -31,7 +31,7 @@ class MenuItem {
 	 * recursively, with MenuItems represented with ULs in 
 	 * the LIs of ULs.
 	 */
-	function getItemHtml(){
+	function getItemHTML(){
 
 		$output = "<li><a href='$this->link'>$this->text</a>";
 		if ($this->subMenuItems != NULL){
@@ -39,7 +39,7 @@ class MenuItem {
 			$output .= "\n<ul>\n";
 
 			foreach ($this->subMenuItems as $item){
-				$output .= $item->getItemHtml();
+				$output .= $item->getItemHTML();
 			}
 
 			$output .= "</ul>\n";
@@ -49,7 +49,7 @@ class MenuItem {
 
 		return $output;
 
-	}//getItemHtml
+	}//getItemHTML
 
 
 

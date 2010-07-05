@@ -4,7 +4,7 @@
  * MenuItem.class.php as this instantiated class's root is a
  * MenuItem. This class is used by the smarty plugin 'makemenu',
  * found under 'plugins/' as 'function.makemenu.php', which
- * calls its 'getMenuHtml()' method to get the menu.
+ * calls its 'getMenuHTML()' method to get the menu.
  */
 class Menu {
 
@@ -23,14 +23,14 @@ class Menu {
 	 * Returns a string containing the un-ordered list of the menu.
 	 * Ensure menu is populated first (addToHierachy(...)).
 	 */
-	function getMenuHtml(){
+	function getMenuHTML(){
 
 		$output = "<ul>\n";
 
 		//starting with the root, traverse the tree, concatenating the output.
 		foreach ($this->root->subMenuItems as $item){
 
-			$output .= $item->getItemHtml($this->root_uri);
+			$output .= $item->getItemHTML($this->root_uri);
 
 		}//foreach
 
@@ -38,7 +38,7 @@ class Menu {
 
 		return $output;
 		
-	}//getMenuHtml
+	}//getMenuHTML
 
 
 
