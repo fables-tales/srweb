@@ -1236,7 +1236,7 @@ class Markdown_Parser {
 					$$tag = ''; # $$tag stands for $em or $strong
 				}
 				$tree_char_em = false;
-			} else if ($token_len == 3) {
+			} elseif ($token_len == 3) {
 				if ($em) {
 					# Reached closing marker for both em and strong.
 					# Closing strong marker:
@@ -1258,7 +1258,7 @@ class Markdown_Parser {
 					array_unshift($text_stack, '');
 					$tree_char_em = true;
 				}
-			} else if ($token_len == 2) {
+			} elseif ($token_len == 2) {
 				if ($strong) {
 					# Unwind any dangling emphasis marker:
 					if (strlen($token_stack[0]) == 1) {
@@ -1507,7 +1507,7 @@ class Markdown_Parser {
 				# roughly 10% raw, 45% hex, 45% dec
 				# '@' *must* be encoded. I insist.
 				if ($r > 90 && $char != '@') /* do nothing */;
-				else if ($r < 45) $chars[$key] = '&#x'.dechex($ord).';';
+				elseif ($r < 45) $chars[$key] = '&#x'.dechex($ord).';';
 				else              $chars[$key] = '&#'.$ord.';';
 			}
 		}
@@ -1949,7 +1949,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 			#
 			# Check for: Indented code block.
 			#
-			else if ($tag{0} == "\n" || $tag{0} == " ") {
+			elseif ($tag{0} == "\n" || $tag{0} == " ") {
 				# Indented code block: pass it unchanged, will be handled 
 				# later.
 				$parsed .= $tag;
@@ -1957,7 +1957,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 			#
 			# Check for: Fenced code block marker.
 			#
-			else if ($tag{0} == "~") {
+			elseif ($tag{0} == "~") {
 				# Fenced code block marker: find matching end marker.
 				$tag_re = preg_quote(trim($tag));
 				if (preg_match('{^(?>.*\n)+?'.$tag_re.' *\n}', $text, 
@@ -1977,7 +1977,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 			#            Opening Context Block tag (like ins and del) 
 			#               used as a block tag (tag is alone on it's line).
 			#
-			else if (preg_match('{^<(?:'.$this->block_tags_re.')\b}', $tag) ||
+			elseif (preg_match('{^<(?:'.$this->block_tags_re.')\b}', $tag) ||
 				(	preg_match('{^<(?:'.$this->context_block_tags_re.')\b}', $tag) &&
 					preg_match($newline_before_re, $parsed) &&
 					preg_match($newline_after_re, $text)	)
@@ -1994,7 +1994,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 			# Check for: Clean tag (like script, math)
 			#            HTML Comments, processing instructions.
 			#
-			else if (preg_match('{^<(?:'.$this->clean_tags_re.')\b}', $tag) ||
+			elseif (preg_match('{^<(?:'.$this->clean_tags_re.')\b}', $tag) ||
 				$tag{1} == '!' || $tag{1} == '?')
 			{
 				# Need to parse tag and following text using the HTML parser.
@@ -2007,7 +2007,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 			#
 			# Check for: Tag with same name as enclosing tag.
 			#
-			else if ($enclosing_tag_re !== '' &&
+			elseif ($enclosing_tag_re !== '' &&
 				# Same name as enclosing tag.
 				preg_match('{^</?(?:'.$enclosing_tag_re.')\b}', $tag))
 			{
@@ -2015,7 +2015,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 				# Increase/decrease nested tag count.
 				#
 				if ($tag{1} == '/')						$depth--;
-				else if ($tag{strlen($tag)-2} != '/')	$depth++;
+				elseif ($tag{strlen($tag)-2} != '/')	$depth++;
 
 				if ($depth < 0) {
 					#
@@ -2143,7 +2143,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 				#
 				if (preg_match('{^</?'.$base_tag_name_re.'\b}', $tag)) {
 					if ($tag{1} == '/')						$depth--;
-					else if ($tag{strlen($tag)-2} != '/')	$depth++;
+					elseif ($tag{strlen($tag)-2} != '/')	$depth++;
 				}
 				
 				#
@@ -2365,8 +2365,8 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 		$separators	= preg_split('/ *[|] */', $underline);
 		foreach ($separators as $n => $s) {
 			if (preg_match('/^ *-+: *$/', $s))		$attr[$n] = ' align="right"';
-			else if (preg_match('/^ *:-+: *$/', $s))$attr[$n] = ' align="center"';
-			else if (preg_match('/^ *:-+ *$/', $s))	$attr[$n] = ' align="left"';
+			elseif (preg_match('/^ *:-+: *$/', $s))$attr[$n] = ' align="center"';
+			elseif (preg_match('/^ *:-+ *$/', $s))	$attr[$n] = ' align="left"';
 			else									$attr[$n] = '';
 		}
 		

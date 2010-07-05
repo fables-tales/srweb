@@ -2,6 +2,23 @@
 
 class Content {
 
+	private $desiredFields = array(
+		'TITLE',
+		'DESCRIPTION',
+		'KEYWORDS',
+		'CONTENT_TYPE',
+		'REDIRECT'
+	);
+	private $content = '';
+	private $parsedContent = '';
+	private $contentHasBeenParsed = false;
+	private $meta = array();
+	private static $parsers = array();
+
+	public static function registerParser($type, $callback){
+		self::$parsers[$type] = $callback;
+	}
+
 	/*
 	 * Constructor. Takes a filename as an argument, grabs the meta 
 	 * fields from it, and stores the remaining content (discarding 
@@ -10,35 +27,14 @@ class Content {
 	 */
 	function __construct($filename){
 
-		$this->DESIRED_FIELDS = array(
-			'TITLE',
-			'DESCRIPTION',
-			'KEYWORDS',
-			'CONTENT_TYPE',
-			'REDIRECT'
-		);
-
-		//add to this array to parse more types
-		$this->CONTENT_TYPES = array(
-			'MD', 'MARKDOWN'
-		);
-
-		$this->content = '';
-		$this->parsedContent = '';
-		$this->contentHasBeenParsed = false;
-
-		$this->meta = array();	
-
 		//open and read file
 		$fh = fopen($filename, 'r') or die("Can't open file: $filename");
-		
-		$end_of_comments = false;
 
 		while (!feof($fh)){
 
 			$line = fgets($fh);//read line
 
-			if ($this->isComment($line) && ! $end_of_comments){
+			if (self::isComment($line) && !$end_of_comments){
 
 				$this->getField($line);
 				continue; //get next line
@@ -47,10 +43,8 @@ class Content {
 
 			//if we've gotten this far, then there's been a gap in the
 			//commented header section -- assuming actual content now.
-			$end_of_comments = true;
-
 			//store content
-			$this->content .= $line;
+			$this->content = stream_get_contents($fh);
 			
 		}//while
 
@@ -79,7 +73,7 @@ class Content {
 			$matches[2] = trim($matches[2]);
 
 			//if we want the field, store it
-			if (in_array($matches[1], $this->DESIRED_FIELDS))
+			if (in_array($matches[1], $this->desiredFields))
 				$this->meta[$matches[1]] = $matches[2];
 
 			return true;
@@ -127,28 +121,17 @@ class Content {
 	 */
 	function getParsedContent(){
 
-		if (! $this->contentHasBeenParsed){//it needs parsing
+		if (!$this->contentHasBeenParsed){//it needs parsing
 
 			//uppercase content type
 			$upper_content = strtoupper($this->meta['CONTENT_TYPE']);
 
 			//if it's a type that need parsing
-			if (in_array($upper_content, $this->CONTENT_TYPES)){
+			if (isset(self::$parsers[$upper_content])){
 
-				//if a method to parse it exists (see below), call that method.
-				if (method_exists($this, '_parse_' . $upper_content)){
-
-					//call method of the form '_parse_{CONTENT_TYPE}' where 
-					//'{CONTENT_TYPE}' is the upercase string of the type.
-					call_user_func_array( array($this, '_parse_' . $upper_content), array());
-
-				} else {
-
-					//content can't be parsed
-					$this->parsedContent = $this->content;
-					$this->contentHasBeenParsed = true;
-
-				}//if-else
+				$callback = self::$parsers[$upper_content];
+				$this->parsedContent = $callback($this->content);
+				$this->contentHasBeenParsed = true;
 
 			} else {
 
@@ -165,45 +148,15 @@ class Content {
 	}//getContent
 
 
-
-
-
-
-	/*
-	 * Parsing "plugins" take the following form:
-	 * 
-	 * 	private function _parse_{CONTENT_TYPE}(){...}
-	 * 
-	 * where '{CONTENT_TYPE}' is the type listed in $CONTENT_TYPES.
-	 * They will be called automatically if the content type in
-	 * question is loaded. No parameters are allowed.
-	 */
-
-	/*
-	 * Parsing for MarkDown, using markdown.php from:
-	 * http://michelf.com/projects/php-markdown/
-	 */
-	private function _parse_MD(){
-
-		require_once('markdown.php');
-		$this->parsedContent = Markdown($this->content);
-		$this->contentHasBeenParsed = true;
-
-	}//_parse_MD
-
-
-	/*
-	 * Uses the _parse_MD function to parse. This is just another
-	 * way of using MarkDown. (i.e. users can write MD/md/MARKDOWN/
-	 * markdown/{any mixed case variants}). 
-	 */
-	private function _parse_MARKDOWN(){
-
-		$this->_parse_MD();
-
-	}//_parse_MARKDOWN
-
-
 }//class
+
+function _parser_markdown($rawData)
+{
+	require_once('markdown.php');
+	return Markdown($rawData);
+}
+
+Content::registerParser('MARKDOWN', '_parser_markdown');
+Content::registerParser('MD', '_parser_markdown');
 
 ?>

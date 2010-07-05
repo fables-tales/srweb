@@ -36,7 +36,7 @@ if (isset($_GET['page']))
 
 		$page = $_GET['page'];
 
-	} else if (pageIsAllowed($_GET['page'].'/')){
+	} elseif (pageIsAllowed($_GET['page'].'/')){
 
 		//a file of that name doesn't exist, but a dir does.
 		$page = $_GET['page'].'/';
