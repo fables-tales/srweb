@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 //get user configuration
 require('config.inc.php');
 
@@ -67,6 +69,11 @@ if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page)){
 	$content = new Content(CONTENT_DIR . '/404');
 }
 
+$content->getParsedContent();
+if ($content->getMeta('REDIRECT') != ""){
+	Header("HTTP/1.1 302 Found");
+	Header("Location: " . $content->getMeta('REDIRECT'));
+}
 
 //get ready to display the template
 $smarty->assign('menu', constructMenuHierachy());
@@ -78,7 +85,7 @@ $smarty->assign('root_uri', ROOT_URI);
 //display template
 $smarty->display('index.tpl');
 
-
+ob_end_flush();
 
 
 
