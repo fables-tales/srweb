@@ -14,7 +14,8 @@ class Content {
 			'TITLE',
 			'DESCRIPTION',
 			'KEYWORDS',
-			'CONTENT_TYPE'
+			'CONTENT_TYPE',
+			'REDIRECT'
 		);
 
 		//add to this array to parse more types
@@ -68,7 +69,7 @@ class Content {
 	private function getField($string){
 
 		$string = trim($string);
-		$pattern = '/[[:space:]]*\/\/(.*):(.*)/';
+		$pattern = '/[[:space:]]*\/\/([^:]*):(.*)/';
 		preg_match($pattern, $string, $matches);
 
 		if ($matches){
@@ -108,7 +109,10 @@ class Content {
 	 */
 	function getMeta($field){
 
-		return $this->meta[$field];
+		if (isset($this->meta[$field]))
+			return $this->meta[$field];
+		else
+			return "";
 
 	}//getMeta
 
