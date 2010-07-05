@@ -154,9 +154,23 @@ div#content h3 {
 	margin-bottom:5px;
 }
 
+div#content > p {
+	clear:both;
+}
+
 div#content > p > img {
 	border:1px solid silver;
 	padding:3px;
+}
+
+div#content > p > img.left {
+	float:left;
+	margin-right:10px;
+}
+
+div#content > p > img.right {
+	float:right;
+	margin-left:10px;
 }
 
 div#content div#topBanner {
