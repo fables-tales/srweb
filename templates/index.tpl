@@ -29,7 +29,7 @@
 			<li><a href="{$root_uri}ide">IDE</a></li>
 			<li><a href="{$root_uri}schools/">Schools</a></li>
 			<li><a href="{$root_uri}sponsors/">Sponsors</a></li>
-			<li><a href="{$root_uri}about/gettimginvolved">Get Involved</a></li>
+			<li><a href="{$root_uri}about/gettinginvolved">Get Involved</a></li>
 			<li><a href="{$root_uri}about">About Us</a></li>
 		</ul>
 	</div>
