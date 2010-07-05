@@ -4,7 +4,7 @@
 //CONTENT_TYPE:	HTML
 
 <div id="topBanner">
-	<img src="https://studentrobotics.org/~rbarlow/images/srobo_website_robot.png" alt="" />
+	<img src="images/content/srobo_website_robot.png" alt="Image of Robot" />
 	
 	<h1>Welcome to Student Robotics</h1>
 	
