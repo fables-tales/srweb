@@ -128,8 +128,8 @@ function getAllowedPages($directory) {
 					//get the listing for the directory as well
 					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));
 
-					//get the bit of path after the content dir	
-					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/'; 
+					//get the bit of path after the content dir
+					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
 					preg_match($pattern, $directory. "/" . $file, $matches);
 					$array_items[] = $matches[1] . '/';
 
