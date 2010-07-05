@@ -52,7 +52,7 @@ class Menu {
 	function addToHierachy($path, $root_uri, $text=""){
 
 		//get all parts of the path (e.g. 'dir/dir2/file' => array(dir, dir2, file))
-		preg_match_all( '/([a-zA-Z0-9\-\.]+)\/?/' , $path, $matches);
+		preg_match_all( '/([a-zA-Z0-9\-\.]+)\/?/', $path, $matches);
 		$matches = $matches[1];
 
 		//start at the root
