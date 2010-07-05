@@ -29,8 +29,6 @@ class Content {
 
 		//open and read file
 		$fh = fopen($filename, 'r') or die("Can't open file: $filename");
-		
-		$end_of_comments = false;
 
 		while (!feof($fh)){
 
@@ -45,10 +43,8 @@ class Content {
 
 			//if we've gotten this far, then there's been a gap in the
 			//commented header section -- assuming actual content now.
-			$end_of_comments = true;
-
 			//store content
-			$this->content .= $line;
+			$this->content = stream_get_contents($fh);
 			
 		}//while
 
