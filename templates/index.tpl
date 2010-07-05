@@ -25,12 +25,12 @@
 		</form>
 
 		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">IDE</a></li>
-			<li><a href="">Schools</a></li>
-			<li><a href="">Sponsors</a></li>
-			<li><a href="">Get Involved</a></li>
-			<li><a href="">About Us</a></li>
+			<li><a href="{$root_uri}home">Home</a></li>
+			<li><a href="{$root_uri}ide">IDE</a></li>
+			<li><a href="{$root_uri}schools/">Schools</a></li>
+			<li><a href="{$root_uri}sponsors/">Sponsors</a></li>
+			<li><a href="{$root_uri}about/gettimginvolved">Get Involved</a></li>
+			<li><a href="{$root_uri}about">About Us</a></li>
 		</ul>
 	</div>
 
