@@ -134,6 +134,26 @@ div#content{
 	overflow:visible;
 }
 
+div#content h1, h2, h3, h4, h5, h6 {
+	color:#0d1f61;
+	line-height:1.3em;
+}
+
+div#content h1 {
+	font-size:26px;
+	margin-bottom:10px;
+}
+
+div#content h2 {
+	font-size:20px;
+	margin-bottom:5px;
+}
+
+div#content h3 {
+	font-size:18px;
+	margin-bottom:5px;
+}
+
 div#content div#topBanner {
 	background-color:orange;
 	height:200px;
