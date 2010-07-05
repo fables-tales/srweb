@@ -109,7 +109,10 @@ class Content {
 	 */
 	function getMeta($field){
 
-		return $this->meta[$field];
+		if (isset($this->meta[$field]))
+			return $this->meta[$field];
+		else
+			return "";
 
 	}//getMeta
 
