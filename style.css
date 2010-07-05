@@ -137,6 +137,7 @@ div#content{
 div#content h1, h2, h3, h4, h5, h6 {
 	color:#0d1f61;
 	line-height:1.3em;
+	clear:both;
 }
 
 div#content > h1 {
@@ -154,11 +155,12 @@ div#content h2 {
 div#content h3 {
 	font-size:18px;
 	margin-bottom:5px;
+	padding-top:20px;
 }
 
 div#content > p {
 	clear:both;
-	padding-top:10px;
+	padding-top:5px;
 }
 
 div#content > p > img {
@@ -200,6 +202,7 @@ div#content div#topBanner h1 {
 	float:right;
 	margin-right:50px;
 	margin-top:20px;
+	clear:none;
 }
 
 div#content div#topBanner p {
