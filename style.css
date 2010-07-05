@@ -156,6 +156,7 @@ div#content h3 {
 
 div#content > p {
 	clear:both;
+	padding-top:10px;
 }
 
 div#content > p > img {
