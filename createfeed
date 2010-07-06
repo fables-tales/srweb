@@ -26,6 +26,7 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 		$output  = "<?xml version='1.0'?><rss version='2.0'><channel>";
 		$output .= "<title>Student Robotics Latest News</title>";
 		$output .= "<link>" . $ROOT_URI . "news/</link>";
+		$output .= "<lastBuildDate>" . date(DATE_RSS) . "</lastBuildDate>";
 		$output .= "<description>All the latest news from Student Robotics</description>";
 
 		foreach ($newsItems as $newsItem){
@@ -34,7 +35,9 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 
 			$output .= "<title>" . $newsItem->getMeta('TITLE') . "</title>";
 			$output .= "<link>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</link>";
+			$output .= "<guid>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</guid>";
 			$output .= "<description>" . $newsItem->getMeta('DESCRIPTION') . "</description>";
+			$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getMeta('PUB_DATE'))) . "</pubDate>";
 
 			$output .= "</item>";
 
