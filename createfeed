@@ -3,6 +3,7 @@
 
 require('config.inc.php');
 require('classes/Content.class.php');
+$ROOT_URI = 'https://www.studentrobotics.org/~ckirkham/srweb/';
 
 $newsItems = array();
 
@@ -19,6 +20,29 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 	}//while
 
 	closedir($d);
+
+	if (count($newsItems) > 0){
+
+		$output  = "<?xml version='1.0'?><rss version='2.0'><channel>";
+		$output .= "<title>Student Robotics Latest News</title>";
+		$output .= "<link>" . $ROOT_URI . "news/</link>";
+		$output .= "<description>All the latest news from Student Robotics</description>";
+
+		foreach ($newsItems as $newsItem){
+
+			$output .= "<item>";
+
+			$output .= "<title>" . $newsItem->getMeta('TITLE') . "</title>";
+			$output .= "<link>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</link>";
+			$output .= "<description>" . $newsItem->getMeta('DESCRIPTION') . "</description>";
+
+			$output .= "</item>";
+
+		}//foreach
+
+		$output .= "</channel></rss>";
+
+	}//if
 
 } else {
 
