@@ -29,6 +29,8 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 		$output .= "<lastBuildDate>" . date(DATE_RSS) . "</lastBuildDate>";
 		$output .= "<description>All the latest news from Student Robotics</description>";
 
+		usort($newsItems, "dateStrCmp");
+
 		foreach ($newsItems as $newsItem){
 
 			$output .= "<item>";
@@ -37,7 +39,7 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 			$output .= "<link>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</link>";
 			$output .= "<guid>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</guid>";
 			$output .= "<description>" . $newsItem->getMeta('DESCRIPTION') . "</description>";
-			$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getMeta('PUB_DATE'))) . "</pubDate>";
+			$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getPubDate())) . "</pubDate>";
 
 			$output .= "</item>";
 
@@ -65,6 +67,16 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 	echo "ERROR opening directory 'content/news/ '\n";
 
 }
+
+
+function dateStrCmp($a, $b){
+
+	if (strtotime($a->getPubDate()) == strtotime($b->getPubDate()))
+		return 0;
+
+	return strtotime($a->getPubDate()) > strtotime($b->getPubDate()) ? -1 : 1;
+
+}//dateStrCmp
 
 
 ?>
