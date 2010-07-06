@@ -153,6 +153,26 @@ class Content {
 	}//getContent
 
 
+
+	/*
+	 * Returns the date specified in the file
+	 */
+	function getPubDate(){
+
+		if ($this->getMeta('PUB_DATE') === ""){
+			$f = fopen($this->filename, 'w');
+			$date = date(DATE_RSS);
+			fwrite($f, "//PUB_DATE: " . $date);
+			fwrite($f, $this->content);
+			fclose($f);
+			return $date;
+		}
+
+		return $this->getMeta('PUB_DATE');
+
+	}//getPubDate
+
+
 }//class
 
 function _parser_markdown($rawData)
