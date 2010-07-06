@@ -4,9 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>{getFromContent get="title"} | Student Robotics</title>
+	<title>Welcome to Student Robotics | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="keywords" content="{getFromContent get='keywords'}" />
+	<meta name="keywords" content="student, robotics, robot, competition, southampton" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.rss" />
 	<base href="{$root_uri}" />
@@ -142,10 +142,6 @@
 
 		<p></p>
 
-	</div>
-
-	<div id="original">
-		Original: <a href="{$root_uri}content/{$page}">{$page}</a>
 	</div>
 
 
