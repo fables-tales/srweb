@@ -35,10 +35,10 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 
 			$output .= "<item>";
 
-			$output .= "<title>" . $newsItem->getMeta('TITLE') . "</title>";
+			$output .= "<title><![CDATA[" . $newsItem->getMeta('TITLE') . "]]></title>";
 			$output .= "<link>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</link>";
 			$output .= "<guid>" . $ROOT_URI . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</guid>";
-			$output .= "<description>" . $newsItem->getMeta('DESCRIPTION') . "</description>";
+			$output .= "<description><![CDATA[" . $newsItem->getMeta('DESCRIPTION') . "]]></description>";
 			$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getPubDate())) . "</pubDate>";
 
 			$output .= "</item>";
