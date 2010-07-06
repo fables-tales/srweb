@@ -11,7 +11,7 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 
 	while (false !== ($file = readdir($d))){
 
-		if (($file != '.') && ($file != '..')){
+		if (substr($file, 0, 1) != "."){
 
 			$newsItems[] = new Content(CONTENT_DIR . '/news/' . $file);
 
