@@ -1,0 +1,30 @@
+#!/usr/bin/php
+<?php
+
+require('config.inc.php');
+require('classes/Content.class.php');
+
+$newsItems = array();
+
+if ($d = opendir(CONTENT_DIR . '/news')){
+
+	while (false !== ($file = readdir($d))){
+
+		if (($file != '.') && ($file != '..')){
+
+			$newsItems[] = new Content(CONTENT_DIR . '/news/' . $file);
+
+		}//if
+
+	}//while
+
+	closedir($d);
+
+} else {
+
+	echo 'ERROR opening directory';
+
+}
+
+
+?>
