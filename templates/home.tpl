@@ -39,108 +39,108 @@
 	<div id="content">
 
 		<div id="topBanner">
-	<img src="images/content/srobo_website_robot.png" alt="Image of Robot" />
+			<img src="images/content/srobo_website_robot.png" alt="Image of Robot" />
 	
-	<h1>Welcome to Student Robotics</h1>
+			<h1>Welcome to Student Robotics</h1>
 	
-	<p>Student Robotics is an exciting competition between sixth form schools 
-	and colleges in the Southampton area to build fully autonomous robots. Led 
-	by a group of students from the University of Southampton, the teams in the 
-	competition will have to design, build and test their robots ready to 
-	compete against other local teams.</p>
-</div>
+			<p>Student Robotics is an exciting competition between sixth form schools 
+			and colleges in the Southampton area to build fully autonomous robots. Led 
+			by a group of students from the University of Southampton, the teams in the 
+			competition will have to design, build and test their robots ready to 
+			compete against other local teams.</p>
+		</div>
 
-<div id="latestNews">
+		<div id="latestNews">
 
-	<h2>SR 2011 Applications now open</h2>
+			<h2>SR 2011 Applications now open</h2>
 
-	<p>
-		Applications for the 2011 Student Robotics competition are now
-		open. 
+			<p>	Applications for the 2011 Student Robotics competition are now
+			open.
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+			diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+			aliquam erat volutpat.
+			<a href="">Read More</a>
+			</p>
 
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
-		diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-		aliquam erat volutpat.
+		</div>
 
-		<a href="">Read More</a>
-	</p>
+		<div id="expMenuAndBoxWrapper">
 
-</div>
+			<div id="expandedMenu">
 
-<div id="expMenuAndBoxWrapper">
+				<h3>Take a Look Around</h3>
 
-<div id="expandedMenu">
+				<ul>
+				<li><a href="http://zarquon/%7Echris/srweb/home">Home</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/schools">Schools &amp; Colleges</a>
+				<ul>
+				<li><a href="http://zarquon/%7Echris/srweb/schools/competitioninfo">Competition Info</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/schools/joining">Joining</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/schools/docs">Documentation</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/schools/kit">Kit</a></li>
+				</ul>
+				</li>
+				<li><a href="http://zarquon/%7Echris/srweb/uni">Uni Students</a>
+				<ul>
+				<li><a href="http://zarquon/%7Echris/srweb/uni/gettinginvolved">Getting Involved</a></li>
+				</ul>
+				</li>
+				<li><a href="http://zarquon/%7Echris/srweb/sponsors">Sponsors</a>
+				<ul>
+				<li><a href="http://zarquon/%7Echris/srweb/sponsors/whysponsor">Why Sponsor?</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/sponsors/currentsponsors">Current Sponsors</a></li>
+				</ul>
+				</li>
+				<li><a href="http://zarquon/%7Echris/srweb/about">About Us</a>
+				<ul>
+				<li><a href="http://zarquon/%7Echris/srweb/about/team">The Team</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/about/media">Media</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/about/mission">Mission Statement</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/about/publicdocs">Public Documents</a></li>
+				<li><a href="http://zarquon/%7Echris/srweb/about/contactus">Contact Us</a></li>
+				</ul>
+				</li>
+				</ul>
 
-<h3>Take a Look Around</h3>
+			</div>
 
-<ul>
-<li><a href="http://zarquon/%7Echris/srweb/home">Home</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/schools">Schools &amp; Colleges</a>
-<ul>
-<li><a href="http://zarquon/%7Echris/srweb/schools/competitioninfo">Competition Info</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/schools/joining">Joining</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/schools/docs">Documentation</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/schools/kit">Kit</a></li>
-</ul>
-</li>
-<li><a href="http://zarquon/%7Echris/srweb/uni">Uni Students</a>
-<ul>
-<li><a href="http://zarquon/%7Echris/srweb/uni/gettinginvolved">Getting Involved</a></li>
-</ul>
-</li>
-<li><a href="http://zarquon/%7Echris/srweb/sponsors">Sponsors</a>
-<ul>
-<li><a href="http://zarquon/%7Echris/srweb/sponsors/whysponsor">Why Sponsor?</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/sponsors/currentsponsors">Current Sponsors</a></li>
-</ul>
-</li>
-<li><a href="http://zarquon/%7Echris/srweb/about">About Us</a>
-<ul>
-<li><a href="http://zarquon/%7Echris/srweb/about/team">The Team</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/about/media">Media</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/about/mission">Mission Statement</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/about/publicdocs">Public Documents</a></li>
-<li><a href="http://zarquon/%7Echris/srweb/about/contactus">Contact Us</a></li>
-</ul>
-</li>
-</ul>
+			<div id="boxWrapper">
 
-</div>
+				<div class="box">
+					<h3>The IDE</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+					tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					<img src="" alt="" />
+				</div>
 
-<div id="boxWrapper">
+				<div class="box">
+					<h3>The Kit</h3>
+					<p>
+						<img width="100" height="100" src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/power.png" alt="old powerboard" />
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+						euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</p>
+				</div>
 
-	<div class="box">
-		<h3>The IDE</h3>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-		<img src="" alt="" />
-	</div>
+				<div class="box">
+					<h3>Want to Get Involved?</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					<img src="" alt="" />
+				</div>
 
-	<div class="box">
-                <h3>The Kit</h3>
-                <p>
-					<img width="100" height="100" src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/power.png" alt="old powerboard" />
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </p>
-        </div>
+				<div class="box">
+					<h3>Our Sponsors</h3>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					<img src="" alt="" />
+				</div>
 
-	<div class="box">
-                <h3>Want to Get Involved?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                <img src="" alt="" />
-        </div>
+			</div>
 
-	<div class="box">
-                <h3>Our Sponsors</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                <img src="" alt="" />
-        </div>
+		</div>
 
-
-
-</div>
-
-</div>		
-<p></p>
+		<p></p>
 
 	</div>
 
