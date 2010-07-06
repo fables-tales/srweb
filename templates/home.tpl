@@ -70,37 +70,7 @@
 
 				<h3>Take a Look Around</h3>
 
-				<ul>
-				<li><a href="http://zarquon/%7Echris/srweb/home">Home</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/schools">Schools &amp; Colleges</a>
-				<ul>
-				<li><a href="http://zarquon/%7Echris/srweb/schools/competitioninfo">Competition Info</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/schools/joining">Joining</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/schools/docs">Documentation</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/schools/kit">Kit</a></li>
-				</ul>
-				</li>
-				<li><a href="http://zarquon/%7Echris/srweb/uni">Uni Students</a>
-				<ul>
-				<li><a href="http://zarquon/%7Echris/srweb/uni/gettinginvolved">Getting Involved</a></li>
-				</ul>
-				</li>
-				<li><a href="http://zarquon/%7Echris/srweb/sponsors">Sponsors</a>
-				<ul>
-				<li><a href="http://zarquon/%7Echris/srweb/sponsors/whysponsor">Why Sponsor?</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/sponsors/currentsponsors">Current Sponsors</a></li>
-				</ul>
-				</li>
-				<li><a href="http://zarquon/%7Echris/srweb/about">About Us</a>
-				<ul>
-				<li><a href="http://zarquon/%7Echris/srweb/about/team">The Team</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/about/media">Media</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/about/mission">Mission Statement</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/about/publicdocs">Public Documents</a></li>
-				<li><a href="http://zarquon/%7Echris/srweb/about/contactus">Contact Us</a></li>
-				</ul>
-				</li>
-				</ul>
+				{makemenu menu=$side_menu}
 
 			</div>
 
