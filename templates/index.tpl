@@ -48,7 +48,7 @@
 
 
 	<div id="footer">
-		<span class="rss">RSS</span>
+		<span class="rss"><a href="{$root_uri}feed.rss"><img src="{$root_uri}images/template/feed.png" alt="RSS" title="SR RSS Latest News Feed" /></a></span>
 		<span class="copyright">&copy; Student Robotics</span>
 	</div>
 
