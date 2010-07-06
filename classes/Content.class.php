@@ -39,7 +39,7 @@ class Content {
 
 			$line = fgets($fh);//read line
 
-			if (self::isComment($line) && !$end_of_comments){
+			if (self::isComment($line)){
 
 				$this->getField($line);
 				continue; //get next line
