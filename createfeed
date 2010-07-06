@@ -42,11 +42,24 @@ if ($d = opendir(CONTENT_DIR . '/news')){
 
 		$output .= "</channel></rss>";
 
-	}//if
+		if (!file_exists('feed.rss'))
+			touch('feed.rss');
+
+		$f = fopen('feed.rss', 'w');
+		fwrite($f, $output);
+		fclose($f);
+
+		echo "File 'feed.rss' written\n";
+
+	} else {
+
+		echo "Nothing to write\n";
+
+	}
 
 } else {
 
-	echo 'ERROR opening directory';
+	echo "ERROR opening directory 'content/news/ '\n";
 
 }
 
