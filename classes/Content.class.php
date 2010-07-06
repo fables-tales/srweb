@@ -162,8 +162,15 @@ class Content {
 		if ($this->getMeta('PUB_DATE') === ""){
 			$f = fopen($this->filename, 'w');
 			$date = date(DATE_RSS);
-			fwrite($f, "//PUB_DATE: " . $date);
-			fwrite($f, $this->content);
+
+			foreach (array_keys($this->meta) as $k){
+				$s = "//$k: " . $this->meta[$k] . "\n";
+				fwrite($f, $s);
+			}
+
+			fwrite($f, "//PUB_DATE: " . $date . "\n");
+
+			fwrite($f, "\n" . $this->content);
 			fclose($f);
 			return $date;
 		}
