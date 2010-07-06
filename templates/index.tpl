@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="{getFromContent get='keywords'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
+	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.rss" />
 	<base href="{$root_uri}" />
 
 </head>
