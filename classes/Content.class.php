@@ -7,7 +7,8 @@ class Content {
 		'DESCRIPTION',
 		'KEYWORDS',
 		'CONTENT_TYPE',
-		'REDIRECT'
+		'REDIRECT',
+		'PUB_DATE'
 	);
 
 	public $filename = '';
