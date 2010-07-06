@@ -83,7 +83,11 @@ $smarty->assign('content', $content);
 $smarty->assign('root_uri', ROOT_URI);
 
 //display template
-$smarty->display('index.tpl');
+if ($page == "home"){
+	$smarty->display('home.tpl');
+} else {
+	$smarty->display('content.tpl');
+}
 
 ob_end_flush();
 
