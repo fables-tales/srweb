@@ -18,7 +18,7 @@
 <div id="pageWrapper">
 
 	<div id="header">
-		<a href=""><img src="{$root_uri}images/template/website_logo.png" alt="Student Robotics Logo" /></a>
+		<a href="{$root_uri}"><img src="{$root_uri}images/template/website_logo.png" alt="Student Robotics Logo" /></a>
 
 		<form action="" method="get">
 			<input type="text" name="q" />
