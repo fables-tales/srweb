@@ -76,7 +76,7 @@ if ($content->getMeta('REDIRECT') != ""){
 }
 
 //get ready to display the template
-$smarty->assign('menu', constructMenuHierachy());
+$smarty->assign('side_menu', constructMenuHierachy());
 $smarty->assign('page', $page);
 $smarty->assign('content_dir', CONTENT_DIR);
 $smarty->assign('content', $content);
