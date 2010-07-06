@@ -9,6 +9,8 @@ class Content {
 		'CONTENT_TYPE',
 		'REDIRECT'
 	);
+
+	public $filename = '';
 	private $content = '';
 	private $parsedContent = '';
 	private $contentHasBeenParsed = false;
@@ -26,6 +28,8 @@ class Content {
 	 * with '//').
 	 */
 	function __construct($filename){
+
+		$this->filename = $filename;
 
 		//open and read file
 		$fh = fopen($filename, 'r') or die("Can't open file: $filename");
