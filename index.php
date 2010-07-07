@@ -65,12 +65,37 @@ if (isset($_GET['page']) && ($_GET['page'] != 'home')) {
 
 
 
+
+
 //append 'index' if there is a trailing slash
 if (substr($page, -1) == '/') $page .= 'index';
 
-if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page))
+if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page)){
+
+	if (function_exists('apache_request_headers')){
+
+		$headers = apache_request_headers();
+
+		if (isset($headers['If-Modified-Since'])
+			&& (strtotime($headers['If-Modified-Since']) == filemtime(CONTENT_DIR . '/' . $page))){
+
+			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+				filemtime(CONTENT_DIR . '/' . $page)).' GMT', true, 304);
+
+			Header('Connection: close');
+
+		} else {
+
+			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+				filemtime(CONTENT_DIR . '/' . $page)).' GMT', true, 200);
+
+		}//if else isset if-mod-since
+
+	}//apache headers exists
+
 	$content = new Content(CONTENT_DIR . '/' . $page);
-else
+
+} else
 	$content = new Content(CONTENT_DIR . '/404');
 
 
