@@ -8,7 +8,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="{getFromContent get='keywords'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
-	<base href="{$root_uri}content/" />
+	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.rss" />
+	<base href="{$root_uri}" />
 
 </head>
 
@@ -17,18 +18,28 @@
 <div id="pageWrapper">
 
 	<div id="header">
-		header
-	</div>
+		<a href="{$root_uri}"><img src="{$root_uri}images/template/website_logo.png" alt="Student Robotics Logo" /></a>
 
+		<form action="" method="get">
+			<input type="text" name="q" />
+			<input type="submit" value="" />
+		</form>
 
-	<div id="navigation">
-		{makemenu menu=$menu}
+		<ul>
+			<li><a href="{$root_uri}home">Home</a></li>
+			<li><a href="{$root_uri}ide">IDE</a></li>
+			<li><a href="{$root_uri}schools/">Schools</a></li>
+			<li><a href="{$root_uri}sponsors/">Sponsors</a></li>
+			<li><a href="{$root_uri}about/gettinginvolved">Get Involved</a></li>
+			<li><a href="{$root_uri}about">About Us</a></li>
+		</ul>
 	</div>
 
 
 	<div id="content">
 
 		{getFromContent get="content"}
+		<p></p>
 
 	</div>
 
@@ -38,7 +49,8 @@
 
 
 	<div id="footer">
-		footer
+		<span class="rss"><a href="{$root_uri}feed.rss"><img src="{$root_uri}images/template/feed.png" alt="RSS" title="SR RSS Latest News Feed" /></a></span>
+		<span class="copyright">&copy; Student Robotics</span>
 	</div>
 
 </div>

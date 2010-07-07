@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 //get user configuration
 require('config.inc.php');
 
@@ -34,7 +36,7 @@ if (isset($_GET['page']))
 
 		$page = $_GET['page'];
 
-	} else if (pageIsAllowed($_GET['page'].'/')){
+	} elseif (pageIsAllowed($_GET['page'].'/')){
 
 		//a file of that name doesn't exist, but a dir does.
 		$page = $_GET['page'].'/';
@@ -67,6 +69,11 @@ if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page)){
 	$content = new Content(CONTENT_DIR . '/404');
 }
 
+$content->getParsedContent();
+if ($content->getMeta('REDIRECT') != ""){
+	Header("HTTP/1.1 302 Found");
+	Header("Location: " . $content->getMeta('REDIRECT'));
+}
 
 //get ready to display the template
 $smarty->assign('menu', constructMenuHierachy());
@@ -78,7 +85,7 @@ $smarty->assign('root_uri', ROOT_URI);
 //display template
 $smarty->display('index.tpl');
 
-
+ob_end_flush();
 
 
 
@@ -121,8 +128,8 @@ function getAllowedPages($directory) {
 					//get the listing for the directory as well
 					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));
 
-					//get the bit of path after the content dir	
-					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/'; 
+					//get the bit of path after the content dir
+					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
 					preg_match($pattern, $directory. "/" . $file, $matches);
 					$array_items[] = $matches[1] . '/';
 
