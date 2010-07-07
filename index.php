@@ -1,6 +1,6 @@
 <?php
 
-ob_start();
+if (!ob_start('ob_gzhandler')) ob_start();
 
 //get user configuration
 require('config.inc.php');
