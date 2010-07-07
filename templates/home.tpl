@@ -52,15 +52,7 @@
 
 		<div id="latestNews">
 
-			<h2>SR 2011 Applications now open</h2>
-
-			<p>	Applications for the 2011 Student Robotics competition are now
-			open.
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-			diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-			aliquam erat volutpat.
-			<a href="">Read More</a>
-			</p>
+			{latestRSS}
 
 		</div>
 
