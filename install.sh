@@ -22,30 +22,6 @@ then
 fi
 
 echo ""
-echo -e "Have you checked the settings in 'config.inc.php'? [Y/n]: \c"
-read input
-
-if [[ $input == "n" ]]
-then
-	echo ""
-	echo "You should!"
-	echo "The most important thing is the ROOT_URI setting."
-	echo "Perhaps, one day, this script will do that for you."
-	echo ""
-
-	echo -e "\nEdit in $EDITOR now? [Y/n]: \c"
-	read input2
-
-	if [[ ! $input2 == "n" ]]
-	then
-		$EDITOR config.inc.php
-	fi
-else
-	echo "Well done!"
-fi
-
-
-echo ""
 echo -e "Have you checked the the '.htaccess' file? [Y/n]: \c"
 read input
 

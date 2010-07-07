@@ -7,8 +7,11 @@ class Content {
 		'DESCRIPTION',
 		'KEYWORDS',
 		'CONTENT_TYPE',
-		'REDIRECT'
+		'REDIRECT',
+		'PUB_DATE'
 	);
+
+	public $filename = '';
 	private $content = '';
 	private $parsedContent = '';
 	private $contentHasBeenParsed = false;
@@ -27,6 +30,8 @@ class Content {
 	 */
 	function __construct($filename){
 
+		$this->filename = $filename;
+
 		//open and read file
 		$fh = fopen($filename, 'r') or die("Can't open file: $filename");
 
@@ -34,7 +39,7 @@ class Content {
 
 			$line = fgets($fh);//read line
 
-			if (self::isComment($line) && !$end_of_comments){
+			if (self::isComment($line)){
 
 				$this->getField($line);
 				continue; //get next line
@@ -146,6 +151,33 @@ class Content {
 		return $this->parsedContent;
 
 	}//getContent
+
+
+
+	/*
+	 * Returns the date specified in the file
+	 */
+	function getPubDate(){
+
+		if ($this->getMeta('PUB_DATE') === ""){
+			$f = fopen($this->filename, 'w');
+			$date = date(DATE_RSS);
+
+			foreach (array_keys($this->meta) as $k){
+				$s = "//$k: " . $this->meta[$k] . "\n";
+				fwrite($f, $s);
+			}
+
+			fwrite($f, "//PUB_DATE: " . $date . "\n");
+
+			fwrite($f, "\n" . $this->content);
+			fclose($f);
+			return $date;
+		}
+
+		return $this->getMeta('PUB_DATE');
+
+	}//getPubDate
 
 
 }//class

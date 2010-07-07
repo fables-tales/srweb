@@ -30,7 +30,7 @@ $ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
 
 
 
-if (isset($_GET['page']))
+if (isset($_GET['page']) && ($_GET['page'] != 'home')) {
 
 	if (pageIsAllowed($_GET['page'])) {
 
@@ -45,7 +45,7 @@ if (isset($_GET['page']))
 		Header("HTTP/1.1 302 Found");
 		Header("Location: " . ROOT_URI . $page);
 
-	} else {
+	} elseif ($page != 'home'){
 
 		//page not found/allowed
 		$page = '404';
@@ -53,37 +53,44 @@ if (isset($_GET['page']))
 
 	}//if-elseif-else pageIsAllowed
 
- else
-	$page = 'home';
+} else {
+
+	//home page
+	$smarty->assign('side_menu', constructMenuHierachy());
+	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->display('home.tpl');
+	ob_end_flush();
+	exit(0);
+}
+
+
 
 //append 'index' if there is a trailing slash
 if (substr($page, -1) == '/') $page .= 'index';
 
-if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page)){
-
+if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page))
 	$content = new Content(CONTENT_DIR . '/' . $page);
-
-} else {
-
-	Header("HTTP/1.1 404 Not Found");
+else
 	$content = new Content(CONTENT_DIR . '/404');
-}
+
 
 $content->getParsedContent();
+
 if ($content->getMeta('REDIRECT') != ""){
 	Header("HTTP/1.1 302 Found");
 	Header("Location: " . $content->getMeta('REDIRECT'));
 }
 
+$smarty->assign('content', $content);
+
+
 //get ready to display the template
-$smarty->assign('menu', constructMenuHierachy());
 $smarty->assign('page', $page);
 $smarty->assign('content_dir', CONTENT_DIR);
-$smarty->assign('content', $content);
 $smarty->assign('root_uri', ROOT_URI);
 
-//display template
-$smarty->display('index.tpl');
+//display contnet template
+$smarty->display('content.tpl');
 
 ob_end_flush();
 

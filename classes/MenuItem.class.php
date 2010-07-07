@@ -10,7 +10,7 @@ class MenuItem {
 	private $name;
 	private $text;
 	private $link;
-	private $subMenuItems = array();
+	public $subMenuItems = array();
 
 	/*
 	 * Constructor. Stores passed arguments, and initialises

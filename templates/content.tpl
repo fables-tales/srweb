@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="{getFromContent get='keywords'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
+	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.rss" />
 	<base href="{$root_uri}" />
 
 </head>
@@ -17,7 +18,7 @@
 <div id="pageWrapper">
 
 	<div id="header">
-		<a href=""><img src="images/template/website_logo.png" alt="Student Robotics Logo" /></a>
+		<a href="{$root_uri}"><img src="{$root_uri}images/template/website_logo.png" alt="Student Robotics Logo" /></a>
 
 		<form action="" method="get">
 			<input type="text" name="q" />
@@ -48,7 +49,7 @@
 
 
 	<div id="footer">
-		<span class="rss">RSS</span>
+		<span class="rss"><a href="{$root_uri}feed.rss"><img src="{$root_uri}images/template/feed.png" alt="RSS" title="SR RSS Latest News Feed" /></a></span>
 		<span class="copyright">&copy; Student Robotics</span>
 	</div>
 
