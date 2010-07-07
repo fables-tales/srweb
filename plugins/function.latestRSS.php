@@ -9,9 +9,9 @@
  * -------------------------------------------------------------
  */
 
-define('MEMCACHE_SERVER', 	'127.0.0.1');
-define('MEMCACHE_PORT',		'11211');
-define('MEMCACHE_TTL', 		 600 /*seconds*/);
+define('MEMCACHE_SERVER', 	'unix:///tmp/memcached');
+define('MEMCACHE_PORT',		0);
+define('MEMCACHE_TTL',		600 /*seconds*/);
 
 function smarty_function_latestRSS($params, &$smarty)
 {
@@ -23,7 +23,7 @@ function smarty_function_latestRSS($params, &$smarty)
 
 		//connect to memcached
 		$memcache = new Memcache();
-		if($memcache->connect(MEMCACHE_SERVER, MEMCACHE_PORT)){
+		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
 			//does the most recent feed exist in the cache
 			if (!($feed_latest = $memcache->get('latest_feed_content'))){
