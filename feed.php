@@ -2,6 +2,7 @@
 
 define('MEMCACHE_SERVER', 	'127.0.0.1');
 define('MEMCACHE_PORT',		'11211');
+define('MEMCACHE_TTL', 		 1800 /*seconds*/);
 
 $feed = NULL;
 
@@ -12,7 +13,7 @@ if (extension_loaded('memcache')){
 
 		if (!($feed = $memcache->get('feed_content'))){
 			$feed = getFeedContent();
-			$memcache->set('feed_content', $feed, 0, 30);
+			$memcache->set('feed_content', $feed, 0, MEMCACHE_TTL);
 		}
 
 	}//if connect
