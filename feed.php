@@ -40,7 +40,10 @@ if ($feed !== NULL){
 
 
 
-
+/*
+ * Returns the content of the feed to be served. This function is
+ * used both with and without caching functionality (see above).
+ */
 function getFeedContent(){
 
 	require('config.inc.php');
@@ -54,18 +57,14 @@ function getFeedContent(){
 
 	if ($d = opendir(CONTENT_DIR . '/news')){
 
-		while (false !== ($file = readdir($d))){
-
-			if (substr($file, 0, 1) != "."){
-
+		//get the files
+		while (false !== ($file = readdir($d)))
+			if (substr($file, 0, 1) != ".")//ignore {., .., .gitignore, etc...}
 				$newsItems[] = new Content(CONTENT_DIR . '/news/' . $file);
-
-			}//if
-
-		}//while
 
 		closedir($d);
 
+		//build output based on the Content objects
 		if (count($newsItems) > 0){
 
 			$output  = "<?xml version='1.0'?><rss version='2.0'><channel>";
@@ -96,8 +95,9 @@ function getFeedContent(){
 
 		}
  
-	} 
+	}
 
+	//return NULL if no success
 	return NULL;
 
 }//getFeedContent
