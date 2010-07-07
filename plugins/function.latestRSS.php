@@ -18,12 +18,16 @@ function smarty_function_latestRSS($params, &$smarty)
 
 	$feed_latest = NULL;
 
+	//check to see if cache module is useable
 	if (extension_loaded('memcache')){
 
+		//connect to memcached
 		$memcache = new Memcache();
 		if($memcache->connect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
+			//does the most recent feed exist in the cache
 			if (!($feed_latest = $memcache->get('latest_feed_content'))){
+				//if not, make it so...
 				$feed_latest = _latestRSS_getMostRecentFeedItem();
 				$memcache->set('latest_feed_content', $feed_latest, 0, MEMCACHE_TTL);
 			}
@@ -33,9 +37,11 @@ function smarty_function_latestRSS($params, &$smarty)
 
 	}//if extension_loaded
 
+	//if cache wasn't useable, gracefully degrade to getting it each time
 	if ($feed_latest === NULL)
 		$feed_latest = _latestRSS_getMostRecentFeedItem();
 
+	//and if that didn't work, leave it empty.
 	if ($feed_latest === NULL)
 		$feed_latest = '';
 
@@ -47,10 +53,15 @@ function _latestRSS_getMostRecentFeedItem(){
 
 	require_once('createfeed.inc.php');
 	$feed = getFeedContent();
-	$feed = str_replace(array('<![CDATA[', ']]>'), '', $feed);
-	$xml = new SimpleXMLElement($feed);
 
+	//strip out CDATA tags
+	$feed = str_replace(array('<![CDATA[', ']]>'), '', $feed);
+
+	//get the data for the first item (it has been sorted so the newest is at the top)
+	$xml = new SimpleXMLElement($feed);
 	$items = $xml->xpath('/rss/channel/item');
+
+	//extract tags. Blank if it doesn't exist.
 	$title = !empty($items[0]->title) ? htmlspecialchars((string)$items[0]->title) : '';
 	$description = !empty($items[0]->description) ? htmlspecialchars((string)$items[0]->description) : '';
 	$link = !empty($items[0]->link) ? htmlspecialchars((string)$items[0]->link) : '';
