@@ -40,7 +40,7 @@
 	<div id="content">
 
 		<div id="topBanner">
-			<img src="images/content/srobo_website_robot.png" alt="Image of Robot" />
+			<img src="{$root_uri}images/content/srobo_website_robot.png" alt="Image of Robot" />
 	
 			<h1>Welcome to Student Robotics</h1>
 	
@@ -71,32 +71,43 @@
 
 				<div class="box">
 					<h3>The IDE</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-					tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<img src="" alt="" />
+					<p>
+						<img src="{$root_uri}images/template/sr_round_flat.png" alt="" />
+
+						The Student Robotics web&ndash;based <acronym title="Integrated Development Environment">IDE</acronym>
+						is used by all of the schools &amp; colleges taking part to write programs for their robots.
+						You will need to be registered to use it.
+					</p>
 				</div>
 
 				<div class="box">
 					<h3>The Kit</h3>
 					<p>
-						<img width="100" height="100" src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/power.png" alt="old powerboard" />
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-						euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						<img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="motor board prototype" />
+						Student Robotics design and build a range of easily&ndash;programmable boards
+						designed specifically for building robots. The teams receive the kit at Kickstart
+						and have about 7 months to build a competition&ndash;winning robot.
 					</p>
 				</div>
 
-				<div class="box">
+				<div class="box clearboth">
 					<h3>Want to Get Involved?</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<img src="" alt="" />
+					<p>
+						Student Robotics is always looking for more people to get involved, and not just schools.
+						Whether you're a University student or a company considering sponsoring the competition,
+						you are more than welcome to get involved.
+					</p>
+
 				</div>
 
 				<div class="box">
 					<h3>Our Sponsors</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<img src="" alt="" />
+					<p>
+						<img src="" alt="" />
+
+						Student Robotics really couldn't happen if we didn't have our sponsors.
+					</p>
+
 				</div>
 
 			</div>
