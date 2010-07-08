@@ -72,6 +72,11 @@ acronym {
 	border-bottom:1px dotted silver;
 }
 
+.clearboth {
+	clear:both;
+}
+
+
 div#pageWrapper {
 	width:960px;
 	margin:0 auto;
