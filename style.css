@@ -68,6 +68,9 @@ body {
 	background:#F5F3F4;
 }
 
+acronym {
+	border-bottom:1px dotted silver;
+}
 
 div#pageWrapper {
 	width:960px;
