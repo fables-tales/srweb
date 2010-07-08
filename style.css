@@ -181,7 +181,8 @@ div#content > p > img.right {
 }
 
 div#content div#topBanner {
-	background-color:orange;
+	background:url('images/template/banner_bg.png') no-repeat;
+	background-position:0px -10px;
 	height:200px;
 }
 
