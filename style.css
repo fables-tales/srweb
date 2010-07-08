@@ -72,6 +72,7 @@ body {
 div#pageWrapper {
 	width:960px;
 	margin:0 auto;
+	background:url('images/template/bottom_swirl.png') no-repeat bottom right;
 }
 
 
@@ -325,6 +326,7 @@ div#footer {
 	padding:10px;
 	position:relative;
 	background-color:#dfdcd7;
+	opacity:0.5;
 }
 
 div#footer > span.rss {
