@@ -124,4 +124,44 @@ function getAllowedPages($directory) {
 
 
 
+/*
+ * Returns the page to serve.
+ */
+function getPage(){
+
+	$page = 'home';
+	$allowed_pages = getAllowedPages(CONTENT_DIR . '/default');
+
+	if (isset($_GET['page'])){
+
+		if (in_array($_GET['page'], $allowed_pages)){
+
+			$page = $_GET['page'];
+
+		} elseif (in_array($_GET['page'] . '/', $allowed_pages)) {
+
+			//redirect the browser to the more correct URL with trailing slash
+			Header('HTTP/1.1 302 Found');
+			Header('Location: ' . ROOT_URI . $_GET['page'] . '/');
+
+		} else {
+
+			//page not allowed / page not found -- respond with a 404
+			Header('HTTP/1.1 404 Not Found');
+			$page = '404';
+
+		}//if-elseif-else
+
+		//append 'index' if the 'page' requested is a directory
+		if (substr($page, -1, 1) == '/')
+			$page .= 'index';
+
+
+	}//if isset
+
+	return $page;
+
+}//getPage
+
+
 ?>
