@@ -164,4 +164,37 @@ function getPage(){
 }//getPage
 
 
+
+/*
+ * Constructs a Menu (object) with a load of MenuItems (objects)
+ * and to pass to the makemenu plugin (function.makemenu.php)
+ * in the plugins/ dir. (For producing a ul/li-based menu).
+ */
+function constructMenuHierachy(){
+
+	global $MENU_PAGES;
+	$allowed_pages = getAllowedPages(CONTENT_DIR . '/default');
+
+	$menu = new Menu();
+
+	//ignore any menu page that doesn't exist
+	$menu_pages = array_intersect($MENU_PAGES, $allowed_pages);
+
+	//add each to the hierachy
+	foreach (array_keys($menu_pages) as $index){
+
+		$path = $menu_pages[$index];
+
+		if (gettype($index) == 'string'){
+			$menu->addToHierachy($path, ROOT_URI, $index);
+		} else {
+			$menu->addToHierachy($path, ROOT_URI);
+		}
+
+	}
+
+	return $menu;
+
+}//constructMenuHeirachy
+
 ?>
