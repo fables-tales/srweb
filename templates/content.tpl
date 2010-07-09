@@ -28,7 +28,7 @@
 	</div>
 
 	<div id="original">
-		Original: <a href="{$root_uri}content/{$page}">{$page}</a>
+		Original: <a href="{$root_uri}content/{$original}">{$original}</a>
 	</div>
 
 
