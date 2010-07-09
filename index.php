@@ -30,12 +30,13 @@ $page = getPage();
 $orderedLanguages = getOrderedLanguages();
 
 $language = 'en';
+$accepted_languages = array_change_key_case($ACCEPTED_LANGUAGES);
 foreach($orderedLanguages as $l){
 
-	if (array_key_exists($l, $ACCEPTED_LANGUAGES)){
+	if (in_array(strtolower($l), array_change_key_case($ACCEPTED_LANGUAGES, CASE_LOWER))){
 
-		if (file_exists(CONTENT_DIR . '/' . $ACCEPTED_LANGUAGES[$l] . '/' . $page)){
-			$language = $ACCEPTED_LANGUAGES[$l];
+		if (file_exists(CONTENT_DIR . '/' . $accepted_languages[strtolower($l)] . '/' . $page)){
+			$language = $accepted_languages[strtolower($l)];
 			break;
 		}
 
