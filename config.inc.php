@@ -68,6 +68,18 @@ $MENU_PAGES = array(
 	'Contact Us'		=> 'about/contactus'
 );
 
+/*
+ *
+ */
+$ACCEPTED_LANGUAGES = array(
+//	lANG. TAG	=>  LANG. DIR
+//	=============================
+	'en'		=> 'en',
+	'en-gb'		=> 'en',
+	'en-us'		=> 'en',
+	'fr'		=> 'fr'	
+);
+
 
 
 /* ===================================
