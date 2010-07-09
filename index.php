@@ -26,6 +26,50 @@ $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 $smarty->cache_dir = CACHE_DIR;
 
 
+$page = getPage();
+$orderedLanguages = getOrderedLanguages();
+
+$language = 'en';
+foreach($orderedLanguages as $l){
+	if (file_exists(CONTENT_DIR . '/' . $l . '/' . $page)){
+		$language = $l;
+		break;
+	}
+}//foreach
+
+
+if ($page == 'home'){
+
+	$smarty->assign('side_menu', constructMenuHierachy());
+	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->display('home.tpl');
+
+} else {
+
+	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
+	$content = new Content($fileToServe);
+	$content->getParsedContent();
+
+	if ($content->getMeta('REDIRECT') != ""){
+		Header("HTTP/1.1 302 Found");
+		Header("Location: " . $content->getMeta('REDIRECT'));
+	}
+
+	$smarty->assign('content', $content);
+
+
+	//get ready to display the template
+	$smarty->assign('original', $language . '/' . $page);
+	$smarty->assign('content_dir', CONTENT_DIR);
+	$smarty->assign('root_uri', ROOT_URI);
+
+	//display contnet template
+	$smarty->display('content.tpl');
+
+}//if-else
+
+
+
 /*
  * Returns an ordered array (most prefered first) of languages
  * the client is happy with. If it's not set, then 'en' is the
