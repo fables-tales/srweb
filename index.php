@@ -60,6 +60,8 @@ if ($page == 'home'){
 	$smarty->assign('side_menu', constructMenuHierachy());
 	$smarty->assign('root_uri', ROOT_URI);
 	$smarty->display('home.tpl');
+	ob_end_flush();
+	exit(0);
 
 } else {
 
@@ -116,6 +118,8 @@ if ($page == 'home'){
 
 	//display content template
 	$smarty->display('content.tpl');
+
+	ob_end_flush();
 
 }//if-else
 
