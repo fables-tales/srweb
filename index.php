@@ -53,6 +53,31 @@ if ($page == 'home'){
 } else {
 
 	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
+
+	//before we go ahead and serve it, see if we can use what the
+	//user's browser has cached.
+	if (function_exists('apache_request_headers')){
+
+		$headers = apache_request_headers();
+
+		if (isset($headers['If-Modified-Since'])
+			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
+
+			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+				filemtime($fileToServe)).' GMT', true, 304);
+
+			Header('Connection: close');
+
+		} else {
+
+			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+				filemtime($fileToServe)).' GMT', true, 200);
+
+		}//if else isset if-mod-since
+
+	}//if function_exists
+
+
 	$content = new Content($fileToServe);
 	$content->getParsedContent();
 
