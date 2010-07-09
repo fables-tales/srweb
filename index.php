@@ -250,14 +250,18 @@ function getAllowedPages($directory) {
 function getPage(){
 
 	$page = 'home';
+
+	//the 'default' directory is a symlink to the 'en' -- more explanatory
 	$allowed_pages = getAllowedPages(CONTENT_DIR . '/default');
 
 	if (isset($_GET['page'])){
 
+		//can we serve the page?
 		if (in_array($_GET['page'], $allowed_pages)){
 
 			$page = $_GET['page'];
 
+		//is the request actually a directory?
 		} elseif (in_array($_GET['page'] . '/', $allowed_pages)) {
 
 			//redirect the browser to the more correct URL with trailing slash
