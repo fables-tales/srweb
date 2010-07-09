@@ -68,8 +68,26 @@ $MENU_PAGES = array(
 	'Contact Us'		=> 'about/contactus'
 );
 
+
 /*
+ * An array to map standardised language tags (more on that in
+ * a second) to the directory under which the content could be
+ * found.
  *
+ * A language tag is of the form 'a[[-b];q=c]'
+ *
+ * where:	'a' is an ISO-639-1 assigned language code;
+ * 		'b' is an ISO 3166-1 alpha-2 assigned country code; and
+ * 		'c' is a value between (and including) 0 and 1 as an
+ * 		    indication of preference for the tag (with 0 being
+ * 		    'do not use').
+ *
+ * Both 'b' and 'c' are optional. Below is case insensitive.
+ *
+ * The tag is sent by the client's browser in an 'Accept-Language'
+ * header, so assuming the client has configured their browser, they
+ * will be served their language's content if it exists. If it doesn't,
+ * English (en) will be served instead.
  */
 $ACCEPTED_LANGUAGES = array(
 //	lANG. TAG	=>  LANG. DIR
