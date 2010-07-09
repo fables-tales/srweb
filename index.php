@@ -50,7 +50,7 @@ function getOrderedLanguages(){
 		foreach ($tags as $tag){
 
 			preg_match($pattern, $tag, $matches);
-			$preference = $matches[3] != "" ? (float)str_replace(';q=', '', $matches[3]) : (float)1;
+			$preference = array_key_exists(3, $matches) ? (float)str_replace(';q=', '', $matches[3]) : (float)1;
 			$pref_array[$matches[1].$matches[2]] = $preference;
 
 		}//foreach
