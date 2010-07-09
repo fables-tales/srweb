@@ -15,12 +15,12 @@ function getFeedContent(){
 
 	$newsItems = array();
 
-	if ($d = opendir(CONTENT_DIR . '/news')){
+	if ($d = opendir(CONTENT_DIR . '/en/news')){
 
 		//get the files
 		while (false !== ($file = readdir($d)))
 			if (substr($file, 0, 1) != ".")//ignore {., .., .gitignore, etc...}
-				$newsItems[] = new Content(CONTENT_DIR . '/news/' . $file);
+				$newsItems[] = new Content(CONTENT_DIR . '/en/news/' . $file);
 
 		closedir($d);
 
@@ -40,8 +40,8 @@ function getFeedContent(){
 				$output .= "<item>";
 
 				$output .= "<title><![CDATA[" . $newsItem->getMeta('TITLE') . "]]></title>";
-				$output .= "<link>" . $BASE_URL . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</link>";
-				$output .= "<guid>" . $BASE_URL . str_replace(CONTENT_DIR . '/', '', $newsItem->filename) . "</guid>";
+				$output .= "<link>" . $BASE_URL . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</link>";
+				$output .= "<guid>" . $BASE_URL . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</guid>";
 				$output .= "<description><![CDATA[" . $newsItem->getMeta('DESCRIPTION') . "]]></description>";
 				$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getPubDate())) . "</pubDate>";
 
