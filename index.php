@@ -31,9 +31,14 @@ $orderedLanguages = getOrderedLanguages();
 
 $language = 'en';
 foreach($orderedLanguages as $l){
-	if (file_exists(CONTENT_DIR . '/' . $l . '/' . $page)){
-		$language = $l;
-		break;
+
+	if (array_key_exists($l, $ACCEPTED_LANGUAGES)){
+
+		if (file_exists(CONTENT_DIR . '/' . $ACCEPTED_LANGUAGES[$l] . '/' . $page)){
+			$language = $ACCEPTED_LANGUAGES[$l];
+			break;
+		}
+
 	}
 }//foreach
 
