@@ -25,17 +25,27 @@ $smarty->template_dir = TEMPLATE_DIR;
 $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 $smarty->cache_dir = CACHE_DIR;
 
-
+//get the page to serve (excl. language)
 $page = getPage();
+
+//get the prefered languages
 $orderedLanguages = getOrderedLanguages();
 
+//default language is en -- English
 $language = 'en';
-$accepted_languages = array_change_key_case($ACCEPTED_LANGUAGES);
+
+//use lowercase array keys for comparison (no mixed case issues then)
+$accepted_languages = array_change_key_case($ACCEPTED_LANGUAGES, CASE_LOWER);
+
 foreach($orderedLanguages as $l){
 
-	if (in_array(strtolower($l), array_change_key_case($ACCEPTED_LANGUAGES, CASE_LOWER))){
+	//if it's a supported language...
+	if (in_array(strtolower($l), $accepted_languages)){
 
+		//and the relevent content filew exists...
 		if (file_exists(CONTENT_DIR . '/' . $accepted_languages[strtolower($l)] . '/' . $page)){
+
+			//this is the language to use
 			$language = $accepted_languages[strtolower($l)];
 			break;
 		}
@@ -43,7 +53,8 @@ foreach($orderedLanguages as $l){
 	}
 }//foreach
 
-
+//home and content files are treated differently, so if the page is 'home'
+//serve the home template, otherwise use the content template.
 if ($page == 'home'){
 
 	$smarty->assign('side_menu', constructMenuHierachy());
@@ -52,6 +63,7 @@ if ($page == 'home'){
 
 } else {
 
+	//the physical file to serve, including the language in the path
 	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
 
 	//before we go ahead and serve it, see if we can use what the
@@ -60,6 +72,7 @@ if ($page == 'home'){
 
 		$headers = apache_request_headers();
 
+		//if the file hasn't changed since the client last saw it, send a 304
 		if (isset($headers['If-Modified-Since'])
 			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
 
@@ -70,6 +83,7 @@ if ($page == 'home'){
 
 		} else {
 
+			//otherwise serve it
 			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
 				filemtime($fileToServe)).' GMT', true, 200);
 
@@ -78,14 +92,20 @@ if ($page == 'home'){
 	}//if function_exists
 
 
+	//this is as far as we can get without opening a content file, so...
+
 	$content = new Content($fileToServe);
+
+	//called to allow access to the metadata
 	$content->getParsedContent();
 
+	//if the file is a special redirection file, do the redirection
 	if ($content->getMeta('REDIRECT') != ""){
 		Header("HTTP/1.1 302 Found");
 		Header("Location: " . $content->getMeta('REDIRECT'));
 	}
 
+	//make the content object accessible in the templates (used by a custom smarty plugin)
 	$smarty->assign('content', $content);
 
 
@@ -94,12 +114,27 @@ if ($page == 'home'){
 	$smarty->assign('content_dir', CONTENT_DIR);
 	$smarty->assign('root_uri', ROOT_URI);
 
-	//display contnet template
+	//display content template
 	$smarty->display('content.tpl');
 
 }//if-else
 
 
+
+
+
+
+
+
+
+
+
+
+/*
+ * ===========================================================
+ *                         FUNCTIONS
+ * ===========================================================
+ */
 
 /*
  * Returns an ordered array (most prefered first) of languages
