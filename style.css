@@ -161,6 +161,7 @@ div#content > h1 {
 div#content h2 {
 	font-size:20px;
 	margin-bottom:5px;
+	margin-top:15px;
 }
 
 div#content h3 {
@@ -171,7 +172,7 @@ div#content h3 {
 
 div#content > p {
 	clear:both;
-	padding-top:5px;
+	padding-top:0px;
 }
 
 div#content > p > img {
