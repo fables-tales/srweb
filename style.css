@@ -175,12 +175,12 @@ div#content > p {
 	padding-top:0px;
 }
 
-div#content > p > a {
+div#content a {
 	text-decoration:none;
 	color:#FE9302;
 }
 
-div#content > p > a:hover {
+div#content a:hover {
 	border-bottom:1px dotted #FE9302;
 }
 
