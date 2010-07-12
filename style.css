@@ -175,6 +175,15 @@ div#content > p {
 	padding-top:0px;
 }
 
+div#content > p > a {
+	text-decoration:none;
+	color:#FE9302;
+}
+
+div#content > p > a:hover {
+	border-bottom:1px dotted #FE9302;
+}
+
 div#content > p > img {
 	border:1px solid silver;
 	padding:3px;
