@@ -7,7 +7,7 @@
 	</form>
 
 	<ul>
-		<li><a href="{$root_uri}home">Home</a></li>
+		<li><a href="{$root_uri}">Home</a></li>
 		<li><a href="{$root_uri}ide">IDE</a></li>
 		<li><a href="{$root_uri}schools/">Schools</a></li>
 		<li><a href="{$root_uri}sponsors/">Sponsors</a></li>
