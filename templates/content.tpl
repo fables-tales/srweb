@@ -9,7 +9,7 @@
 	<meta name="keywords" content="{getFromContent get='keywords'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
-	<base href="{$root_uri}" />
+	<base href="{$base_uri}" />
 
 </head>
 
