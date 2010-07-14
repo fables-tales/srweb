@@ -289,6 +289,10 @@ div#content div#expandedMenu ul li a {
 	text-decoration:none;
 }
 
+div#content div#expandedMenu > ul > li a:hover {
+	border-bottom:none;
+}
+
 div#content div#expandedMenu > ul > li {
 	margin-bottom:10px;
 	font-size:18px;
