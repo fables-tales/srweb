@@ -15,7 +15,9 @@ define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
 
 /* The root of the website when hosted (Where you would navigate to
  * to find index.php) */
-define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) . '/');
+define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
+	? dirname($_SERVER['PHP_SELF']) . '/'
+	: '/');
 
 
 /* The pages that you wish to appear in the menu should be listed here.
