@@ -77,9 +77,6 @@ $MENU_PAGES = array(
 	'Documentation'		=> 'schools/docs/',
 	'Kit'			=> 'schools/kit/',
 
-	'Uni Students'		=> 'uni/',
-	'Getting Involved'	=> 'uni/gettinginvolved',
-
 	'Sponsors'		=> 'sponsors/',
 	'Why Sponsor?'		=> 'sponsors/whysponsor',
 	'Current Sponsors'	=> 'sponsors/currentsponsors',
