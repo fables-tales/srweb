@@ -13,12 +13,14 @@ ini_set('display_errors', 1);
 /* The directory 'Smarty.class.php' can be found in */
 define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
 
-/* The root of the website when hosted (Where you would navigate to
- * to find index.php) */
+
+/* The location of files relative to the directory this file is in */
 define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
 	? dirname($_SERVER['PHP_SELF']) . '/'
 	: '/');
 
+/* The root of the website when hosted (Where you would navigate to
+ * to find index.php) */
 define('BASE_URI', !empty($_SERVER['HTTPS'])
 
 	? 'https://' . $_SERVER['HTTP_HOST'] 
