@@ -78,8 +78,6 @@ $MENU_PAGES = array(
 	'Kit'			=> 'schools/kit/',
 
 	'Sponsors'		=> 'sponsors/',
-	'Why Sponsor?'		=> 'sponsors/whysponsor',
-	'Current Sponsors'	=> 'sponsors/currentsponsors',
 
 	'About Us'		=> 'about/',
 	'The Team'		=> 'about/team',
