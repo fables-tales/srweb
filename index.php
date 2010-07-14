@@ -59,6 +59,7 @@ if ($page == 'home'){
 
 	$smarty->assign('side_menu', constructMenuHierachy());
 	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->assign('base_uri', BASE_URI);
 	$smarty->display('home.tpl');
 	ob_end_flush();
 	exit(0);
@@ -115,6 +116,7 @@ if ($page == 'home'){
 	$smarty->assign('original', $language . '/' . $page);
 	$smarty->assign('content_dir', CONTENT_DIR);
 	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->assign('base_uri', BASE_URI);
 
 	//display content template
 	$smarty->display('content.tpl');
