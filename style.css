@@ -262,7 +262,7 @@ div#content div#latestNews h2 {
 }
 
 div#content div#expMenuAndBoxWrapper {
-			overflow:auto;
+	overflow:auto;
 }
 
 div#content div#expandedMenu {
@@ -278,6 +278,11 @@ div#content div#expandedMenu h3 {
 	font-size:20px;
 	line-height:30px;
 	color:#0d1f61;
+}
+
+div#content div#expandedMenu ul {
+	list-style:none;
+	margin-left:0;
 }
 
 div#content div#expandedMenu ul li a {
