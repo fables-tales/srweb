@@ -19,7 +19,7 @@ define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
 	? dirname($_SERVER['PHP_SELF']) . '/'
 	: '/');
 
-define('BASE_URL', !empty($_SERVER['HTTPS'])
+define('BASE_URI', !empty($_SERVER['HTTPS'])
 
 	? 'https://' . $_SERVER['HTTP_HOST'] 
 		. dirname($_SERVER['PHP_SELF']) . '/'
