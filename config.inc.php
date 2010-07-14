@@ -19,6 +19,15 @@ define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
 	? dirname($_SERVER['PHP_SELF']) . '/'
 	: '/');
 
+define('BASE_URL', !empty($_SERVER['HTTPS'])
+
+	? 'https://' . $_SERVER['HTTP_HOST'] 
+		. dirname($_SERVER['PHP_SELF']) . '/'
+
+	: 'http://' . $_SERVER['HTTP_HOST'] 
+		. dirname($_SERVER['PHP_SELF']) . '/'
+);
+
 
 /* The pages that you wish to appear in the menu should be listed here.
  * There are two way to add a page to the menu:
