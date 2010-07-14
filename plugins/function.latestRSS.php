@@ -8,9 +8,7 @@
  * Purpose:  Gets the most recent entry in an rss feed as HTML
  * -------------------------------------------------------------
  */
-
-define('MEMCACHE_SERVER', 	'unix:///tmp/memcached');
-define('MEMCACHE_PORT',		0);
+require_once('config.inc.php');
 define('MEMCACHE_TTL',		600 /*seconds*/);
 
 function smarty_function_latestRSS($params, &$smarty)
