@@ -3,8 +3,3 @@ RewriteBase /~chris/srweb
 
 RewriteCond %{REQUEST_FILENAME}	!-f
 RewriteRule ^(.+)$ 		index.php?page=$1	[L]
-
-
-Options -Indexes +FollowSymLinks
-#Order allow,deny
-#Deny from all
