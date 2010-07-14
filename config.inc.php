@@ -31,6 +31,17 @@ define('BASE_URI', !empty($_SERVER['HTTPS'])
 );
 
 
+/* Memcache(d) --
+ * for the site to function, memcached is required (including the memcache)
+ * PHP module. It is used to prevent needless processing for the RSS feed
+ * and it's use. Without it, the feed will still work, but the latestRSS
+ * smarty plugin will not. If you just start the memcache deamon (memcached)
+ * then you probably won't need to change these settings
+ */
+define('MEMCACHE_SERVER', 	'127.0.0.1');
+define('MEMCACHE_PORT',		11211);
+
+
 /* The pages that you wish to appear in the menu should be listed here.
  * There are two way to add a page to the menu:
  *
