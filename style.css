@@ -198,6 +198,20 @@ div#content > p > img.right {
 	margin-left:10px;
 }
 
+div#content ul {
+	list-style:disc;
+	margin-left:30px;
+	margin-bottom:10px;
+}
+
+div#content ul ul {
+	list-style:circle;
+}
+
+div#content ul li {
+	line-height:1.5em;
+}
+
 div#content div#topBanner {
 	background:url('images/template/banner_bg.png') no-repeat;
 	background-position:0px -10px;
