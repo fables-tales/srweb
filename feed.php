@@ -1,9 +1,7 @@
 <?php
 
-require('createfeed.inc.php');
-
-define('MEMCACHE_SERVER', 	'unix:///tmp/memcached');
-define('MEMCACHE_PORT',		0);
+require_once('config.inc.php');
+require_once('createfeed.inc.php');
 define('MEMCACHE_TTL',		1800 /*seconds*/);
 
 $feed = NULL;
