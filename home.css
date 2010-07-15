@@ -165,7 +165,6 @@ div#content h3 {
 div#content > p {
 	clear:both;
 	margin-bottom:10px;
-	overflow:auto;
 }
 
 div#content a {
