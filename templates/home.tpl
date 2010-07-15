@@ -7,7 +7,7 @@
 	<title>Welcome to Student Robotics | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="student, robotics, robot, competition, southampton" />
-	<meta description="Student Robotics is an exciting competition between sixth form schools and colleges in the Southampton area to build fully autonomous robots. " />
+	<meta name="description" content="Student Robotics is an exciting competition between sixth form schools and colleges in the Southampton area to build fully autonomous robots. " />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<base href="{$base_uri}" />
