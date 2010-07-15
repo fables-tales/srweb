@@ -167,11 +167,13 @@ div#content h2 {
 div#content h3 {
 	font-size:18px;
 	margin-bottom:5px;
+	margin-top:15px;
 }
 
 div#content > p {
 	clear:both;
 	margin-bottom:10px;
+	overflow:auto;
 }
 
 div#content a {
