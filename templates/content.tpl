@@ -7,6 +7,7 @@
 	<title>{getFromContent get="title"} | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="{getFromContent get='keywords'}" />
+	<meta name="description" content="{getFromContent get='description'}">
 	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<base href="{$base_uri}" />
