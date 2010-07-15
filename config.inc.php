@@ -71,7 +71,7 @@ $MENU_PAGES = array(
 //     =====================================================
 	'Home' 			=> 'home',
 
-	'Schools & Colleges'	=> 'schools/',
+	'Schools &amp; Colleges'=> 'schools/',
 	'Competition Info'	=> 'schools/competitioninfo',
 	'Joining'		=> 'schools/joining',
 	'Documentation'		=> 'schools/docs/',
