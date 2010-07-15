@@ -2,8 +2,10 @@
 	<a href="{$root_uri}"><img src="{$root_uri}images/template/website_logo.png" alt="Student Robotics Logo" /></a>
 
 	<form action="{$root_uri}search.php" method="get">
-		<input type="text" name="q" />
-		<input type="submit" value="" />
+		<fieldset>
+			<input type="text" name="q" />
+			<input type="submit" value="" />
+		</fieldset>
 	</form>
 
 	<ul>
