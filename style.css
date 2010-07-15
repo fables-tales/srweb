@@ -170,11 +170,11 @@ div#content > p {
 
 div#content a {
 	text-decoration:none;
-	color:#FE9302;
+	color:#DE6400;
 }
 
 div#content a:hover {
-	border-bottom:1px dotted #FE9302;
+	color:#0d1f61;
 }
 
 div#content > p > img {
