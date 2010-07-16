@@ -30,7 +30,7 @@ $BASE_URI = !empty($_SERVER['HTTPS'])
 		. dirname($_SERVER['PHP_SELF']) . '/';
 
 define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
-	? substr($BASE_URI, -2, 1)
+	? substr($BASE_URI, 0, -1)
 	: $BASE_URI);
 
 
