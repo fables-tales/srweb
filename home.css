@@ -254,6 +254,10 @@ div#content div#latestNews h2 {
 	color:#0d1f61;
 }
 
+div#content div#latestNews h2 a {
+	color:#0d1f61;
+}
+
 div#content div#expMenuAndBoxWrapper {
 	overflow:auto;
 }
