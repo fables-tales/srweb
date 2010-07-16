@@ -1,6 +1,6 @@
 <?php
 
-/*//{enable, server default} error reporting
+//{enable, server default} error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -21,14 +21,17 @@ define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
 
 /* The root of the website when hosted (Where you would navigate to
  * to find index.php) */
-define('BASE_URI', !empty($_SERVER['HTTPS'])
+$BASE_URI = !empty($_SERVER['HTTPS'])
 
 	? 'https://' . $_SERVER['HTTP_HOST'] 
 		. dirname($_SERVER['PHP_SELF']) . '/'
 
 	: 'http://' . $_SERVER['HTTP_HOST'] 
-		. dirname($_SERVER['PHP_SELF']) . '/'
-);
+		. dirname($_SERVER['PHP_SELF']) . '/';
+
+define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
+	? substr($BASE_URI, -2, 1)
+	: $BASE_URI);
 
 
 /* Memcache(d) --
