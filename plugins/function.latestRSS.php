@@ -64,7 +64,7 @@ function _latestRSS_getMostRecentFeedItem(){
 	$description = !empty($items[0]->description) ? htmlspecialchars((string)$items[0]->description) : '';
 	$link = !empty($items[0]->link) ? htmlspecialchars((string)$items[0]->link) : '';
 
-	return "<h2>$title</h2><p>$description <a href=\"$link\">Read More...</a></p>";
+	return "<h2><a href='$link'>$title</a></h2><p>$description <a href=\"$link\">Read More...</a></p>";
 
 }
 
