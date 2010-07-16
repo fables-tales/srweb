@@ -53,7 +53,7 @@
 			<div id="boxWrapper">
 
 				<div class="box">
-					<h3>The IDE</h3>
+					<h3><a href="{$root_uir}ide">The IDE</a></h3>
 					<p>
 						<img src="{$root_uri}images/template/sr_round_flat.png" alt="" />
 
@@ -64,7 +64,7 @@
 				</div>
 
 				<div class="box">
-					<h3>The Kit</h3>
+					<h3><a href="{$root_uir}schools/kit/">The Kit</a></h3>
 					<p>
 						<img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="motor board prototype" />
 						Student Robotics design and build a range of easily&ndash;programmable boards
@@ -74,7 +74,7 @@
 				</div>
 
 				<div class="box clearboth">
-					<h3>Want to Get Involved?</h3>
+					<h3><a href="{$root_uir}about/gettinginvolved">Want to Get Involved?</a></h3>
 					<p>
 						Student Robotics is always looking for more people to get involved, and not just schools.
 						Whether you're a University student or a company considering sponsoring the competition,
@@ -84,7 +84,7 @@
 				</div>
 
 				<div class="box">
-					<h3>Our Sponsors</h3>
+					<h3><a href="{$root_uir}sponsors/">Our Sponsors</a></h3>
 					<p>
 						<img src="" alt="" />
 
