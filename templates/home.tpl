@@ -55,7 +55,7 @@
 				<div class="box">
 					<h3><a href="{$root_uir}ide">The IDE</a></h3>
 					<p>
-						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="" /></a>
+						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
 
 						The Student Robotics web&ndash;based <acronym title="Integrated Development Environment">IDE</acronym>
 						is used by all of the schools &amp; colleges taking part to write programs for their robots.
@@ -66,7 +66,7 @@
 				<div class="box">
 					<h3><a href="{$root_uir}schools/kit/">The Kit</a></h3>
 					<p>
-						<a href="{$root_uir}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="motor board prototype" /></a>
+						<a href="{$root_uir}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
 						Student Robotics design and build a range of easily&ndash;programmable boards
 						designed specifically for building robots. The teams receive the kit at Kickstart
 						and have about 7 months to build a competition&ndash;winning robot.
