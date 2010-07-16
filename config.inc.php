@@ -1,6 +1,6 @@
 <?php
 
-//{enable, server default} error reporting
+/*//{enable, server default} error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -75,7 +75,7 @@ $MENU_PAGES = array(
 	'Home' 			=> 'home',
 
 	'Schools &amp; Colleges'=> 'schools/',
-	'Competition Info'	=> 'schools/competitioninfo',
+	'Competition'		=> 'schools/competition',
 	'Joining'		=> 'schools/joining',
 	'Documentation'		=> 'schools/docs/',
 	'Kit'			=> 'schools/kit/',
