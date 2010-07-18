@@ -213,6 +213,7 @@ div#content div.newsItem {
 	height:auto;
 	overflow:auto;
 	margin-bottom:15px;
+	clear:both;
 }
 
 div#content div.newsDate {
@@ -272,6 +273,32 @@ div#content div.newsInfo {
 
 div#content div.newsInfo a {
 	color:silver;
+}
+
+div#content div.olderNewer {
+
+}
+
+div#content div.olderNewer a {
+	padding:5px;
+	background:silver;
+	color:#0d1f61;
+}
+
+div#content div.olderNewer a.older {
+	float:left;
+}
+
+div#content div.olderNewer a.newer {
+	float:right;
+}
+
+div#content div.olderNewer a.older:before {
+	content:'< ';
+}
+
+div#content div.olderNewer a.newer:after {
+	content:' >';
 }
 
 div#original {
