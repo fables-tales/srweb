@@ -38,11 +38,24 @@ function smarty_function_newsPage($params, &$smarty)
 			$content->getParsedContent()
 		);
 
-		$output .= $contentHTML;
+		$timestamp = strtotime($content->getMeta('PUB_DATE'));
 
-		$output .= '<span class="newsInfo">Published: ' . date('jS M, H:i', strtotime($content->getMeta('PUB_DATE'))) . 
-			' | <a href="' . $link . '">permalink</a> | <a href="' . 
-			'content/default/' . str_replace($smarty->get_template_vars('base_uri'), '', $link) . '">original</a></span><p>&nbsp;</p>';
+		$output .= '<div class="newsItem">';
+
+		$output .= '<div class="newsDate">' .
+				'<div class="day">' . date('d', $timestamp) . '</div>' .
+				'<div class="month">' . date('M', $timestamp) . '</div>' .
+				'<div class="year">' . date('Y', $timestamp) . '</div>' .
+			   '</div>';
+
+		$output .= '<div class="newsContent">' . $contentHTML . '</div>';
+
+		$output .= '<div class="newsInfo">' .
+			'<a href="' . $link . '">permalink</a> | ' .
+				'<a href="content/default/' . str_replace($smarty->get_template_vars('base_uri'), '', $link) . '">original</a>' .
+			'</div>';
+
+		$output .= '</div>';
 
 	}//foreach
 
