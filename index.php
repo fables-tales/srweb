@@ -66,6 +66,7 @@ if ($page == 'home'){
 
 } elseif ($page == 'news/index'){
 
+	$smarty->assign('p', isset($_GET['p']) ? $_GET['p'] : '1');
 	$smarty->assign('root_uri', ROOT_URI);
 	$smarty->assign('base_uri', BASE_URI);
 	$smarty->display('news.tpl');
