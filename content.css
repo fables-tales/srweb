@@ -143,6 +143,10 @@ div#content h1, h2, h3, h4, h5, h6 {
 	clear:both;
 }
 
+div#content h2 a {
+	color:#0d1f61;
+}
+
 div#content > h1 {
 	font-size:26px;
 	margin-bottom:10px;
