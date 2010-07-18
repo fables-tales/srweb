@@ -3,4 +3,4 @@ RewriteBase /~chris/srweb
 
 RewriteCond %{REQUEST_FILENAME}	!-f
 RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
-RewriteRule ^(.+)$ 		index.php?page=$1	[L]
+RewriteRule ^(.+)$ 	index.php?page=$1	[L,QSA]
