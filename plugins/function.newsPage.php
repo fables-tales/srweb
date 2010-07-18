@@ -10,7 +10,7 @@
  */
 require_once('config.inc.php');
 define('MEMCACHE_TTL',		600 /*seconds*/);
-define('ITEMS_PER_PAGE', 1);
+define('ITEMS_PER_PAGE', 5);
 
 function smarty_function_newsPage($params, &$smarty)
 {
