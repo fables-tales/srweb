@@ -15,6 +15,7 @@ function smarty_function_newsPage($params, &$smarty)
 {
 
 	require_once('createfeed.inc.php');
+	require_once('classes/Content.class.php');
 	$feed = getFeedContent();
 	$feed = str_replace(array('<![CDATA[', ']]>'), '', $feed);
 
@@ -27,7 +28,18 @@ function smarty_function_newsPage($params, &$smarty)
 		$description = !empty($item->description) ? htmlspecialchars((string)$item->description) : '';
 		$link = !empty($item->link) ? htmlspecialchars((string)$item->link) : '';
 
-		$output .= "<h2><a href='$link'>$title</a></h2><p>$description <a href=\"$link\">Read More...</a></p>";
+		$content = new Content('content/default/' . str_replace($smarty->get_template_vars('base_uri'), '', $link));
+		$contentHTML = str_replace(
+			array('<h3', '<h2', '<h1', '</h3', '</h2', '</h1'),
+			array('<h4', '<h3', '<h2', '</h4', '</h3', '</h2'),
+			$content->getParsedContent()
+		);
+
+		$output .= $contentHTML;
+
+		$output .= '<span class="newsInfo">Published: ' . date('jS M, H:i', strtotime($content->getMeta('PUB_DATE'))) . 
+			' | <a href="' . $link . '">permalink</a> | <a href="' . 
+			'content/default/' . str_replace($smarty->get_template_vars('base_uri'), '', $link) . '">original</a></span><p>&nbsp;</p>';
 
 	}//foreach
 
