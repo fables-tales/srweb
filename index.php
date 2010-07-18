@@ -64,6 +64,14 @@ if ($page == 'home'){
 	ob_end_flush();
 	exit(0);
 
+} elseif ($page == 'news/index'){
+
+	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->assign('base_uri', BASE_URI);
+	$smarty->display('news.tpl');
+	ob_end_flush();
+	exit(0);
+
 } else {
 
 	//the physical file to serve, including the language in the path
