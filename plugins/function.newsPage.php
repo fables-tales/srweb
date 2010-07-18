@@ -23,10 +23,12 @@ function smarty_function_newsPage($params, &$smarty)
 	$xml = new SimpleXMLElement($feed);
 	$items = $xml->xpath('/rss/channel/item');
 
-	foreach ($items as $item){
+	$p = $smarty->get_template_vars('p');
 
-		$title = !empty($item->title) ? htmlspecialchars((string)$item->title) : '';
-		$description = !empty($item->description) ? htmlspecialchars((string)$item->description) : '';
+	for($i = ($p - 1) * ITEMS_PER_PAGE; $i < count($items) && $i < ($p - 1) * ITEMS_PER_PAGE + ITEMS_PER_PAGE; $i++){
+
+		$item = $items[$i];
+
 		$link = !empty($item->link) ? htmlspecialchars((string)$item->link) : '';
 
 		$content = new Content('content/default/' . str_replace($smarty->get_template_vars('base_uri'), '', $link));
