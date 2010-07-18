@@ -65,7 +65,7 @@ function smarty_function_newsPage($params, &$smarty)
 		$olderNewer .= '<a class="older" href="news/?p=' . (int)($p+1) . '">Older News</a>';
 
 	} elseif ($p == 1 && ITEMS_PER_PAGE >= count($items)){
-		$olderNewer .= ':-(';
+		$olderNewer .= '';
 
 	} elseif ($p > 1 && $p * ITEMS_PER_PAGE < count($items)){
 		$olderNewer .= '<a class="older" href="news/?p=' . (int)($p+1) . '">Older News</a>' . '<a class="newer" href="news/?p=' . (int)($p-1) . '">Newer News</a>';
