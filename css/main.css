@@ -215,8 +215,8 @@ div#footer {
 	margin-top:40px;
 	padding:10px;
 	position:relative;
-	background-color:#dfdcd7;
-	opacity:0.5;
+	background-color:rgba(223,220,215,0.5);
+	color:#333;
 }
 
 div#footer > span.rss {
@@ -229,4 +229,5 @@ div#footer > span.copyright {
 	margin:0 auto;
 	width:200px;
 	text-align:center;
+	text-shadow:1px 1px 1px #fff;
 }
