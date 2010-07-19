@@ -10,6 +10,7 @@
 	<meta name="description" content="{getFromContent get='description'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
+	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
 	<base href="{$base_uri}" />
 
 </head>
