@@ -72,7 +72,7 @@ acronym {
 div#pageWrapper {
 	width:960px;
 	margin:0 auto;
-	background:url('images/template/bottom_swirl.png') no-repeat bottom right;
+	background:url('../images/template/bottom_swirl.png') no-repeat bottom right;
 }
 
 
@@ -102,7 +102,7 @@ div#header > form > fieldset > input[type=text]{
 
 div#header > form > fieldset > input[type=submit]{
 	/* Thanks to http://www.famfamfam.com/lab/icons/silk/ for the image */
-	background-image:url('images/template/magnifier.png');
+	background-image:url('../images/template/magnifier.png');
 	background-repeat:no-repeat;
 	background-position:center;
 	height:24px;
@@ -143,6 +143,10 @@ div#content h1, h2, h3, h4, h5, h6 {
 	clear:both;
 }
 
+div#content h2 a {
+	color:#0d1f61;
+}
+
 div#content > h1 {
 	font-size:26px;
 	margin-bottom:10px;
@@ -162,7 +166,7 @@ div#content h3 {
 	margin-top:15px;
 }
 
-div#content > p {
+div#content p {
 	clear:both;
 	margin-bottom:10px;
 }
@@ -205,143 +209,96 @@ div#content ul li {
 	line-height:1.5em;
 }
 
-div#content div#topBanner {
-	background:url('images/template/banner_bg.png') no-repeat;
-	background-position:0px -10px;
-	height:200px;
-}
-
-div#content div#topBanner img {
-	width:374px;
-	height:260px;
-	overflow:visible;
-	float:left;
-	position:relative;
-	top:-60px;
-	left:30px;
-}
-
-div#content div#topBanner h1 {
-	font-size:30px;
-	line-height:40px;
-	color:white;
-	font-weight:normal;
-	width:500px;
-	float:right;
-	margin-right:50px;
-	margin-top:20px;
-	clear:none;
-}
-
-div#content div#topBanner p {
-	color:white;
-	font-style:italic;
-	width:500px;
-	float:right;
-	margin-right:30px;
-}
-
-div#content div#latestNews {
-	margin:0 50px 50px 50px;
-	padding:50px 0 50px 0;
-	border-bottom:1px solid silver;
-}
-
-div#content div#latestNews h2 {
-	font-size:30px;
-	line-height:40px;
-	clear:both;
-	color:#0d1f61;
-}
-
-div#content div#latestNews h2 a {
-	color:#0d1f61;
-}
-
-div#content div#expMenuAndBoxWrapper {
+div#content div.newsItem {
+	height:auto;
 	overflow:auto;
+	margin-bottom:15px;
+	clear:both;
 }
 
-div#content div#expandedMenu {
+div#content div.newsDate {
+	background:#0d1f61;
+	color:silver;
 	float:left;
-	width:240px;
-	border-right:1px solid silver;
-	padding-right:20px;
+	width:60px;
+	position:relative;
+	margin-top:19px;
 }
 
-div#content div#expandedMenu h3 {
-	border-bottom:1px solid silver;
-	margin-bottom:10px;
-	font-size:20px;
-	line-height:30px;
-	color:#0d1f61;
+div#content div.newsDate div {
+	float:left;
+	width:60px;
+	text-align:center;
+	display:block;
 }
 
-div#content div#expandedMenu ul {
-	list-style:none;
-	margin-left:0;
+div#content div.newsDate div.day {
+	font-size:40px;
+	line-height:40px;
+	margin-top:5px;
+	font-weight:bolder;
+	letter-spacing:3px;
+	margin-left:2px;
 }
 
-div#content div#expandedMenu ul li a {
-	text-decoration:none;
-}
-
-div#content div#expandedMenu > ul > li a:hover {
-	border-bottom:none;
-}
-
-div#content div#expandedMenu > ul > li {
-	margin-bottom:10px;
-	font-size:18px;
-}
-
-div#content div#expandedMenu > ul > li > a {
-	color:#0d1f61;
-}
-
-div#content div#expandedMenu > ul > li > ul {
-	margin-left:5px;
-}
-
-div#content div#expandedMenu > ul > li > ul > li {
+div#content div.newsDate div.month {
+	letter-spacing:5px;
+	text-transform:uppercase;
 	font-size:16px;
+	line-height:14px;
+	margin-left:3px;
 }
 
-div#content div#expandedMenu > ul > li > ul > li > a {
-	color:#8b8884;
+div#content div.newsDate div.year {
+	letter-spacing:5px;
+	font-size:14px;
+	line-height:14px;
+	margin-top:5px;
+	margin-bottom:4px;
+	margin-left:3px;
 }
 
-div#content div#boxWrapper {
+div#content div.newsContent {
 	float:left;
-	width:700px;
-	margin-left:-1px;
+	width:890px;
+	margin-left:10px;
+	border-bottom:1px dashed silver;
 }
 
-div#content div#boxWrapper div.box {
-	width:320px;
-	float:left;
-	margin-left:20px;
-	margin-bottom:20px;
-	line-height:1.4em;
-}
-
-div#content div#boxWrapper div.box h3 {
-	border-bottom:1px solid silver;
-	font-size:20px;
-	line-height:30px;
-	margin-bottom:10px;
-	color:#0d1f61;
-}
-
-div#content div#boxWrapper div.box h3 a {
-	color:#0d1f61;
-}
-
-div#content div#boxWrapper div.box img {
-	border:1px solid silver;
-	padding:2px;
+div#content div.newsInfo {
+	color:silver;
+	font-size:0.8em;
 	float:right;
-	margin-left:5px;
+}
+
+div#content div.newsInfo a {
+	color:silver;
+}
+
+div#content div.olderNewer {
+
+}
+
+div#content div.olderNewer a {
+	padding:5px;
+	background:silver;
+	color:#0d1f61;
+}
+
+div#content div.olderNewer a.older {
+	float:left;
+}
+
+div#content div.olderNewer a.newer {
+	float:right;
+}
+
+div#content div.olderNewer a.older:before {
+	content:'< ';
+}
+
+div#content div.olderNewer a.newer:after {
+	content:' >';
 }
 
 div#original {
