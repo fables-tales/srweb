@@ -87,7 +87,9 @@ $MENU_PAGES = array(
 	'Media'			=> 'about/media',
 	'Mission Statement'	=> 'about/mission',
 	'Public Documents'	=> 'about/publicdocs',
-	'Contact Us'		=> 'about/contactus'
+	'Contact Us'		=> 'about/contactus',
+
+	'News'			=> 'news/'
 );
 
 
