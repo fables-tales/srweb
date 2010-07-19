@@ -1,6 +1,6 @@
 div#content div.newsItem {
 	height:auto;
-	overflow:auto;
+	overflow:hidden;
 	margin-bottom:15px;
 	clear:both;
 }
