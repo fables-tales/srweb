@@ -8,7 +8,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="student, robotics, news" />
 	<meta name="description" content="All the latest news from Student Robotics" />
-	<link rel="stylesheet" type="text/css" href="{$root_uri}css/content.css" />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}css/news.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<base href="{$base_uri}" />
 
