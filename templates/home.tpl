@@ -7,9 +7,11 @@
 	<title>Welcome to Student Robotics | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="student, robotics, robot, competition, southampton" />
-	<link rel="stylesheet" type="text/css" href="{$root_uri}style.css" />
-	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.rss" />
-	<base href="{$root_uri}" />
+	<meta name="description" content="Student Robotics is an exciting competition between sixth form schools and colleges in the Southampton area to build fully autonomous robots. " />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}css/home.css" />
+	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
+	<base href="{$base_uri}" />
 
 </head>
 
@@ -17,29 +19,12 @@
 
 <div id="pageWrapper">
 
-	<div id="header">
-		<a href="{$root_uri}"><img src="{$root_uri}images/template/website_logo.png" alt="Student Robotics Logo" /></a>
-
-		<form action="" method="get">
-			<input type="text" name="q" />
-			<input type="submit" value="" />
-		</form>
-
-		<ul>
-			<li><a href="{$root_uri}home">Home</a></li>
-			<li><a href="{$root_uri}ide">IDE</a></li>
-			<li><a href="{$root_uri}schools/">Schools</a></li>
-			<li><a href="{$root_uri}sponsors/">Sponsors</a></li>
-			<li><a href="{$root_uri}about/gettinginvolved">Get Involved</a></li>
-			<li><a href="{$root_uri}about">About Us</a></li>
-		</ul>
-	</div>
-
+	{include file="header.tpl"}
 
 	<div id="content">
 
 		<div id="topBanner">
-			<img src="images/content/srobo_website_robot.png" alt="Image of Robot" />
+			<img src="{$root_uri}images/content/srobo_website_robot.png" alt="Image of Robot" />
 	
 			<h1>Welcome to Student Robotics</h1>
 	
@@ -52,15 +37,7 @@
 
 		<div id="latestNews">
 
-			<h2>SR 2011 Applications now open</h2>
-
-			<p>	Applications for the 2011 Student Robotics competition are now
-			open.
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-			diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-			aliquam erat volutpat.
-			<a href="">Read More</a>
-			</p>
+			{latestRSS}
 
 		</div>
 
@@ -77,33 +54,44 @@
 			<div id="boxWrapper">
 
 				<div class="box">
-					<h3>The IDE</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-					tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<img src="" alt="" />
-				</div>
-
-				<div class="box">
-					<h3>The Kit</h3>
+					<h3><a href="{$root_uir}ide">The IDE</a></h3>
 					<p>
-						<img width="100" height="100" src="https://www.studentrobotics.org/sites/all/themes/robogrid/photos/power.png" alt="old powerboard" />
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-						euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
+
+						The Student Robotics web&ndash;based <acronym title="Integrated Development Environment">IDE</acronym>
+						is used by all of the schools &amp; colleges taking part to write programs for their robots.
+						You will need to be registered to use it.
 					</p>
 				</div>
 
 				<div class="box">
-					<h3>Want to Get Involved?</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<img src="" alt="" />
+					<h3><a href="{$root_uir}schools/kit/">The Kit</a></h3>
+					<p>
+						<a href="{$root_uir}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
+						Student Robotics design and build a range of easily&ndash;programmable boards
+						designed specifically for building robots. The teams receive the kit at Kickstart
+						and have about 7 months to build a competition&ndash;winning robot.
+					</p>
+				</div>
+
+				<div class="box clearboth">
+					<h3><a href="{$root_uir}about/gettinginvolved">Want to Get Involved?</a></h3>
+					<p>
+						Student Robotics is always looking for more people to get involved, and not just schools.
+						Whether you're a University student or a company considering sponsoring the competition,
+						you are more than welcome to get involved.
+					</p>
+
 				</div>
 
 				<div class="box">
-					<h3>Our Sponsors</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<img src="" alt="" />
+					<h3><a href="{$root_uir}sponsors/">Our Sponsors</a></h3>
+					<p>
+						<img src="" alt="" />
+
+						Student Robotics really couldn't happen if we didn't have our sponsors.
+					</p>
+
 				</div>
 
 			</div>
@@ -115,10 +103,7 @@
 	</div>
 
 
-	<div id="footer">
-		<span class="rss"><a href="{$root_uri}feed.rss"><img src="{$root_uri}images/template/feed.png" alt="RSS" title="SR RSS Latest News Feed" /></a></span>
-		<span class="copyright">&copy; Student Robotics</span>
-	</div>
+	{include file="footer.tpl"}
 
 </div>
 

@@ -4,11 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>{getFromContent get="title"} | Student Robotics</title>
+	<title>News | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="keywords" content="{getFromContent get='keywords'}" />
-	<meta name="description" content="{getFromContent get='description'}" />
+	<meta name="keywords" content="student, robotics, news" />
+	<meta name="description" content="All the latest news from Student Robotics" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}css/news.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<base href="{$base_uri}" />
 
@@ -22,16 +23,13 @@
 
 
 	<div id="content">
+		
+		<h1>Student Robotics News</h1>
 
-		{getFromContent get="content"}
+		{newsPage}
 		<p></p>
 
 	</div>
-
-	<div id="original">
-		Original: <a href="{$root_uri}content/{$original}">{$original}</a>
-	</div>
-
 
 	{include file="footer.tpl"}
 
@@ -40,4 +38,3 @@
 </body>
 
 </html>
-

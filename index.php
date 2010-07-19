@@ -1,6 +1,6 @@
 <?php
 
-ob_start();
+if (!ob_start('ob_gzhandler')) ob_start();
 
 //get user configuration
 require('config.inc.php');
@@ -25,74 +25,118 @@ $smarty->template_dir = TEMPLATE_DIR;
 $smarty->compile_dir = COMPILED_TEMPLATE_DIR;
 $smarty->cache_dir = CACHE_DIR;
 
-//get the allowed pages by traversing the content dir
-$ALLOWED_PAGES = getAllowedPages(CONTENT_DIR);
+//get the page to serve (excl. language)
+$page = getPage();
 
+//get the prefered languages
+$orderedLanguages = getOrderedLanguages();
 
+//default language is en -- English
+$language = 'en';
 
-if (isset($_GET['page']) && ($_GET['page'] != 'home')) {
+//use lowercase array keys for comparison (no mixed case issues then)
+$accepted_languages = array_change_key_case($ACCEPTED_LANGUAGES, CASE_LOWER);
 
-	if (pageIsAllowed($_GET['page'])) {
+foreach($orderedLanguages as $l){
 
-		$page = $_GET['page'];
+	//if it's a supported language...
+	if (in_array(strtolower($l), $accepted_languages)){
 
-	} elseif (pageIsAllowed($_GET['page'].'/')){
+		//and the relevent content filew exists...
+		if (file_exists(CONTENT_DIR . '/' . $accepted_languages[strtolower($l)] . '/' . $page)){
 
-		//a file of that name doesn't exist, but a dir does.
-		$page = $_GET['page'].'/';
+			//this is the language to use
+			$language = $accepted_languages[strtolower($l)];
+			break;
+		}
 
-		//perform a temporary redirect
-		Header("HTTP/1.1 302 Found");
-		Header("Location: " . ROOT_URI . $page);
+	}
+}//foreach
 
-	} elseif ($page != 'home'){
+//home and content files are treated differently, so if the page is 'home'
+//serve the home template, otherwise use the content template.
+if ($page == 'home'){
 
-		//page not found/allowed
-		$page = '404';
-		Header("HTTP/1.1 404 Not Found");
-
-	}//if-elseif-else pageIsAllowed
-
-} else {
-
-	//home page
 	$smarty->assign('side_menu', constructMenuHierachy());
 	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->assign('base_uri', BASE_URI);
 	$smarty->display('home.tpl');
 	ob_end_flush();
 	exit(0);
-}
+
+} elseif ($page == 'news/index'){
+
+	$smarty->assign('p', isset($_GET['p']) ? $_GET['p'] : '1');
+	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->assign('base_uri', BASE_URI);
+	$smarty->display('news.tpl');
+	ob_end_flush();
+	exit(0);
+
+} else {
+
+	//the physical file to serve, including the language in the path
+	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
+
+	//before we go ahead and serve it, see if we can use what the
+	//user's browser has cached.
+	if (function_exists('apache_request_headers')){
+
+		$headers = apache_request_headers();
+
+		//if the file hasn't changed since the client last saw it, send a 304
+		if (isset($headers['If-Modified-Since'])
+			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
+
+			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+				filemtime($fileToServe)).' GMT', true, 304);
+
+			Header('Connection: close');
+
+		} else {
+
+			//otherwise serve it
+			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+				filemtime($fileToServe)).' GMT', true, 200);
+
+		}//if else isset if-mod-since
+
+	}//if function_exists
+
+
+	//this is as far as we can get without opening a content file, so...
+
+	$content = new Content($fileToServe);
+
+	//called to allow access to the metadata
+	$content->getParsedContent();
+
+	//if the file is a special redirection file, do the redirection
+	if ($content->getMeta('REDIRECT') != ""){
+		Header("HTTP/1.1 302 Found");
+		Header("Location: " . $content->getMeta('REDIRECT'));
+	}
+
+	//make the content object accessible in the templates (used by a custom smarty plugin)
+	$smarty->assign('content', $content);
+
+
+	//get ready to display the template
+	$smarty->assign('original', $language . '/' . $page);
+	$smarty->assign('content_dir', CONTENT_DIR);
+	$smarty->assign('root_uri', ROOT_URI);
+	$smarty->assign('base_uri', BASE_URI);
+
+	//display content template
+	$smarty->display('content.tpl');
+
+	ob_end_flush();
+
+}//if-else
 
 
 
-//append 'index' if there is a trailing slash
-if (substr($page, -1) == '/') $page .= 'index';
 
-if (CONTENT_DIR . '/' . $page === realpath(CONTENT_DIR . '/' . $page))
-	$content = new Content(CONTENT_DIR . '/' . $page);
-else
-	$content = new Content(CONTENT_DIR . '/404');
-
-
-$content->getParsedContent();
-
-if ($content->getMeta('REDIRECT') != ""){
-	Header("HTTP/1.1 302 Found");
-	Header("Location: " . $content->getMeta('REDIRECT'));
-}
-
-$smarty->assign('content', $content);
-
-
-//get ready to display the template
-$smarty->assign('page', $page);
-$smarty->assign('content_dir', CONTENT_DIR);
-$smarty->assign('root_uri', ROOT_URI);
-
-//display contnet template
-$smarty->display('content.tpl');
-
-ob_end_flush();
 
 
 
@@ -102,15 +146,60 @@ ob_end_flush();
 
 
 /*
- * Determines whether or not a particular page can be viewed
- * (does it exist) returning a boolean value accordingly.
+ * ===========================================================
+ *                         FUNCTIONS
+ * ===========================================================
  */
-function pageIsAllowed($page){
 
-	global $ALLOWED_PAGES;
-	return in_array($page, $ALLOWED_PAGES);
+/*
+ * Returns an ordered array (most prefered first) of languages
+ * the client is happy with. If it's not set, then 'en' is the
+ * default.
+ *
+ * For more information on this header, see the RFC:
+ * http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
+ */
+function getOrderedLanguages(){
 
-}//pageIsAllowed
+	//check to see if we can get at the headers
+	if (!function_exists('apache_request_headers'))
+		return array('en');
+
+	$headers = apache_request_headers();
+
+	//check to see if Accept-Language header is present
+	if (!in_array('Accept-Language', array_keys($headers)))
+		return array('en');
+
+	//get each of the language tags
+	$tags = explode(',', $headers['Accept-Language']);
+
+	$pref_array = array();
+	if (count($tags) > 0){
+
+		//get, by group, the following: language, country code, preference
+		$pattern = '/([A-Za-z]{2})(-[A-Za-z]{2})?(;q=[01]\.[0-9]+)?/';
+		foreach ($tags as $tag){
+
+			preg_match($pattern, $tag, $matches);
+
+			//no 'q' preference === preference of 1
+			$preference = array_key_exists(3, $matches) ? (float)str_replace(';q=', '', $matches[3]) : (float)1;
+			$pref_array[$matches[1].$matches[2]] = $preference;
+
+		}//foreach
+
+		//sort thee array, in reverse numeric order, and return the keys (that's the language tag)
+		arsort($pref_array, SORT_NUMERIC);
+		return array_keys($pref_array);
+
+	} else {
+
+		return array('en');
+
+	}//if-else
+
+}
 
 
 
@@ -128,7 +217,7 @@ function getAllowedPages($directory) {
 		while (false !== ($file = readdir($handle))) {
 
 			//ignore . and ..
-			if ($file != "." && $file != "..") {
+			if (substr($file, 0, 1) != '.') {
 
 				if (is_dir($directory. "/" . $file)){
 
@@ -136,7 +225,7 @@ function getAllowedPages($directory) {
 					$array_items = array_merge($array_items, getAllowedPages($directory. "/" . $file));
 
 					//get the bit of path after the content dir
-					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
+					$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR . '/default') . '\/(.+)$/';
 					preg_match($pattern, $directory. "/" . $file, $matches);
 					$array_items[] = $matches[1] . '/';
 
@@ -147,7 +236,7 @@ function getAllowedPages($directory) {
 				$file = $directory . "/" . $file;
 
 				//ignore the extension fof the file paths, and get just the bit after 'content/'
-				$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR) . '\/(.+)$/';
+				$pattern = '/^' . str_replace('/', '\/', CONTENT_DIR . '/default') . '\/(.+)$/';
 				preg_match($pattern, $file, $matches);
 				$array_items[] = $matches[1];
 
@@ -171,6 +260,51 @@ function getAllowedPages($directory) {
 
 
 /*
+ * Returns the page to serve.
+ */
+function getPage(){
+
+	$page = 'home';
+
+	//the 'default' directory is a symlink to the 'en' -- more explanatory
+	$allowed_pages = getAllowedPages(CONTENT_DIR . '/default');
+
+	if (isset($_GET['page'])){
+
+		//can we serve the page?
+		if (in_array($_GET['page'], $allowed_pages)){
+
+			$page = $_GET['page'];
+
+		//is the request actually a directory?
+		} elseif (in_array($_GET['page'] . '/', $allowed_pages)) {
+
+			//redirect the browser to the more correct URL with trailing slash
+			Header('HTTP/1.1 302 Found');
+			Header('Location: ' . ROOT_URI . $_GET['page'] . '/');
+
+		} else {
+
+			//page not allowed / page not found -- respond with a 404
+			Header('HTTP/1.1 404 Not Found');
+			$page = '404';
+
+		}//if-elseif-else
+
+		//append 'index' if the 'page' requested is a directory
+		if (substr($page, -1, 1) == '/')
+			$page .= 'index';
+
+
+	}//if isset
+
+	return $page;
+
+}//getPage
+
+
+
+/*
  * Constructs a Menu (object) with a load of MenuItems (objects)
  * and to pass to the makemenu plugin (function.makemenu.php)
  * in the plugins/ dir. (For producing a ul/li-based menu).
@@ -178,12 +312,12 @@ function getAllowedPages($directory) {
 function constructMenuHierachy(){
 
 	global $MENU_PAGES;
-	global $ALLOWED_PAGES;
+	$allowed_pages = getAllowedPages(CONTENT_DIR . '/default');
 
 	$menu = new Menu();
 
 	//ignore any menu page that doesn't exist
-	$menu_pages = array_intersect($MENU_PAGES, $ALLOWED_PAGES);
+	$menu_pages = array_intersect($MENU_PAGES, $allowed_pages);
 
 	//add each to the hierachy
 	foreach (array_keys($menu_pages) as $index){
@@ -201,6 +335,5 @@ function constructMenuHierachy(){
 	return $menu;
 
 }//constructMenuHeirachy
-
 
 ?>

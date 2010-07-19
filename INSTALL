@@ -1,5 +1,24 @@
-git clone
-ensure php-Smarty is installed
-get php markdown and put it in smarty's plugins -- corectly named!
-configure directories with config.inc.php
-ensure 'templates_compiled' is owned by apache user
+Instalation Instructions for SRweb
+==================================
+
+* Install php-Smarty:
+
+	+ for yum: `sudo yum install php-Smarty`
+	+ for apt: `sudo apt-get install smarty`
+	+ (for both, ensure config.inc.php is set correctly)
+
+* ensure 'templates_compiled' is owned by apache user. There are a number 
+  of ways you can do this:
+
+	+ `chown $APACHEU:$APACHEG templates_compiled/` (where $APACHEU
+	  and $APACHEG are the Apache user and Apache group, respectively)
+	+ `setfacl -m u:$APACHEU:rwx templates_compiled/` to allow r/w/x
+	  access to the apache user aswell as the owner.
+	+ You could also chmod, but depending on the dir's location, that
+          may not be the best way.
+
+* modify the .htaccess file to use the correct 'RewriteBase' and ensure 
+  mod_rewrite is installed and loaded in the main Apache configuration file.
+
+
+That should be it! Hope that helped.

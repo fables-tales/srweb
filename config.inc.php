@@ -13,9 +13,36 @@ ini_set('display_errors', 1);
 /* The directory 'Smarty.class.php' can be found in */
 define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
 
+
+/* The location of files relative to the directory this file is in */
+define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
+	? dirname($_SERVER['PHP_SELF']) . '/'
+	: '/');
+
 /* The root of the website when hosted (Where you would navigate to
  * to find index.php) */
-define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) . '/');
+$BASE_URI = !empty($_SERVER['HTTPS'])
+
+	? 'https://' . $_SERVER['HTTP_HOST'] 
+		. dirname($_SERVER['PHP_SELF']) . '/'
+
+	: 'http://' . $_SERVER['HTTP_HOST'] 
+		. dirname($_SERVER['PHP_SELF']) . '/';
+
+define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
+	? substr($BASE_URI, 0, -1)
+	: $BASE_URI);
+
+
+/* Memcache(d) --
+ * for the site to function, memcached is required (including the memcache)
+ * PHP module. It is used to prevent needless processing for the RSS feed
+ * and it's use. Without it, the feed will still work, but the latestRSS
+ * smarty plugin will not. If you just start the memcache deamon (memcached)
+ * then you probably won't need to change these settings
+ */
+define('MEMCACHE_SERVER', 	'127.0.0.1');
+define('MEMCACHE_PORT',		11211);
 
 
 /* The pages that you wish to appear in the menu should be listed here.
@@ -47,18 +74,13 @@ $MENU_PAGES = array(
 //     =====================================================
 	'Home' 			=> 'home',
 
-	'Schools & Colleges'	=> 'schools/',
-	'Competition Info'	=> 'schools/competitioninfo',
+	'Schools &amp; Colleges'=> 'schools/',
+	'Competition'		=> 'schools/competition',
 	'Joining'		=> 'schools/joining',
 	'Documentation'		=> 'schools/docs/',
 	'Kit'			=> 'schools/kit/',
 
-	'Uni Students'		=> 'uni/',
-	'Getting Involved'	=> 'uni/gettinginvolved',
-
 	'Sponsors'		=> 'sponsors/',
-	'Why Sponsor?'		=> 'sponsors/whysponsor',
-	'Current Sponsors'	=> 'sponsors/currentsponsors',
 
 	'About Us'		=> 'about/',
 	'The Team'		=> 'about/team',
@@ -66,6 +88,36 @@ $MENU_PAGES = array(
 	'Mission Statement'	=> 'about/mission',
 	'Public Documents'	=> 'about/publicdocs',
 	'Contact Us'		=> 'about/contactus'
+);
+
+
+/*
+ * An array to map standardised language tags (more on that in
+ * a second) to the directory under which the content could be
+ * found.
+ *
+ * A language tag is of the form 'a[[-b];q=c]'
+ *
+ * where:	'a' is an ISO-639-1 assigned language code;
+ * 		'b' is an ISO 3166-1 alpha-2 assigned country code; and
+ * 		'c' is a value between (and including) 0 and 1 as an
+ * 		    indication of preference for the tag (with 0 being
+ * 		    'do not use').
+ *
+ * Both 'b' and 'c' are optional. Below is case insensitive.
+ *
+ * The tag is sent by the client's browser in an 'Accept-Language'
+ * header, so assuming the client has configured their browser, they
+ * will be served their language's content if it exists. If it doesn't,
+ * English (en) will be served instead.
+ */
+$ACCEPTED_LANGUAGES = array(
+//	lANG. TAG	=>  LANG. DIR
+//	=============================
+	'en'		=> 'en',
+	'en-gb'		=> 'en',
+	'en-us'		=> 'en',
+	'fr'		=> 'fr'	
 );
 
 
