@@ -113,7 +113,8 @@ div#header > ul > li {
 div#header > ul > li > a {
 	text-decoration:none;
 	color:#8b8884;
-	padding:10px;
+	padding:8px;
+	letter-spacing:1px;
 }
 
 div#content{
