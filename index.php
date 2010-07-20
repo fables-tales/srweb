@@ -105,13 +105,27 @@ if ($page == 'home'){
 
 	}//if function_exists
 
+	$content = NULL;
 
-	//this is as far as we can get without opening a content file, so...
+	if (extension_loaded('memcache')){
 
-	$content = new Content($fileToServe);
+		$memcache = new Memcache();
+		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
-	//called to allow access to the metadata
-	$content->getParsedContent();
+			if (!($content = $memcache->get('page_content_' . $fileToServe))){
+				$content = new Content($fileToServe);
+				$content->getParsedContent();
+				$memcache->set('page_content_' . $fileToServe, $content, 0, MEMCACHE_TTL);
+			}
+
+		}
+
+	}//if extension_loaded
+
+	if ($content === NULL){
+		$content = new Content($fileToServe);
+		$content->getParsedContent();
+	}
 
 	//if the file is a special redirection file, do the redirection
 	if ($content->getMeta('REDIRECT') != ""){
