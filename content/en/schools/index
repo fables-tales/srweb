@@ -6,22 +6,54 @@
 Schools & Colleges
 ==================
 
+Student Robotics runs a robotics competition for teams comprised of
+sixth&ndash;form and college students in the local (Southampton, UK) area. Teams
+that aren't too far away will get a weekly visit from one of the Student Robotics
+Mentors, who will offer guidance and monitor the progress of the team.
+
+
 [The Competition](schools/competition)
 --------------------------------------
 
-Read more about the [competition](schools/competition).
+The competition is generally arena&ndash;based and, in the past, has involved
+picking up coloured blocks and throwing balls into nets. To see the scale of the
+operation from last year's competition (Easter 2010), why not have a look at
+[this time&ndash;lapse video](http://xgoat.com/wp/2010/04/21/student-robotics-2010/)
+of the arena going up, the competition, and the arena coming down.
+
+Would you like to read more about this year's [competition](schools/competition)?
+
 
 [The Kit](schools/kit)
 ----------------------
 
-Have a look at the [kit](schools/kit).
+Student Robotics understands how restrictive money can be for running activities
+like this. To combat this issue, we've found some [sponsors](sponsors/) &ndash;
+ to whom we are very grateful &ndash; making the kit for the teams completely
+free. That's right, **free**! The only things that will need to be brought are
+materials for the robot base/body and any motors, servos. etc... that the team
+decides they need.
+
+Why not have a look at this year's [kit](schools/kit)?
+
 
 [The Documentation](schools/docs)
 ---------------------------------
 
-Do you need to read some [documentation](schools/docs)?
+Using the kit may seem quite daunting at first, but please bear in mind the fact
+that it has been designed to be as easy to use as possible. All of the
+low&ndash;level interfacing with the hardware has been done by us, leaving a nice,
+higher&ndash;level way of making the robot do things. The robots are programmed
+by the teams in [Python](http://www.python.org/), a language recommended for both
+new and experienced programmers alike.
+
+To see how it all works, please have a read of the [documentation](schools/docs).
+
 
 [Want to Take Part?](schools/joining)
 -------------------------------------
+
+If the above sounds interesting to you, and you'd like to find out more, please
+do [contact us](about/contactus) and ask absolutely anything you'd like.
 
 Find out how to [join](schools/joining).
