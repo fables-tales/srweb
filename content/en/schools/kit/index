@@ -6,4 +6,21 @@
 The Kit
 =======
 
-When more information about the kit is available, it will appear here.
+This year's kit is currently under development and some fairly large changes are
+happening:
+
+At the heart of last year's kit was what we affectionately refereed to as
+_The Slug_: a now&ndash;discontinued, heavily&ndash;modified
+<acronym title="Network Attached Storage">NAS</acronym> device from Linksys. This
+system, although successful, was not very maintainable.
+
+This year, we've made the leap to [Beagleboards](http://beagleboard.org/) which
+should dramatically the situation: faster code running on the robots, faster robot
+boot times, and we'll even attach a 480x272 multi&ndash;purpose color display! As
+well as this, the rest of the kit (motor boards, PWM boards and JointIO boards) is
+being redesigned to be even better and much more difficult to break!
+
+
+
+
+_When more information about the kit is available, it will appear here._
