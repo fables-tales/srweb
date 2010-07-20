@@ -144,6 +144,30 @@ div#content h2 {
 	margin-top:15px;
 }
 
+div#content h1 a {
+	color:inherit;
+}
+
+div#content h2 a {
+	color:inherit;
+}
+
+div#content h3 a {
+	color:inherit;
+}
+
+div#content h4 a {
+	color:inherit;
+}
+
+div#content h5 a {
+	color:inherit;
+}
+
+div#content h6 a {
+	color:inherit;
+}
+
 div#content h3 {
 	font-size:18px;
 	margin-bottom:5px;
