@@ -2,7 +2,7 @@
 
 if (!ob_start('ob_gzhandler')) ob_start();
 
-define('MEMCACHE_TTL', 60);
+define('MEMCACHE_TTL', 86400);
 
 //get user configuration
 require('config.inc.php');
