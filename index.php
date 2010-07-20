@@ -112,11 +112,11 @@ if ($page == 'home'){
 		$memcache = new Memcache();
 		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
-			if (!($content = $memcache->get('page_content_' . $fileToServe))){
+			if (!($content = $memcache->get('page_content_' . $fileToServe . '_' . filemtime($fileToServe)))){
 				$content = new Content($fileToServe);
 				$content->getParsedContent();
-				$memcache->set('page_content_' . $fileToServe, $content, 0, MEMCACHE_TTL);
-			}
+				$memcache->set('page_content_' . $fileToServe . '_' . filemtime($fileToServe), $content, 0, MEMCACHE_TTL);
+			};
 
 		}
 
