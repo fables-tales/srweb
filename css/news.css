@@ -11,7 +11,11 @@ div.content div.newsDate {
 	float:left;
 	width:60px;
 	position:relative;
-	margin-top:19px;
+	margin-top:5px;
+}
+
+div.content > div.newsItem > div.newsContent > h2 {
+	margin-top:0px;
 }
 
 div.content div.newsDate div {
@@ -48,9 +52,7 @@ div.content div.newsDate div.year {
 }
 
 div.content div.newsContent {
-	float:left;
-	width:890px;
-	margin-left:10px;
+	margin-left:70px;
 	border-bottom:1px dashed silver;
 }
 
