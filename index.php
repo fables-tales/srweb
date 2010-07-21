@@ -142,6 +142,7 @@ if ($page == 'home'){
 	$smarty->assign('content_dir', CONTENT_DIR);
 	$smarty->assign('root_uri', ROOT_URI);
 	$smarty->assign('base_uri', BASE_URI);
+	$smarty->assign('page_id', str_replace('/', '_', $page));
 
 	//display content template
 	$smarty->display('content.tpl');
