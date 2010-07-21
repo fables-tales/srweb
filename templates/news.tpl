@@ -23,7 +23,7 @@
 	{include file="header.tpl"}
 
 
-	<div id="content">
+	<div class="content">
 		
 		<h1>Student Robotics News</h1>
 
