@@ -22,7 +22,7 @@
 
 	{include file="header.tpl"}
 
-	<div id="content">
+	<div class="content">
 
 		<div id="topBanner">
 			<img src="{$root_uri}images/content/srobo_website_robot.png" alt="Image of Robot" />
