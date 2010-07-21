@@ -117,7 +117,7 @@ div#header > ul > li > a {
 	letter-spacing:1px;
 }
 
-div#content{
+div.content{
 	clear:both;
 	border-bottom:1px solid silver;
 	padding-bottom:20px;
@@ -125,55 +125,55 @@ div#content{
 	overflow:visible;
 }
 
-div#content h1, h2, h3, h4, h5, h6 {
+div.content h1, h2, h3, h4, h5, h6 {
 	color:#0d1f61;
 	line-height:1.3em;
 }
 
-div#content > h1 {
+div.content > h1 {
 	font-size:26px;
 	margin-bottom:10px;
 	border-top:1px solid silver;
 	padding-top:10px;
 }
 
-div#content h2 {
+div.content h2 {
 	font-size:20px;
 	margin-bottom:5px;
 	margin-top:15px;
 }
 
-div#content h1 a {
+div.content h1 a {
 	color:inherit;
 }
 
-div#content h2 a {
+div.content h2 a {
 	color:inherit;
 }
 
-div#content h3 a {
+div.content h3 a {
 	color:inherit;
 }
 
-div#content h4 a {
+div.content h4 a {
 	color:inherit;
 }
 
-div#content h5 a {
+div.content h5 a {
 	color:inherit;
 }
 
-div#content h6 a {
+div.content h6 a {
 	color:inherit;
 }
 
-div#content h3 {
+div.content h3 {
 	font-size:18px;
 	margin-bottom:5px;
 	margin-top:15px;
 }
 
-div#content p {
+div.content p {
 	margin-bottom:10px;
 	/* Stops floated images inside paragraphs from swallowing the top
          * margin of the following heading */
@@ -181,41 +181,41 @@ div#content p {
 }
 
 
-div#content a {
+div.content a {
 	text-decoration:none;
 	color:#DE6400;
 }
 
-div#content a:hover {
+div.content a:hover {
 	color:#0d1f61;
 }
 
-div#content > p > img {
+div.content > p > img {
 	border:1px solid silver;
 	padding:3px;
 }
 
-div#content > p > img.left {
+div.content > p > img.left {
 	float:left;
 	margin-right:10px;
 }
 
-div#content > p > img.right {
+div.content > p > img.right {
 	float:right;
 	margin-left:10px;
 }
 
-div#content ul {
+div.content ul {
 	list-style:disc;
 	margin-left:30px;
 	margin-bottom:10px;
 }
 
-div#content ul ul {
+div.content ul ul {
 	list-style:circle;
 }
 
-div#content ul li {
+div.content ul li {
 	line-height:1.5em;
 }
 
