@@ -177,6 +177,8 @@ div.content p {
 	margin-bottom:10px;
 	margin-left: 20px;
 	text-align:justify;
+	font: 16px/1.6 Helvetica,Arial,sans-serif;
+	word-spacing:0.1em;
 }
 
 
