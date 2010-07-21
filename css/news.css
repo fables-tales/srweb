@@ -1,11 +1,11 @@
-div#content div.newsItem {
+div.content div.newsItem {
 	height:auto;
 	overflow:hidden;
 	margin-bottom:15px;
 	clear:both;
 }
 
-div#content div.newsDate {
+div.content div.newsDate {
 	background:#0d1f61;
 	color:white;
 	float:left;
@@ -14,14 +14,14 @@ div#content div.newsDate {
 	margin-top:19px;
 }
 
-div#content div.newsDate div {
+div.content div.newsDate div {
 	float:left;
 	width:60px;
 	text-align:center;
 	display:block;
 }
 
-div#content div.newsDate div.day {
+div.content div.newsDate div.day {
 	font-size:40px;
 	line-height:40px;
 	margin-top:5px;
@@ -30,7 +30,7 @@ div#content div.newsDate div.day {
 	margin-left:2px;
 }
 
-div#content div.newsDate div.month {
+div.content div.newsDate div.month {
 	letter-spacing:5px;
 	text-transform:uppercase;
 	font-size:16px;
@@ -38,7 +38,7 @@ div#content div.newsDate div.month {
 	margin-left:3px;
 }
 
-div#content div.newsDate div.year {
+div.content div.newsDate div.year {
 	letter-spacing:5px;
 	font-size:14px;
 	line-height:14px;
@@ -47,45 +47,45 @@ div#content div.newsDate div.year {
 	margin-left:3px;
 }
 
-div#content div.newsContent {
+div.content div.newsContent {
 	float:left;
 	width:890px;
 	margin-left:10px;
 	border-bottom:1px dashed silver;
 }
 
-div#content div.newsInfo {
+div.content div.newsInfo {
 	color:silver;
 	font-size:0.8em;
 	float:right;
 }
 
-div#content div.newsInfo a {
+div.content div.newsInfo a {
 	color:silver;
 }
 
-div#content div.olderNewer {
+div.content div.olderNewer {
 
 }
 
-div#content div.olderNewer a {
+div.content div.olderNewer a {
 	padding:5px;
 	background:silver;
 	color:#0d1f61;
 }
 
-div#content div.olderNewer a.older {
+div.content div.olderNewer a.older {
 	float:left;
 }
 
-div#content div.olderNewer a.newer {
+div.content div.olderNewer a.newer {
 	float:right;
 }
 
-div#content div.olderNewer a.older:before {
+div.content div.olderNewer a.older:before {
 	content:'< ';
 }
 
-div#content div.olderNewer a.newer:after {
+div.content div.olderNewer a.newer:after {
 	content:' >';
 }
