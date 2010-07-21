@@ -15,7 +15,14 @@ Mentors, who will offer guidance and monitor the progress of the team.
 [The Competition](schools/competition)
 --------------------------------------
 
-<img src="images/content/comp1.jpg" title="2010 Competition" alt="2010 Competition" class="right" />
+<video
+  controls="controls"
+  src="https://www.studentrobotics.org/~rspanton/timelapse-2010/2010-400.ogv"
+  poster="images/content/comp1.jpg"
+  tabindex="0"
+  class="right">
+	<img src="images/content/comp1.jpg" title="2010 Competition" alt="2010 Competition" class="right" />
+</video>
 
 The competition is generally arena&ndash;based and, in the past, has involved
 picking up coloured blocks and throwing balls into nets. To see the scale of the
