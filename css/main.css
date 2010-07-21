@@ -176,6 +176,7 @@ div.content h3 {
 div.content p {
 	margin-bottom:10px;
 	margin-left: 20px;
+	text-align:justify;
 }
 
 
