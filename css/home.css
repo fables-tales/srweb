@@ -38,10 +38,10 @@ div.content div#topBanner h1 {
 
 div.content div#topBanner p {
 	color:white;
-	font-style:italic;
 	width:500px;
 	float:right;
 	margin-right:30px;
+	text-align:left;
 }
 
 div.content div#latestNews {
