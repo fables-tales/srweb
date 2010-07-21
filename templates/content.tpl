@@ -22,7 +22,7 @@
 	{include file="header.tpl"}
 
 
-	<div id="content">
+	<div id="{$page_id}" class="content">
 
 		{getFromContent get="content"}
 		<p></p>
