@@ -205,6 +205,22 @@ div.content > p > img.right {
 	margin-left:20px;
 }
 
+div.content > p > video {
+	border:1px solid silver;
+	padding:3px;
+	margin-bottom:10px;
+}
+
+div.content > p > video.left {
+	float:left;
+	margin-right:20px;
+}
+
+div.content > p > video.right {
+	float:right;
+	margin-left:20px;
+}
+
 div.content ul {
 	list-style:disc;
 	margin-left:30px;
