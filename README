@@ -1,0 +1,148 @@
+Quick Info
+==========
+
+MarkDown Syntax:
+    http://daringfireball.net/projects/markdown/syntax
+
+The PHP MarkDown (Extra) function features:
+    http://michelf.com/projects/php-markdown/extra/
+
+
+
+Introduction
+============
+
+In the spirit of the project, this documentation will be written in a 
+markdown syntax -- all will become clear...
+
+For INSTALATION INSTRUCTIONS, please see the INSTALL file.
+
+Srweb is a git-, PHP-, and Smarty-based templating system for producing a 
+webpage. Some of its merits include:
+
+  * Simple setup.
+
+  * Completely file-based (NO database!).
+
+  * changes can be made using git:
+
+      + you can accept git patches for changes;
+
+      + people can clone and run the site locally with borderline negligible 
+        modifications, make changes and push them back; and
+
+      + you can revert the site to an earlier point in time with ease, for 
+        example.
+
+  * A simple syntax (MarkDown) for writing content, with a fallback to 
+    standard HTML should MarkDown prove insufficient. (Hey, no offence 
+    MarkDown, but when it comes to image stuff, things get a little 
+    tricky.) More on this in a minute.
+
+  * A simple, file-based, news-feed-producing system with an automatic RSS 
+    feed.
+
+
+
+Style Guidlines & Content Production
+====================================
+
+Rules:
+
+1. use MarkDown (Syntax : http://daringfireball.net/projects/markdown/syntax)
+
+2. USE MarkDown
+
+3. If you have to use HTML:
+
+     + Don't use any style attributes in anything
+
+     + Use a semantic markup (by that I mean use a hierachical layout)
+
+4. If you have to style your elements:
+
+     + Do it properly, and by that I mean use CSS in 'css/content_extra.css'
+       -- you can address your specific element(s) using an ID for the content 
+       <div> (the content <div> is given an ID of the page name e.g. 
+       'sponsors/index' with slashes '/' replaced by underscores '_').
+
+       For example, a page 'bees/bob' like:
+
+          //TITLE:        Bees
+          //DESCRIPTION:  Why it's the bees/bob page, of course!
+          //KEYWORDS:	 bees, bob
+          //CONTENT_TYPE: markdown
+
+          | col  | col  |
+          | ---- | ---- |
+          | data | data |
+
+       ... a simple MarkDown (extra) table, you could target it with the 
+       following CSS:
+
+          div#bees_bob table {
+            color:red;
+          }
+
+       ... in the 'css/content_extra.css' file.
+
+The first thing to note is the header at the top of the file. The text after 
+'//TITLE:' will appear in the page's <title> tag. The DESCRIPTION will 
+appear in the relevent <meta> tag, and the same applies for KEYWORDS. The 
+CONTENT_TYPE specifies how the file will be parsed. The Currently supported 
+formats are as follows:
+
+  * 'markdown' --> MarkDown, obviously
+  * 'md'       --> shorthand for MarkDown
+  * 'html'     --> HTML source
+
+The prefered method of content production is MarkDown (you may have guessed) 
+and HTML should be used in exceptional circumstances. It is important to 
+note, though, that HTML tags can appear in MarkDown. For example:
+
+
+   A Title
+   =======
+
+   <img src="src.png" alt="alt" title="title" class="right" />
+
+   Some paragraph text.
+
+
+Will produce HTML output as follows:
+
+
+   <h1>A Title</h1>
+
+   <p><img src="src.png" alt="alt" title="title" class="right" /></p>
+
+   <p>Some paragraph text.</p>
+ 
+
+Which, with the current CSS, will produce a page with the <img> floated to 
+the right.
+
+Other valid content file headers include:
+
+  * PUB_DATE, which is used as the publication date for news (so RSS feed) 
+    items.
+
+
+Producing News
+==============
+
+Producing a news feed is simple, follow the following steps:
+
+  1. create a file, with a name of your choosing, in the 'news/' directory.
+
+  2. fill said file with the news content you want, remembering to set the 
+     headers {TITLE, DESCRIPTION, KEYWORDS, CONTENT_TYPE, PUB_DATE}, where 
+     PUB_DATE is the date the feed was published. The format can be anything 
+     PHP's strtotime() function can handle.
+
+  3. You're done! The page will be viewable as a normal page, it will appear 
+     in the news feed (RSS), and also on the home page in the latest news 
+     section. It'll also be in the 'news/index' representation of the feed.
+     (You will, or course, need to wait for memcache's cache to expire (or 
+     flush it :D).) The TITLE, DESCRIPTION and a formatted version of PUB_DATE
+     will appear in the feed.
