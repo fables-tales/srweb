@@ -128,7 +128,6 @@ div#content{
 div#content h1, h2, h3, h4, h5, h6 {
 	color:#0d1f61;
 	line-height:1.3em;
-	clear:both;
 }
 
 div#content > h1 {
