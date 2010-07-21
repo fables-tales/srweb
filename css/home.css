@@ -142,11 +142,12 @@ div.content div#boxWrapper div.box h3 a {
 
 div.content div#boxWrapper div.box p {
 	margin-left: 0;
+	text-align:left;
 }
 
 div.content div#boxWrapper div.box img {
 	border:1px solid silver;
 	padding:2px;
 	float:right;
-	margin-left:5px;
+	margin-left:10px;
 }
