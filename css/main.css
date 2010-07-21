@@ -177,7 +177,6 @@ div#content p {
 	margin-bottom:10px;
 	/* Stops floated images inside paragraphs from swallowing the top
          * margin of the following heading */
-	overflow:hidden;
 	margin-left: 20px;
 }
 
