@@ -69,8 +69,3 @@ function _latestRSS_getMostRecentFeedItem(){
 }
 
 ?>
-
-
-
-
-
