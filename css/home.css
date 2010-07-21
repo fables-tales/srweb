@@ -1,5 +1,11 @@
+div.content {
+	padding:0;
+	border-top:none;
+}
+
 div.content p {
 	margin-bottom:0;
+	font:inherit;
 }
 
 div.content div#topBanner {
