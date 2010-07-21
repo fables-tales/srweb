@@ -58,7 +58,7 @@
 					<p>
 						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
 
-						The Student Robotics web&ndash;based <acronym title="Integrated Development Environment">IDE</acronym>
+						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
 						is used by all of the schools &amp; colleges taking part to write programs for their robots.
 						You will need to be registered to use it.
 					</p>

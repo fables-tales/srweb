@@ -11,7 +11,7 @@ happening:
 
 At the heart of last year's kit was what we affectionately refereed to as
 _The Slug_: a now&ndash;discontinued, heavily&ndash;modified
-<acronym title="Network Attached Storage">NAS</acronym> device from Linksys. This
+<abbr title="Network Attached Storage">NAS</abbr> device from Linksys. This
 system, although successful, was not very maintainable.
 
 This year, we've made the leap to [Beagleboards](http://beagleboard.org/) which
