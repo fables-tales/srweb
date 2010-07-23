@@ -17,7 +17,7 @@ function smarty_function_latestRSS($params, &$smarty)
 	$feed_latest = NULL;
 
 	//check to see if cache module is useable
-	if (extension_loaded('memcache')){
+	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
 
 		//connect to memcached
 		$memcache = new Memcache();

@@ -6,7 +6,7 @@ define('MEMCACHE_TTL',		1800 /*seconds*/);
 
 $feed = NULL;
 
-if (extension_loaded('memcache')){
+if (MEMCACHE_ENABLED && extension_loaded('memcache')){
 
 	$memcache = new Memcache();
 	if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){

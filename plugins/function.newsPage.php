@@ -23,7 +23,7 @@ function smarty_function_newsPage($params, &$smarty)
 
 	$p = $smarty->get_template_vars('p');
 
-	if (extension_loaded('memcache')){
+	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
 
 		$memcache = new Memcache();
 		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
