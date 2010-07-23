@@ -10,30 +10,6 @@ ini_set('display_errors', 1);
  * ==================================
  */
 
-/* The directory 'Smarty.class.php' can be found in */
-define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
-
-
-/* The location of files relative to the directory this file is in */
-define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
-	? dirname($_SERVER['PHP_SELF']) . '/'
-	: '/');
-
-/* The root of the website when hosted (Where you would navigate to
- * to find index.php) */
-$BASE_URI = !empty($_SERVER['HTTPS'])
-
-	? 'https://' . $_SERVER['HTTP_HOST'] 
-		. dirname($_SERVER['PHP_SELF']) . '/'
-
-	: 'http://' . $_SERVER['HTTP_HOST'] 
-		. dirname($_SERVER['PHP_SELF']) . '/';
-
-define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
-	? substr($BASE_URI, 0, -1)
-	: $BASE_URI);
-
-
 /* Memcache(d) --
  * for the site to function, memcached is required (including the memcache)
  * PHP module. It is used to prevent needless processing for the RSS feed
@@ -41,9 +17,9 @@ define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
  * smarty plugin will not. If you just start the memcache deamon (memcached)
  * then you probably won't need to change these settings
  */
+define('MEMCACHE_ENABLED',	true);
 define('MEMCACHE_SERVER', 	'127.0.0.1');
 define('MEMCACHE_PORT',		11211);
-define('MEMCACHE_PREFIX',	$BASE_URI . '__');
 
 
 /* The pages that you wish to appear in the menu should be listed here.
@@ -130,6 +106,31 @@ $ACCEPTED_LANGUAGES = array(
  *    Don't say I didn't warn you!
  * ===================================
  */
+
+/* The directory 'Smarty.class.php' can be found in */
+define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
+
+
+/* The location of files relative to the directory this file is in */
+define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
+	? dirname($_SERVER['PHP_SELF']) . '/'
+	: '/');
+
+/* The root of the website when hosted (Where you would navigate to
+ * to find index.php) */
+$BASE_URI = !empty($_SERVER['HTTPS'])
+
+	? 'https://' . $_SERVER['HTTP_HOST']
+		. dirname($_SERVER['PHP_SELF']) . '/'
+
+	: 'http://' . $_SERVER['HTTP_HOST']
+		. dirname($_SERVER['PHP_SELF']) . '/';
+
+define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
+	? substr($BASE_URI, 0, -1)
+	: $BASE_URI);
+
+
 //extract the current directory
 define('ROOT_DIR',		dirname(__FILE__));
 define('TEMPLATE_DIR', 		ROOT_DIR . '/templates');
@@ -137,6 +138,7 @@ define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
+define('MEMCACHE_PREFIX',	BASE_URI . '__');
 
 date_default_timezone_set("Europe/London");
 

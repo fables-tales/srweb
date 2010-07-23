@@ -18,7 +18,7 @@ markdown syntax -- all will become clear...
 For INSTALATION INSTRUCTIONS, please see the INSTALL file.
 
 Srweb is a git-, PHP-, and Smarty-based templating system for producing a 
-webpage. Some of its merits include:
+website. Some of its merits include:
 
   * Simple setup.
 
@@ -61,7 +61,7 @@ Rules:
 
 4. If you have to style your elements:
 
-     + Do it properly, and by that I mean use CSS in 'css/content_extra.css'
+     + Do it properly, and by that I mean use CSS, and in 'css/content_extra.css'
        -- you can address your specific element(s) using an ID for the content 
        <div> (the content <div> is given an ID of the page name e.g. 
        'sponsors/index' with slashes '/' replaced by underscores '_').
@@ -130,10 +130,38 @@ Other valid content file headers include:
     items.
 
 
+Classes which can be applied to images (and also HTML5 videos) are as follows:
+
+  * 'left' : to float an image/video to the left of the page
+  * 'right': to float an image/video to the right of the page
+
+
+
+Content should be placed in the 'content/${lang}/' directory. Anything in this
+directory will appear under the BASE_URI directory on the site. Subdirectories
+will also work.
+
+Currently, language selection occurs based on the client's configuration (i.e. a
+browser preference setting). There is a 'content/default' symlink to the default
+language (currently English) and it is what pages are based upon. For the page to
+exist in another language, it must first exist in the default language. If an
+ISO standard language is set in the browser at a higher level of preference than
+the default, and the requested page exists in the more-prefered language, then
+that page will be served in the more-prefered language, and only when the correct
+mapping is set up in 'config.inc.php'.
+
+At the moment, only content files can be in multiple languages. The pages that
+can't be in different languages, currently, are as follows:
+
+  * the home page (i.e. 'templates/home.tpl')
+  * the news page (i.e. 'templates/news.tpl')
+  * the news feed
+
+
 Producing News
 ==============
 
-Producing a news feed is simple, follow the following steps:
+Producing a news feed item is simple, follow the following steps:
 
   1. create a file, with a name of your choosing, in the 'news/' directory.
 
@@ -148,3 +176,4 @@ Producing a news feed is simple, follow the following steps:
      (You will, or course, need to wait for memcache's cache to expire (or 
      flush it :D).) The TITLE, DESCRIPTION and a formatted version of PUB_DATE
      will appear in the feed.
+
