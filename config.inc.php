@@ -41,6 +41,7 @@ define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
  * smarty plugin will not. If you just start the memcache deamon (memcached)
  * then you probably won't need to change these settings
  */
+define('MEMCACHE_ENABLED',	true);
 define('MEMCACHE_SERVER', 	'127.0.0.1');
 define('MEMCACHE_PORT',		11211);
 define('MEMCACHE_PREFIX',	$BASE_URI . '__');
