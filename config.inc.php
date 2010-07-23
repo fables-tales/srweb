@@ -20,7 +20,6 @@ ini_set('display_errors', 1);
 define('MEMCACHE_ENABLED',	true);
 define('MEMCACHE_SERVER', 	'127.0.0.1');
 define('MEMCACHE_PORT',		11211);
-define('MEMCACHE_PREFIX',	$BASE_URI . '__');
 
 
 /* The pages that you wish to appear in the menu should be listed here.
@@ -139,6 +138,7 @@ define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
+define('MEMCACHE_PREFIX',	$BASE_URI . '__');
 
 date_default_timezone_set("Europe/London");
 
