@@ -68,21 +68,25 @@ Rules:
 
        For example, a page 'bees/bob' like:
 
-          //TITLE:        Bees
-          //DESCRIPTION:  Why it's the bees/bob page, of course!
-          //KEYWORDS:	 bees, bob
-          //CONTENT_TYPE: markdown
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//TITLE:        Bees
+//DESCRIPTION:  Why it's the bees/bob page, of course!
+//KEYWORDS:	bees, bob
+//CONTENT_TYPE: markdown
 
-          | col  | col  |
-          | ---- | ---- |
-          | data | data |
+| col  | col  |
+| ---- | ---- |
+| data | data |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
        ... a simple MarkDown (extra) table, you could target it with the 
        following CSS:
 
-          div#bees_bob table {
-            color:red;
-          }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+div#bees_bob table {
+   color:red;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
        ... in the 'css/content_extra.css' file.
 
@@ -100,24 +104,22 @@ The prefered method of content production is MarkDown (you may have guessed)
 and HTML should be used in exceptional circumstances. It is important to 
 note, though, that HTML tags can appear in MarkDown. For example:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A Title
+=======
 
-   A Title
-   =======
+<img src="src.png" alt="alt" title="title" class="right" />
 
-   <img src="src.png" alt="alt" title="title" class="right" />
-
-   Some paragraph text.
-
+Some paragraph text.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Will produce HTML output as follows:
 
-
-   <h1>A Title</h1>
-
-   <p><img src="src.png" alt="alt" title="title" class="right" /></p>
-
-   <p>Some paragraph text.</p>
- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<h1>A Title</h1>
+<p><img src="src.png" alt="alt" title="title" class="right" /></p>
+<p>Some paragraph text.</p>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Which, with the current CSS, will produce a page with the <img> floated to 
 the right.
