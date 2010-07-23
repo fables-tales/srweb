@@ -11,9 +11,9 @@ if (extension_loaded('memcache')){
 	$memcache = new Memcache();
 	if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
-		if (!($feed = $memcache->get('feed_content'))){
+		if (!($feed = $memcache->get(MEMCACHE_PREFIX . 'feed_content'))){
 			$feed = getFeedContent();
-			$memcache->set('feed_content', $feed, 0, MEMCACHE_TTL);
+			$memcache->set(MEMCACHE_PREFIX . 'feed_content', $feed, 0, MEMCACHE_TTL);
 		}
 
 	}//if connect

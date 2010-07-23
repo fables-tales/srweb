@@ -28,9 +28,9 @@ function smarty_function_newsPage($params, &$smarty)
 		$memcache = new Memcache();
 		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
-			if (!($output = $memcache->get('news_page_' . $p))){
+			if (!($output = $memcache->get(MEMCACHE_PREFIX . 'news_page_' . $p))){
 				$output = _getOutputForPage($p, $smarty->get_template_vars('base_uri'));
-				$memcache->set('news_page_' . $p, $output, 0, MEMCACHE_TTL);
+				$memcache->set(MEMCACHE_PREFIX . 'news_page_' . $p, $output, 0, MEMCACHE_TTL);
 			}
 
 		}//if connect

@@ -24,10 +24,10 @@ function smarty_function_latestRSS($params, &$smarty)
 		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
 			//does the most recent feed exist in the cache
-			if (!($feed_latest = $memcache->get('latest_feed_content'))){
+			if (!($feed_latest = $memcache->get(MEMCACHE_PREFIX . 'latest_feed_content'))){
 				//if not, make it so...
 				$feed_latest = _latestRSS_getMostRecentFeedItem();
-				$memcache->set('latest_feed_content', $feed_latest, 0, MEMCACHE_TTL);
+				$memcache->set(MEMCACHE_PREFIX . 'latest_feed_content', $feed_latest, 0, MEMCACHE_TTL);
 			}
 
 		} else
