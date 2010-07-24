@@ -1,14 +1,20 @@
-div#content p {
-	margin-bottom:0;
+div.content {
+	padding:0;
+	border-top:none;
 }
 
-div#content div#topBanner {
+div.content p {
+	margin-bottom:0;
+	font:inherit;
+}
+
+div.content div#topBanner {
 	background:url('../images/template/banner_bg.png') no-repeat;
 	background-position:0px -10px;
 	height:200px;
 }
 
-div#content div#topBanner img {
+div.content div#topBanner img {
 	width:374px;
 	height:260px;
 	overflow:visible;
@@ -18,7 +24,7 @@ div#content div#topBanner img {
 	left:30px;
 }
 
-div#content div#topBanner h1 {
+div.content div#topBanner h1 {
 	font-size:30px;
 	line-height:40px;
 	color:white;
@@ -30,43 +36,43 @@ div#content div#topBanner h1 {
 	clear:none;
 }
 
-div#content div#topBanner p {
+div.content div#topBanner p {
 	color:white;
-	font-style:italic;
 	width:500px;
 	float:right;
 	margin-right:30px;
+	text-align:left;
 }
 
-div#content div#latestNews {
+div.content div#latestNews {
 	margin:0 50px 50px 50px;
 	padding:50px 0 50px 0;
 	border-bottom:1px solid silver;
 }
 
-div#content div#latestNews h2 {
+div.content div#latestNews h2 {
 	font-size:30px;
 	line-height:40px;
 	clear:both;
 	color:#0d1f61;
 }
 
-div#content div#latestNews h2 a {
+div.content div#latestNews h2 a {
 	color:#0d1f61;
 }
 
-div#content div#expMenuAndBoxWrapper {
+div.content div#expMenuAndBoxWrapper {
 	overflow:auto;
 }
 
-div#content div#expandedMenu {
+div.content div#expandedMenu {
 	float:left;
 	width:240px;
 	border-right:1px solid silver;
 	padding-right:20px;
 }
 
-div#content div#expandedMenu h3 {
+div.content div#expandedMenu h3 {
 	border-bottom:1px solid silver;
 	margin-bottom:10px;
 	font-size:20px;
@@ -74,47 +80,46 @@ div#content div#expandedMenu h3 {
 	color:#0d1f61;
 }
 
-div#content div#expandedMenu ul {
+div.content div#expandedMenu ul {
 	list-style:none;
 	margin-left:0;
 }
 
-div#content div#expandedMenu ul li a {
+div.content div#expandedMenu ul li a {
 	text-decoration:none;
 }
 
-div#content div#expandedMenu > ul > li a:hover {
+div.content div#expandedMenu > ul > li a:hover {
 	border-bottom:none;
 }
 
-div#content div#expandedMenu > ul > li {
+div.content div#expandedMenu > ul > li {
 	margin-bottom:10px;
 	font-size:18px;
 }
 
-div#content div#expandedMenu > ul > li > a {
+div.content div#expandedMenu > ul > li > a {
 	color:#0d1f61;
 }
 
-div#content div#expandedMenu > ul > li > ul {
+div.content div#expandedMenu > ul > li > ul {
 	margin-left:5px;
 }
 
-div#content div#expandedMenu > ul > li > ul > li {
+div.content div#expandedMenu > ul > li > ul > li {
 	font-size:16px;
 }
 
-div#content div#expandedMenu > ul > li > ul > li > a {
+div.content div#expandedMenu > ul > li > ul > li > a {
 	color:#8b8884;
 }
 
-div#content div#boxWrapper {
+div.content div#boxWrapper {
 	float:left;
-	width:700px;
 	margin-left:-1px;
 }
 
-div#content div#boxWrapper div.box {
+div.content div#boxWrapper div.box {
 	width:320px;
 	float:left;
 	margin-left:20px;
@@ -122,7 +127,7 @@ div#content div#boxWrapper div.box {
 	line-height:1.4em;
 }
 
-div#content div#boxWrapper div.box h3 {
+div.content div#boxWrapper div.box h3 {
 	border-bottom:1px solid silver;
 	font-size:20px;
 	line-height:30px;
@@ -130,13 +135,18 @@ div#content div#boxWrapper div.box h3 {
 	color:#0d1f61;
 }
 
-div#content div#boxWrapper div.box h3 a {
+div.content div#boxWrapper div.box h3 a {
 	color:#0d1f61;
 }
 
-div#content div#boxWrapper div.box img {
+div.content div#boxWrapper div.box p {
+	margin-left: 0;
+	text-align:left;
+}
+
+div.content div#boxWrapper div.box img {
 	border:1px solid silver;
 	padding:2px;
 	float:right;
-	margin-left:5px;
+	margin-left:10px;
 }

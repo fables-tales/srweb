@@ -2,6 +2,8 @@
 
 if (!ob_start('ob_gzhandler')) ob_start();
 
+define('MEMCACHE_TTL', 86400);
+
 //get user configuration
 require('config.inc.php');
 
@@ -103,13 +105,27 @@ if ($page == 'home'){
 
 	}//if function_exists
 
+	$content = NULL;
 
-	//this is as far as we can get without opening a content file, so...
+	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
 
-	$content = new Content($fileToServe);
+		$memcache = new Memcache();
+		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
-	//called to allow access to the metadata
-	$content->getParsedContent();
+			if (!($content = $memcache->get(MEMCACHE_PREFIX . 'page_content_' . $fileToServe . '_' . filemtime($fileToServe)))){
+				$content = new Content($fileToServe);
+				$content->getParsedContent();
+				$memcache->set(MEMCACHE_PREFIX . 'page_content_' . $fileToServe . '_' . filemtime($fileToServe), $content, 0, MEMCACHE_TTL);
+			};
+
+		}
+
+	}//if extension_loaded
+
+	if ($content === NULL){
+		$content = new Content($fileToServe);
+		$content->getParsedContent();
+	}
 
 	//if the file is a special redirection file, do the redirection
 	if ($content->getMeta('REDIRECT') != ""){
@@ -126,6 +142,7 @@ if ($page == 'home'){
 	$smarty->assign('content_dir', CONTENT_DIR);
 	$smarty->assign('root_uri', ROOT_URI);
 	$smarty->assign('base_uri', BASE_URI);
+	$smarty->assign('page_id', str_replace('/', '_', $page));
 
 	//display content template
 	$smarty->display('content.tpl');

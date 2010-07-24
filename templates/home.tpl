@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -11,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/home.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
+	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
 	<base href="{$base_uri}" />
 
 </head>
@@ -21,7 +21,7 @@
 
 	{include file="header.tpl"}
 
-	<div id="content">
+	<div class="content">
 
 		<div id="topBanner">
 			<img src="{$root_uri}images/content/srobo_website_robot.png" alt="Image of Robot" />
@@ -58,7 +58,7 @@
 					<p>
 						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
 
-						The Student Robotics web&ndash;based <acronym title="Integrated Development Environment">IDE</acronym>
+						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
 						is used by all of the schools &amp; colleges taking part to write programs for their robots.
 						You will need to be registered to use it.
 					</p>

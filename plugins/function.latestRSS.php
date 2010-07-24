@@ -17,17 +17,17 @@ function smarty_function_latestRSS($params, &$smarty)
 	$feed_latest = NULL;
 
 	//check to see if cache module is useable
-	if (extension_loaded('memcache')){
+	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
 
 		//connect to memcached
 		$memcache = new Memcache();
 		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
 
 			//does the most recent feed exist in the cache
-			if (!($feed_latest = $memcache->get('latest_feed_content'))){
+			if (!($feed_latest = $memcache->get(MEMCACHE_PREFIX . 'latest_feed_content'))){
 				//if not, make it so...
 				$feed_latest = _latestRSS_getMostRecentFeedItem();
-				$memcache->set('latest_feed_content', $feed_latest, 0, MEMCACHE_TTL);
+				$memcache->set(MEMCACHE_PREFIX . 'latest_feed_content', $feed_latest, 0, MEMCACHE_TTL);
 			}
 
 		} else
@@ -69,8 +69,3 @@ function _latestRSS_getMostRecentFeedItem(){
 }
 
 ?>
-
-
-
-
-

@@ -13,4 +13,4 @@ function smarty_function_makemenu($params, &$smarty)
 {
     return $params['menu']->getMenuHTML();
 }
-?> 
+?>

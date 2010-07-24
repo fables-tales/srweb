@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -11,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/news.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
+	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
 	<base href="{$base_uri}" />
 
 </head>
@@ -22,7 +22,7 @@
 	{include file="header.tpl"}
 
 
-	<div id="content">
+	<div class="content">
 		
 		<h1>Student Robotics News</h1>
 
