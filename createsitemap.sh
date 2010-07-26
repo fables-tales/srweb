@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_URI="https://www.studentrobotics.org/~ckirkham/"
+ROOT_URI="https://www.studentrobotics.org/"
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
 echo "<urlset\
@@ -9,15 +9,16 @@ echo "<urlset\
  xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9\
   http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">" >> sitemap.xml
 
-URLS=$(	find content/ | 
+URLS=$( find content/default/ |
 	grep --invert-match -E '\..*$' |
-	awk '{ sub(/^content\//, ""); print }' | 
+	grep --invert-match -E '\/index$' |
+	awk '{ sub(/^content\/default\//, ""); print }' |
 	xargs -I {} echo {}
 )
 
 for i in $URLS; do
 
-	if [ -d "content/$i" ]; then
+	if [ -d "content/default/$i" ]; then
 		echo "$i/"
 	else
 		echo $i
