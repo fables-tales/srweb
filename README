@@ -15,7 +15,7 @@ Introduction
 In the spirit of the project, this documentation will be written in a 
 markdown syntax -- all will become clear...
 
-For INSTALATION INSTRUCTIONS, please see the INSTALL file.
+For INSTALLATION INSTRUCTIONS, please see the INSTALL file.
 
 Srweb is a git-, PHP-, and Smarty-based templating system for producing a 
 website. Some of its merits include:
