@@ -1,0 +1,46 @@
+div.docs {
+	height:auto;
+	overflow:auto;
+}
+
+div#docsNav {
+	width:180px;
+	margin-right:9px;
+	margin-top:20px;
+	border-right:1px solid silver;
+	float:left;
+}
+
+div#docsNav ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+div#docsNav ul ul {
+	padding-left:0px;
+	
+	background:url('../images/template/ul-dotted-bg.png') repeat-y;
+}
+
+div#docsNav ul li {
+	text-transform:capitalize;
+	padding-left:7px;
+}
+
+div#docsNav ul li a {
+	color:#0D1F61;
+}
+
+div#docsNav ul li ul li {
+	text-transform:capitalize;
+	background:url('../images/template/li-dotted-bg.png') no-repeat 0 0.7em;
+	
+}
+
+div.docs div#content {
+	float:left;
+	width:730px;
+	margin-top:20px;
+}
+
