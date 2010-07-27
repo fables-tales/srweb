@@ -32,7 +32,8 @@ div.content div#topBanner h1 {
 	width:500px;
 	float:right;
 	margin-right:50px;
-	margin-top:20px;
+	margin-top:10px;
+	margin-bottom:0px;
 	clear:none;
 }
 
@@ -149,4 +150,5 @@ div.content div#boxWrapper div.box img {
 	padding:2px;
 	float:right;
 	margin-left:10px;
+	margin-bottom:5px;
 }
