@@ -79,6 +79,8 @@ if ($page == 'home'){
 
 } else {
 
+	$pageInDocs = preg_match('/docs\/.+/', $page);
+
 	//the physical file to serve, including the language in the path
 	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
 
