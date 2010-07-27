@@ -89,28 +89,28 @@ div.content div#expandedMenu ul li a {
 	text-decoration:none;
 }
 
-div.content div#expandedMenu > ul > li a:hover {
+div.content div#expandedMenu ul li a:hover {
 	border-bottom:none;
 }
 
-div.content div#expandedMenu > ul > li {
+div.content div#expandedMenu ul li {
 	margin-bottom:10px;
 	font-size:18px;
 }
 
-div.content div#expandedMenu > ul > li > a {
+div.content div#expandedMenu ul li a {
 	color:#0d1f61;
 }
 
-div.content div#expandedMenu > ul > li > ul {
+div.content div#expandedMenu ul li ul {
 	margin-left:5px;
 }
 
-div.content div#expandedMenu > ul > li > ul > li {
+div.content div#expandedMenu ul li ul li {
 	font-size:16px;
 }
 
-div.content div#expandedMenu > ul > li > ul > li > a {
+div.content div#expandedMenu ul li ul li a {
 	color:#8b8884;
 }
 
