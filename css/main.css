@@ -267,12 +267,12 @@ div#footer {
 	color:#333;
 }
 
-div#footer > span.rss {
+div#footer span.rss {
 	position:absolute;
 	right:10px;
 }
 
-div#footer > span.copyright {
+div#footer span.copyright {
 	display:block;
 	margin:0 auto;
 	width:200px;
