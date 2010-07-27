@@ -357,4 +357,26 @@ function constructMenuHierachy(){
 
 }//constructMenuHeirachy
 
+
+
+function constructDocsNavHierarchy(){
+
+	$docsPages = getAllowedPages(CONTENT_DIR . '/default/docs');
+	sort($docsPages);
+	$menu = new Menu();
+
+	foreach($docsPages as $item){
+
+		if (substr($item, -5, 5) == 'index')
+			continue;
+
+		$text = explode('/', $item);
+		$text = $text[count($text)-1];
+		$menu->addToHierachy($item, ROOT_URI, str_replace('_', ' ', $text));
+	}
+
+	return $menu;
+
+}
+
 ?>
