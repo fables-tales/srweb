@@ -134,7 +134,7 @@ div.content h1, h2, h3, h4, h5, h6 {
 	line-height:1.3em;
 }
 
-div.content > h1 {
+div.content h1 {
 	font-size:26px;
 	margin-bottom:10px;
 	padding-top:10px;
@@ -194,34 +194,34 @@ div.content a:hover {
 	color:#0d1f61;
 }
 
-div.content > p > img {
+div.content p img {
 	border:1px solid silver;
 	padding:3px;
 	margin-bottom:10px;
 }
 
-div.content > p > img.left {
+div.content p img.left {
 	float:left;
 	margin-right:20px;
 }
 
-div.content > p > img.right {
+div.content p img.right {
 	float:right;
 	margin-left:20px;
 }
 
-div.content > p > video {
+div.content p video {
 	border:1px solid silver;
 	padding:3px;
 	margin-bottom:10px;
 }
 
-div.content > p > video.left {
+div.content p video.left {
 	float:left;
 	margin-right:20px;
 }
 
-div.content > p > video.right {
+div.content p video.right {
 	float:right;
 	margin-left:20px;
 }
