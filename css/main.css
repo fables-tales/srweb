@@ -68,27 +68,27 @@ div#header {
 	width:960px;
 }
 
-div#header > a {
+div#header a {
 	float:left;
 	margin-top:20px;
 	margin-left:20px;
 }
 
-div#header > form {
+div#header form {
 	float:right;
 	margin-top:30px;
 }
 
-div#header > form > fieldset > input {
+div#header form fieldset input {
 	border:1px solid silver;
 }
 
-div#header > form > fieldset > input[type=text]{
+div#header form fieldset input[type=text]{
 	font-size:16px;
 	line-height:16px;
 }
 
-div#header > form > fieldset > input[type=submit]{
+div#header form fieldset input[type=submit]{
 	/* Thanks to http://www.famfamfam.com/lab/icons/silk/ for the image */
 	background-image:url('../images/template/magnifier.png');
 	background-repeat:no-repeat;
@@ -99,22 +99,24 @@ div#header > form > fieldset > input[type=submit]{
 	top:-1px;
 }
 
-div#header > ul {
+div#header ul {
 	clear:both;
 	float:right;
 	margin-bottom:10px;
 }
 
-div#header > ul > li {
+div#header ul li {
 	float:left;
 	margin-left:10px;
 }
 
-div#header > ul > li > a {
+div#header ul li a {
 	text-decoration:none;
 	color:#8b8884;
 	padding:8px;
 	letter-spacing:1px;
+	margin-top:0px;
+	margin-left:0px;
 }
 
 div.content{
