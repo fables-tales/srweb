@@ -5,7 +5,6 @@ div.docs {
 
 div#docsNav {
 	width:180px;
-	margin-right:9px;
 	margin-top:20px;
 	border-right:1px solid silver;
 	float:left;
@@ -40,7 +39,10 @@ div#docsNav ul li ul li {
 
 div.docs div#content {
 	float:left;
-	width:730px;
+	width:725px;
 	margin-top:20px;
+	border-left:1px solid silver;
+	margin-left:-1px;
+	padding-left:10px;
 }
 
