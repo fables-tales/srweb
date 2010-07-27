@@ -24,7 +24,8 @@ div#docsNav ul ul {
 
 div#docsNav ul li {
 	text-transform:capitalize;
-	padding-left:7px;
+	padding-left:8px;
+	margin-left:2px;
 }
 
 div#docsNav ul li a {
