@@ -55,8 +55,10 @@ foreach($orderedLanguages as $l){
 	}
 }//foreach
 
-//home and content files are treated differently, so if the page is 'home'
-//serve the home template, otherwise use the content template.
+/*
+ * Some pages need to be treated differently (they use a different template, for
+ * example); this is handled here.
+ */
 if ($page == 'home'){
 
 	$smarty->assign('side_menu', constructMenuHierachy());
