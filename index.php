@@ -148,8 +148,13 @@ if ($page == 'home'){
 	$smarty->assign('base_uri', BASE_URI);
 	$smarty->assign('page_id', str_replace('/', '_', $page));
 
-	//display content template
-	$smarty->display('content.tpl');
+	if ($pageInDocs){
+
+		$smarty->assign('docsNav', constructDocsNavHierarchy());
+		$smarty->display('docs.tpl');
+
+	} else
+		$smarty->display('content.tpl');
 
 	ob_end_flush();
 
