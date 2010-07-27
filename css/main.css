@@ -102,7 +102,7 @@ div#header form fieldset input[type=submit]{
 div#header ul {
 	clear:both;
 	float:right;
-	margin-bottom:10px;
+	margin-top:-8px;
 }
 
 div#header ul li {
@@ -117,6 +117,7 @@ div#header ul li a {
 	letter-spacing:1px;
 	margin-top:0px;
 	margin-left:0px;
+	display:block;
 }
 
 div.content{
