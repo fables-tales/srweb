@@ -38,7 +38,9 @@ div.content div#topBanner p {
 	width:500px;
 	float:right;
 	margin-right:30px;
+	margin-top: 0;
 	text-align:left;
+	line-height: 24px;
 }
 
 div.content div#latestNews {
