@@ -1,5 +1,8 @@
 <?php
 
+/*
+ * A wrapper class for general-purpose server-side caching. Using memcache(d).
+ */
 class CacheWrapper {
 
 	public static $SERVER;
@@ -8,6 +11,11 @@ class CacheWrapper {
 	public static $DEFAULT_TTL = 600; //10 mins
 	public static $ENABLED;
 
+
+	/*
+	 * Sets the static class up. It can be used time and time again, without
+	 * having to duplicate code, pass settings around, etc...
+	 */
 	public static function setup($server, $port, $main_prefix='', $default_ttl=-1, $enabled=true){
 
 		self::$SERVER = $server;
@@ -60,8 +68,5 @@ class CacheWrapper {
 	}//getCacheItem
 
 }//class
-
-
-
 
 ?>
