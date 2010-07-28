@@ -113,7 +113,7 @@ if ($page == 'home'){
 
 
 	//do some caching stuff
-	$content = CacheWrapper::getCacheItem('page_content_' . $fileToServe . filemtime($fileToServe), 10, function(){
+	$content = CacheWrapper::getCacheItem('page_content_' . $fileToServe . filemtime($fileToServe), MEMCACHE_TTL, function(){
 
 		global $fileToServe;
 		$c = new Content($fileToServe);
