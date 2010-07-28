@@ -50,9 +50,10 @@ class CacheWrapper {
 					$var = $function();
 					$actualTTL = $ttl == -1 ? self::$DEFAULT_TTL : $ttl;
 					$memcache->set(self::$PREFIX . $item_index, $var, 0, $actualTTL);
-			};
 
-		}
+				}
+
+			}
 
 		}//if enabled && loaded
 
