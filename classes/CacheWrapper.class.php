@@ -69,4 +69,7 @@ class CacheWrapper {
 
 }//class
 
+require_once('config.inc.php');
+CacheWrapper::setup(MEMCACHE_SERVER, MEMCACHE_PORT, ROOT_URI, 600, MEMCACHE_ENABLED);
+
 ?>
