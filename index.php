@@ -17,6 +17,10 @@ require('classes/Menu.class.php');
 //get class from extracting metadata and content
 require('classes/Content.class.php');
 
+//get CacheWrapper stuff
+require_once('classes/CacheWrapper.class.php');
+CacheWrapper::setup(MEMCACHE_SERVER, MEMCACHE_PORT, ROOT_URI, 600, MEMCACHE_ENABLED);
+
 //get instance of smarty
 $smarty = new Smarty();
 
