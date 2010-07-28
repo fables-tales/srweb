@@ -147,7 +147,7 @@ language (currently English) and it is what pages are based upon. For the page t
 exist in another language, it must first exist in the default language. If an
 ISO standard language is set in the browser at a higher level of preference than
 the default, and the requested page exists in the more-prefered language, then
-that page will be served in the more-prefered language, and only when the correct
+that page will be served in the more-preferred language, and only when the correct
 mapping is set up in 'config.inc.php'.
 
 At the moment, only content files can be in multiple languages. The pages that
