@@ -9,36 +9,26 @@
  * -------------------------------------------------------------
  */
 require_once('config.inc.php');
-define('MEMCACHE_TTL',		600 /*seconds*/);
+require_once('createfeed.inc.php');
+require_once('classes/Content.class.php');
+require_once('classes/CacheWrapper.class.php');
+
 define('ITEMS_PER_PAGE', 5);
 
 function smarty_function_newsPage($params, &$smarty)
 {
 
-	require_once('createfeed.inc.php');
-	require_once('classes/Content.class.php');
-
-
-	$output = NULL;
+	//specify it differently because index.php's definition screws things up
+	$MEMCACHE_TTL = 600;
 
 	$p = $smarty->get_template_vars('p');
 
-	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
+	//do some caching stuff
+	$output = CacheWrapper::getCacheItem('news_page_' . $p, $MEMCACHE_TTL, function() use (&$p, &$smarty){
 
-		$memcache = new Memcache();
-		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
+		return _getOutputForPage($p, $smarty->get_template_vars('base_uri'));
 
-			if (!($output = $memcache->get(MEMCACHE_PREFIX . 'news_page_' . $p))){
-				$output = _getOutputForPage($p, $smarty->get_template_vars('base_uri'));
-				$memcache->set(MEMCACHE_PREFIX . 'news_page_' . $p, $output, 0, MEMCACHE_TTL);
-			}
-
-		}//if connect
-
-	}//if extension_loaded
-
-	if ($output === NULL)
-		$output = _getOutputForPage($p, $smarty->get_template_vars('base_uri'));
+	});
 
 	return $output;
 
