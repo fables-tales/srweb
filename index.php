@@ -17,6 +17,8 @@ require('classes/Menu.class.php');
 //get class from extracting metadata and content
 require('classes/Content.class.php');
 
+require('classes/CacheWrapper.class.php');
+
 //get instance of smarty
 $smarty = new Smarty();
 
@@ -109,27 +111,17 @@ if ($page == 'home'){
 
 	}//if function_exists
 
-	$content = NULL;
 
-	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
+	//do some caching stuff
+	$content = CacheWrapper::getCacheItem('page_content_' . $fileToServe . filemtime($fileToServe), MEMCACHE_TTL, function(){
 
-		$memcache = new Memcache();
-		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
+		global $fileToServe;
+		$c = new Content($fileToServe);
+		$c->getParsedContent();
+		return $c;
 
-			if (!($content = $memcache->get(MEMCACHE_PREFIX . 'page_content_' . $fileToServe . '_' . filemtime($fileToServe)))){
-				$content = new Content($fileToServe);
-				$content->getParsedContent();
-				$memcache->set(MEMCACHE_PREFIX . 'page_content_' . $fileToServe . '_' . filemtime($fileToServe), $content, 0, MEMCACHE_TTL);
-			};
+	});
 
-		}
-
-	}//if extension_loaded
-
-	if ($content === NULL){
-		$content = new Content($fileToServe);
-		$content->getParsedContent();
-	}
 
 	//if the file is a special redirection file, do the redirection
 	if ($content->getMeta('REDIRECT') != ""){
