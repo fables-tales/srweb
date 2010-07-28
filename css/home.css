@@ -52,6 +52,7 @@ div.content div#latestNews h2 {
 	line-height:40px;
 	clear:both;
 	color:#0d1f61;
+	margin-top: 0;
 }
 
 div.content div#latestNews h2 a {
