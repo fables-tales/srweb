@@ -10,18 +10,14 @@ div.content p {
 
 div.content div#topBanner {
 	background:url('../images/template/banner_bg.png') no-repeat;
-	background-position:0px -10px;
-	height:200px;
+	height:236px;
 }
 
 div.content div#topBanner img {
-	width:374px;
-	height:260px;
 	overflow:visible;
 	float:left;
 	position:relative;
 	top:-60px;
-	left:30px;
 }
 
 div.content div#topBanner h1 {
@@ -42,7 +38,9 @@ div.content div#topBanner p {
 	width:500px;
 	float:right;
 	margin-right:30px;
+	margin-top: 0;
 	text-align:left;
+	line-height: 24px;
 }
 
 div.content div#latestNews {
@@ -56,6 +54,7 @@ div.content div#latestNews h2 {
 	line-height:40px;
 	clear:both;
 	color:#0d1f61;
+	margin-top: 0;
 }
 
 div.content div#latestNews h2 a {
