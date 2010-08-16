@@ -359,7 +359,7 @@ function constructMenuHierachy(){
 function constructDocsNavHierarchy(){
 
 	$docsPages = getAllowedPages(CONTENT_DIR . '/default/docs');
-	sort($docsPages);
+	natcasesort($docsPages);
 	$menu = new Menu();
 
 	foreach($docsPages as $item){
