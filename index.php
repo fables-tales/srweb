@@ -196,14 +196,14 @@ function getOrderedLanguages(){
 	if (count($tags) > 0){
 
 		//get, by group, the following: language, country code, preference
-		$pattern = '/([A-Za-z]{2})(-[A-Za-z]{2})?(;q=[01]\.[0-9]+)?/';
+		$pattern = '/([A-Za-z]{2}-?[A-Za-z]{0,2})(;q=[01]\.[0-9]+)?/';
 		foreach ($tags as $tag){
 
 			preg_match($pattern, $tag, $matches);
 
 			//no 'q' preference === preference of 1
-			$preference = array_key_exists(3, $matches) ? (float)str_replace(';q=', '', $matches[3]) : (float)1;
-			$pref_array[$matches[1].$matches[2]] = $preference;
+			$preference = array_key_exists(2, $matches) ? (float)str_replace(';q=', '', $matches[2]) : (float)1;
+			$pref_array[$matches[1]] = $preference;
 
 		}//foreach
 
