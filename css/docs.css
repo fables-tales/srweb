@@ -22,7 +22,6 @@ div#docsNav ul ul {
 }
 
 div#docsNav ul li {
-	text-transform:capitalize;
 	padding:4px 0 4px 8px;
 	margin-left:2px;
 	line-height:1.1em;
@@ -33,7 +32,6 @@ div#docsNav ul li a {
 }
 
 div#docsNav ul li ul li {
-	text-transform:capitalize;
 	background:url('../images/template/li-dotted-bg.png') no-repeat 0 0.7em;
 	font-weight:bolder;
 }
