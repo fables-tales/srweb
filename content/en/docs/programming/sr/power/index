@@ -1,0 +1,64 @@
+//TITLE:	Power
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Power
+=====
+
+There are a few things that can be done with the power board, namely changing user LEDs and beeping. As there is only one power board, it is not accessed like a list like _motor_ for example:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+power.something...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+LEDs
+----
+
+There are 3 user-changeable LEDs on the power board, located at the bottom-left of the screen. They are numbered 0, 1 and 2 respectively. To turn an LED on, you set its value high (1); to turn it off, you set its value low (0):
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# turn LED 0 on
+power.led[0] = 1
+
+# turn LED 1 off
+power.led[1] = 0
+
+# to toggle LED 2, you can use
+power.led[2] = not power.led[2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bear in mind that the last example (toggling) will read the value from the board before setting it again, which may be slow. If you're toggling an LED, it will be quicker to store its value in a variable somewhere.
+
+
+Beeping
+-------
+
+The power board can beep at frequencies ranging from 20Hz to 20000Hz. It can play one note at a time (monophonic) and notes can be queued.
+
+### Single Note ###
+
+To produce a note at 440Hz (middle A) for half a second, you would use the following:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+power.beep(440, 0.5)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Multiple Queued Notes ###
+
+However, _power.beep()_ can also accept a list of tuples containing a frequency-duration pair; this allows for some Python tricks to be used to great effect:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# beep at 100Hz for 1s, then at 200Hz for 2s
+power.beep( [(100, 1), (200, 2)] )
+
+# ramp up from 100Hz to 1000Hz in 1s overall, with frequency jumps of 100Hz
+power.beep( [ (x*100, 0.1) for x in range(1, 10) ] )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please note that there is a **maximum queue size** of **10 notes** (frequency-duration pairs). This means that to play a sequence longer than 10 notes, you'll need to use the _beep_queue()_ method with yield to feed it some more when necessary.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# wait until there is only 3 notes left in the beep queue
+yield power.beep_queue(3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
