@@ -16,4 +16,4 @@ There are a number of tutorials out there which would help you to learn program:
 
 * A number of tutorials for people that have programmed before are linked to from [here](http://wiki.python.org/moin/BeginnersGuide/Programmers). [Dive Into Python](http://diveintopython.org/toc/index.html) is a good book for people that have programmed before, but it is a fairly long read.
 
-Some of the more advanced python features &mdash; [yield](docs/programming/python/yield), for example &mdash; are explained by us here. They will be parts of python that are quite advanced, but where only a little understanding is required to use them.
+Some of the more advanced python features &mdash; [yield](docs/programming/python/yield_and_coroutines), for example &mdash; are explained by us here. They will be parts of python that are quite advanced, but where only a little understanding is required to use them.
