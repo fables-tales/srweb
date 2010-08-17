@@ -15,11 +15,16 @@ yield io[0].dpin[3] == 1
 # code here won't execute until digital pin 3 on JointIO board 0 goes high
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Yield in General
+----------------
+
 It is important to note that this is not what yield does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, yield is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. You do not really need to worry about how it works (unless you use it in your own code, of course), but it is mentioned here for those of you that are interested.
 
-Here's an over-simplified example of what happens in the background:
+Here's an over-simplified example (waiting for _n_ seconds, in this case) of what happens in the background:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import time
+
 # this part's your code
 def test():
 	print "a"
@@ -42,8 +47,7 @@ try:
                 tmp = gen.next()  # run test() until the next yield, storing
                                   # the yielded value in tmp
 
-                print tmp  # this print is a replacement for interfacing
-                           # with hardware, just to illustrate the point
+                time.sleep(tmp)
 
 except StopIteration:
         print "end of user code"
@@ -53,11 +57,11 @@ When executed by Python, the above code outputs:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 a
-1
+  ** waits 1s **
 b
-2
+  ** waits 2s **
 c
-3
+  ** waits 3s **
 end of user code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
