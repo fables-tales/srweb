@@ -49,3 +49,12 @@ div.docs div#content {
 	padding-left:10px;
 }
 
+div.docs div#content pre {
+	border:1px solid #FFE659;
+	background:#FFF4B8;
+	font-size:0.8em;
+	margin-left:30px;
+	overflow:auto;
+	padding:5px;
+	margin-bottom:15px;
+}
