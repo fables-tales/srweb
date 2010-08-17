@@ -1,0 +1,64 @@
+//TITLE:	Yield
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Yield
+=====
+
+Yield is one of the more advanced features of Python. [Yield's official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. The way it works in the code written using the [sr module](docs/programming/sr/) is explained below.
+
+Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the yield statement:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yield io[0].dpin[3] == 1
+# code here won't execute until digital pin 3 on JointIO board 0 goes high
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is important to note that this is not what yield does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, yield is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. You do not really need to worry about how it works (unless you use it in your own code, of course), but it is mentioned here for those of you that are interested.
+
+Here's an over-simplified example of what happens in the background:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# this part's your code
+def test():
+	print "a"
+        yield 1
+        print "b"
+        yield 2
+        print "c"
+        yield 3
+
+
+
+# this part's ours
+gen = test() # because the function contains yields,
+             # it's not a function but a generator instead
+
+try:
+	# do everything in the user's code
+	while True:
+
+                tmp = gen.next()  # run test() until the next yield, storing
+                                  # the yielded value in tmp
+
+                print tmp  # this print is a replacement for interfacing
+                           # with hardware, just to illustrate the point
+
+except StopIteration:
+        print "end of user code"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When executed by Python, the above code outputs:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a
+1
+b
+2
+c
+3
+end of user code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Exception handling](http://docs.python.org/tutorial/errors.html#handling-exceptions) was used above, which you may or may not need to use depending on your code. But again, you do not really need to worry about how it all works. There is a lot of information available online if you want to learn more about yield. 
