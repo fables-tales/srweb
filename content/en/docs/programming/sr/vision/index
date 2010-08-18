@@ -1,0 +1,39 @@
+//TITLE:	Vision
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Vision
+======
+
+The vision software looks &mdash; using the provided webcam &mdash; for blobs of color. Each identified blob has the following properties:
+
+* `.x` co-ordinate of the top left corner of the blob in the webcam image
+* `.y` co-ordinate of the top left corner of the blob in the webcam image
+* `.mass` (...)
+* `.color` &mdash; one of {`RED`, `GREEN`, `BLUE`}
+* `.width` of the blob
+* `.height` if the blob
+
+Note that two other global variables are available for the the width and height of the webcam image &mdash; `VISION_WIDTH` and `VISION_HEIGHT`, respectively. 
+
+Computers use a co-ordinate system whereby the origin is in the top left-hand corner. So, if you were to imagine a 100x100 image, the top left-hand corner would have the co-ordinates `(0,0)`; the bottom right-hand corner would have the co-ordinates `(99,99)`; the top right-hand corner, `(99,0)`; and the bottom left-hand corner, `(0,99)`.
+
+To get access to all of this information about the blobs, you'll need to wait on a vision event to occur somewhere in your code; you do this using the `yield` statement:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# wait here for a vision event to occur, storing the event object
+ev = yield vision
+
+# check to see if the event was a vision event
+if ev == vision:
+
+        # do something with all of the returned blobs 
+        # (print RED blob co-ords. in this case)
+        for blob in ev.vision.blobs:
+
+                if blob.colour == RED:
+                        print "Found red blob at " + str(blob.x) + ", " + str(blob.y)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The list of properties above apply to a `blob` object, so we could have printed out any of those properties above.
