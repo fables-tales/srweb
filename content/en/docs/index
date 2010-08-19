@@ -1,9 +1,15 @@
 //TITLE:	Documentation
-//DESCRIPTION:	
+//DESCRIPTION:	An introduction to student robotics for Schools and Colleges.
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
 Documentation
 =============
 
-When kit documentation becomes available, it will be here.
+There are a number of sections in the documentation, offering help for the [IDE](docs/IDE/), the [kit](docs/kit/) and [programming](docs/programming/). Navigation of the documentation can be done using the column to the left, where everything is arranged alphabetically in the aforementioned sub-sections. Within this documentation, you will come across a number of yellow boxes like this:
+
+~~~
+# code example
+~~~
+
+These are code examples provided to help you.
