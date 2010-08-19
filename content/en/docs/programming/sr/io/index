@@ -6,7 +6,7 @@
 IO (JointIO)
 ============
 
-The JointIO board provides 8 pins for input and 4 for output. 4 of the input pins can be used as analog inputs. As with `pwm` and `motor`, `io` is a list, with indexes based on [token ring](docs/kit/token_ring) ordering.
+The JointIO board provides 8 pins for input (both analogue and digital) and 4 for digital output. As with `pwm` and `motor`, `io` is a list, with indexes based on [token ring](docs/kit/token_ring) ordering.
 
 
 Digital vs. Analogue {#digital_vs_analogue}
@@ -25,10 +25,10 @@ Input {#input}
 You can read a **digital** input pin with the following code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# io[IO_BOARD_NUMBER].dpin[DIGITAL_PIN_NO]
+# io[IO_BOARD_NUMBER].in[PIN_NO].d
 
 # to read JoinIO board 0's digital pin 0...
-pin0 = io[0].dpin[0]
+pin0 = io[0].in[0].d
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `pin0` will now contain a `1` or a `0` depending on whether the pin was high (3.3v) or low (0v), respectively.
@@ -36,10 +36,10 @@ pin0 = io[0].dpin[0]
 You can read an **analogue** input pin with the following code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# io[IO_BOARD_NUMBER].apin[ANALOGUE_PIN_NO]
+# io[IO_BOARD_NUMBER].in[PIN_NO].a
 
 # to read JoinIO board 0's analogue pin 2...
-pin0 = io[0].apin[2]
+pin0 = io[0].in[2].a
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -49,101 +49,16 @@ Output {#output}
 You can only set digital outputs (there's no analogue output, unless you get creative with some additional electronics, of course). To set a digital output pin, you would use the following:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# io[IO_BOARD_NUMBER].pin[PIN_NO] = VALUE
+# io[IO_BOARD_NUMBER].out[PIN_NO].d = VALUE
 
 # to set JointIO board 0's pin 1 high:
-io[0].pin[1] = 1
+io[0].out[1].d = 1
 
 # to set JointIO board 0's pin 1 low:
-io[0].pin[1] = 0
+io[0].out[1].d = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-IO Events {#events}
+
+IO Events {#IOEvents}
 ---------
-
-Often, you will need to wait on a particular IO event to occur; an input pin going high, for example. To do this, you will need to use `yield` (read [this](docs/programming/python/yield_and_coroutines) to learn more). There are a number of things you can `yield` on:
-
-A digital input pin changing value (high to low, or low to high):
-
-~~~
-# Wait for digital input pin 3 on JointIO board 0 to change value
-yield io[0].dpin[3]
-~~~
-
-Waiting for a particular digital value:
-
-~~~
-# Wait for digital input 3 on JointIO board 0 to become digital '1'
-yield io[0].dpin[3] == 1
-~~~
-
-Waiting for an analogue pin to exceed a particular value:
-
-~~~
-# Wait for the reading of analogue input 3 on JointIO board 0 to exceed 1V
-yield io[0].apin[1] > 1
-~~~
-
-Waiting for an analogue pin to drop below a particular value:
-
-~~~
-# Wait for the reading of analogue input 2 on JointIO board 0 to drop below 2.5V
-yield io[0].apin[2] < 2.5
-~~~
-
-Code situated after these yields in the program flow will not be executed until the specified condition has been met. So, for example, if your robot had the following code:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from sr import *
-
-def main():
-
-        # set output pin 0 high
-        io[0].pin[0] = 1
-
-        # wait until digital input 0 goes high
-        yield io[0].dpin[0] == 1
-
-        # set output pin 0 low
-        io[0].pin[0] = 0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-...when it was run, output pin 0 would be high and it would stay high until digital input pin 0 went high. When this happens, the next bit of code will execute &mdash; setting output pin 0 low.
-
-Please note that you cannot wait on an analogue input using the equals (`==`) comparison. Because of the nature of analogue-digital conversion (as explained [above](docs/programming/sr/io#digital_vs_analogue)) it wouldn't make sense to do so.
-
-
-### Logic Expressions
-
-Logic expressions can also be use with `yield`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# OR:
-yield io[0].pin[3] == 1, io[0].pin[2] == 0
-yield io[0].apin[3] > 2, io[0].apin[3] < 3
-
-        
-# AND:
-yield (io[0].pin[3] == 1) & (io[0].pin[2] == 0)
-
-# alternatively:
-yield And( io[0].pin[3] == 1, io[0].pin[2] == 0 )
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-AND means both inputs need to be `True` for execution to continue. OR means either one or both inputs need to be `True` for execution to continue.
-
-If you decide to do this, however, you may need to find out which one occurred (if you're using OR, anyway). To do this, you would use something like the following:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ev = yield io[0].apin[1] > 1.6, (io[0].dpin[2] == 1) & (io[0].dpin[3] == 0)
-if 2 in ev.io[0].pins:
-    # ev.io[0].vals is an array of the pin values
-    # e.g. ev.io[0].vals[2] gives the value of the pin when the event happened
-    # the value of ev.io[0].vals[0] is meaningless
-    # (and may later throw an error if read at the wrong time)
-elif 1 in ev.io[0].pins:
-    # ev.io.vals[1] is a voltage (float)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-??????????????????????????
-
-
+It is possible to wait at a particular line in your code until a certain condition is met (a digital input changing, for example). As this works with other parts of the module, it is discussed elsewhere under the [events page](docs/programming/sr/event/).
