@@ -35,7 +35,7 @@ motor[1].target = 0
 
 # the following will put motor 0 at 25% power (forwards) for 2.5 seconds:
 motor[0].target = 25
-yield 2.5                    # wait for 2.5 seconds
+yield query.timeout(2.5)       # wait for 2.5 seconds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can read the current target value for a motor using the same field:

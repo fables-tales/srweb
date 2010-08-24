@@ -60,5 +60,5 @@ Please note that there is a **maximum queue size** of **10 notes** (frequency-du
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # wait until there is only 3 notes left in the beep queue
-yield power.beep_queue(3)
+yield query.power.beep_queue(3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

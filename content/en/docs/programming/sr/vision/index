@@ -26,7 +26,7 @@ To get access to all of this information about the blobs, you'll need to wait on
 ev = yield vision
 
 # check to see if the event was a vision event
-if ev == vision:
+if ev.was(vision):
 
         # do something with all of the returned blobs 
         # (print RED blob co-ords. in this case)
