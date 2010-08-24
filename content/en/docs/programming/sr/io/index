@@ -61,4 +61,4 @@ io[0].out[1].d = 0
 
 IO Events {#IOEvents}
 ---------
-It is possible to wait at a particular line in your code until a certain condition is met (a digital input changing, for example). As this works with other parts of the module, it is discussed elsewhere under the [events page](docs/programming/sr/event/).
+It is possible to wait at a particular line in your code until a certain condition is met (a digital input changing, for example). As this works with other parts of the module, it is discussed elsewhere under the [query page](docs/programming/sr/query/).

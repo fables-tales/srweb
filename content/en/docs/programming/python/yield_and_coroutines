@@ -6,7 +6,7 @@
 Yield and Coroutines
 ====================
 
-Yield is one of the more advanced features of Python. [Yield's official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. The way it works in the code written using the [sr module](docs/programming/sr/) is explained below.
+Yield is one of the more advanced features of Python. [Yield's official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. Roughly, you can think of a `yield` as a special type of `return`.
 
 Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the yield statement:
 
@@ -14,6 +14,9 @@ Very often, when writing code for your robot, you'll need to wait on a particula
 yield query.io[0].dpin[3] == 1
 # code here won't execute until digital pin 3 on JointIO board 0 goes high
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the [query](docs/programming/sr/query/) object for more information.
+
 
 Yield in General
 ----------------
@@ -108,7 +111,7 @@ def anotherCoroutine():
                 print "I can tell you I'm a robot before main adds me!"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is important to note that inter-coroutine communication is very difficult, so the code in them really should be independent. If, for example, you had an arm that was just moving up and down (for some reason) and it reaches its movement limits when it hits switches at the top and bottom, you could set up a coroutine to: move the arm up until it hits the top switch, then move it down until it hit the bottom switch, and then back up again, etc... This would benefit from running independently in a coroutine.
+It is important to note that inter-coroutine communication is very difficult, so the code in them really should be independent. If, for example, you had an arm that was just moving up and down (for some reason) and it reaches its movement limits when it hits switches at the top and bottom, you could set up a coroutine to: move the arm up until it hits the top switch, then move it down until it hit the bottom switch, and then back up again, ad infinitum. This would benefit from running independently in a coroutine.
 
 
 
