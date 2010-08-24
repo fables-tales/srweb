@@ -88,7 +88,7 @@ if ($page == 'home'){
 
 	//before we go ahead and serve it, see if we can use what the
 	//user's browser has cached.
-	if (function_exists('apache_request_headers')){
+	if (function_exists('apache_request_headers') && !$pageInDocs){
 
 		$headers = apache_request_headers();
 
