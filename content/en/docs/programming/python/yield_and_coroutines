@@ -6,9 +6,9 @@
 Yield and Coroutines
 ====================
 
-Yield is one of the more advanced features of Python. [Yield's official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. Roughly, you can think of a `yield` as a special type of `return`.
+`yield` is one of the more advanced features of Python. [`yield`'s official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. Roughly, you can think of a `yield` as a special type of `return`.
 
-Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the yield statement:
+Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the `yield` statement:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 yield query.io[0].dpin[3] == 1
@@ -21,7 +21,7 @@ See the [query](docs/programming/sr/query/) object for more information.
 [Yield in General](docs/programming/python/yield_and_coroutines#general) {#general}
 ------------------
 
-It is important to note that this is not what yield does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, yield is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the _yield_ keyword is used:
+It is important to note that this is not what `yield` does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, `yield` is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the `yield` keyword is used:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # this is a generator now, it mentions yield
