@@ -70,7 +70,6 @@ div.docs div#content div.warning {
 	font-weight:bolder;
 	margin-left:30px;
 	overflow:auto;
-	padding:5px;
-	padding-left:52px;
+	padding:10px 5px 10px 52px;
 	margin-bottom:15px;
 }
