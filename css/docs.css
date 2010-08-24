@@ -62,3 +62,15 @@ div.docs div#content pre {
 	padding:5px;
 	margin-bottom:15px;
 }
+
+div.docs div#content div.warning {
+	border:1px solid red;
+	background:url('../images/template/dialog-warning.png') no-repeat 10px center #FFBFC7;
+	font-size:0.8em;
+	font-weight:bolder;
+	margin-left:30px;
+	overflow:auto;
+	padding:5px;
+	padding-left:52px;
+	margin-bottom:15px;
+}
