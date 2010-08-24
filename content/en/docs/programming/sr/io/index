@@ -9,8 +9,8 @@ IO (JointIO)
 The JointIO board provides 8 pins for input (both analogue and digital) and 4 for digital output. As with `pwm` and `motor`, `io` is a list, with indexes based on [token ring](docs/kit/token_ring) ordering.
 
 
-Digital vs. Analogue {#digital_vs_analogue}
---------------------
+[Digital vs. Analogue](docs/programming/sr/io/#digital_vs_analogue) {#digital_vs_analogue}
+----------------------
 
 A digital value, in general, is one that can take a number of discrete values. In contrast, an analogue value is not restricted by these discrete steps, with an infinitely large number of possible values between two given (different) values. 
 
@@ -19,8 +19,8 @@ However, to represent an analogue value in a computer, it needs to be represente
 Here, a digital pin refers to a pin that takes a _binary_ value; that is, either a `0` or a `1` (low or high).
 
 
-Input {#input}
------
+[Input](docs/programming/sr/io/#input) {#input}
+-------
 
 You can read a **digital** input pin with the following code:
 
@@ -43,8 +43,8 @@ pin0 = io[0].in[2].a
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Output {#output}
-------
+[Output](docs/programming/sr/io/#output) {#output}
+--------
 
 You can only set digital outputs (there's no analogue output, unless you get creative with some additional electronics, of course). To set a digital output pin, you would use the following:
 
@@ -59,6 +59,6 @@ io[0].out[1].d = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-IO Events {#IOEvents}
----------
+[IO Events](docs/programming/sr/io/#IOEvents) {#IOEvents}
+-----------
 It is possible to wait at a particular line in your code until a certain condition is met (a digital input changing, for example). As this works with other parts of the module, it is discussed elsewhere under the [query page](docs/programming/sr/query/).

@@ -8,8 +8,8 @@ Query {#query}
 
 Often, you will need to wait on a particular event to occur; an input pin going high, for example. To do this, you will need to use `yield` (read [this](docs/programming/python/yield_and_coroutines) to learn more). The API has changed slightly this year, making some things slightly clearer. In Python, it is possible to override operators (things like `*`, `+`, `<` and `==`, for example). We have used this feature to make compound waiting conditions more readable, as explained below.
 
-IO Queries
-----------
+[IO Queries](docs/programming/sr/query/#IOQueries) {#IOQueries}
+------------
 
 There are a number of things you can `yield` on with `io`:
 
@@ -63,8 +63,8 @@ def main:
 Please note that you cannot wait on an analogue input using the equals (`==`) comparison. Because of the nature of analogue-digital conversion (as explained in the [io section](docs/programming/sr/io#digital_vs_analogue)) it wouldn't make sense to do so.
 
 
-Vision Queries
---------------
+[Vision Queries](docs/programming/sr/query/#vision_queries) {#vision_queries}
+----------------
 
 Getting vision events is easy. All you need to do is:
 
@@ -79,15 +79,15 @@ if ev.was(vision):
 
 See the [vision page](docs/programming/sr/vision/) for more information.
 
-Combining Queries Together
---------------------------
+[Combining Queries Together](docs/programming/sr/query/#combining_queries) {#combining_queries}
+----------------------------
 
 When you write `query.io[0].in[0].d == 0` (for example), the operator overriding comes into play. But before that's explained, another explanation is necessary. When you write `abc = 1 == 1`, the value contained in `abc` afterwards is `True`. `abc` is assigned the value of the logical expression `1 == 1` &mdash; the boolean value, `True`. (If this is a surprise to you, then you should read a [tutorial](docs/programming/python/).) 
 
 This is where the confusing bit occurs &mdash; for the `query.(...)` objects, the operators are overridden so that they no longer compare values; they therefore don't return a boolean value, but another object instead. Because this object is just a representation for a condition that could be met, these conditions can be joined together.
 
 
-### More Complex Logic Expressions
+### [More Complex Logic Expressions](docs/programming/sr/query/#complex) {#complex}
 
 Logic expressions can also be use with `yield`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
 
@@ -124,7 +124,7 @@ elif 1 in ev.io[0].pins:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-### Even More Complex Logical Expressions
+### [Even More Complex Logical Expressions](docs/programming/sr/query/#more_complex) {#more_complex}
 
 So far, we've mainly used `io` for these querying expressions. It is possible to combine different types of querying objects into a single expression. It is possible to, say, wait for a switch to be closed for a maximum of 10 seconds and then carry on with your code regardless:
 
