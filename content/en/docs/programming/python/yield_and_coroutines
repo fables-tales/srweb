@@ -18,8 +18,8 @@ yield query.io[0].dpin[3] == 1
 See the [query](docs/programming/sr/query/) object for more information.
 
 
-Yield in General
-----------------
+[Yield in General](docs/programming/python/yield_and_coroutines#general) {#general}
+------------------
 
 It is important to note that this is not what yield does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, yield is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the _yield_ keyword is used:
 
@@ -85,8 +85,8 @@ end of user code
 
 However, the above doesn't involve the _sr_ module. When programming your robot, you may want to use coroutines to segment your code into independent chunks. 
 
-Coroutines
-----------
+[Coroutines](docs/programming/python/yield_and_coroutines#coroutines) {#coroutines}
+------------
 
 Instead of having loads of selection statements checking to see what event has occurred, you could have a number of [coroutines](http://en.wikipedia.org/wiki/Coroutine) &mdash; dealing with perhaps one or two events &mdash; to make your code execute more efficiently. To use coroutines in this way, the code that runs behind the scenes needs to know about them. There are two ways to register a coroutine:
 
