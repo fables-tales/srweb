@@ -53,6 +53,12 @@ div.docs div#content ul {
 	margin-left:45px;
 }
 
+div.docs div#content ol {
+	margin-left:45px;
+	list-style:decimal;
+	margin-bottom:15px;
+}
+
 div.docs div#content pre {
 	border:1px solid #FFE659;
 	background:#FFF4B8;
