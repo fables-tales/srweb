@@ -1,0 +1,22 @@
+//TITLE:	Writing Good Commit Messages
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Writing Good Commit Messages
+============================
+
+Writing good commit messages is easy; sadly, writing lazy ones is even easier. With a bit of discipline, though, it will become natural over time. There are 2 parts to a good commit message:
+
+1. a summary of **what you've done**
+2. an explanation as to **why you've done it**
+
+And there should be a blank line between them. Here's an example:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added function to get nearest blob of colour
+
+Returns a blob object that is the nearest one visible to the vision software.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+How much you should write depends on how much code you've written. It is good practice to produce small commits that do just one thing. If you need more than one line (less than 80 characters), the commit does too much!
