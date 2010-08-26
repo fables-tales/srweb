@@ -100,9 +100,33 @@ All you need to do now is save the file on to the root (as in `G:\` or `H:\` or 
 
 ### Preparing the kit
 
-//...
+To run the _hello world_ program, all you need is the following:
+
+* The powerboard
+* The battery (charged, of course)
+* The cable to connect the battery to the powerboard
+* The USB hub
+* The memory stick (with the _hello world_ code on it, from before)
+
+To assemble, follow these steps:
+
+1. Ensure the powerboard power switch in the OFF position
+2. Plug the USB hub into the USB socket on the powerboard
+3. Plug the memory stick into the USB hub
+4. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
+5. Plug the other end of the battery cable into the powerboard
+
+OK, we're ready to run the code.
 
 
 ### Running the code
 
 //...
+
+
+
+
+
+
+
+
