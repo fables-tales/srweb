@@ -106,15 +106,17 @@ To run the _hello world_ program, all you need is the following:
 * The battery (charged, of course)
 * The cable to connect the battery to the powerboard
 * The USB hub
+* The USB hub power cable
 * The memory stick (with the _hello world_ code on it, from before)
 
 To assemble, follow these steps:
 
 1. Ensure the powerboard power switch in the OFF position
 2. Plug the USB hub into the USB socket on the powerboard
-3. Plug the memory stick into the USB hub
-4. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
-5. Plug the other end of the battery cable into the powerboard
+3. Plug the USB hub power cable into the powerboard and the hub
+4. Plug the memory stick into the USB hub
+5. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
+6. Plug the other end of the battery cable into the powerboard
 
 <div class="warning">You MUST use the USB hub. The BeagleBoard in the powerboard case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
 
