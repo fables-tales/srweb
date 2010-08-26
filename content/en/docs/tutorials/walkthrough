@@ -123,7 +123,9 @@ OK, we're ready to run the code.
 
 ### Running the code
 
-//...
+If you've followed all of the above, you should now be ready to see a flashing LED on the powerboard.
+
+Turn the powerboard switch on and allow the system to boot. You should see the SR logo on the display. When it's finished booting, you can press the _run_ button on the powerboard. If you see a flashing LED (on for a second, off for a second), feel free to bask in the glory of having successfully programmed your Student Robotics kit. Well done! If you don't, try and [troubleshoot](docs/troubleshooting/) the issue.
 
 
 
