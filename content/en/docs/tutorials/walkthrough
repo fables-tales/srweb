@@ -13,9 +13,13 @@ Once that's up and running, we'll continue to advance what the examples do up to
 Hello World!
 ------------
 
+The aim for our _hello world_ program is to flash an LED. We'll turn it on for 1 second, then turn it off for 1 second, then on... ad infinitum. This should take you through all you need to do to write a basic program for you robot (kit).
+
+Here goes...
+
 ### Writing the code
 
-//flash
+
 
 
 ### Getting the code on the memory stick
