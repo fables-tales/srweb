@@ -116,6 +116,8 @@ To assemble, follow these steps:
 4. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
 5. Plug the other end of the battery cable into the powerboard
 
+<div class="warning">You MUST use the USB hub. The BeagleBoard in the powerboard case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
+
 OK, we're ready to run the code.
 
 
