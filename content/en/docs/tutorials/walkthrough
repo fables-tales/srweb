@@ -19,8 +19,75 @@ Here goes...
 
 ### Writing the code
 
+To write code for your robot, you will need to use the Student Robotics [IDE](ide). An IDE, or Integrated Development Environment, is a suite of tools intended to help the developer with their programming tasks. For you, the SR IDE provides a code editor, file manager, and code checker. For more reference material on the IDE, please visit the [IDE section](docs/IDE/) under docs.
 
+Let's begin. In a new browser tab or window, open the [IDE](ide). You should be presented with a screen like this:
 
+![Login Screen](images/content/tutorials/walkthrough/login.png)
+
+Enter your login details and click _Log In_. (You should already have login details, they were given to you XXXXXXXXXXX.) You will now be presented with a screen something like the following (it may not be exactly the same):
+
+![project page](images/content/tutorials/walkthrough/project_page.png)
+
+You're on the _Projects_ page. On the left-hand side, you'll see a button labeled _New Project_; when you click it, a dialog box will appear asking for the project's name. Call it "walkthrough", and click _Save_:
+
+![new project](images/content/tutorials/walkthrough/new_project.png)
+
+OK, now we're ready to write some code! When the robot tries to run code (the _run_ button is pressed, or the robot's started automatically at the competition), it looks for a file called "robot.py". Let's create that file now. On the left-hand side you'll find a link to create a _New File_. Click it. You'll now be presented with a code editor to write the code in, like this:
+
+![new file / editor](images/content/tutorials/walkthrough/new_file_editor.png)
+
+In the editor, write (or paste!) the following:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main:
+	while True:
+		power.led[0] = 1
+		yield query.timeout(1)
+		power.led[0] = 0
+		yield query.timeout(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+you should see something like this:
+
+![LED flashing code in editor](images/content/tutorials/walkthrough/flash_code_in_editor.png)
+
+Let's dissect that to see what's going on:
+
+On the first line, we have an `import` statement. This tells Python (the programming language the robot code is written in) to get the SR module. Doing so allows objects like `power` and `query` (and some others) to be used in your code. This is essential &mdash; without it, you will not be able to control your robot!
+
+The next (non-empty) line says '`def main:`'. This is how a function (a bit like a function in Maths, if you've used one of those) is defined. `main` is the name of the function defined. `main` is a special function, because it's the one the kit will look for when it tries to run your code. We'll look at creating other functions later.
+
+'`while True:`' effectively means loop forever. Any logical expression (or anything that can evaluate to `True` or `False`) can come after the `while` keyword, and the body of code within the `while` loop will be executed until the condition becomes `False`. In this case, however, it is always `True`, hence the infinite loop. Notice the indentation in the code; this is how Python knows what code belongs to what. In the above code, everything at one level of indentation or more is in the `main` function; everything at two levels is a part of the `while` loop body. Indentation is one of the main issues you'll come across that causes your program to act in unexpected ways or not at all. In short, use tabs (as in the `[TAB]` key) to indent code.
+
+The remaining chunk of code (from within the `while` loop) is as follows:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+power.led[0] = 1
+yield query.timeout(1)
+power.led[0] = 0
+yield query.timeout(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Briefly, these lines turn LED0 on, wait for a second, turn LED0 off, and wait for another second. This is then repeated (it's in a while loop). To read more detailed information about the `power` and `query` objects, see their respective pages [here](docs/programming/sr/power/) and [here](docs/programming/sr/query/).
+
+We're now ready to save the file. At the upper left-hand side of the screen, you'll see a button labeled _Save_. Click it, and you'll be presented with a dialogue box for saving the file. Choose our "walkthrough" project from the drop-down list, write a useful commit message &mdash; here's mine:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added "hello world" (LED flashing) robot.py
+
+Flashes LED0 on for a second and then off for a second, then repeats.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+...and give the file the name "robot.py":
+
+![hello world save as](images/content/tutorials/walkthrough/hello_world_save_as.png)
+
+Now click _Save_.
+
+OK, so we've written some code, and we now need to test it on the kit. However, there's some other things to do first, like getting the code onto the memory stick.
 
 ### Getting the code on the memory stick
 
