@@ -10,7 +10,7 @@
  */
 require_once('config.inc.php');
 require_once('classes/CacheWrapper.class.php');
-define('MEMCACHE_TTL',		600 /*seconds*/);
+define('MEMCACHE_TTL',		60 /*seconds*/);
 
 function smarty_function_latestRSS($params, &$smarty)
 {

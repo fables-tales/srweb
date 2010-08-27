@@ -3,7 +3,7 @@
 require_once('config.inc.php');
 require_once('classes/CacheWrapper.class.php');
 require_once('createfeed.inc.php');
-define('MEMCACHE_TTL',		1800 /*seconds*/);
+define('MEMCACHE_TTL',		300 /*seconds*/);
 
 
 //do some caching stuff
