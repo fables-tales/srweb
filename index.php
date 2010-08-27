@@ -2,8 +2,6 @@
 
 if (!ob_start('ob_gzhandler')) ob_start();
 
-define('MEMCACHE_TTL', 86400);
-
 //get user configuration
 require('config.inc.php');
 
@@ -113,7 +111,7 @@ if ($page == 'home'){
 
 
 	//do some caching stuff
-	$content = CacheWrapper::getCacheItem('page_content_' . $fileToServe . filemtime($fileToServe), MEMCACHE_TTL, function(){
+	$content = CacheWrapper::getCacheItem('page_content_' . $fileToServe . filemtime($fileToServe), 86400/*1 day*/, function(){
 
 		global $fileToServe;
 		$c = new Content($fileToServe);

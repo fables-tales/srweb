@@ -10,7 +10,6 @@
  */
 require_once('config.inc.php');
 require_once('classes/CacheWrapper.class.php');
-define('MEMCACHE_TTL',		60 /*seconds*/);
 
 function smarty_function_latestRSS($params, &$smarty)
 {
@@ -18,7 +17,7 @@ function smarty_function_latestRSS($params, &$smarty)
 	$feed_latest = NULL;
 
 	//do some caching stuff
-	$feed_latest = CacheWrapper::getCacheItem('latest_feed_content_', MEMCACHE_TTL, function(){
+	$feed_latest = CacheWrapper::getCacheItem('latest_feed_content_', 60/*seconds*/, function(){
 
 		return _latestRSS_getMostRecentFeedItem();
 
