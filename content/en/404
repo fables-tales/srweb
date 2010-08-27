@@ -2,6 +2,18 @@
 //DESCRIPTION:	The page you were looking for has not been found.
 //KEYWORDS:	404, not found
 //AUTHORS:	Chris Kirkham
-//CONTENT_TYPE:	HTML
+//CONTENT_TYPE:	markdown
 
-404 ERROR -- PAGE NOT FOUND
+<p></p>
+
+[<img src="images/template/sad_robot.jpg" title="Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/)" alt="Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/)" class="left" />](http://www.flickr.com/photos/stevekeys/3107679409/in/set-72157611904763809/)
+
+404 &mdash; Page Not Found
+==========================
+We're sorry, but the page you are looking for has not been found. If you followed a link on the site, we'd really appreciate it if you [got in contact with us](about/contactus) to let us know. If you have an email client configured, you could just <a href="javascript:location.href = '&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#119;&#x65;&#98;m&#x61;&#115;&#x74;&#101;&#x72;&#64;&#x73;&#116;&#x75;&#100;&#101;&#x6e;&#116;&#x72;&#111;&#x62;&#111;&#x74;&#105;c&#x73;&#46;&#x6f;&#114;&#x67;?subject=Broken Link: '+escape(location.href)">click this link</a> and hit send.
+
+If you were looking for something in particular, you might like to try searching for it. There is a search box in the top right-hand corner of the site you can use.
+
+<div markdown="1" class="left_img_attribution">
+[Danbo Brigade Chief](http://www.flickr.com/photos/stevekeys/3107679409/in/set-72157611904763809/) was released under a [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/deed.en_GB) license by [Steve Keys](http://www.flickr.com/photos/stevekeys/).</div>
+
