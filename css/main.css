@@ -128,7 +128,7 @@ div.content{
 	padding:0 20px;
 	padding-bottom:20px;
 	height:auto;
-	overflow:visible;
+	overflow:auto;
 }
 
 div.content h1, h2, h3, h4, h5, h6 {
@@ -240,6 +240,15 @@ div.content ul ul {
 
 div.content li {
 	line-height:1.5em;
+}
+
+div.content div.left_img_attribution p {
+	font-size:10px;
+	color:silver;
+	clear:both;
+	float:left;
+	padding-right:20px;
+	padding-bottom:10px;
 }
 
 div#original {
