@@ -381,7 +381,9 @@ function constructDocsNavHierarchy(){
 
 function log404(){
 
-	if (LOG404_ENABLED && filesize(LOG404_FILE) < 2 << 20/*2MB*/){
+	if (LOG404_ENABLED
+		&& filesize(LOG404_FILE) < 2 << 20/*2MB*/
+		&& strpos($_SERVER['HTTP_REFERER'], BASE_URI) !== false){
 
 		$f = fopen(LOG404_FILE, 'a');
 		fwrite($f, $_SERVER['REQUEST_URI'] . '   at   ' . date('r') . "\n");
