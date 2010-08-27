@@ -386,7 +386,7 @@ function log404(){
 		&& strpos($_SERVER['HTTP_REFERER'], BASE_URI) !== false){
 
 		$f = fopen(LOG404_FILE, 'a');
-		fwrite($f, $_SERVER['REQUEST_URI'] . '   at   ' . date('r') . "\n");
+		fwrite($f, '{' . str_replace(BASE_URI, '', $_SERVER['HTTP_REFERER']) . '} was referring to {' . str_replace(ROOT_URI, '', $_SERVER['REQUEST_URI']) . '} on ' . date('r') . "\n");
 		fclose($f);
 
 	}
