@@ -140,6 +140,11 @@ define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
 define('MEMCACHE_PREFIX',	BASE_URI . '__');
 
+
+//404 log stuff
+define('LOG404_ENABLED',	true);
+define('LOG404_FILE',		'/tmp/404log');
+
 date_default_timezone_set("Europe/London");
 
 ?>
