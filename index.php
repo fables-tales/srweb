@@ -306,6 +306,7 @@ function getPage(){
 			//page not allowed / page not found -- respond with a 404
 			Header('HTTP/1.1 404 Not Found');
 			$page = '404';
+			log404();
 
 		}//if-elseif-else
 
@@ -375,5 +376,19 @@ function constructDocsNavHierarchy(){
 	return $menu;
 
 }
+
+
+
+function log404(){
+
+	if (LOG404_ENABLED && filesize(LOG404_FILE) < 2 << 20/*2MB*/){
+
+		$f = fopen(LOG404_FILE, 'a');
+		fwrite($f, $_SERVER['REQUEST_URI'] . '   at   ' . date('r') . "\n");
+		fclose($f);
+
+	}
+
+}//log404
 
 ?>
