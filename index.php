@@ -97,7 +97,7 @@ if ($page == 'home'){
 			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
 
 			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
-				filemtime($fileToServe)).' GMT', true, 304);
+				filemtime($fileToServe)).' GMT', false, $page == "404" ? 404 : 304);
 
 			Header('Connection: close');
 
@@ -105,7 +105,7 @@ if ($page == 'home'){
 
 			//otherwise serve it
 			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
-				filemtime($fileToServe)).' GMT', true, 200);
+				filemtime($fileToServe)).' GMT');
 
 		}//if else isset if-mod-since
 
