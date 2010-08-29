@@ -17,7 +17,7 @@ function smarty_function_latestRSS($params, &$smarty)
 	$feed_latest = NULL;
 
 	//do some caching stuff
-	$feed_latest = CacheWrapper::getCacheItem('latest_feed_content_', 60/*seconds*/, function(){
+	$feed_latest = CacheWrapper::getCacheItem('[latest_feed_content]', 60/*seconds*/, function(){
 
 		return _latestRSS_getMostRecentFeedItem();
 

@@ -7,7 +7,7 @@ define('MEMCACHE_TTL',		300 /*seconds*/);
 
 
 //do some caching stuff
-$feed = CacheWrapper::getCacheItem('feed_content_', MEMCACHE_TTL, function(){
+$feed = CacheWrapper::getCacheItem('[feed_content]', MEMCACHE_TTL, function(){
 
 	return getFeedContent();
 

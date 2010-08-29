@@ -24,7 +24,7 @@ function smarty_function_newsPage($params, &$smarty)
 	$p = $smarty->get_template_vars('p');
 
 	//do some caching stuff
-	$output = CacheWrapper::getCacheItem('news_page_' . $p, $MEMCACHE_TTL, function() use (&$p, &$smarty){
+	$output = CacheWrapper::getCacheItem('[news_page_' . $p . ']', $MEMCACHE_TTL, function() use (&$p, &$smarty){
 
 		return _getOutputForPage($p, $smarty->get_template_vars('base_uri'));
 

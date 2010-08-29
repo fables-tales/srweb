@@ -111,7 +111,7 @@ if ($page == 'home'){
 
 
 	//do some caching stuff
-	$content = CacheWrapper::getCacheItem('page_content_' . $fileToServe . filemtime($fileToServe), 86400/*1 day*/, function(){
+	$content = CacheWrapper::getCacheItem('[page_content:' . $fileToServe . ':' . filemtime($fileToServe) . ']', 86400/*1 day*/, function(){
 
 		global $fileToServe;
 		$c = new Content($fileToServe);
