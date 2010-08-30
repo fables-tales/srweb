@@ -138,8 +138,6 @@ define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
-define('MEMCACHE_PREFIX',	BASE_URI . '__');
-
 
 //404 log stuff
 define('LOG404_ENABLED',	true);
