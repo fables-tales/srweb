@@ -97,3 +97,10 @@ div.docs div#content blockquote p code {
 	font-size:0.8em;
 	font-weight:bolder;
 }
+
+div.docs div#content p img {
+	border:none;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
