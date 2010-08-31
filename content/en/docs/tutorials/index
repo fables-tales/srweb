@@ -6,4 +6,7 @@
 Tutorials
 =========
 
-We've written a [walkthrough](docs/tutorials/walkthrough) to guide you through &mdash; step-by-step &mdash; the process of writing, transfering and running code on your kit. It's a good place to start if you're not sure what you're doing.
+We've written a [walkthrough](docs/tutorials/walkthrough) to guide you through &mdash; step-by-step &mdash; the process of writing, transfering and running code on your kit. It's a good place to start if you're not sure what you're doing. **After** that, you might like to read the following tutorials listed in order of difficulty:
+
+1. [(The Walkthrough)](docs/tutorials/walkthrough) &mdash; you should start here
+2. [Basic Motor Control](docs/tutorials/basic_motor_control) &mdash; all you need to know to get your motors moving
