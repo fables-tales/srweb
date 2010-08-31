@@ -130,8 +130,10 @@ If you've followed all of the above, you should now be ready to see a flashing L
 Turn the powerboard switch on and allow the system to boot. You should see the SR logo on the display. When it's finished booting, you can press the _run_ button on the powerboard. If you see a flashing LED (on for a second, off for a second), feel free to bask in the glory of having successfully programmed your Student Robotics kit. Well done! If you don't, try and [troubleshoot](docs/troubleshooting/) the issue.
 
 
+Next Steps
+----------
 
-
+Now you've written a basic program for your kit and know how to get your code on it, we can move towards some more advanced (and more interesting) programs. If you head back to the [tutorials](docs/tutorials/) page, you'll find a list of other tutorials to do. The recommended one to do next would be [Basic Motor Control](docs/tutorials/basic_motor_control).
 
 
 
