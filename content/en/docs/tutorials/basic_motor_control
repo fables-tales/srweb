@@ -12,8 +12,8 @@ The aim of this tutorial is to get a motor turning with your kit. To complete th
 * The battery (charged, of course)
 * The cable to connect the battery to the powerboard
 * A motor (see specification below)
-* A [motorboard](docs/kit/motor_board)
-* A green _camcon_ connector to plug the motor and motorboard together
+* A [motor board](docs/kit/motor_board)
+* A green _camcon_ connector to plug the motor and motor board together
 * The USB hub
 * The USB hub power cable
 * The memory stick
@@ -27,7 +27,7 @@ Motor Specification
 There is a certain specification the motor(s) you use must meet. The criteria are as follows:
 
 * 12V motor
-* A stall current of no more than 5A (a [motorboard](docs/kit/motor_board) can only provide 5A, above which it will current limit)
+* A stall current of no more than 5A (a [motor board](docs/kit/motor_board) can only provide 5A, above which it will current limit)
 
 
 Connecting a Motor
@@ -48,7 +48,7 @@ To start off with, we'll just make a motor move forwards, then backwards, and th
 
 Doing this is actually very easy; the only thing you need to realise is that a positive number is forwards and a negative number is backwards. 
 
-<div class="warning">The actual direction of travel of a motor, when mounted on a robot, will depend on its orientation and the way in which the wires are connected to the motorboard. If the motor appears to be going in the wrong direction, just swap the motor's positive and negative wires over.</div>
+<div class="warning">The actual direction of travel of a motor, when mounted on a robot, will depend on its orientation and the way in which the wires are connected to the motor board. If the motor appears to be going in the wrong direction, just swap the motor's positive and negative wires over.</div>
 
 Here's the code:
 
@@ -74,9 +74,9 @@ def main:
 
 You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `motor[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](docs/programming/sr/motor/) page. But, to sumarise:
 
-`motor[0].target = x` will set the power of the first [motorboard](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.
+`motor[0].target = x` will set the power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.
 
-So, `motor[0].target = 50` sets the target power of the first [motorboard](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
+So, `motor[0].target = 50` sets the target power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
 
 So, if you put the above code on your robot, you should be able to see a motor spin forwards, stop, spin backwards, stop, and then repeat...
 
