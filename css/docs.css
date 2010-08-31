@@ -81,9 +81,7 @@ div.docs div#content div.warning {
 }
 
 div.docs div#content blockquote {
-	margin-left:30px;
-	border:1px solid #8AEFFF;
-	background:#DBFAFF;
+	margin-left:50px;
 	padding:5px;
 	margin-bottom:15px;
 }
