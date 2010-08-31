@@ -57,6 +57,8 @@ $MENU_PAGES = array(
 	'Documentation'		=> 'schools/docs/',
 	'Kit'			=> 'schools/kit/',
 
+	'Docs'			=> 'docs/',
+
 	'Sponsors'		=> 'sponsors/',
 
 	'About Us'		=> 'about/',
