@@ -1,0 +1,177 @@
+//TITLE:	Basic Motor Control
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Basic Motor Control
+===================
+
+The aim of this tutorial is to get a motor turning with your kit. To complete this tutorial, you'll need the following:
+
+* The [powerboard](docs/kit/power_board)
+* The battery (charged, of course)
+* The cable to connect the battery to the powerboard
+* A motor (see specification below)
+* A [motorboard](docs/kit/motor_board)
+* A green _camcon_ connector to plug the motor and motorboard together
+* The USB hub
+* The USB hub power cable
+* The memory stick
+
+You should be familiar with the setup for most of the above now (if you've read the [walkthrough](docs/tutorials/walkthrough)), so it's just the motor-related parts that need explaining.
+
+
+Motor Specification
+-------------------
+
+There is a certain specification the motor(s) you use must meet. The criteria are as follows:
+
+* 12V motor
+* A stall current of no more than 5A (a [motorboard](docs/kit/motor_board) can only provide 5A, above which it will current limit)
+
+
+Connecting a Motor
+------------------
+
+To plug the motor into the kit, you'll need to solder an appropriate gauge of wire to the terminals on the motor, and connect the other ends to the _camcon_ connector.
+
+
+Some Code
+--------
+
+The example program we'll write will do a number of things with the motor: forwards and backwards, and different power settings, for example. Let's begin.
+
+To start off with, we'll just make a motor move forwards, then backwards, and then repeat.
+
+
+### Forwards & Backwards
+
+Doing this is actually very easy; the only thing you need to realise is that a positive number is forwards and a negative number is backwards. 
+
+<div class="warning">The actual direction of travel of a motor, when mounted on a robot, will depend on its orientation and the way in which the wires are connected to the motorboard. If the motor appears to be going in the wrong direction, just swap the motor's positive and negative wires over.</div>
+
+Here's the code:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main:
+
+	while True:
+
+		motor[0].target = 50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+
+		motor[0].target = -50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `motor[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](docs/programming/sr/motor/) page. But, to sumarise:
+
+`motor[0].target = x` will set the power of the first [motorboard](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.
+
+So, `motor[0].target = 50` sets the target power of the first [motorboard](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
+
+So, if you put the above code on your robot, you should be able to see a motor spin forwards, stop, spin backwards, stop, and then repeat...
+
+
+### Changing the Speed
+
+Now we're going to modify the program to vary the speed of the motor. Our aim is to do the forwards and backwards bit (as above), but, before we loop round again, ramp the power up to 70%, then down to -70%, and then back to 0 (all in steps of 10%).
+
+Here's the code:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main:
+
+	while True:
+
+		motor[0].target = 50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+
+		motor[0].target = -50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+
+		# ^^ code from before ^^
+
+		# power up to 70 (from 10)
+		for pwr in range(10, 80, 10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# power down from 70 (to 10)
+		for pwr in range(70, 0, -10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# set power to 0 for a second
+		motor[0].target = 0
+		query.timeout(1)
+
+		# power "up" to -70 (from -10)
+		for pwr in range(-10, -80, -10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# power "up" to -70 (from -10)
+		for pwr in range(-70, 0, 10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# set power to 0 for a second
+		motor[0].target = 0
+		query.timeout(1)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Again, as you've seen most of that before, it shouldn't be too difficult to get your head around. The `for` loop may be new, however. The [`for`](http://docs.python.org/tutorial/controlflow.html#for-statements) loop accepts a Python `list` (a `list`, when `print`ed, appears in square brackets like so: `[1, 2, 3]`). For a comprehensive introduction to to `list`s, have a look at [this WikiBooks article](http://en.wikibooks.org/wiki/Python_Programming/Lists). The `for` loop will iterate over the `list` (i.e. take each element in turn) and make it available in the loop's body as the variable after the the `for` keyword. Here's an example:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+for i in [1, 2, 3]:
+	print i
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The above would output:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1
+2
+3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Then there's the [`range()`](http://docs.python.org/library/functions.html#range) function. The `range()` function returns a `list` with its contents dependent on the arguments passed to it. The Python documentation explains it quite nicely:
+
+> `range([start], stop[, step])` (note: the square brackets here mean 'optional')
+>
+> If the step argument is omitted, it defaults to 1. If the start argument is
+> omitted, it defaults to 0. The full form returns a list of plain integers
+> `[start,  start + step, start + 2 *  step, ...]`. If step is positive, the last
+> element is the largest `start + i * step` less than stop; if step is negative,
+> the last element is the smallest `start + i * step` greater than stop.
+
+So, based on that, `range(3)` would return the list `[0, 1, 2]` because it is shorthand for `range(0, 3, 1)`. From the quote, you can see that this would return a list starting from `0`, and finishing with the integer one less than `3`, hence the `[0, 1, 2]`.
+
+So, taking `range(10, 80, 10)`, for example, would output `10` as the first element, then `20, 30, ...` up until `x=10+i*10` for some `i` where `i` ensures `x < stop` (which, in this case, is `80`). So, the `80` I've used could equally have been `77` or even `71` and the outputted `list` would still be `[10, 20, 30, 40, 50, 60, 70]`.
+
+Putting all of that together should mean you understand the above code. You might want to run the code on your kit to see if it does what you expect it to.
+
+<div class="warning">You might want to ensure the motor won't take the kit anywhere when you press the run button (unless it's in a robot, of course).</div>
+
+Next Steps
+----------
+
+From here, you might want to take a look at the [basic IO](docs/tutorials/basic_IO).
