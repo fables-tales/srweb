@@ -8,9 +8,9 @@ Basic Motor Control
 
 The aim of this tutorial is to get a motor turning with your kit. To complete this tutorial, you'll need the following:
 
-* The [powerboard](docs/kit/power_board)
+* The [power board](docs/kit/power_board)
 * The battery (charged, of course)
-* The cable to connect the battery to the powerboard
+* The cable to connect the battery to the power board
 * A motor (see specification below)
 * A [motor board](docs/kit/motor_board)
 * A green _camcon_ connector to plug the motor and motor board together
