@@ -102,32 +102,32 @@ All you need to do now is save the file on to the root (as in `G:\` or `H:\` or 
 
 To run the _hello world_ program, all you need is the following:
 
-* The powerboard
+* The power board
 * The battery (charged, of course)
-* The cable to connect the battery to the powerboard
+* The cable to connect the battery to the power board
 * The USB hub
 * The USB hub power cable
 * The memory stick (with the _hello world_ code on it, from before)
 
 To assemble, follow these steps:
 
-1. Ensure the powerboard power switch in the OFF position
-2. Plug the USB hub into the USB socket on the powerboard
-3. Plug the USB hub power cable into the powerboard and the hub
+1. Ensure the power board power switch in the OFF position
+2. Plug the USB hub into the USB socket on the power board
+3. Plug the USB hub power cable into the power board and the hub
 4. Plug the memory stick into the USB hub
 5. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
-6. Plug the other end of the battery cable into the powerboard
+6. Plug the other end of the battery cable into the power board
 
-<div class="warning">You MUST use the USB hub. The BeagleBoard in the powerboard case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
+<div class="warning">You MUST use the USB hub. The BeagleBoard in the power board case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
 
 OK, we're ready to run the code.
 
 
 ### Running the code
 
-If you've followed all of the above, you should now be ready to see a flashing LED on the powerboard.
+If you've followed all of the above, you should now be ready to see a flashing LED on the power board.
 
-Turn the powerboard switch on and allow the system to boot. You should see the SR logo on the display. When it's finished booting, you can press the _run_ button on the powerboard. If you see a flashing LED (on for a second, off for a second), feel free to bask in the glory of having successfully programmed your Student Robotics kit. Well done! If you don't, try and [troubleshoot](docs/troubleshooting/) the issue.
+Turn the power board switch on and allow the system to boot. You should see the SR logo on the display. When it's finished booting, you can press the _run_ button on the power board. If you see a flashing LED (on for a second, off for a second), feel free to bask in the glory of having successfully programmed your Student Robotics kit. Well done! If you don't, try and [troubleshoot](docs/troubleshooting/) the issue.
 
 
 Next Steps
