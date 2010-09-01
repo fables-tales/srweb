@@ -74,7 +74,7 @@ def main:
 
 You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `motor[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](docs/programming/sr/motor/) page. But, to sumarise:
 
-`motor[0].target = x` will set the power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.
+<div class="info">`motor[0].target = x` will set the power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.</div>
 
 So, `motor[0].target = 50` sets the target power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
 
