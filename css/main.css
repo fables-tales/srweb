@@ -68,27 +68,29 @@ div#header {
 	width:960px;
 }
 
-div#header > a {
+div#header a {
 	float:left;
 	margin-top:20px;
 	margin-left:20px;
 }
 
-div#header > form {
+div#header form {
 	float:right;
 	margin-top:30px;
 }
 
-div#header > form > fieldset > input {
+div#header form fieldset input {
 	border:1px solid silver;
 }
 
-div#header > form > fieldset > input[type=text]{
+div#header form fieldset input[type=text]{
 	font-size:16px;
-	line-height:16px;
+	height:22px;
+	position:relative;
+	top:-1px;
 }
 
-div#header > form > fieldset > input[type=submit]{
+div#header form fieldset input[type=submit]{
 	/* Thanks to http://www.famfamfam.com/lab/icons/silk/ for the image */
 	background-image:url('../images/template/magnifier.png');
 	background-repeat:no-repeat;
@@ -96,25 +98,27 @@ div#header > form > fieldset > input[type=submit]{
 	height:24px;
 	width:24px;
 	position:relative;
-	top:-1px;
 }
 
-div#header > ul {
+div#header ul {
 	clear:both;
 	float:right;
-	margin-bottom:10px;
+	margin-top:-8px;
 }
 
-div#header > ul > li {
+div#header ul li {
 	float:left;
 	margin-left:10px;
 }
 
-div#header > ul > li > a {
+div#header ul li a {
 	text-decoration:none;
 	color:#8b8884;
 	padding:8px;
 	letter-spacing:1px;
+	margin-top:0px;
+	margin-left:0px;
+	display:block;
 }
 
 div.content{
@@ -124,7 +128,7 @@ div.content{
 	padding:0 20px;
 	padding-bottom:20px;
 	height:auto;
-	overflow:visible;
+	overflow:auto;
 }
 
 div.content h1, h2, h3, h4, h5, h6 {
@@ -132,7 +136,7 @@ div.content h1, h2, h3, h4, h5, h6 {
 	line-height:1.3em;
 }
 
-div.content > h1 {
+div.content h1 {
 	font-size:26px;
 	margin-bottom:10px;
 	padding-top:10px;
@@ -192,34 +196,34 @@ div.content a:hover {
 	color:#0d1f61;
 }
 
-div.content > p > img {
+div.content p img {
 	border:1px solid silver;
 	padding:3px;
 	margin-bottom:10px;
 }
 
-div.content > p > img.left {
+div.content p img.left {
 	float:left;
 	margin-right:20px;
 }
 
-div.content > p > img.right {
+div.content p img.right {
 	float:right;
 	margin-left:20px;
 }
 
-div.content > p > video {
+div.content p video {
 	border:1px solid silver;
 	padding:3px;
 	margin-bottom:10px;
 }
 
-div.content > p > video.left {
+div.content p video.left {
 	float:left;
 	margin-right:20px;
 }
 
-div.content > p > video.right {
+div.content p video.right {
 	float:right;
 	margin-left:20px;
 }
@@ -234,8 +238,17 @@ div.content ul ul {
 	list-style:circle;
 }
 
-div.content ul li {
+div.content li {
 	line-height:1.5em;
+}
+
+div.content div.left_img_attribution p {
+	font-size:10px;
+	color:silver;
+	clear:both;
+	float:left;
+	padding-right:20px;
+	padding-bottom:10px;
 }
 
 div#original {
@@ -265,12 +278,12 @@ div#footer {
 	color:#333;
 }
 
-div#footer > span.rss {
+div#footer span.rss {
 	position:absolute;
 	right:10px;
 }
 
-div#footer > span.copyright {
+div#footer span.copyright {
 	display:block;
 	margin:0 auto;
 	width:200px;

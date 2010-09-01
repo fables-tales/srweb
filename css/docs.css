@@ -1,0 +1,121 @@
+div.docs {
+	height:auto;
+	overflow:auto;
+}
+
+div#docsNav {
+	width:180px;
+	margin-top:20px;
+	border-right:1px solid silver;
+	float:left;
+}
+
+div#docsNav ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+div#docsNav ul ul {
+	margin-left:5px;
+	background:url('../images/template/ul-dotted-bg.png') repeat-y;
+}
+
+div#docsNav ul li {
+	padding:4px 0 4px 8px;
+	margin-left:2px;
+	line-height:1.1em;
+}
+
+div#docsNav ul li a {
+	color:#0D1F61;
+}
+
+div#docsNav ul li ul li {
+	background:url('../images/template/li-dotted-bg.png') no-repeat 0 0.7em;
+	font-weight:bolder;
+}
+
+div#docsNav ul li ul li ul li {
+	font-weight:normal;
+}
+
+div.docs div#content {
+	float:left;
+	width:725px;
+	margin-top:20px;
+	border-left:1px solid silver;
+	margin-left:-1px;
+	padding-left:10px;
+}
+
+div.docs div#content ul {
+	margin-left:45px;
+}
+
+div.docs div#content ol {
+	margin-left:45px;
+	list-style:decimal;
+	margin-bottom:15px;
+}
+
+div.docs div#content pre {
+	border:1px solid #FFE659;
+	background:#FFF4B8;
+	font-size:0.8em;
+	margin-left:30px;
+	overflow:auto;
+	padding:5px;
+	margin-bottom:15px;
+}
+
+div.docs div#content div.warning {
+	border:1px solid red;
+	background:url('../images/template/dialog-warning.png') no-repeat 10px center #FFBFC7;
+	font-size:0.8em;
+	font-weight:bolder;
+	margin-left:30px;
+	overflow:auto;
+	padding:10px 5px 10px 52px;
+	margin-bottom:15px;
+}
+
+div.docs div#content div.info {
+	border:1px solid #52C5FF;
+	background:url('../images/template/dialog-information.png') no-repeat 10px center #CCFEFF;
+	font-size:0.8em;
+	font-weight:bolder;
+	margin-left:30px;
+	overflow:auto;
+	padding:10px 5px 10px 52px;
+	margin-bottom:15px;
+}
+
+div.docs div#content blockquote {
+	margin-left:50px;
+	padding:5px;
+	margin-bottom:15px;
+}
+
+div.docs div#content blockquote p {
+	font-family: times;
+	font-style:italic;
+	margin-left:0px;
+	margin-bottom:0;
+}
+
+div.docs div#content blockquote p code {
+	font-size:0.8em;
+	font-weight:bolder;
+}
+
+div.docs div#content p img {
+	border:none;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div.docs div#content p code {
+	background: #FFF4B8;
+}

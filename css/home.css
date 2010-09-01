@@ -1,6 +1,7 @@
 div.content {
 	padding:0;
 	border-top:none;
+	overflow:visible;
 }
 
 div.content p {
@@ -10,18 +11,14 @@ div.content p {
 
 div.content div#topBanner {
 	background:url('../images/template/banner_bg.png') no-repeat;
-	background-position:0px -10px;
-	height:200px;
+	height:236px;
 }
 
 div.content div#topBanner img {
-	width:374px;
-	height:260px;
 	overflow:visible;
 	float:left;
 	position:relative;
-	top:-60px;
-	left:30px;
+	top:-45px;
 }
 
 div.content div#topBanner h1 {
@@ -32,7 +29,8 @@ div.content div#topBanner h1 {
 	width:500px;
 	float:right;
 	margin-right:50px;
-	margin-top:20px;
+	margin-top:10px;
+	margin-bottom:0px;
 	clear:none;
 }
 
@@ -41,7 +39,9 @@ div.content div#topBanner p {
 	width:500px;
 	float:right;
 	margin-right:30px;
+	margin-top: 0;
 	text-align:left;
+	line-height: 24px;
 }
 
 div.content div#latestNews {
@@ -55,6 +55,7 @@ div.content div#latestNews h2 {
 	line-height:40px;
 	clear:both;
 	color:#0d1f61;
+	margin-top: 0;
 }
 
 div.content div#latestNews h2 a {
@@ -89,28 +90,28 @@ div.content div#expandedMenu ul li a {
 	text-decoration:none;
 }
 
-div.content div#expandedMenu > ul > li a:hover {
+div.content div#expandedMenu ul li a:hover {
 	border-bottom:none;
 }
 
-div.content div#expandedMenu > ul > li {
-	margin-bottom:10px;
+div.content div#expandedMenu ul li {
+	margin-bottom:5px;
 	font-size:18px;
 }
 
-div.content div#expandedMenu > ul > li > a {
+div.content div#expandedMenu ul li a {
 	color:#0d1f61;
 }
 
-div.content div#expandedMenu > ul > li > ul {
+div.content div#expandedMenu ul li ul {
 	margin-left:5px;
 }
 
-div.content div#expandedMenu > ul > li > ul > li {
+div.content div#expandedMenu ul li ul li {
 	font-size:16px;
 }
 
-div.content div#expandedMenu > ul > li > ul > li > a {
+div.content div#expandedMenu ul li ul li a {
 	color:#8b8884;
 }
 
@@ -149,4 +150,5 @@ div.content div#boxWrapper div.box img {
 	padding:2px;
 	float:right;
 	margin-left:10px;
+	margin-bottom:5px;
 }

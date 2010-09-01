@@ -2,6 +2,18 @@
 //DESCRIPTION:	The page you were looking for has not been found.
 //KEYWORDS:	404, not found
 //AUTHORS:	Chris Kirkham
-//CONTENT_TYPE:	HTML
+//CONTENT_TYPE:	markdown
 
-404 ERROR -- PAGE NOT FOUND
+<p></p>
+
+[<img src="images/template/sad_robot.jpg" title="Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/)" alt="Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/)" class="left" />](http://www.flickr.com/photos/stevekeys/3107679409/in/set-72157611904763809/)
+
+404 &mdash; Page Not Found
+==========================
+We're very sorry, but the page you were looking for has not been found. If you typed the link in yourself, you may wish to double check it. If you followed a link from elsewhere, you might want to let them know. If it was a link from us, we'll be aware of it next time we trawl our logs, so it should be fixed soon!
+
+In the mean time, you could try searching for what you're looking for; there's a search box at the top-right-hand side of the page.
+
+<div markdown="1" class="left_img_attribution">
+[Danbo Brigade Chief](http://www.flickr.com/photos/stevekeys/3107679409/in/set-72157611904763809/) was released under a [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/deed.en_GB) license by [Steve Keys](http://www.flickr.com/photos/stevekeys/).</div>
+

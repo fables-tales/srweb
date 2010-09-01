@@ -57,6 +57,8 @@ $MENU_PAGES = array(
 	'Documentation'		=> 'schools/docs/',
 	'Kit'			=> 'schools/kit/',
 
+	'Docs'			=> 'docs/',
+
 	'Sponsors'		=> 'sponsors/',
 
 	'About Us'		=> 'about/',
@@ -138,7 +140,10 @@ define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 
-define('MEMCACHE_PREFIX',	BASE_URI . '__');
+
+//404 log stuff
+define('LOG404_ENABLED',	true);
+define('LOG404_FILE',		'/tmp/404log');
 
 date_default_timezone_set("Europe/London");
 

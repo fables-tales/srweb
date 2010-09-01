@@ -9,35 +9,19 @@
  * -------------------------------------------------------------
  */
 require_once('config.inc.php');
-define('MEMCACHE_TTL',		600 /*seconds*/);
+require_once('classes/CacheWrapper.class.php');
 
 function smarty_function_latestRSS($params, &$smarty)
 {
 
 	$feed_latest = NULL;
 
-	//check to see if cache module is useable
-	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
+	//do some caching stuff
+	$feed_latest = CacheWrapper::getCacheItem('[latest_feed_content]', 60/*seconds*/, function(){
 
-		//connect to memcached
-		$memcache = new Memcache();
-		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
+		return _latestRSS_getMostRecentFeedItem();
 
-			//does the most recent feed exist in the cache
-			if (!($feed_latest = $memcache->get(MEMCACHE_PREFIX . 'latest_feed_content'))){
-				//if not, make it so...
-				$feed_latest = _latestRSS_getMostRecentFeedItem();
-				$memcache->set(MEMCACHE_PREFIX . 'latest_feed_content', $feed_latest, 0, MEMCACHE_TTL);
-			}
-
-		} else
-			return '<h2>Sad Face...</h2><p>Couldn\'t open a connection to memcache</p>';
-
-	}//if extension_loaded
-
-	//if cache wasn't useable, gracefully degrade to getting it each time
-	if ($feed_latest === NULL)
-		$feed_latest = _latestRSS_getMostRecentFeedItem();
+	});
 
 	//and if that didn't work, leave it empty.
 	if ($feed_latest === NULL)

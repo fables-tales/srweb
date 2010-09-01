@@ -2,8 +2,6 @@
 
 if (!ob_start('ob_gzhandler')) ob_start();
 
-define('MEMCACHE_TTL', 86400);
-
 //get user configuration
 require('config.inc.php');
 
@@ -16,6 +14,8 @@ require('classes/Menu.class.php');
 
 //get class from extracting metadata and content
 require('classes/Content.class.php');
+
+require('classes/CacheWrapper.class.php');
 
 //get instance of smarty
 $smarty = new Smarty();
@@ -55,8 +55,10 @@ foreach($orderedLanguages as $l){
 	}
 }//foreach
 
-//home and content files are treated differently, so if the page is 'home'
-//serve the home template, otherwise use the content template.
+/*
+ * Some pages need to be treated differently (they use a different template, for
+ * example); this is handled here.
+ */
 if ($page == 'home'){
 
 	$smarty->assign('side_menu', constructMenuHierachy());
@@ -77,12 +79,14 @@ if ($page == 'home'){
 
 } else {
 
+	$pageInDocs = preg_match('/docs\/.+/', $page);
+
 	//the physical file to serve, including the language in the path
 	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
 
 	//before we go ahead and serve it, see if we can use what the
 	//user's browser has cached.
-	if (function_exists('apache_request_headers')){
+	if (function_exists('apache_request_headers') && !$pageInDocs){
 
 		$headers = apache_request_headers();
 
@@ -91,7 +95,7 @@ if ($page == 'home'){
 			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
 
 			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
-				filemtime($fileToServe)).' GMT', true, 304);
+				filemtime($fileToServe)).' GMT', false, $page == "404" ? 404 : 304);
 
 			Header('Connection: close');
 
@@ -99,33 +103,23 @@ if ($page == 'home'){
 
 			//otherwise serve it
 			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
-				filemtime($fileToServe)).' GMT', true, 200);
+				filemtime($fileToServe)).' GMT');
 
 		}//if else isset if-mod-since
 
 	}//if function_exists
 
-	$content = NULL;
 
-	if (MEMCACHE_ENABLED && extension_loaded('memcache')){
+	//do some caching stuff
+	$content = CacheWrapper::getCacheItem('[page_content:' . $fileToServe . ':' . filemtime($fileToServe) . ']', 86400/*1 day*/, function(){
 
-		$memcache = new Memcache();
-		if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
+		global $fileToServe;
+		$c = new Content($fileToServe);
+		$c->getParsedContent();
+		return $c;
 
-			if (!($content = $memcache->get(MEMCACHE_PREFIX . 'page_content_' . $fileToServe . '_' . filemtime($fileToServe)))){
-				$content = new Content($fileToServe);
-				$content->getParsedContent();
-				$memcache->set(MEMCACHE_PREFIX . 'page_content_' . $fileToServe . '_' . filemtime($fileToServe), $content, 0, MEMCACHE_TTL);
-			};
+	});
 
-		}
-
-	}//if extension_loaded
-
-	if ($content === NULL){
-		$content = new Content($fileToServe);
-		$content->getParsedContent();
-	}
 
 	//if the file is a special redirection file, do the redirection
 	if ($content->getMeta('REDIRECT') != ""){
@@ -144,8 +138,13 @@ if ($page == 'home'){
 	$smarty->assign('base_uri', BASE_URI);
 	$smarty->assign('page_id', str_replace('/', '_', $page));
 
-	//display content template
-	$smarty->display('content.tpl');
+	if ($pageInDocs){
+
+		$smarty->assign('docsNav', constructDocsNavHierarchy());
+		$smarty->display('docs.tpl');
+
+	} else
+		$smarty->display('content.tpl');
 
 	ob_end_flush();
 
@@ -195,14 +194,14 @@ function getOrderedLanguages(){
 	if (count($tags) > 0){
 
 		//get, by group, the following: language, country code, preference
-		$pattern = '/([A-Za-z]{2})(-[A-Za-z]{2})?(;q=[01]\.[0-9]+)?/';
+		$pattern = '/([A-Za-z]{2}-?[A-Za-z]{0,2})(;q=[01]\.[0-9]+)?/';
 		foreach ($tags as $tag){
 
 			preg_match($pattern, $tag, $matches);
 
 			//no 'q' preference === preference of 1
-			$preference = array_key_exists(3, $matches) ? (float)str_replace(';q=', '', $matches[3]) : (float)1;
-			$pref_array[$matches[1].$matches[2]] = $preference;
+			$preference = array_key_exists(2, $matches) ? (float)str_replace(';q=', '', $matches[2]) : (float)1;
+			$pref_array[$matches[1]] = $preference;
 
 		}//foreach
 
@@ -305,6 +304,7 @@ function getPage(){
 			//page not allowed / page not found -- respond with a 404
 			Header('HTTP/1.1 404 Not Found');
 			$page = '404';
+			log404();
 
 		}//if-elseif-else
 
@@ -352,5 +352,47 @@ function constructMenuHierachy(){
 	return $menu;
 
 }//constructMenuHeirachy
+
+
+
+function constructDocsNavHierarchy(){
+
+	$docsPages = getAllowedPages(CONTENT_DIR . '/default/docs');
+	natcasesort($docsPages);
+	$menu = new Menu();
+
+	foreach($docsPages as $item){
+
+		if (substr($item, -5, 5) == 'index')
+			continue;
+
+		$text = explode('/', $item);
+		$text = $text[count($text)-1];
+		$menu->addToHierachy($item, ROOT_URI, str_replace('_', ' ', $text));
+	}
+
+	return $menu;
+
+}
+
+
+
+function log404(){
+
+	if (LOG404_ENABLED
+		&& filesize(LOG404_FILE) < 2 << 20/*2MB*/
+		&& strpos($_SERVER['HTTP_REFERER'], BASE_URI) !== false){
+
+		$f = fopen(LOG404_FILE, 'a');
+
+		$line = '{/' . str_replace(BASE_URI, '', $_SERVER['HTTP_REFERER']) . '} was referring to {' . str_replace(ROOT_URI, '/', $_SERVER['REQUEST_URI']) . '} on ' . date('r') . "\n";
+
+		fwrite($f, $line);
+
+		fclose($f);
+
+	}
+
+}//log404
 
 ?>

@@ -11,10 +11,10 @@
 	<ul>
 		<li><a href="{$root_uri}">Home</a></li>
 		<li><a href="{$root_uri}ide">IDE</a></li>
+		<li><a href="{$root_uri}docs/">Docs</a></li>
 		<li><a href="{$root_uri}schools/">Schools</a></li>
 		<li><a href="{$root_uri}sponsors/">Sponsors</a></li>
 		<li><a href="{$root_uri}news/">News</a></li>
-		<li><a href="{$root_uri}about/gettinginvolved">Get Involved</a></li>
 		<li><a href="{$root_uri}about">About Us</a></li>
 	</ul>
 </div>

@@ -1,0 +1,64 @@
+//TITLE:	IO (JointIO)
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+IO (JointIO)
+============
+
+The JointIO board provides 8 pins for input (both analogue and digital) and 4 for digital output. As with `pwm` and `motor`, `io` is a list, with indexes based on [token ring](docs/kit/token_ring) ordering.
+
+
+[Digital vs. Analogue](docs/programming/sr/io/#digital_vs_analogue) {#digital_vs_analogue}
+----------------------
+
+A digital value, in general, is one that can take a number of discrete values. In contrast, an analogue value is not restricted by these discrete steps, with an infinitely large number of possible values between two given (different) values. 
+
+However, to represent an analogue value in a computer, it needs to be represented digitally. Using an ADC (10-bit), we represent an analogue value from 0V to 3.3V as a digital value ranging from 0 to 1023. In the Python, however, we give you a value between `0.0` and `3.3`, calculated using the digital value (0 to 1023). It is important to understand this as confusion may occur when a particularly precise _analogue_ value cannot be achieved.
+
+Here, a digital pin refers to a pin that takes a _binary_ value; that is, either a `0` or a `1` (low or high).
+
+
+[Input](docs/programming/sr/io/#input) {#input}
+-------
+
+You can read a **digital** input pin with the following code:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# io[IO_BOARD_NUMBER].in[PIN_NO].d
+
+# to read JoinIO board 0's digital pin 0...
+pin0 = io[0].in[0].d
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`pin0` will now contain a `1` or a `0` depending on whether the pin was high (3.3v) or low (0v), respectively.
+
+You can read an **analogue** input pin with the following code:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# io[IO_BOARD_NUMBER].in[PIN_NO].a
+
+# to read JoinIO board 0's analogue pin 2...
+pin0 = io[0].in[2].a
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Output](docs/programming/sr/io/#output) {#output}
+--------
+
+You can only set digital outputs (there's no analogue output, unless you get creative with some additional electronics, of course). To set a digital output pin, you would use the following:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# io[IO_BOARD_NUMBER].out[PIN_NO].d = VALUE
+
+# to set JointIO board 0's pin 1 high:
+io[0].out[1].d = 1
+
+# to set JointIO board 0's pin 1 low:
+io[0].out[1].d = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[IO Events](docs/programming/sr/io/#IOEvents) {#IOEvents}
+-----------
+It is possible to wait at a particular line in your code until a certain condition is met (a digital input changing, for example). As this works with other parts of the module, it is discussed elsewhere under the [query page](docs/programming/sr/query/).

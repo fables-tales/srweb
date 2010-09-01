@@ -1,0 +1,19 @@
+//TITLE:	Token Ring
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+The Token Ring
+==============
+
+The boards in the Student Robotics kit are connected together using a [ring topology](http://en.wikipedia.org/wiki/Ring_network). This means that all in/out connectors on the boards need to be connected for the _token_ to passed around. This _token_ is held by the board that is currently allowed to talk through the power board to the BeagleBoard. If the loop is not complete, the token will not successfully circulate and the robot will not work. Here's an example layout:
+
+![Simple Token Ring Example](images/content/token_ring_diagram.png "Simple Token Ring Example")
+
+In this example, the token will be passed around anti-clockwise, starting from the power board. (It'll go from the power board (PB), to `io[0]`, then `motor[0]`, `motor[1]`, PB, `io[0]`, etc...) The token is passed away from the power board's `OUT` socket, around the ring to its `IN` socket.
+
+<div class="warning">Please Note: INs should only be connected to OUTs!</div>
+
+The order in which boards appear in the lists in the [SR API](docs/programming/sr/) objects depend on the order they appear in the ring. `motor[0]`, for example, would be the first motor to appear in the loop and `motor[1]` would be the second. So, in the above example, even though `io[0]` is the first board in the loop, the first motor board in the loop is still `motor[0]`.
+
+<div class="warning">If you change the order that the boards appear in within the ring, your code may have to change as well.</div>

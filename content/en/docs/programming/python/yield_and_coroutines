@@ -1,0 +1,122 @@
+//TITLE:	Yield and Coroutines
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Yield and Coroutines
+====================
+
+`yield` is one of the more advanced features of Python. [`yield`'s official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. Roughly, you can think of a `yield` as a special type of `return`.
+
+Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the `yield` statement:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+yield query.io[0].dpin[3] == 1
+# code here won't execute until digital pin 3 on JointIO board 0 goes high
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the [query](docs/programming/sr/query/) object for more information.
+
+
+[Yield in General](docs/programming/python/yield_and_coroutines#general) {#general}
+------------------
+
+It is important to note that this is not what `yield` does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, `yield` is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the `yield` keyword is used:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# this is a generator now, it mentions yield
+def aGenerator():
+        yield 1	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is where confusion occurs. You cannot call _aGenerator()_ like a function because, well, it's a generator:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gen = aGenerator()
+print gen  # outputs something like "<generator object func at 0x9d6fd74>"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here's an over-simplified example (waiting for _n_ seconds, in this case) of what happens in the background:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import time
+
+# this part's your code
+def test():
+        print "a"
+        yield 1
+        print "b"
+        yield 2
+        print "c"
+        yield 3
+
+
+
+# this part's ours
+gen = test() # because the function contains yields,
+             # it's not a function but a generator instead
+
+try:
+	# do everything in the user's code
+	while True:
+
+                tmp = gen.next()  # run test() until the next yield, storing
+                                  # the yielded value in tmp
+
+                time.sleep(tmp)
+
+except StopIteration:
+        print "end of user code"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When executed by Python, the above code outputs:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a
+  ** waits 1s **
+b
+  ** waits 2s **
+c
+  ** waits 3s **
+end of user code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Exception handling](http://docs.python.org/tutorial/errors.html#handling-exceptions) was used above, which you may or may not need to use depending on your code. But, you do not really need to worry about how it all works behind the scenes (that is, anything below the "this part's ours" comment).
+
+However, the above doesn't involve the _sr_ module. When programming your robot, you may want to use coroutines to segment your code into independent chunks. 
+
+[Coroutines](docs/programming/python/yield_and_coroutines#coroutines) {#coroutines}
+------------
+
+Instead of having loads of selection statements checking to see what event has occurred, you could have a number of [coroutines](http://en.wikipedia.org/wiki/Coroutine) &mdash; dealing with perhaps one or two events &mdash; to make your code execute more efficiently. To use coroutines in this way, the code that runs behind the scenes needs to know about them. There are two ways to register a coroutine:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def aCoroutine():
+        while True:
+                yield 1
+                print "I'm a Robot"
+
+def main():
+        #To add another function as a coroutine:
+        add_coroutine(aCoroutine)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Or you can get a function added as a coroutine from the beginning by [decorating](http://www.siafoo.net/article/68) it:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@coroutine
+def anotherCoroutine():
+        while True:
+                yield 1
+                print "I can tell you I'm a robot before main adds me!"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is important to note that inter-coroutine communication is very difficult, so the code in them really should be independent. If, for example, you had an arm that was just moving up and down (for some reason) and it reaches its movement limits when it hits switches at the top and bottom, you could set up a coroutine to: move the arm up until it hits the top switch, then move it down until it hit the bottom switch, and then back up again, ad infinitum. This would benefit from running independently in a coroutine.
+
+
+
+
+
+
+
+

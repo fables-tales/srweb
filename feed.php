@@ -1,27 +1,18 @@
 <?php
 
 require_once('config.inc.php');
+require_once('classes/CacheWrapper.class.php');
 require_once('createfeed.inc.php');
-define('MEMCACHE_TTL',		1800 /*seconds*/);
+define('MEMCACHE_TTL',		300 /*seconds*/);
 
-$feed = NULL;
 
-if (MEMCACHE_ENABLED && extension_loaded('memcache')){
+//do some caching stuff
+$feed = CacheWrapper::getCacheItem('[feed_content]', MEMCACHE_TTL, function(){
 
-	$memcache = new Memcache();
-	if($memcache->pconnect(MEMCACHE_SERVER, MEMCACHE_PORT)){
+	return getFeedContent();
 
-		if (!($feed = $memcache->get(MEMCACHE_PREFIX . 'feed_content'))){
-			$feed = getFeedContent();
-			$memcache->set(MEMCACHE_PREFIX . 'feed_content', $feed, 0, MEMCACHE_TTL);
-		}
+});
 
-	}//if connect
-
-}//if extension_loaded
-
-if ($feed === NULL)
-	$feed = getFeedContent();
 
 if ($feed !== NULL){
 
