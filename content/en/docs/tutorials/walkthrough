@@ -135,6 +135,7 @@ Next Steps
 
 Now you've written a basic program for your kit and know how to get your code on it, we can move towards some more advanced (and more interesting) programs. If you head back to the [tutorials](docs/tutorials/) page, you'll find a list of other tutorials to do. The recommended one to do next would be [Basic Motor Control](docs/tutorials/basic_motor_control).
 
+But, if you're feeling happy about the steps necessary to get your robot running, feel free to just use the [API reference](docs/programming/sr/). The subsections contain a lot of information on using a particular object &mdash; including examples &mdash; so, in theory, that should be all you need.
 
 
 
