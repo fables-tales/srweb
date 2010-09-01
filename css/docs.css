@@ -115,3 +115,7 @@ div.docs div#content p img {
 	margin-left:auto;
 	margin-right:auto;
 }
+
+div.docs div#content p code {
+	background: #FFF4B8;
+}
