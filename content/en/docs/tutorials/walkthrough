@@ -3,8 +3,8 @@
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-A Robot Building Walkthrough
-============================
+Walkthrough
+===========
 
 The aim of this walkthrough is to take you through &mdash; step-by-step &mdash; the process of writing code and running it on the kit. We'll start off with a [_hello world_ program](http://en.wikipedia.org/wiki/Hello_world_program), the first program most programmers write in every language. As Student Robotics involves a lot of electronics, we'll use a slightly adapted _hello world_ program which flashes an LED on the [power board](docs/kit/power_board) instead.
 
