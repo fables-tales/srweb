@@ -117,5 +117,7 @@ div.docs div#content p img {
 }
 
 div.docs div#content p code {
-	background: #FFF4B8;
+	font-size:0.9em;
+	font-weight:bolder;
+	padding:5px;
 }
