@@ -33,7 +33,9 @@ There is a certain specification the motor(s) you use must meet. The criteria ar
 Connecting a Motor
 ------------------
 
-To plug the motor into the kit, you'll need to solder an appropriate gauge of wire to the terminals on the motor, and connect the other ends to the _camcon_ connector.
+To plug the motor into the kit, you'll need to solder an appropriate gauge of wire to the terminals on the motor, and connect the other ends to the _camcon_ connector. Like so:
+
+![Motor connected to Camcon](images/content/kit/motor_and_camcon.png)
 
 
 Some Code
