@@ -43,6 +43,7 @@ To plug the motor into the kit, you'll need to solder an appropriate gauge of wi
 
 ![Motor connected to Camcon](images/content/kit/motor_and_camcon.png)
 
+<div class="info">You may want to insulate the motor's terminals with some insulation tape (or heat shrink tubing if you've got it) like in the diagram above.</div>
 
 Some Code
 --------
