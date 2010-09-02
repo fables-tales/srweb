@@ -12,11 +12,17 @@ The aim of this tutorial is to get a motor turning with your kit. To complete th
 * The battery (charged, of course)
 * The cable to connect the battery to the power board
 * A motor (see specification below)
+* 2 lengths of a suitable gauge of wire for your motor
 * A [motor board](docs/kit/motor_board)
 * A green _camcon_ connector to plug the motor and motor board together
+* 2 SRIC cables (Ethernet cables)
 * The USB hub
 * The USB hub power cable
 * The memory stick
+* A soldering Iron
+* Some solder wire
+* Wire strippers
+* A small slotted/flat blade screwdriver (for the _camcon_ screws)
 
 You should be familiar with the setup for most of the above now (if you've read the [walkthrough](docs/tutorials/walkthrough)), so it's just the motor-related parts that need explaining.
 
