@@ -192,4 +192,4 @@ Putting all of that together should mean you understand the above code. You migh
 Next Steps
 ----------
 
-From here, you might want to take a look at the [basic IO](docs/tutorials/basic_IO).
+From here, you might want to take a look at the [basic IO](docs/tutorials/basic_IO). You might also like to see if you can make the larger code example above more concise by creating functions for the repetitive parts. [This](http://www.tutorialspoint.com/python/python_functions.htm) tutorial seems good if you're interested.
