@@ -106,7 +106,7 @@ You should now _safely remove_ the memory stick from the computer and prepare th
 
 To run the _hello world_ program, all you need is the following:
 
-* The power board
+* The [power board](docs/kit/power_board)
 * The battery (charged, of course)
 * The cable to connect the battery to the power board
 * The USB hub
