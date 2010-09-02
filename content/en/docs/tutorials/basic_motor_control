@@ -175,11 +175,11 @@ Then there's the [`range()`](http://docs.python.org/library/functions.html#range
 
 > `range([start], stop[, step])` (note: the square brackets here mean 'optional')
 >
-> If the step argument is omitted, it defaults to 1. If the start argument is
-> omitted, it defaults to 0. The full form returns a list of plain integers
-> `[start,  start + step, start + 2 *  step, ...]`. If step is positive, the last
-> element is the largest `start + i * step` less than stop; if step is negative,
-> the last element is the smallest `start + i * step` greater than stop.
+> If the `step` argument is omitted, it defaults to `1`. If the `start` argument is
+> omitted, it defaults to `0`. The full form returns a list of plain integers
+> `[start,  start + step, start + 2 *  step, ...]`. If `step` is positive, the last
+> element is the largest `start + i * step` less than `stop`; if `step` is negative,
+> the last element is the smallest `start + i * step` greater than `stop`.
 
 So, based on that, `range(3)` would return the list `[0, 1, 2]` because it is shorthand for `range(0, 3, 1)`. From the quote, you can see that this would return a list starting from `0`, and finishing with the integer one less than `3`, hence the `[0, 1, 2]`.
 
