@@ -45,6 +45,15 @@ To plug the motor into the kit, you'll need to solder an appropriate gauge of wi
 
 <div class="info">You may want to insulate the motor's terminals with some insulation tape (or heat shrink tubing if you've got it) like in the diagram above.</div>
 
+Now you need to connect the motor to one of your motor boards. You'll need to connect the following:
+
+* Your motor into the motor socket on the motor board;
+* One of the SRIC cables from the `OUT` of the power board to the `IN` of the motor board, and the other to the `OUT` of the motor board and the `IN` of the power board;
+* The motor power cable (2 green _camcons_ connected together) into the motor power connector on the motor board and one of the motor power connectors on the power board.
+
+You should be familiar with the setup for the rest of the kit used.
+
+
 Some Code
 --------
 
