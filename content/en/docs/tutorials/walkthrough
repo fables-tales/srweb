@@ -95,7 +95,11 @@ If you head back to the project tab, you'll now see our "robot.py" listed as a f
 
 ![robot.zip download](images/content/tutorials/walkthrough/robot_zip_download.png)
 
-All you need to do now is save the file on to the root (as in `G:\` or `H:\` or whatever the drive letter is) of the robot's memory stick. You may have to overwrite an existing "robot.zip" if one already exists (or you could rename it if there's space). You should now _safely remove_ the memory stick from the computer and prepare the kit for running the code.
+All you need to do now is save the file on to the root (as in `G:\` or `H:\` or whatever the drive letter is) of the robot's memory stick. You may have to overwrite an existing "robot.zip" if one already exists (or you could rename it if there's space).
+
+<div class="warning">The code you want to run MUST be in the exported 'robot.zip'; it will not be used otherwise.</div>
+
+You should now _safely remove_ the memory stick from the computer and prepare the kit for running the code.
 
 
 ### Preparing the kit
