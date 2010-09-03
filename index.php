@@ -381,6 +381,7 @@ function log404(){
 
 	if (LOG404_ENABLED
 		&& filesize(LOG404_FILE) < 2 << 20/*2MB*/
+		&& isset($_SERVER['HTTP_REFERER'])
 		&& strpos($_SERVER['HTTP_REFERER'], BASE_URI) !== false){
 
 		$f = fopen(LOG404_FILE, 'a');
