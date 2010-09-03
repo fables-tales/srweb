@@ -9,10 +9,6 @@ function getFeedContent(){
 	require_once('config.inc.php');
 	require_once('classes/Content.class.php');
 
-	$BASE_URL = !empty($_SERVER['HTTPS'])
-		? 'https://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/'
-		: 'http://'  . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/';
-
 	$newsItems = array();
 
 	if ($d = opendir(CONTENT_DIR . '/en/news')){
@@ -29,7 +25,7 @@ function getFeedContent(){
 
 			$output  = "<?xml version='1.0'?><rss version='2.0'><channel>";
 			$output .= "<title>Student Robotics Latest News</title>";
-			$output .= "<link>" . $BASE_URL . "news/</link>";
+			$output .= "<link>" . $BASE_URI . "news/</link>";
 			$output .= "<lastBuildDate>" . date(DATE_RSS) . "</lastBuildDate>";
 			$output .= "<description>All the latest news from Student Robotics</description>";
 
