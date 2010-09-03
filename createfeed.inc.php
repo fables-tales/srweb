@@ -25,7 +25,7 @@ function getFeedContent(){
 
 			$output  = "<?xml version='1.0'?><rss version='2.0'><channel>";
 			$output .= "<title>Student Robotics Latest News</title>";
-			$output .= "<link>" . $BASE_URI . "news/</link>";
+			$output .= "<link>" . BASE_URI . "news/</link>";
 			$output .= "<lastBuildDate>" . date(DATE_RSS) . "</lastBuildDate>";
 			$output .= "<description>All the latest news from Student Robotics</description>";
 
@@ -36,8 +36,8 @@ function getFeedContent(){
 				$output .= "<item>";
 
 				$output .= "<title><![CDATA[" . $newsItem->getMeta('TITLE') . "]]></title>";
-				$output .= "<link>" . $BASE_URL . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</link>";
-				$output .= "<guid>" . $BASE_URL . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</guid>";
+				$output .= "<link>" . BASE_URI . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</link>";
+				$output .= "<guid>" . BASE_URI . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</guid>";
 				$output .= "<description><![CDATA[" . $newsItem->getMeta('DESCRIPTION') . "]]></description>";
 				$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getPubDate())) . "</pubDate>";
 
