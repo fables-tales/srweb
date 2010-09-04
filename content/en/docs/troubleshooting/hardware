@@ -1,0 +1,24 @@
+//TITLE:	Hardware Troubleshooting
+//DESCRIPTION:	Help with common problems encountered with the SR hardware
+//KEYWORDS:	troubleshooting, faq, problems, help, hardware, kit
+//CONTENT_TYPE: markdown
+
+Hardware Troubleshooting
+========================
+
+<div class="info">
+Every piece of SR hardware has one or more green LEDs on it to indicate that it has power. Some boards contain more than one green power LED as there are separate power rails, e.g. the motor board has one next to the SRIC connectors and another next to the 12V camcon power connector. The most important thing to check before anything else is that a board has power. If a board does not have power then it is not possible to track down further problems.
+
+Refer to the boards specific kit page listed in the menu to the left to find out what LEDs should be illuminated after power-on.
+</div>
+
+Problems and Solutions
+----------------------
+
+After turning the kit on nothing happens, no LEDs light up and the power board doesn't beep
+:	The battery might be connected the wrong way around. As with all power connectors in the SR kit the ground (black) wire should be on the right when viewing the plug with the screw terminals facing up and the wires towards your body.
+:	The battery might be flat. Plug the charger into the power board while the battery is connected and leave it for an hour or so.
+:	The power board contains a fuse to protect the BeagleBoard inside the power board case. In the event of this fuse blowing the power board assembly must be returned to us for inspection and repair. If none of the above solutions have worked for you then please contact either your mentor or tell us on the forum and we will sort out a replacement for your power board.
+
+After turning the kit on nothing happens but a single red LED is lit on the power board
+:	This LED will light up when the main 15A fuse is either blown or not present. Either tell your mentor, who can bring a replacement on their next visit, or post a message on the forum so that we can mail out a replacement.
