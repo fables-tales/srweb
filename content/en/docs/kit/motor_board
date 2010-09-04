@@ -9,3 +9,15 @@ Motor Board
 The motor board is used to connect a motor to your kit. A diagram of the major parts you need to know about is pictured below:
 
 ![motor board diagram](images/content/kit/motor_board_diagram.png "The Motor Board")
+
+Initial Power-up State
+----------------------
+
+* Power LED &mdash; on
+* Token LED &mdash; on
+* Motor power LED &mdash; off
+* Current limit LED &mdash; off
+* Feedback LEDs &mdash; off
+* Motor direction LEDs &mdash; off
+
+After you have started your code the `Motor power LED` should come on and the `Current Limit LED` remain off.
