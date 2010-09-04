@@ -91,6 +91,15 @@ div.docs div#content div.info {
 	margin-bottom:15px;
 }
 
+div.docs div#content div.info p, div.docs div#content div.warning p {
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 10px 0 0 0;
+}
+div.docs div#content div.info p:first-child, div.docs div#content div.warning p:first-child {
+	margin: 0;
+}
+
 div.docs div#content blockquote {
 	margin-left:50px;
 	padding:5px;
