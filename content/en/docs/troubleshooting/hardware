@@ -12,8 +12,8 @@ Every piece of SR hardware has one or more green LEDs on it to indicate that it 
 Refer to the boards specific kit page listed in the menu to the left to find out what LEDs should be illuminated after power-on.
 </div>
 
-Problems and Solutions
-----------------------
+General Kit and Power Board Problems
+------------------------------------
 
 After turning the kit on nothing happens, no LEDs light up and the power board doesn't beep
 :	The battery might be connected the wrong way around. As with all power connectors in the SR kit the ground (black) wire should be on the right when viewing the plug with the screw terminals facing up and the wires towards your body.
