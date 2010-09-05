@@ -201,8 +201,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="311.70642"
-     inkscape:cy="148.78643"
+     inkscape:cx="282.00793"
+     inkscape:cy="149.49353"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -549,7 +549,7 @@
          x="578.75653"
          y="240.03865"
          style="font-size:12px;text-align:start;text-anchor:start"
-         id="tspan6684">Current Limiting LED</tspan></text>
+         id="tspan6684">Current Limit LED</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
