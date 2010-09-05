@@ -6,7 +6,10 @@
 Motor Board
 ===========
 
-The motor board is used to connect a motor to your kit. A diagram of the major parts you need to know about is pictured below:
+The Motor Board can be used to control a single 12V DC motor. Your kit contains two of these boards to allow you control motors for moving your robot although don't feel you are limited to using them for this purpose.
+
+Board Diagram
+-------------
 
 ![motor board diagram](images/content/kit/motor_board_diagram.png "The Motor Board")
 
