@@ -20,4 +20,4 @@ A refactoring that returns a blob object that is the nearest one visible to
 the vision software; makes blob selection/targeting easier.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-How much you should write depends on how much code you've written. It is good practice to produce small commits that do just one thing. If you need more than one line (less than 80 characters), the commit does too much!
+How much you should write depends on how much code you've written. It is good practice to produce small commits that do just one thing. If you need more than one line (less than 80 characters) to summarise the change, then the commit does too much!
