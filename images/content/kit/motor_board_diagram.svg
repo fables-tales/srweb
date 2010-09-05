@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="635.94238"
+   width="658.75586"
    height="265.35938"
    id="svg2"
    version="1.1"
@@ -20,6 +20,10 @@
    inkscape:export-ydpi="90">
   <defs
      id="defs4">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2929"
+       effect="spiro" />
     <marker
        inkscape:stockid="Arrow1Mstart"
        orient="auto"
@@ -200,9 +204,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="322.60763"
-     inkscape:cy="126.12868"
+     inkscape:zoom="1"
+     inkscape:cx="330.43542"
+     inkscape:cy="101.84862"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -224,19 +228,19 @@
        units="mm"
        dotted="false" />
     <sodipodi:guide
-       position="-136.7041,-729.11988"
+       position="-113.89062,-729.11989"
        orientation="0,744.09448"
        id="guide2841" />
     <sodipodi:guide
-       position="607.39038,-729.11988"
+       position="630.20386,-729.11989"
        orientation="-1052.3622,0"
        id="guide2843" />
     <sodipodi:guide
-       position="607.39038,323.24232"
+       position="630.20386,323.24231"
        orientation="0,-744.09448"
        id="guide2845" />
     <sodipodi:guide
-       position="-136.7041,323.24232"
+       position="-113.89062,323.24231"
        orientation="1052.3622,0"
        id="guide2847" />
   </sodipodi:namedview>
@@ -248,7 +252,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -256,7 +260,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-136.7041,-57.88295)">
+     transform="translate(-113.89063,-57.88295)">
     <g
        id="g3665"
        transform="translate(277.3104,12.479334)">
@@ -505,17 +509,17 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 363.9375,241.24233 -6,5.53906 -86.92943,0"
+       d="m 360.7041,234.24232 -89,0"
        id="path6280"
-       sodipodi:nodetypes="ccc"
-       inkscape:original-d="m 363.9375,241.24233 -6,5.53906 -86.92943,0"
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 360.7041,234.24232 -89,0"
        inkscape:path-effect="#path-effect6282" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 371.9375,241.24233 -22,22.34998 -78.57588,-0.25"
+       d="m 370.7041,242.24232 -11,11 -88,0"
        id="path6472"
        inkscape:path-effect="#path-effect6474"
-       inkscape:original-d="m 371.9375,241.24233 -22,22.34998 -78.57588,-0.25"
+       inkscape:original-d="m 370.7041,242.24232 -11,11 -88,0"
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
@@ -556,26 +560,26 @@
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="173.9375"
-       y="253.24232"
+       x="173.7041"
+       y="241.24232"
        id="text6690"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6692"
-         x="173.9375"
-         y="253.24232"
+         x="173.7041"
+         y="241.24232"
          style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">Power LED</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="176.9375"
-       y="270.24234"
+       x="176.7041"
+       y="259.24234"
        id="text6694"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6696"
-         x="176.9375"
-         y="270.24234"
+         x="176.7041"
+         y="259.24234"
          style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">Token LED</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
@@ -632,29 +636,29 @@
          y="274.24234">Feedback Connector</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 428.9375,257.7163 -23.33452,23.33452 -134.21611,0"
+       d="m 428.7041,259.24232 -15,15 0,28"
        id="path7688"
        inkscape:path-effect="#path-effect7690"
-       inkscape:original-d="m 428.9375,257.7163 -23.33452,23.33452 -134.21611,0"
+       inkscape:original-d="m 428.7041,259.24232 -15,15 0,28"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 428.9375,274.68686 -22.98097,22.98097 -133.86255,0"
+       d="m 434.7041,281.24232 -36,36 -120,0 -6,-6"
        id="path7880"
        inkscape:path-effect="#path-effect7882"
-       inkscape:original-d="m 428.9375,274.68686 -22.98097,22.98097 -133.86255,0"
-       sodipodi:nodetypes="ccc" />
+       inkscape:original-d="m 434.7041,281.24232 -36,36 -120,0 -6,-6"
+       sodipodi:nodetypes="cccc" />
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="134.9375"
-       y="294.24234"
+       x="133.7041"
+       y="317.24234"
        id="text8076"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8078"
-         x="134.9375"
-         y="294.24234">Feedback LEDs</tspan></text>
+         x="133.7041"
+         y="317.24234">Feedback LEDs</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
@@ -689,5 +693,38 @@
          id="tspan8290"
          x="183.9375"
          y="148.24232">SRIC OUT</tspan></text>
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:none"
+       id="rect2919"
+       width="22.322834"
+       height="44.29134"
+       x="374.02695"
+       y="252.37621" />
+    <rect
+       y="276.24234"
+       x="355.7041"
+       height="10.629921"
+       width="5.3149605"
+       id="rect2921"
+       style="fill:#ff0000;fill-opacity:1;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text2923"
+       y="289.24234"
+       x="112.7041"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       xml:space="preserve"><tspan
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         y="289.24234"
+         x="112.7041"
+         id="tspan2925"
+         sodipodi:role="line">SRIC Activity LED</tspan></text>
+    <path
+       inkscape:path-effect="#path-effect2929"
+       inkscape:original-d="m 352.7041,282.24232 -81,0"
+       sodipodi:nodetypes="cc"
+       id="path2927"
+       d="m 352.7041,282.24232 -81,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
   </g>
 </svg>
