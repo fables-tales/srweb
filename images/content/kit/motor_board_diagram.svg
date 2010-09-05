@@ -9,8 +9,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="566.92914"
-   height="294.09448"
+   width="635.94238"
+   height="265.35938"
    id="svg2"
    version="1.1"
    inkscape:version="0.47 r22583"
@@ -23,28 +23,28 @@
     <marker
        inkscape:stockid="Arrow1Mstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow1Mstart"
        style="overflow:visible">
       <path
          id="path4094"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
-         transform="scale(0.4) translate(10,0)" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
     </marker>
     <marker
        inkscape:stockid="Arrow2Lstart"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Lstart"
        style="overflow:visible">
       <path
          id="path4106"
-         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(1.1) translate(1,0)" />
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(1.1,0,0,1.1,1.1,0)" />
     </marker>
     <inkscape:path-effect
        is_visible="true"
@@ -201,8 +201,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="299.58727"
-     inkscape:cy="146.65237"
+     inkscape:cx="322.60763"
+     inkscape:cy="126.12868"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -224,19 +224,19 @@
        units="mm"
        dotted="false" />
     <sodipodi:guide
-       position="-149.9375,-715.11987"
+       position="-136.7041,-729.11988"
        orientation="0,744.09448"
        id="guide2841" />
     <sodipodi:guide
-       position="594.15698,-715.11987"
+       position="607.39038,-729.11988"
        orientation="-1052.3622,0"
        id="guide2843" />
     <sodipodi:guide
-       position="594.15698,337.24233"
+       position="607.39038,323.24232"
        orientation="0,-744.09448"
        id="guide2845" />
     <sodipodi:guide
-       position="-149.9375,337.24233"
+       position="-136.7041,323.24232"
        orientation="1052.3622,0"
        id="guide2847" />
   </sodipodi:namedview>
@@ -256,7 +256,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-149.9375,-43.147844)">
+     transform="translate(-136.7041,-57.88295)">
     <g
        id="g3665"
        transform="translate(277.3104,12.479334)">
@@ -519,59 +519,64 @@
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="577.9375"
-       y="223.24232"
-       id="text6664"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="578.9375"
+       y="224.24232"
+       id="text6664"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6666"
-         x="577.9375"
-         y="223.24232"
-         style="font-size:12px">Motor LEDs</tspan></text>
+         x="578.9375"
+         y="224.24232"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">Motor LEDs</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="578.75653"
-       y="240.03865"
-       id="text6680"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="578.9375"
+       y="242.24232"
+       id="text6680"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="578.75653"
-         y="240.03865"
-         style="font-size:12px;text-align:start;text-anchor:start"
+         x="578.9375"
+         y="242.24232"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
          id="tspan6684">Current Limit LED</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="561.69586"
-       y="130.08351"
-       id="text6686"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="560.9375"
+       y="133.24232"
+       id="text6686"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="561.69586"
-         y="130.08351"
-         style="font-size:12px"
+         x="560.9375"
+         y="133.24232"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
          id="tspan7090">Motor Power LED</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="204.84956"
-       y="249.58456"
-       id="text6690"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="173.9375"
+       y="253.24232"
+       id="text6690"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6692"
-         x="204.84956"
-         y="249.58456"
-         style="font-size:12px">Power LED</tspan></text>
+         x="173.9375"
+         y="253.24232"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">Power LED</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="207.67796"
-       y="265.84805"
-       id="text6694"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="176.9375"
+       y="270.24234"
+       id="text6694"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6696"
-         x="207.67796"
-         y="265.84805"
-         style="font-size:12px">Token LED</tspan></text>
+         x="176.9375"
+         y="270.24234"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">Token LED</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
        d="m 533.01638,182.05587 17.2347,-17.70601 30.14145,0.25"
@@ -581,14 +586,15 @@
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="581.92804"
-       y="167.91374"
-       id="text6890"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="581.9375"
+       y="171.24232"
+       id="text6890"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="581.92804"
-         y="167.91374"
-         style="font-size:12px"
+         x="581.9375"
+         y="171.24232"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
          id="tspan7094">Motor Connector</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
@@ -598,13 +604,14 @@
        inkscape:original-d="m 465.84123,73.161429 8.48528,-8.485281 86.97414,0" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="562.7149"
-       y="68.211678"
-       id="text7086"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="561.9375"
+       y="71.242325"
+       id="text7086"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="562.7149"
-         y="68.211678"
+         x="561.9375"
+         y="71.242325"
          id="tspan7092">Motor Power Connector</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-mid:none"
@@ -614,14 +621,15 @@
        inkscape:original-d="m 534,267.36218 41,0" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="577"
-       y="270.36218"
-       id="text7488"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="576.9375"
+       y="274.24234"
+       id="text7488"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7490"
-         x="577"
-         y="270.36218">Feedback Connector</tspan></text>
+         x="576.9375"
+         y="274.24234">Feedback Connector</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
        d="m 428.9375,257.7163 -23.33452,23.33452 -134.21611,0"
@@ -638,26 +646,28 @@
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="179.9375"
-       y="292.24234"
-       id="text8076"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="134.9375"
+       y="294.24234"
+       id="text8076"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8078"
-         x="179.9375"
-         y="292.24234">Feedback LEDs</tspan></text>
+         x="134.9375"
+         y="294.24234">Feedback LEDs</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="225"
-       y="205.36218"
-       id="text8084"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="202.9375"
+       y="208.24232"
+       id="text8084"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8086"
-         x="225"
-         y="205.36218">SRIC IN</tspan></text>
+         x="202.9375"
+         y="208.24232">SRIC IN</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.9992126;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.99921262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart)"
        d="m 293,201.36218 -22,0"
        id="path8092"
        inkscape:original-d="m 293,201.36218 -22,0"
@@ -670,13 +680,14 @@
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="213"
-       y="144.86218"
-       id="text8288"><tspan
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="183.9375"
+       y="148.24232"
+       id="text8288"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan8290"
-         x="213"
-         y="144.86218">SRIC OUT</tspan></text>
+         x="183.9375"
+         y="148.24232">SRIC OUT</tspan></text>
   </g>
 </svg>
