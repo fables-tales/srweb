@@ -10,7 +10,7 @@ The vision software looks &mdash; using the provided webcam &mdash; for blobs of
 
 * `.x` co-ordinate of the top left corner of the blob in the webcam image
 * `.y` co-ordinate of the top left corner of the blob in the webcam image
-* `.mass` (...)
+* `.mass` number of pixels the blob occupies
 * `.color` &mdash; one of {`RED`, `GREEN`, `BLUE`}
 * `.width` of the blob
 * `.height` if the blob
