@@ -22,3 +22,18 @@ After turning the kit on nothing happens, no LEDs light up and the power board d
 
 After turning the kit on nothing happens but a single red LED is lit on the power board
 :	This LED will light up when the main 15A fuse is either blown or not present. Either tell your mentor, who can bring a replacement on their next visit, or post a message on the forum so that we can mail out a replacement.
+
+
+Motor Board Problems
+--------------------
+
+When attempting to control a motor nothing happens and a bright red LED in the centre of the motor board lights up
+:	There is a short between the output terminals of the motor board. Try un-plugging the motor from the motor board and see if the red light goes out. If it does then check your wiring as the two wires must be connected together somewhere. If the light stays lit please inform your mentor or post a message on the forum.
+
+When attempting to control a motor a bright red LED in the centre of the motor board lights up and the motor judders
+:	The motor you have connected has a stall current of more than 5.5A. The motor board will shut the output off periodically to protect itself from damage if a current greater than 5.5A is detected. If you are trying to change the motor speed from 0 to (-)100, or full power one direction to full power in the other then fairly large currents can flow, try incrementing the speed of the motor gradually. If that does not work then you will have to obtain a smaller motor with a stall current of less than 5.5A.
+:	This can also occur if the battery has just come off charge and the motor has a stall current of 5.5A exactly. After charging the battery the voltage will be around 13V which will cause a higher current to flow through the motor. A motor with a stall current of 5.5A at 12V (2.18&Omega; winding resistance) will draw 5.96A at 13V. We recommend that you look for motors with a stall current of no greater than 5A to avoid this issue. If you cannot change the motors a workaround is to add a 0.2&Omega; resistor in series with the motor, this resistor must be capable of dissipating at least 6W and care should be taken as it will get hot.
+
+The motor isn't as strong as it is when connected directly to the battery and the green `Motor Power` LED dims when turning the motor on
+:	Some of the strands of wire may have broken where the wire enters the camcon connectors either at the power board or the motor board. Remove the wires from the connectors, cut off the frayed wire and re-strip the wire.
+:	The wire used to connect power from the power board to the motor board is too thing. Please make sure you use the wire provided for connecting power to the motor boards. This wire must be able to handle at least 5A and we recommend at least 20AWG.
