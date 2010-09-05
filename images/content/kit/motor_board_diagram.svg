@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.47 r22583"
    sodipodi:docname="motor_board_diagram.svg"
-   inkscape:export-filename="/home/chris/public_html/srweb/images/content/kit/motor_board_diagram.png"
+   inkscape:export-filename="/home/rbarlow/srobo/git/srweb/images/content/kit/motor_board_diagram.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -201,8 +201,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="282.00793"
-     inkscape:cy="149.49353"
+     inkscape:cx="299.58727"
+     inkscape:cy="146.65237"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -248,7 +248,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -477,17 +477,17 @@
        sodipodi:type="arc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 515.9375,217.24233 49,0 13,-13"
+       d="m 515.9375,217.24233 61,0"
        id="path4752"
        inkscape:path-effect="#path-effect4754"
-       inkscape:original-d="m 515.9375,217.24233 49,0 13,-13"
-       sodipodi:nodetypes="ccc" />
+       inkscape:original-d="m 515.9375,217.24233 61,0"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 494.9375,223.24233 7.00893,6.91457 65.55357,0 10.17858,-10"
+       d="m 494.9375,223.24233 7.00893,6.91457 65.55357,0 9.4375,-8.91457"
        id="path5508"
        inkscape:path-effect="#path-effect5510"
-       inkscape:original-d="m 494.9375,223.24233 7.00893,6.91457 65.55357,0 c 0,0 0.17858,-4.5 10.17858,-10"
+       inkscape:original-d="m 494.9375,223.24233 7.00893,6.91457 65.55357,0 c 0,0 -0.5625,-3.41457 9.4375,-8.91457"
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
@@ -520,25 +520,14 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="579"
-       y="208.36218"
+       x="577.9375"
+       y="223.24232"
        id="text6664"><tspan
          sodipodi:role="line"
          id="tspan6666"
-         x="579"
-         y="208.36218"
-         style="font-size:12px">Forwards LED#</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="579"
-       y="223.36218"
-       id="text6668"><tspan
-         sodipodi:role="line"
-         id="tspan6670"
-         x="579"
-         y="223.36218"
-         style="font-size:12px">Backwards LED#</tspan></text>
+         x="577.9375"
+         y="223.24232"
+         style="font-size:12px">Motor LEDs</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
@@ -650,23 +639,13 @@
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="164.3282"
-       y="284.33633"
+       x="179.9375"
+       y="292.24234"
        id="text8076"><tspan
          sodipodi:role="line"
          id="tspan8078"
-         x="164.3282"
-         y="284.33633">Feedback LED (1)</tspan></text>
-    <text
-       id="text8080"
-       y="301.58633"
-       x="164.5782"
-       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       xml:space="preserve"><tspan
-         y="301.58633"
-         x="164.5782"
-         id="tspan8082"
-         sodipodi:role="line">Feedback LED (2)</tspan></text>
+         x="179.9375"
+         y="292.24234">Feedback LEDs</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
