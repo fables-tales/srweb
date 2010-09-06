@@ -36,6 +36,6 @@ Specification
 | Output Voltage                       | 12V       |
 | Maximum Output Current               | 5A        |
 | Output Current Limit*                | 5.5A      |
-| PWM frequency                        | 324Hz     |
+| PWM Frequency                        | 324Hz     |
 
 *It is strongly advised to operate well within the current limit of the motor board or strange behaviour may be observed.
