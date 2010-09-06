@@ -37,5 +37,7 @@ Specification
 | Maximum Output Current               | 5A        |
 | Output Current Limit*                | 5.5A      |
 | PWM Frequency                        | 324Hz     |
+| PWM Duty Cycle Range                 | 0-99%     |
+| PWM Duty Cycle Steps (per direction) | 100       |
 
 *It is strongly advised to operate well within the current limit of the motor board or strange behaviour may be observed.
