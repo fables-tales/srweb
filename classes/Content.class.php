@@ -128,8 +128,9 @@ class Content {
 
 		if (!$this->contentHasBeenParsed){//it needs parsing
 
-			//uppercase content type
-			$upper_content = strtoupper($this->meta['CONTENT_TYPE']);
+			//uppercase content type. If content type not specified, default to markdown. 
+			//(quick way to stop PHP errors when empty place-holding files are used.)
+			$upper_content = isset($this->meta['CONTENT_TYPE']) ? strtoupper($this->meta['CONTENT_TYPE']) : 'MARKDOWN';
 
 			//if it's a type that need parsing
 			if (isset(self::$parsers[$upper_content])){
