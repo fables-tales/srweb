@@ -13,6 +13,8 @@
 	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
 	<base href="{$base_uri}" />
 
+	{literal}
+
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -26,6 +28,8 @@
 	  })();
 
 	</script>
+
+	{/literal}
 
 
 </head>
