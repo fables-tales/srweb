@@ -163,8 +163,6 @@ div.content{
 	border-top:1px solid silver;
 	padding:0 20px;
 	padding-bottom:20px;
-	height:auto;
-	overflow:auto;
 }
 
 div.content h1, h2, h3, h4, h5, h6 {
