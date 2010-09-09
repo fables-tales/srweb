@@ -19,6 +19,8 @@ Mentors, who will offer guidance and monitor the progress of the team.
   controls="controls"
   src="https://www.studentrobotics.org/~rspanton/timelapse-2010/2010-400.ogv"
   poster="images/content/comp1.jpg"
+  width="400"
+  height="300"
   tabindex="0"
   class="right">
 	<img src="images/content/comp1.jpg" title="2010 Competition" alt="2010 Competition" class="right" />
