@@ -9,7 +9,7 @@ Lycées et Collèges
 Student Robotics arrange un concours robotique pour des équipes de lycéens
 (élèves qui, en générale, ont entre 16 et 18 ans). La plupart des ces équipes
 sont dans la région proche de Southampton, mais cette année, nous soutiendrons
-quelques équipes en Bristol, et la région Grenoblois. Les équipes qui ne sont pas trop
+quelques équipes en Bristol, et la région Grenobloise. Les équipes qui ne sont pas trop
 loin de nous devraient être visités par un mentor de Student Robotics une fois par semaine,
 qui offrira les conseils et qui suivra le progrès de l'équipe.
 
@@ -57,7 +57,7 @@ nous avons créé le kit d'être si facile que possible d'utiliser. Nous avons r
 toute la conception de bas niveau, qui laisse la conception de haute niveau des
 robots aux équipes. Ils doivent programmer leurs robots dans la language [Python](http://www.python.org/),
 avec des ressources françaises [ici](http://wiki.python.org/moin/FrenchLanguage). Python est une langage
-qui est également pertinante aux programmeurs nouveaux et expérimentés.
+qui est également pertinante aux programmeurs nouveaux que les programmeurs expérimentés.
 
 Pour régarder comment utiliser le kit, veuillez lire la [documentation](docs/).
 
