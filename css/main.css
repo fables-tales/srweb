@@ -159,7 +159,6 @@ div#header ul li a {
 
 div.content{
 	clear:both;
-	border-bottom:1px solid silver;
 	border-top:1px solid silver;
 	padding:0 20px;
 	padding-bottom:20px;
@@ -286,13 +285,15 @@ div.content div.left_img_attribution p {
 }
 
 div#original {
-	float:right;
 	height:auto;
 	padding:2px;
 	padding-right:0px;
 	margin-top:1px;
 	font-size:12px;
 	color:gray;
+	text-align:right;
+	border-top:1px solid silver;
+	clear:both;
 }
 
 div#original a {
@@ -305,7 +306,7 @@ div#original a {
 div#footer {
 	clear:both;
 	width:940px;
-	margin-top:40px;
+	margin-top:20px;
 	padding:10px;
 	position:relative;
 	background-color:rgba(223,220,215,0.5);
