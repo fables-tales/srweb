@@ -107,8 +107,6 @@
 				<div class="box">
 					<h3><a href="{$root_uir}sponsors/">Our Sponsors</a></h3>
 					<p>
-						<img src="" alt="" />
-
 						Student Robotics really couldn't happen if we didn't have our sponsors.
 					</p>
 
