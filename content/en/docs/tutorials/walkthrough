@@ -42,7 +42,7 @@ In the editor, write (or paste!) the following:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
 
-def main:
+def main():
 	while True:
 		power.led[0] = 1
 		yield query.timeout(1)
