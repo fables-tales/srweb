@@ -46,7 +46,7 @@ Code situated after these yields in the program flow will not be executed until 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
 
-def main:
+def main():
 
         # set output pin 0 high
         io[0].out[0].d = 1
