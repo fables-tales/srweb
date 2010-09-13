@@ -36,4 +36,4 @@ When attempting to control a motor a bright red LED in the centre of the motor b
 
 The motor isn't as strong as it is when connected directly to the battery and the green `Motor Power` LED dims when turning the motor on
 :	Some of the strands of wire may have broken where the wire enters the camcon connectors either at the power board or the motor board. Remove the wires from the connectors, cut off the frayed wire and re-strip the wire.
-:	The wire used to connect power from the power board to the motor board is too thing. Please make sure you use the wire provided for connecting power to the motor boards. This wire must be able to handle at least 5A and we recommend at least 20AWG.
+:	The wire used to connect power from the power board to the motor board is too thin. Please make sure you use the wire provided for connecting power to the motor boards. This wire must be able to handle at least 5A and we recommend at least 20AWG.
