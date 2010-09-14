@@ -61,10 +61,18 @@ foreach($orderedLanguages as $l){
  */
 if ($page == 'home'){
 
+	$file = 'home-en';
+	foreach ($orderedLanguages as $l){
+		if (file_exists('templates/' . 'home-' . $accepted_languages[$l] . '.tpl')){
+			$file = 'home-' . $accepted_languages[$l];
+			break;
+		}
+	}
+
 	$smarty->assign('side_menu', constructMenuHierachy());
 	$smarty->assign('root_uri', ROOT_URI);
 	$smarty->assign('base_uri', BASE_URI);
-	$smarty->display('home.tpl');
+	$smarty->display($file . '.tpl');
 	ob_end_flush();
 	exit(0);
 
