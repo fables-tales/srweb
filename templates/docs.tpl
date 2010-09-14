@@ -39,7 +39,7 @@
 
 <div id="pageWrapper">
 
-	{include file="header.tpl"}
+	{include file=$header_file}
 
 
 	<div id="{$page_id}" class="content docs">
@@ -60,7 +60,7 @@
 	</div>
 
 
-	{include file="footer.tpl"}
+	{include file=$footer_file}
 
 </div>
 

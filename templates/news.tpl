@@ -38,7 +38,7 @@
 
 <div id="pageWrapper">
 
-	{include file="header.tpl"}
+	{include file="header-en.tpl"}
 
 
 	<div class="content">
@@ -50,7 +50,7 @@
 
 	</div>
 
-	{include file="footer.tpl"}
+	{include file="footer-en.tpl"}
 
 </div>
 
