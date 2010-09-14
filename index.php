@@ -138,6 +138,22 @@ if ($page == 'home'){
 	//make the content object accessible in the templates (used by a custom smarty plugin)
 	$smarty->assign('content', $content);
 
+	$header_file = 'header-en.tpl';
+	foreach ($orderedLanguages as $l){
+		if (file_exists('templates/' . 'header-' . $accepted_languages[$l] . '.tpl')){
+			$header_file = 'header-' . $accepted_languages[$l] . '.tpl';
+			break;
+		}
+	}
+
+	$footer_file = 'footer-en.tpl';
+	foreach ($orderedLanguages as $l){
+		if (file_exists('templates/' . 'footer-' . $accepted_languages[$l] . '.tpl')){
+			$footer_file = 'footer-' . $accepted_languages[$l] . '.tpl';
+			break;
+		}
+	}
+
 
 	//get ready to display the template
 	$smarty->assign('original', $language . '/' . $page);
@@ -145,6 +161,8 @@ if ($page == 'home'){
 	$smarty->assign('root_uri', ROOT_URI);
 	$smarty->assign('base_uri', BASE_URI);
 	$smarty->assign('page_id', str_replace('/', '_', $page));
+	$smarty->assign('header_file', $header_file);
+	$smarty->assign('footer_file', $footer_file);
 
 	if ($pageInDocs){
 
