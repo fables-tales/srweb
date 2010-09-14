@@ -57,10 +57,10 @@
 
 		<div id="latestNews">
 
-			<h2><a href='http://localhost/~chris/srweb/news/sr2011_comp_starts_soon'>Hold onto your hats, here comes SR 2011</a></h2>
+			<h2><a href='{$root_uri}news/sr2011_comp_starts_soon'>Hold onto your hats, here comes SR 2011</a></h2>
 			<p>Kickstart, the introductory event that starts the annual Student Robotics competition, is almost upon us.
 			So, if you want to take part, make sure you've registered.
-			<a href="http://localhost/~chris/srweb/news/sr2011_comp_starts_soon">Read More...</a></p>
+			<a href="{$root_uri}news/sr2011_comp_starts_soon">Read More...</a></p>
 
 		</div>
 
@@ -71,23 +71,23 @@
 				<h3>Take a Look Around</h3>
 
 				<ul>
-					<li><a href='/~chris/srweb/schools'>Schools &amp; Colleges</a>
+					<li><a href='{$root_uri}schools'>Schools &amp; Colleges</a>
 
 						<ul>
-							<li><a href='/~chris/srweb/schools/competition'>Competition</a></li>
-							<li><a href='/~chris/srweb/schools/joining'>Joining</a></li>
-							<li><a href='/~chris/srweb/schools/kit'>Kit</a></li>
+							<li><a href='{$root_uri}schools/competition'>Competition</a></li>
+							<li><a href='{$root_uri}schools/joining'>Joining</a></li>
+							<li><a href='{$root_uri}schools/kit'>Kit</a></li>
 						</ul>
 					</li>
-					<li><a href='/~chris/srweb/docs'>Docs</a></li>
-					<li><a href='/~chris/srweb/sponsors'>Sponsors</a></li>
-					<li><a href='/~chris/srweb/about'>About Us</a>
+					<li><a href='{$root_uri}docs'>Docs</a></li>
+					<li><a href='{$root_uri}sponsors'>Sponsors</a></li>
+					<li><a href='{$root_uri}about'>About Us</a>
 						<ul>
-							<li><a href='/~chris/srweb/about/team'>The Team</a></li>
-							<li><a href='/~chris/srweb/about/media'>Media</a></li>
-							<li><a href='/~chris/srweb/about/mission'>Mission Statement</a></li>
-							<li><a href='/~chris/srweb/about/publicdocs'>Public Documents</a></li>
-							<li><a href='/~chris/srweb/about/contactus'>Contact Us</a></li>
+							<li><a href='{$root_uri}about/team'>The Team</a></li>
+							<li><a href='{$root_uri}about/media'>Media</a></li>
+							<li><a href='{$root_uri}about/mission'>Mission Statement</a></li>
+							<li><a href='{$root_uri}about/publicdocs'>Public Documents</a></li>
+							<li><a href='{$root_uri}about/contactus'>Contact Us</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -98,9 +98,9 @@
 			<div id="boxWrapper">
 
 				<div class="box">
-					<h3><a href="{$root_uir}ide">The IDE</a></h3>
+					<h3><a href="{$root_uri}ide">The IDE</a></h3>
 					<p>
-						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
+						<a href="{$root_uri}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
 
 						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
 						is used by all of the schools &amp; colleges taking part to write programs for their robots.
@@ -109,9 +109,9 @@
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uir}schools/kit/">The Kit</a></h3>
+					<h3><a href="{$root_uri}schools/kit/">The Kit</a></h3>
 					<p>
-						<a href="{$root_uir}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
+						<a href="{$root_uri}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
 						Student Robotics design and build a range of easily&ndash;programmable boards
 						designed specifically for building robots. The teams receive the kit at Kickstart
 						and have about 7 months to build a competition&ndash;winning robot.
@@ -119,7 +119,7 @@
 				</div>
 
 				<div class="box clearboth">
-					<h3><a href="{$root_uir}about/gettinginvolved">Want to Get Involved?</a></h3>
+					<h3><a href="{$root_uri}about/gettinginvolved">Want to Get Involved?</a></h3>
 					<p>
 						Student Robotics is always looking for more people to get involved, and not just schools.
 						Whether you're a University student or a company considering sponsoring the competition,
@@ -129,7 +129,7 @@
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uir}sponsors/">Our Sponsors</a></h3>
+					<h3><a href="{$root_uri}sponsors/">Our Sponsors</a></h3>
 					<p>
 						Student Robotics really couldn't happen if we didn't have our sponsors.
 					</p>

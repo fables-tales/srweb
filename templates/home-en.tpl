@@ -76,7 +76,7 @@
 				<div class="box">
 					<h3><a href="{$root_uir}ide">The IDE</a></h3>
 					<p>
-						<a href="{$root_uir}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
+						<a href="{$root_uri}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
 
 						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
 						is used by all of the schools &amp; colleges taking part to write programs for their robots.
@@ -85,9 +85,9 @@
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uir}schools/kit/">The Kit</a></h3>
+					<h3><a href="{$root_uri}schools/kit/">The Kit</a></h3>
 					<p>
-						<a href="{$root_uir}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
+						<a href="{$root_uri}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
 						Student Robotics design and build a range of easily&ndash;programmable boards
 						designed specifically for building robots. The teams receive the kit at Kickstart
 						and have about 7 months to build a competition&ndash;winning robot.
@@ -95,7 +95,7 @@
 				</div>
 
 				<div class="box clearboth">
-					<h3><a href="{$root_uir}about/gettinginvolved">Want to Get Involved?</a></h3>
+					<h3><a href="{$root_uri}about/gettinginvolved">Want to Get Involved?</a></h3>
 					<p>
 						Student Robotics is always looking for more people to get involved, and not just schools.
 						Whether you're a University student or a company considering sponsoring the competition,
@@ -105,7 +105,7 @@
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uir}sponsors/">Our Sponsors</a></h3>
+					<h3><a href="{$root_uri}sponsors/">Our Sponsors</a></h3>
 					<p>
 						Student Robotics really couldn't happen if we didn't have our sponsors.
 					</p>
