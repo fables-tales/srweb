@@ -41,18 +41,11 @@ $accepted_languages = array_change_key_case($ACCEPTED_LANGUAGES, CASE_LOWER);
 
 foreach($orderedLanguages as $l){
 
-	//if it's a supported language...
-	if (in_array(strtolower($l), $accepted_languages)){
-
-		//and the relevent content filew exists...
-		if (file_exists(CONTENT_DIR . '/' . $accepted_languages[strtolower($l)] . '/' . $page)){
-
-			//this is the language to use
-			$language = $accepted_languages[strtolower($l)];
-			break;
-		}
-
+	if (isset($accepted_languages[strtolower($l)]) && file_exists(CONTENT_DIR . '/' . $accepted_languages[strtolower($l)] . '/' . $page)){
+		$language = $accepted_languages[strtolower($l)];
+		break;
 	}
+
 }//foreach
 
 /*
@@ -63,8 +56,8 @@ if ($page == 'home'){
 
 	$file = 'home-en';
 	foreach ($orderedLanguages as $l){
-		if (file_exists('templates/' . 'home-' . $accepted_languages[$l] . '.tpl')){
-			$file = 'home-' . $accepted_languages[$l];
+		if (isset($accepted_languages[strtolower($l)]) && file_exists('templates/' . 'home-' . $accepted_languages[strtolower($l)] . '.tpl')){
+			$file = 'home-' . $accepted_languages[strtolower($l)];
 			break;
 		}
 	}
@@ -140,16 +133,16 @@ if ($page == 'home'){
 
 	$header_file = 'header-en.tpl';
 	foreach ($orderedLanguages as $l){
-		if (file_exists('templates/' . 'header-' . $accepted_languages[$l] . '.tpl')){
-			$header_file = 'header-' . $accepted_languages[$l] . '.tpl';
+		if (isset($accepted_languages[strtolower($l)]) && file_exists('templates/' . 'header-' . $accepted_languages[strtolower($l)] . '.tpl')){
+			$header_file = 'header-' . $accepted_languages[strtolower($l)] . '.tpl';
 			break;
 		}
 	}
 
 	$footer_file = 'footer-en.tpl';
 	foreach ($orderedLanguages as $l){
-		if (file_exists('templates/' . 'footer-' . $accepted_languages[$l] . '.tpl')){
-			$footer_file = 'footer-' . $accepted_languages[$l] . '.tpl';
+		if (isset($accepted_languages[strtolower($l)]) && file_exists('templates/' . 'footer-' . $accepted_languages[strtolower($l)] . '.tpl')){
+			$footer_file = 'footer-' . $accepted_languages[strtolower($l)] . '.tpl';
 			break;
 		}
 	}
