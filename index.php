@@ -63,8 +63,8 @@ if ($page == 'home'){
 
 	$file = 'home-en';
 	foreach ($orderedLanguages as $l){
-		if (file_exists('templates/' . 'home-' . $accepted_languages[$l] . '.tpl')){
-			$file = 'home-' . $accepted_languages[$l];
+		if (isset($accepted_languages[strtolower($l)]) && file_exists('templates/' . 'home-' . $accepted_languages[strtolower($l)] . '.tpl')){
+			$file = 'home-' . $accepted_languages[strtolower($l)];
 			break;
 		}
 	}
@@ -140,16 +140,16 @@ if ($page == 'home'){
 
 	$header_file = 'header-en.tpl';
 	foreach ($orderedLanguages as $l){
-		if (file_exists('templates/' . 'header-' . $accepted_languages[$l] . '.tpl')){
-			$header_file = 'header-' . $accepted_languages[$l] . '.tpl';
+		if (isset($accepted_languages[strtolower($l)]) && file_exists('templates/' . 'header-' . $accepted_languages[strtolower($l)] . '.tpl')){
+			$header_file = 'header-' . $accepted_languages[strtolower($l)] . '.tpl';
 			break;
 		}
 	}
 
 	$footer_file = 'footer-en.tpl';
 	foreach ($orderedLanguages as $l){
-		if (file_exists('templates/' . 'footer-' . $accepted_languages[$l] . '.tpl')){
-			$footer_file = 'footer-' . $accepted_languages[$l] . '.tpl';
+		if (isset($accepted_languages[strtolower($l)]) && file_exists('templates/' . 'footer-' . $accepted_languages[strtolower($l)] . '.tpl')){
+			$footer_file = 'footer-' . $accepted_languages[strtolower($l)] . '.tpl';
 			break;
 		}
 	}
