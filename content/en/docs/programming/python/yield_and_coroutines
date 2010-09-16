@@ -11,7 +11,7 @@ Yield and Coroutines
 Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the `yield` statement:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-yield query.io[0].dpin[3] == 1
+yield query.io[0].input[3].d == 1
 # code here won't execute until digital pin 3 on JointIO board 0 goes high
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

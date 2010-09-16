@@ -17,28 +17,28 @@ A digital input pin changing value (high to low, or low to high):
 
 ~~~
 # Wait for digital input pin 3 on JointIO board 0 to change value
-yield query.io[0].in[3].d
+yield query.io[0].input[3].d
 ~~~
 
 Waiting for a particular digital value:
 
 ~~~
 # Wait for digital input 3 on JointIO board 0 to become digital '1'
-yield query.io[0].in[3].d == 1
+yield query.io[0].input[3].d == 1
 ~~~
 
 Waiting for an analogue pin to exceed a particular value:
 
 ~~~
 # Wait for the reading of analogue input 3 on JointIO board 0 to exceed 1V
-yield query.io[0].in[1].a > 1
+yield query.io[0].input[1].a > 1
 ~~~
 
 Waiting for an analogue pin to drop below a particular value:
 
 ~~~
 # Wait for the reading of analogue input 2 on JointIO board 0 to drop below 2.5V
-yield query.io[0].in[2].a < 2.5
+yield query.io[0].input[2].a < 2.5
 ~~~
 
 Code situated after these yields in the program flow will not be executed until the specified condition has been met. So, for example, if your robot had the following code:
@@ -52,10 +52,10 @@ def main():
         io[0].out[0].d = 1
 
         # wait until digital input 0 goes high
-        yield query.io[0].in[0].d == 1
+        yield query.io[0].input[0].d == 1
 
         # set output pin 0 low
-        io[0].pin[0] = 0
+        io[0].pinput[0] = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ...when it was run, output pin 0 would be high and it would stay high until digital input pin 0 went high. When this happens, the next bit of code will execute &mdash; setting output pin 0 low.
@@ -82,7 +82,7 @@ See the [vision page](docs/programming/sr/vision/) for more information.
 [Combining Queries Together](docs/programming/sr/query/#combining_queries) {#combining_queries}
 ----------------------------
 
-When you write `query.io[0].in[0].d == 0` (for example), the operator overriding comes into play. But before that's explained, another explanation is necessary. When you write `abc = 1 == 1`, the value contained in `abc` afterwards is `True`. `abc` is assigned the value of the logical expression `1 == 1` &mdash; the boolean value, `True`. (If this is a surprise to you, then you should read a [tutorial](docs/programming/python/).) 
+When you write `query.io[0].input[0].d == 0` (for example), the operator overriding comes into play. But before that's explained, another explanation is necessary. When you write `abc = 1 == 1`, the value contained in `abc` afterwards is `True`. `abc` is assigned the value of the logical expression `1 == 1` &mdash; the boolean value, `True`. (If this is a surprise to you, then you should read a [tutorial](docs/programming/python/).) 
 
 This is where the confusing bit occurs &mdash; for the `query.(...)` objects, the operators are overridden so that they no longer compare values; they therefore don't return a boolean value, but another object instead. Because this object is just a representation for a condition that could be met, these conditions can be joined together.
 
@@ -93,15 +93,15 @@ Logic expressions can also be use with `yield`. You could, for example, wait unt
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # OR:
-yield query.io[0].in[3].d == 1, query.io[0].in[2].d == 0
-yield query.io[0].in[3].a > 2, query.io[0].in[3].a < 3
+yield query.io[0].input[3].d == 1, query.io[0].input[2].d == 0
+yield query.io[0].input[3].a > 2, query.io[0].input[3].a < 3
 
         
 # AND:
-yield (query.io[0].in[3].d == 1) & (query.io[0].in[2].d == 0)
+yield (query.io[0].input[3].d == 1) & (query.io[0].input[2].d == 0)
 
 # alternatively:
-yield And( query.io[0].in[3].d == 1, query.io[0].in[2].d == 0 )
+yield And( query.io[0].input[3].d == 1, query.io[0].input[2].d == 0 )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AND means both inputs need to be `True` for execution to continue. OR means either one or both inputs need to be `True` for execution to continue.
@@ -109,7 +109,7 @@ AND means both inputs need to be `True` for execution to continue. OR means eith
 If you decide to do this, however, you may need to find out which one occurred (if you're using OR, anyway). To do this, you would use something like the following:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ev = yield query.io[0].in[1].a > 1.6, (query.io[0].in[2].d == 1) & (query.io[0].in[3].d == 0)
+ev = yield query.io[0].input[1].a > 1.6, (query.io[0].input[2].d == 1) & (query.io[0].input[3].d == 0)
 if 2 in ev.io[0].pins:
 
     # ev.io[N].pins is a list of pins involved in the event
@@ -137,7 +137,7 @@ def main:
         motor[0].target = 20
 
         # wait for 10s or a button to be pressed, whichever's sooner.
-        yield query.timeout(10), query.io[0].in[0].d == 1
+        yield query.timeout(10), query.io[0].input[0].d == 1
 
         # stop the motor
         motor[0].target = 0
