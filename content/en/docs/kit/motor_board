@@ -19,6 +19,7 @@ Indicators
 |   LED           | Meaning                | Inital power-up state
 |-----------------|------------------------|----------------------
 | Power           | The board is powered   | On
+| SRIC Activity   | The board is transferring data | Off
 | Token           | The token-ring is functioning | On
 | Motor Power     | The motor has power and will turn when instructed to | Off
 | Current Limit   | Too much current is being drawn from the output | Off
