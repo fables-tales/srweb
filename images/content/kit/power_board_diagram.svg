@@ -17,6 +17,102 @@
    sodipodi:docname="power_board_diagram.svg">
   <defs
      id="defs2927">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4971"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4967"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4963"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4959"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4955"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4951"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4947"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4943"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4939"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4929"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4925"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4921"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4917"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4913"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4909"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4905"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4901"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4897"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4893"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4889"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4885"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4881"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4877"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4873"
+       effect="spiro" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="0 : 526.18109 : 1"
@@ -108,6 +204,30 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4848"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path4094"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.4,0,0,0.4,4,0)" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect6090"
+       is_visible="true" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -116,9 +236,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="444.04871"
-     inkscape:cy="319.61156"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="514.27509"
+     inkscape:cy="208.87293"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -139,7 +259,9 @@
        snapvisiblegridlinesonly="true"
        units="mm"
        spacingx="1mm"
-       spacingy="1mm" />
+       spacingy="1mm"
+       originx="-2.7755576e-17mm"
+       originy="0mm" />
   </sodipodi:namedview>
   <metadata
      id="metadata2930">
@@ -161,34 +283,37 @@
     <g
        id="g4493"
        transform="translate(141.73228,513.77954)">
-      <rect
-         style="fill:#4d9f3a;fill-opacity:1;stroke:none"
-         id="rect3631"
-         width="52.795277"
-         height="14.173206"
-         x="170.07874"
-         y="467.71652" />
-      <rect
-         y="467.71652"
-         x="233.85826"
-         height="14.173206"
-         width="52.795277"
-         id="rect4465"
-         style="fill:#4d9f3a;fill-opacity:1;stroke:none" />
-      <rect
-         style="fill:#4d9f3a;fill-opacity:1;stroke:none"
-         id="rect4467"
-         width="52.795277"
-         height="14.173206"
-         x="297.63779"
-         y="467.71652" />
-      <rect
-         y="467.71652"
-         x="361.41733"
-         height="14.173206"
-         width="52.795277"
-         id="rect4469"
-         style="fill:#4d9f3a;fill-opacity:1;stroke:none" />
+      <g
+         id="g4931">
+        <rect
+           y="467.71652"
+           x="170.07874"
+           height="14.173206"
+           width="52.795277"
+           id="rect3631"
+           style="fill:#4d9f3a;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#4d9f3a;fill-opacity:1;stroke:none"
+           id="rect4465"
+           width="52.795277"
+           height="14.173206"
+           x="233.85826"
+           y="467.71652" />
+        <rect
+           y="467.71652"
+           x="297.63779"
+           height="14.173206"
+           width="52.795277"
+           id="rect4467"
+           style="fill:#4d9f3a;fill-opacity:1;stroke:none" />
+        <rect
+           style="fill:#4d9f3a;fill-opacity:1;stroke:none"
+           id="rect4469"
+           width="52.795277"
+           height="14.173206"
+           x="361.41733"
+           y="467.71652" />
+      </g>
       <rect
          y="467.71652"
          x="120.47244"
@@ -536,5 +661,400 @@
        height="10.629921"
        x="880.51178"
        y="-712.20471" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="796.5722"
+       y="700.453"
+       id="text4758"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4760"
+         x="796.5722"
+         y="700.453">Power Switch</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="797.24408"
+       y="767.9967"
+       id="text4762"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4764"
+         x="797.24408"
+         y="767.9967">Charging LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="796.90814"
+       y="787.01794"
+       id="text4766"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4768"
+         x="796.90814"
+         y="787.01794">5V LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="796.92377"
+       y="804.8399"
+       id="text4770"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4772"
+         x="796.92377"
+         y="804.8399">3.3V LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="797.24408"
+       y="835.31958"
+       id="text4774"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4776"
+         x="797.24408"
+         y="835.31958">Charger Fuse</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="797.24408"
+       y="863.66602"
+       id="text4778"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4780"
+         x="797.24408"
+         y="863.66602">Charger Connector</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="796.5722"
+       y="889.13409"
+       id="text4782"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4784"
+         x="796.5722"
+         y="889.13409">Blown Fuse LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="796.5722"
+       y="907.73651"
+       id="text4786"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4788"
+         x="796.5722"
+         y="907.73651">Main Fuse</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="796.5722"
+       y="948.56476"
+       id="text4790"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4792"
+         x="796.5722"
+         y="948.56476">Battery Connector</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="345.06546"
+       y="1034.6456"
+       id="text4794"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4796"
+         x="345.06546"
+         y="1034.6456">Motor Rail Connectors</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="194.8819"
+       y="1034.6456"
+       id="text4798"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4800"
+         x="194.8819"
+         y="1034.6456">USB Hub Power</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="68.297554"
+       y="888.10767"
+       id="text4802"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4804"
+         x="68.297554"
+         y="888.10767">SRIC OUT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="87.313179"
+       y="820.78485"
+       id="text4806"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4808"
+         x="87.313179"
+         y="820.78485">SRIC IN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="75.305367"
+       y="705.1181"
+       id="text4810"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4812"
+         x="75.305367"
+         y="705.1181">USB Hub</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="63.649113"
+       y="854.58685"
+       id="text4814"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4816"
+         x="63.649113"
+         y="854.58685">Token LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="7.0866141"
+       y="758.2677"
+       id="text4818"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4820"
+         x="7.0866141"
+         y="758.2677">SRIC Activity LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="64.219429"
+       y="1013.3858"
+       id="text4822"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4824"
+         x="64.219429"
+         y="1013.3858">User LEDs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="581.10236"
+       y="1034.6456"
+       id="text4826"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4828"
+         x="581.10236"
+         y="1034.6456">Motor Rail LED</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="69.805367"
+       y="944.94122"
+       id="text4830"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4832"
+         x="69.805367"
+         y="944.94122">Left Knob</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="797.24408"
+       y="1034.6456"
+       id="text4834"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4836"
+         x="797.24408"
+         y="1034.6456">Right Knob</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 744.09449,694.48817 49.6063,0"
+       id="path6088"
+       inkscape:path-effect="#path-effect6090"
+       inkscape:original-d="m 744.09449,694.48817 49.6063,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 754.72441,763.58266 38.97638,0"
+       inkscape:path-effect="#path-effect4873"
+       id="path4871"
+       d="m 754.72441,763.58266 38.97638,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 754.72441,781.29921 38.97638,0"
+       id="path4875"
+       inkscape:path-effect="#path-effect4877"
+       inkscape:original-d="m 754.72441,781.29921 38.97638,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 754.72441,799.01571 38.97638,0"
+       inkscape:path-effect="#path-effect4881"
+       id="path4879"
+       d="m 754.72441,799.01571 38.97638,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 744.09449,830.90551 49.6063,0"
+       id="path4883"
+       inkscape:path-effect="#path-effect4885"
+       inkscape:original-d="m 744.09449,830.90551 49.6063,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 779.52756,859.25195 14.17323,0"
+       id="path4887"
+       inkscape:path-effect="#path-effect4889"
+       inkscape:original-d="m 779.52756,859.25195 14.17323,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 715.74803,883.16925 77.95276,0"
+       inkscape:path-effect="#path-effect4893"
+       id="path4891"
+       d="m 715.74803,883.16925 77.95276,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 744.09449,901.77167 49.6063,0"
+       id="path4895"
+       inkscape:path-effect="#path-effect4897"
+       inkscape:original-d="m 744.09449,901.77167 49.6063,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 779.52756,944.29132 14.17323,0"
+       inkscape:path-effect="#path-effect4901"
+       id="path4899"
+       d="m 779.52756,944.29132 14.17323,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 177.16535,699.15326 -28.34645,0"
+       inkscape:path-effect="#path-effect4905"
+       id="path4903"
+       d="m 177.16535,699.15326 -28.34645,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 209.05512,772.44093 -19.48819,-19.48819 -37.20473,0"
+       id="path4907"
+       inkscape:path-effect="#path-effect4909"
+       inkscape:original-d="m 209.05512,772.44093 -19.48819,-19.48819 -37.20473,0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 177.16535,814.96061 -28.34645,0"
+       id="path4911"
+       inkscape:path-effect="#path-effect4913"
+       inkscape:original-d="m 177.16535,814.96061 -28.34645,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 177.16535,882.28344 -28.34645,0"
+       inkscape:path-effect="#path-effect4917"
+       id="path4915"
+       d="m 177.16535,882.28344 -28.34645,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 194.88189,848.62201 -46.06299,0"
+       id="path4919"
+       inkscape:path-effect="#path-effect4921"
+       inkscape:original-d="m 194.88189,848.62201 -46.06299,0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 201.9685,938.97637 -53.1496,0"
+       inkscape:path-effect="#path-effect4925"
+       id="path4923"
+       d="m 201.9685,938.97637 -53.1496,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 278.14961,999.21258 0,21.25982"
+       id="path4927"
+       inkscape:path-effect="#path-effect4929"
+       inkscape:original-d="m 278.14961,999.21258 0,21.25982"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 338.20865,999.21258 16.12206,17.71652"
+       inkscape:path-effect="#path-effect4939"
+       id="path4937"
+       d="m 338.20865,999.21258 16.12206,17.71652"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 401.98818,999.21258 0,21.25982"
+       id="path4941"
+       inkscape:path-effect="#path-effect4943"
+       inkscape:original-d="m 401.98818,999.21258 0,21.25982"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="m 465.76771,999.21258 0,21.25982"
+       inkscape:path-effect="#path-effect4947"
+       id="path4945"
+       d="m 465.76771,999.21258 0,21.25982"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 529.54725,999.21258 -15.76772,17.71652"
+       id="path4949"
+       inkscape:path-effect="#path-effect4951"
+       inkscape:original-d="m 529.54725,999.21258 -15.76772,17.71652"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:original-d="m 442.91339,937.2047 86.81102,0 83.26772,79.7244"
+       inkscape:path-effect="#path-effect4955"
+       id="path4953"
+       d="m 442.91339,937.2047 86.81102,0 83.26772,79.7244"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:original-d="m 644.88189,938.97636 42.51968,0 90.35434,90.35434 15.94488,0"
+       inkscape:path-effect="#path-effect4959"
+       id="path4957"
+       d="m 644.88189,938.97636 42.51968,0 90.35434,90.35434 15.94488,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:original-d="m 343.70079,942.51967 -24.80316,24.80315 -56.69291,0 -40.74803,40.74798 -72.63779,0"
+       inkscape:path-effect="#path-effect4963"
+       id="path4961"
+       d="m 343.70079,942.51967 -24.80316,24.80315 -56.69291,0 -40.74803,40.74798 -72.63779,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:original-d="M 325.98425,942.51967 301.1811,967.32282"
+       inkscape:path-effect="#path-effect4967"
+       id="path4965"
+       d="M 325.98425,942.51967 301.1811,967.32282"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 308.26772,942.51967 -24.80315,24.80315"
+       id="path4969"
+       inkscape:path-effect="#path-effect4971"
+       inkscape:original-d="m 308.26772,942.51967 c -25.41414,11.23749 -33.99466,14.98781 -24.80315,24.80315"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>
