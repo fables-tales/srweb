@@ -19,8 +19,19 @@ Board Diagram
 Indicators
 ----------
 
-|   LED           | Meaning                | Inital power-up state
-|-----------------|------------------------|----------------------
+|   LED           | Meaning                        | Inital power-up state
+|-----------------|--------------------------------|----------------------
+| 3.3V            | The board is powered           | On
+| 5V              | The BealgeBoard is powered     | On
+| Charging        | The battery is charging*       | Off
+| Motor Rail      | The Motor Rail is powered      | Off
+| Token           | The token-ring is functioning  | On
+| SRIC Activity   | Data is being transferred      | Off
+| Blown Fuse      | The main fuse has blown or is missing | Off
+| User            | Controllable from user code    | Off
+
+*Unfortunately due to the design of the electronics the charging LED will only light up when the battery is charging and the Power Board is switched on.
+If the Power Board is switched off then the charging LED will not light but the battery will charge and the LEDs/dial on the charger should show this.
 
 Specification
 -------------
