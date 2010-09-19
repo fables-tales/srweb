@@ -38,6 +38,15 @@ Specification
 
 |  Parameter                           |   Value   |
 |--------------------------------------|-----------|
+| Absolute Maximum Input Voltage       | 16V       |
+| Maximum Motor Rail Switching Current | 25A       |
+| Maximum USB Hub Output Current       | 1A        |
+| Main Battery Fuse Current            | 15A       |
+| Charger Fuse Current                 | 5A        |
+| Display Resolution                   | 480x272   |
+| Display Refresh Rate                 | 69Hz      |
+| Processor                            | 720MHz ARM Cortex A8 |
+| RAM                                  | 256MB     |
 
 Designs
 -------
