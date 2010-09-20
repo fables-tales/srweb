@@ -10,14 +10,14 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="819.41077"
-   height="664.71381"
+   height="660.93994"
    id="svg13384"
    version="1.1"
    inkscape:version="0.47 r22583"
    sodipodi:docname="power_board_case.svg"
    inkscape:export-filename="/home/rbarlow/git/srweb/images/content/kit/power_board_case.png"
-   inkscape:export-xdpi="60.38689"
-   inkscape:export-ydpi="60.38689">
+   inkscape:export-xdpi="60.389999"
+   inkscape:export-ydpi="60.389999">
   <defs
      id="defs13386">
     <inkscape:perspective
@@ -602,11 +602,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="458.1637"
-     inkscape:cy="353.97547"
+     inkscape:cx="540.38757"
+     inkscape:cy="332.17526"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1280"
      inkscape:window-height="953"
      inkscape:window-x="0"
@@ -636,10 +636,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(58.91078,-128.14835)">
+     transform="translate(57.82156,-127.58534)">
     <g
        id="g18782"
-       transform="translate(-58.91078,128.14835)">
+       transform="translate(-57.82156,127.58534)">
       <g
          transform="translate(57.599762,-605.73499)"
          id="g122"
@@ -1196,7 +1196,7 @@
     </g>
     <g
        id="g20270"
-       transform="translate(-21.81102,656.699)">
+       transform="translate(-0.7218,652.36213)">
       <g
          transform="translate(0.99999818,-1073.1168)"
          id="g122-1"
