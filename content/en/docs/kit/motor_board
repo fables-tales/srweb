@@ -28,6 +28,13 @@ Indicators
 
 After you have started your code the `Motor power LED` should come on and the `Current Limit LED` remain off.
 
+Case Dimensions
+---------------
+
+![motor board case](images/content/kit/motor_board_case.png "The Motor Board Case")
+
+All dimensions are in mm.
+
 Specification
 -------------
 
