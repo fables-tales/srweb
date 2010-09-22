@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.47 r22583"
    sodipodi:docname="motor_board_case.svg"
-   inkscape:export-filename="/home/rbarlow/git/srweb/images/content/kit/motor_board_case.png"
+   inkscape:export-filename="/home/richard/srobo/git/srweb/images/content/kit/motor_board_case.png"
    inkscape:export-xdpi="60.424099"
    inkscape:export-ydpi="60.424099">
   <defs
@@ -822,6 +822,182 @@
          d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
          id="path5217-3" />
     </marker>
+    <inkscape:perspective
+       id="perspective10"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect3728"
+       effect="spiro" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path3733" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart">
+      <path
+         transform="scale(0.6,0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path3757" />
+    </marker>
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4368"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4372"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4564"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4754"
+       effect="spiro" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Sstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart">
+      <path
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path3745" />
+    </marker>
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect5510"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect5702"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect5894"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect5898"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6090"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6282"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6474"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6674"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6678"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6700"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6896"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7106"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7110"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7494"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7686"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7690"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect7882"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect8074"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect8094"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8286"
+       is_visible="true" />
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart">
+      <path
+         transform="matrix(1.1,0,0,1.1,1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         id="path4106" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         id="path4094" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2929"
+       is_visible="true" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -830,16 +1006,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="276.15031"
-     inkscape:cy="252.47206"
+     inkscape:zoom="1.4"
+     inkscape:cx="232.49844"
+     inkscape:cy="320.18813"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer1-8"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="953"
+     inkscape:window-height="951"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="24"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -864,6 +1040,249 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Board"
+     style="opacity:0.1">
+    <g
+       transform="matrix(0,-1,1,0,44.404336,598.25319)"
+       id="layer1-8"
+       inkscape:label="Layer 1">
+      <g
+         transform="translate(277.3104,12.479334)"
+         id="g3665">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1.99842525;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="rect2855"
+           width="212.59842"
+           height="237.40158"
+           x="30"
+           y="72.362183"
+           transform="translate(0,2.5390623e-6)" />
+        <rect
+           style="fill:#4d9f3a;fill-opacity:1;stroke:none"
+           id="rect3631"
+           width="52.795277"
+           height="42.165356"
+           x="132.84961"
+           y="58.042442" />
+        <g
+           id="g3640"
+           transform="matrix(0,1,-1,0,359.04188,-133.40413)">
+          <a
+             id="a3637">
+            <rect
+               style="fill:#000000;fill-opacity:1;stroke:none"
+               id="rect2857"
+               width="53.503937"
+               height="63.956692"
+               x="360"
+               y="102.36218"
+               transform="translate(0,2.5390623e-6)" />
+          </a>
+          <rect
+             y="126.67321"
+             x="373.75644"
+             height="39.614174"
+             width="26.574802"
+             id="rect3633"
+             style="fill:#7b7b7b;fill-opacity:1;stroke:none" />
+        </g>
+        <rect
+           y="-257.00775"
+           x="141.54613"
+           height="42.165356"
+           width="52.795277"
+           id="rect3635"
+           style="fill:#4d9f3a;fill-opacity:1;stroke:none"
+           transform="matrix(0,1,-1,0,0,0)" />
+        <g
+           transform="matrix(0,-1,1,0,-85.608862,516.12331)"
+           id="g3645">
+          <a
+             id="a3647">
+            <rect
+               transform="translate(0,2.5390623e-6)"
+               y="102.36218"
+               x="360"
+               height="63.956692"
+               width="53.503937"
+               id="rect3649"
+               style="fill:#000000;fill-opacity:1;stroke:none" />
+          </a>
+          <rect
+             style="fill:#7b7b7b;fill-opacity:1;stroke:none"
+             id="rect3651"
+             width="26.574802"
+             height="39.614174"
+             x="373.75644"
+             y="126.67321" />
+        </g>
+        <g
+           id="g3653"
+           transform="matrix(0,-1,1,0,-86.144581,574.69473)">
+          <a
+             id="a3655">
+            <rect
+               style="fill:#000000;fill-opacity:1;stroke:none"
+               id="rect3657"
+               width="53.503937"
+               height="63.956692"
+               x="360"
+               y="102.36218"
+               transform="translate(0,2.5390623e-6)" />
+          </a>
+          <rect
+             y="126.67321"
+             x="373.75644"
+             height="39.614174"
+             width="26.574802"
+             id="rect3659"
+             style="fill:#7b7b7b;fill-opacity:1;stroke:none" />
+        </g>
+      </g>
+      <rect
+         y="121.37935"
+         x="430.83328"
+         height="10.629921"
+         width="10.629921"
+         id="rect3682"
+         style="fill:#00ff00;fill-opacity:1;stroke:none" />
+      <rect
+         y="228.67162"
+         x="364.06805"
+         height="10.629921"
+         width="5.3149605"
+         id="rect3684"
+         style="fill:#00ff00;fill-opacity:1;stroke:none" />
+      <rect
+         y="228.67159"
+         x="369.78461"
+         height="10.629921"
+         width="5.3149605"
+         id="rect3686"
+         style="fill:#ff0000;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke:none"
+         id="rect3692"
+         width="10.629921"
+         height="10.629921"
+         x="488.67041"
+         y="210.94037" />
+      <rect
+         y="210.94037"
+         x="503.30032"
+         height="10.629921"
+         width="10.629921"
+         id="rect3694"
+         style="fill:#ffff00;fill-opacity:1;stroke:none" />
+      <rect
+         y="252.44037"
+         x="430.89087"
+         height="10.629921"
+         width="10.629921"
+         id="rect3696"
+         style="fill:#ff0000;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ffff00;fill-opacity:1;stroke:none"
+         id="rect3698"
+         width="10.629921"
+         height="10.629921"
+         x="430.89087"
+         y="268.22607" />
+      <rect
+         y="180.9803"
+         x="418.87344"
+         height="15.944881"
+         width="24.80315"
+         id="rect3702"
+         style="fill:#333333;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#333333;fill-opacity:1;stroke:none"
+         id="rect3704"
+         width="24.80315"
+         height="15.944881"
+         x="418.87344"
+         y="145.54723" />
+      <rect
+         y="163.26376"
+         x="418.87344"
+         height="15.944881"
+         width="24.80315"
+         id="rect3706"
+         style="fill:#333333;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#333333;fill-opacity:1;stroke:none"
+         id="rect3708"
+         width="24.80315"
+         height="15.944881"
+         x="418.87344"
+         y="198.69684" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         style="fill:#ff0000;fill-opacity:1;stroke:none"
+         id="rect3712"
+         width="5.3149605"
+         height="10.629921"
+         x="217.4005"
+         y="-453.82846" />
+      <path
+         transform="matrix(0.95751899,0,0,0.95751899,167.14945,12.89283)"
+         d="m 165.15994,89.181732 c 0,2.789459 -2.2613,5.050763 -5.05076,5.050763 -2.78946,0 -5.05077,-2.261304 -5.05077,-5.050763 0,-2.789459 2.26131,-5.050762 5.05077,-5.050762 2.78946,0 5.05076,2.261303 5.05076,5.050762 z"
+         sodipodi:ry="5.0507627"
+         sodipodi:rx="5.0507627"
+         sodipodi:cy="89.181732"
+         sodipodi:cx="160.10918"
+         id="path3714"
+         style="fill:none;stroke:#000000;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:type="arc"
+         style="fill:none;stroke:#000000;stroke-opacity:1"
+         id="path3716"
+         sodipodi:cx="160.10918"
+         sodipodi:cy="89.181732"
+         sodipodi:rx="5.0507627"
+         sodipodi:ry="5.0507627"
+         d="m 165.15994,89.181732 c 0,2.789459 -2.2613,5.050763 -5.05076,5.050763 -2.78946,0 -5.05077,-2.261304 -5.05077,-5.050763 0,-2.789459 2.26131,-5.050762 5.05077,-5.050762 2.78946,0 5.05076,2.261303 5.05076,5.050762 z"
+         transform="matrix(0.95751899,0,0,0.95751899,354.49215,12.89283)" />
+      <path
+         transform="matrix(0.95751899,0,0,0.95751899,356.00738,225.44872)"
+         d="m 165.15994,89.181732 c 0,2.789459 -2.2613,5.050763 -5.05076,5.050763 -2.78946,0 -5.05077,-2.261304 -5.05077,-5.050763 0,-2.789459 2.26131,-5.050762 5.05077,-5.050762 2.78946,0 5.05076,2.261303 5.05076,5.050762 z"
+         sodipodi:ry="5.0507627"
+         sodipodi:rx="5.0507627"
+         sodipodi:cy="89.181732"
+         sodipodi:cx="160.10918"
+         id="path3718"
+         style="fill:none;stroke:#000000;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:type="arc"
+         style="fill:none;stroke:#000000;stroke-opacity:1"
+         id="path3722"
+         sodipodi:cx="160.10918"
+         sodipodi:cy="89.181732"
+         sodipodi:rx="5.0507627"
+         sodipodi:ry="5.0507627"
+         d="m 165.15994,89.181732 c 0,2.789459 -2.2613,5.050763 -5.05076,5.050763 -2.78946,0 -5.05077,-2.261304 -5.05077,-5.050763 0,-2.789459 2.26131,-5.050762 5.05077,-5.050762 2.78946,0 5.05076,2.261303 5.05076,5.050762 z"
+         transform="matrix(0.95751899,0,0,0.95751899,167.14946,223.93349)" />
+      <rect
+         y="252.37621"
+         x="374.02695"
+         height="44.29134"
+         width="22.322834"
+         id="rect2919"
+         style="fill:#333333;fill-opacity:1;stroke:none" />
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke:none"
+         id="rect2921"
+         width="5.3149605"
+         height="10.629921"
+         x="355.7041"
+         y="276.24234" />
+    </g>
+  </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
