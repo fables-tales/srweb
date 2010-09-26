@@ -6,7 +6,7 @@
 	<title>Welcome to Student Robotics | Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="keywords" content="student, robotics, robot, competition, southampton" />
-	<meta name="description" content="Student Robotics is an exciting competition between sixth form schools and colleges in the Southampton area to build fully autonomous robots. " />
+	<meta name="description" content="Student Robotics is an exciting competition between sixth form schools and colleges to build fully autonomous robots." />
 	<meta name="google-site-verification" content="GizX0DcCqEeGihd9CyYaqM1bVXUB-lhB9rhm53UdRC8" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/home.css" />
@@ -48,11 +48,12 @@
 	
 			<h1>Welcome to Student Robotics</h1>
 	
-			<p>Student Robotics is an exciting competition between sixth form schools 
-			and colleges in the Southampton area to build fully autonomous robots. Led 
-			by a group of students from the University of Southampton, the teams in the 
-			competition will have to design, build and test their robots ready to 
-			compete against other local teams.</p>
+			<p>Student Robotics is an exciting competition, held at 
+			the University of Southampton, between teams of students from sixth 
+			form schools and colleges, to build fully autonomous robots. Led by 
+			a group of students from the University of Southampton, participating 
+			teams will have to design, build and test their robots, ready to compete 
+			against other teams.</p>
 		</div>
 
 		<div id="latestNews">

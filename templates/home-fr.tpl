@@ -68,26 +68,26 @@
 
 			<div id="expandedMenu">
 
-				<h3>Take a Look Around</h3>
+				<h3>Portail du Site</h3>
 
 				<ul>
-					<li><a href='{$root_uri}schools'>Schools &amp; Colleges</a>
+					<li><a href='{$root_uri}schools'>Lycées et Collèges</a>
 
 						<ul>
-							<li><a href='{$root_uri}schools/competition'>Competition</a></li>
-							<li><a href='{$root_uri}schools/joining'>Joining</a></li>
+							<li><a href='{$root_uri}schools/competition'>Concours</a></li>
+							<li><a href='{$root_uri}schools/joining'>S'inscrire</a></li>
 							<li><a href='{$root_uri}schools/kit'>Kit</a></li>
 						</ul>
 					</li>
-					<li><a href='{$root_uri}docs'>Docs</a></li>
+					<li><a href='{$root_uri}docs'>Documents</a></li>
 					<li><a href='{$root_uri}sponsors'>Sponsors</a></li>
-					<li><a href='{$root_uri}about'>About Us</a>
+					<li><a href='{$root_uri}about'>À Propos</a>
 						<ul>
-							<li><a href='{$root_uri}about/team'>The Team</a></li>
-							<li><a href='{$root_uri}about/media'>Media</a></li>
-							<li><a href='{$root_uri}about/mission'>Mission Statement</a></li>
-							<li><a href='{$root_uri}about/publicdocs'>Public Documents</a></li>
-							<li><a href='{$root_uri}about/contactus'>Contact Us</a></li>
+							<li><a href='{$root_uri}about/team'>L'équipe</a></li>
+							<li><a href='{$root_uri}about/media'>Médias</a></li>
+							<li><a href='{$root_uri}about/mission'>Énoncé de mission</a></li>
+							<li><a href='{$root_uri}about/publicdocs'>Documents Publics</a></li>
+							<li><a href='{$root_uri}about/contactus'>Contactez-Nous</a></li>
 						</ul>
 					</li>
 				</ul>
