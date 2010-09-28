@@ -22,7 +22,7 @@ Indicators
 |   LED           | Meaning                        | Inital power-up state
 |-----------------|--------------------------------|----------------------
 | 3.3V            | The board is powered           | On
-| 5V              | The BealgeBoard is powered     | On
+| 5V              | The BeagleBoard is powered     | On
 | Charging        | The battery is charging*       | Off
 | Motor Rail      | The Motor Rail is powered      | Off
 | Token           | The token-ring is functioning  | On
