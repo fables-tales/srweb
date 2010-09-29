@@ -44,11 +44,11 @@ import time
 # this part's your code
 def test():
         print "a"
-        yield 1
+        yield 1    # this is like query.timeout(1)
         print "b"
-        yield 2
+        yield 2    # this is like query.timeout(2)
         print "c"
-        yield 3
+        yield 3    # this is like query.timeout(3)
 
 
 
