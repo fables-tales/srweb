@@ -21,7 +21,7 @@ See the [query](docs/programming/sr/query/) object for more information.
 [Yield in General](docs/programming/python/yield_and_coroutines#general) {#general}
 ------------------
 
-It is important to note that this is not what `yield` does in a normal python program which doesn't involve the [sr module](docs/programming/sr/). More generally, `yield` is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the `yield` keyword is used:
+It is important to note that this is not what `yield` does in a normal python program which doesn't involve the [sr module](docs/programming/sr/); this is simply here for those of you that are interested.  More generally, `yield` is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the `yield` keyword is used:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # this is a generator now, it mentions yield
