@@ -44,11 +44,11 @@ import time
 # this part's your code
 def test():
         print "a"
-        yield query.timeout(1)
+        yield 1
         print "b"
-        yield query.timeout(2)
+        yield 2
         print "c"
-        yield query.timeout(3)
+        yield 3
 
 
 
@@ -63,8 +63,7 @@ try:
                 tmp = gen.next()  # run test() until the next yield, storing
                                   # the yielded value in tmp
 
-                if isinstance(tmp, Timeout):
-                        time.sleep(tmp.delay)
+                time.sleep(tmp)
 
 except StopIteration:
         print "end of user code"
@@ -94,7 +93,7 @@ Instead of having loads of selection statements checking to see what event has o
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def aCoroutine():
         while True:
-                yield query.timeout(1)
+                yield 1
                 print "I'm a Robot"
 
 def main():
@@ -108,7 +107,7 @@ Or you can get a function added as a coroutine from the beginning by [decorating
 @coroutine
 def anotherCoroutine():
         while True:
-                yield query.timeout(1)
+                yield 1
                 print "I can tell you I'm a robot before main adds me!"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
