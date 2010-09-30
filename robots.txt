@@ -1,3 +1,4 @@
 Sitemap: https://www.studentrobotics.org/sitemap.xml
 User-agent: *
 Disallow: /content/
+Disallow: /piwik/
