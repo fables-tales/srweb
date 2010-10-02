@@ -17,8 +17,7 @@ div.content div#topBanner {
 div.content div#topBanner img {
 	overflow:visible;
 	float:left;
-	position:relative;
-	top:-45px;
+	margin-top: -44px;
 }
 
 div.content div#topBanner h1 {
