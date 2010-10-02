@@ -88,14 +88,13 @@
 			<div id="boxWrapper">
 
 				<div class="box">
-					<h3><a href="{$root_uir}ide">The IDE</a></h3>
+					<h3><a href="{$root_uri}about/gettinginvolved">Want to Get Involved?</a></h3>
 					<p>
-						<a href="{$root_uri}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
-
-						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
-						is used by all of the schools &amp; colleges taking part to write programs for their robots.
-						You will need to be registered to use it.
+						Student Robotics is always looking for more people to get involved, and not just schools.
+						Whether you're a University student or a company considering sponsoring the competition,
+						you are more than welcome to get involved.
 					</p>
+
 				</div>
 
 				<div class="box">
@@ -109,13 +108,14 @@
 				</div>
 
 				<div class="box clearboth">
-					<h3><a href="{$root_uri}about/gettinginvolved">Want to Get Involved?</a></h3>
+					<h3><a href="{$root_uir}ide">The IDE</a></h3>
 					<p>
-						Student Robotics is always looking for more people to get involved, and not just schools.
-						Whether you're a University student or a company considering sponsoring the competition,
-						you are more than welcome to get involved.
-					</p>
+						<a href="{$root_uri}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
 
+						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
+						is used by all of the schools &amp; colleges taking part to write programs for their robots.
+						You will need to be registered to use it.
+					</p>
 				</div>
 
 				<div class="box">
