@@ -111,40 +111,41 @@
 			<div id="boxWrapper">
 
 				<div class="box">
-					<h3><a href="{$root_uri}about/gettinginvolved">Want to Get Involved?</a></h3>
+					<h3><a href="{$root_uri}about/gettinginvolved">Envie de participer?</a></h3>
 					<p>
-						Student Robotics is always looking for more people to get involved, and not just schools.
-						Whether you're a University student or a company considering sponsoring the competition,
-						you are more than welcome to get involved.
+						Student Robotics est toujours à la recherche de plus de gens à participer, et pas juste les
+						lycéens. Que vous soyez un étudiant universitaire ou que vous soyez une entreprise qui
+						envisagerait de parrainer avec nous - si vous voulez participer, vous seriez plus que bienvenu.
+						<a href="{$root_uri}about/contactus">Veuillez contactez-nous!</a>.
 					</p>
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uri}schools/kit/">The Kit</a></h3>
+					<h3><a href="{$root_uri}schools/kit/">Le Kit</a></h3>
 					<p>
-						<a href="{$root_uri}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
-						Student Robotics design and build a range of easily&ndash;programmable boards
-						designed specifically for building robots. The teams receive the kit at Kickstart
-						and have about 7 months to build a competition&ndash;winning robot.
+						<a href="{$root_uri}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="Prototype de la carte Moteur" title="Prototype de la carte Moteur" /></a>
+						Student Robotics conçoit et construit un kit électronique facilement programmé,
+						conçu spécifiquement pour la construction des robots. Les équipes reçoivent ce kit
+						à l'événement «Kickstart», et ils ont à peu près 7 mois pour construire un robot qui
+						peut gagner le concours.
 					</p>
 				</div>
 
 				<div class="box clearboth">
-					<h3><a href="{$root_uri}ide">The IDE</a></h3>
+					<h3><a href="{$root_uri}ide">IDE</a></h3>
 					<p>
-						<a href="{$root_uri}ide"><img src="{$root_uri}images/template/sr_round_flat.png" alt="SR logo" title="SR logo" /></a>
-
-						The Student Robotics web&ndash;based <abbr title="Integrated Development Environment">IDE</abbr>
-						is used by all of the schools &amp; colleges taking part to write programs for their robots.
-						You will need to be registered to use it.
+						Notre <abbr title="Integrated Development Environment, ou en français: «Environnement de développement intégré»">IDE</abbr>
+						en ligne est utilisé par toutes les équipes participantes, pour écrire les programmes
+						pour leurs robots.
+						Vous devez vous incrivez pour l'utiliser.
 					</p>
 
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uri}sponsors/">Our Sponsors</a></h3>
+					<h3><a href="{$root_uri}sponsors/">Nos Sponsors</a></h3>
 					<p>
-						Student Robotics really couldn't happen if we didn't have our sponsors.
+						Student Robotics serait impossible sans l'aide de nos sponsors.
 					</p>
 
 				</div>
