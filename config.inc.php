@@ -55,6 +55,7 @@ $MENU_PAGES = array(
 	'Competition'		=> 'schools/competition',
 	'Joining'		=> 'schools/joining',
 	'Documentation'		=> 'schools/docs/',
+	'Forum'			=> 'forum/',
 	'Kit'			=> 'schools/kit/',
 
 	'Docs'			=> 'docs/',
