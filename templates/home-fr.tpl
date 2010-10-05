@@ -62,7 +62,7 @@
 			<h1>Bienvenue à Student Robotics</h1>
 	
 			<p>Student Robotics organise un concours de robotique excitant entre les équipes de 
-			lycéens, et les évènements principaux se déroulent à l'Université de Southampton. 
+			lycéens, et les événements principaux se déroulent à l'Université de Southampton. 
 			Gérée par une équipe d'étudiants de l'Université de Southampton, les équipes de lycéens
 			doivent concevoir, construire et tester un robot qui est entièrement autonome, et prêt 
 			à concurrencer avec les autres équipes.</p>
