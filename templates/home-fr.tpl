@@ -71,8 +71,7 @@
 		<div id="latestNews">
 
 			<h2><a href='{$root_uri}news/newsrwebsite'>Qui aurait cru, un nouveau site web pour SR!</a></h2>
-			<p>Bonjour, et bienvenue au nouveau site web de Student Robotics. Nous sommes en train de traduire ce site d'Anglais en Français, donc veuillez nous excuser si vous trouvez que quelques pages sont en Anglais...
-			<a href="{$root_uri}news/newsrwebsite">En Savoir Plus...</a></p>
+			<p>Bonjour, et bienvenue au nouveau site web de Student Robotics. Nous sommes en train de traduire ce site d'Anglais en Français, donc veuillez nous excuser si vous trouvez que quelques pages sont en Anglais. Si vous pouvez suggèrer des meilleures traductions, ceux serions très bienvenus!</p>
 
 		</div>
 
