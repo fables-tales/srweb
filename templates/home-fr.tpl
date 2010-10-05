@@ -70,10 +70,9 @@
 
 		<div id="latestNews">
 
-			<h2><a href='{$root_uri}news/sr2011_comp_starts_soon'>Hold onto your hats, here comes SR 2011</a></h2>
-			<p>Kickstart, the introductory event that starts the annual Student Robotics competition, is almost upon us.
-			So, if you want to take part, make sure you've registered.
-			<a href="{$root_uri}news/sr2011_comp_starts_soon">Read More...</a></p>
+			<h2><a href='{$root_uri}news/newsrwebsite'>Qui aurait cru, un nouveau site web pour SR!</a></h2>
+			<p>Bonjour, et bienvenue au nouveau site web de Student Robotics. Nous sommes en train de traduire ce site d'Anglais en Français, donc veuillez nous excuser si vous trouvez que quelques pages sont en Anglais...
+			<a href="{$root_uri}news/newsrwebsite">En Savoir Plus...</a></p>
 
 		</div>
 
