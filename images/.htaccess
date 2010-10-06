@@ -1,0 +1,3 @@
+# Allow the browser to cache all images for up to a week
+ExpiresActive On
+ExpiresDefault A604800
