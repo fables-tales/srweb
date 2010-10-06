@@ -114,7 +114,7 @@
 						Student Robotics est toujours à la recherche de plus de gens à participer, et pas juste les
 						lycéens. Que vous soyez un étudiant universitaire ou que vous soyez une entreprise qui
 						envisagerait de parrainer avec nous - si vous voulez participer, vous seriez plus que bienvenu.
-						<a href="{$root_uri}about/contactus">Veuillez contactez-nous!</a>.
+						<a href="{$root_uri}about/contactus">Veuillez nous contacter!</a>.
 					</p>
 				</div>
 
