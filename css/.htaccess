@@ -1,0 +1,3 @@
+# Allow the browser to cache all css files for up to a day
+ExpiresActive On
+ExpiresDefault A86400
