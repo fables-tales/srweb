@@ -6,4 +6,41 @@
 Servo Board
 ===========
 
-Coming soon...
+The Servo Board can be used to control up to 8 RC servos (6 independently).
+Many devices are available that can be controlled as servos such as RC motor speed controllers and these can also be used with the board.
+
+Board Diagram
+-------------
+
+TBA
+
+Indicators
+----------
+
+|   LED           | Meaning                | Inital power-up state
+|-----------------|------------------------|----------------------
+| Power           | The board is powered   | On
+| SRIC Activity   | The board is transferring data | Off
+| Token           | The token-ring is functioning | On
+
+Case Dimensions
+---------------
+
+TBA
+
+Specification
+-------------
+
+|  Parameter                           |   Value   |
+|--------------------------------------|-----------|
+| Absolute Maximum Input Voltage       | 16V       |
+
+Designs
+-------
+
+You can access the schematics and source code of the firmware on the servo board in the following places.
+You do not need this information to use the board but it may be of interest to some people.
+
+ * [Full Schematics](resources/kit/servo/schematic.pdf) [Currently incomplete]
+ * [Firmware Source](https://www.studentrobotics.org/cgit/boards/pwm-fw.git/)
+ * [Hardware Designs](https://www.studentrobotics.org/cgit/boards/pwm-hw.git/)
