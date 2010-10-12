@@ -6,8 +6,8 @@
 JointIO Board
 ===========
 
-The Servo Board can be used to control up to 8 RC servos (6 independently).
-Many devices are available that can be controlled as servos such as RC motor speed controllers and these can also be used with the board.
+The JointIO Board allows you to connect the SR kit to your own electronics. It has 8 inputs which can be configured to read either digital or analogue values and 8 digital outputs capable of driving small loads.
+The board also provides 3.3V to power some/all of your electronics. Both the inputs and outputs of the board use 3.3V logic so you should keep this in mind when interfaceing with the board.
 
 Board Diagram
 -------------
