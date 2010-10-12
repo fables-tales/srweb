@@ -49,13 +49,13 @@ from sr import *
 def main():
 
         # set output pin 0 high
-        io[0].out[0].d = 1
+        io[0].output[0].d = 1
 
         # wait until digital input 0 goes high
         yield query.io[0].input[0].d == 1
 
         # set output pin 0 low
-        io[0].pinput[0] = 0
+        io[0].output[0] = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ...when it was run, output pin 0 would be high and it would stay high until digital input pin 0 went high. When this happens, the next bit of code will execute &mdash; setting output pin 0 low.
