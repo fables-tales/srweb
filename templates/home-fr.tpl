@@ -70,8 +70,11 @@
 
 		<div id="latestNews">
 
-			<h2><a href='{$root_uri}news/newsrwebsite'>Qui aurait cru, un nouveau site web pour SR!</a></h2>
-			<p>Bonjour, et bienvenue au nouveau site web de Student Robotics. Nous sommes en train de traduire ce site d'Anglais en Français, donc veuillez nous excuser si vous trouvez que quelques pages sont en Anglais. Si vous pouvez suggèrer des meilleures traductions, ceux serions très bienvenus!</p>
+			<h2><a href='{$root_uri}news/newsrwebsite'>Student Robotics Grenoble Commence!</a></h2>
+			<p>Nous avons créé des «doings» (Anglais pour l'action de faire quelquechose) à Southampton parce que nous préférons beaucoup de réaliser des projets pendant nos réunions!
+			Vendredi 15 Octobre, 16h-19h, Salle de Réunion de C-Velec, Venez quand vous voulez.
+			<a href="{$root_uri}news-fr/premier-doing">En Savoir Plus</a> 
+</p>
 
 		</div>
 
