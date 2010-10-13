@@ -73,7 +73,7 @@
 			<h2><a href='{$root_uri}news/newsrwebsite'>Student Robotics Grenoble Commence!</a></h2>
 			<p>Nous avons créé des «doings» (Anglais pour l'action de faire quelquechose) à Southampton parce que nous préférons beaucoup de réaliser des projets pendant nos réunions!
 			Vendredi 15 Octobre, 16h-19h, Salle de Réunion de C-Velec, Venez quand vous voulez.
-			<a href="{$root_uri}about/premier-doing">En Savoir Plus</a> 
+			<a href="{$root_uri}about/premier_doing">En Savoir Plus</a> 
 </p>
 
 		</div>
