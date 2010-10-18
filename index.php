@@ -95,15 +95,15 @@ if ($page == 'home'){
 		if (isset($headers['If-Modified-Since'])
 			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
 
-			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+			header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
 				filemtime($fileToServe)).' GMT', false, $page == "404" ? 404 : 304);
 
-			Header('Connection: close');
+			header('Connection: close');
 
 		} else {
 
 			//otherwise serve it
-			Header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+			header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
 				filemtime($fileToServe)).' GMT');
 
 		}//if else isset if-mod-since
@@ -124,8 +124,8 @@ if ($page == 'home'){
 
 	//if the file is a special redirection file, do the redirection
 	if ($content->getMeta('REDIRECT') != ""){
-		Header("HTTP/1.1 302 Found");
-		Header("Location: " . $content->getMeta('REDIRECT'));
+		header("HTTP/1.1 302 Found");
+		header("Location: " . $content->getMeta('REDIRECT'));
 	}
 
 	//make the content object accessible in the templates (used by a custom smarty plugin)
@@ -315,13 +315,13 @@ function getPage(){
 		} elseif (in_array($_GET['page'] . '/', $allowed_pages)) {
 
 			//redirect the browser to the more correct URL with trailing slash
-			Header('HTTP/1.1 302 Found');
-			Header('Location: ' . ROOT_URI . $_GET['page'] . '/');
+			header('HTTP/1.1 302 Found');
+			header('Location: ' . ROOT_URI . $_GET['page'] . '/');
 
 		} else {
 
 			//page not allowed / page not found -- respond with a 404
-			Header('HTTP/1.1 404 Not Found');
+			header('HTTP/1.1 404 Not Found');
 			$page = '404';
 			log404();
 
