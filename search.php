@@ -7,7 +7,10 @@ if (!empty($_GET['q'])){
 
 } else {
 
-	header("Location: " . $_SERVER['HTTP_REFERER']);
+	header("HTTP/1.1 400 Bad Request");
+	header("Content-type: text/plain");
+
+	echo "Please specify some search parameters.";
 
 }
 ?>
