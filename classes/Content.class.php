@@ -101,7 +101,13 @@ class Content {
 
 	}//isComment
 
-
+	/*
+	 * Replaces both 'href' and 'src' absolute links of the form
+	 * '/some/page' with 'ROOT_URI/some/page'
+	 */
+	private static function fixAbsoluteLinks($content) {
+		return preg_replace('/(href|src)="\/(.*)"/', '$1="'.ROOT_URI.'$2"', $content);
+	}
 
 	/*
 	 * Returns a string containing the metadata field, $field.
@@ -149,7 +155,7 @@ class Content {
 
 		}//if
 
-		return $this->parsedContent;
+		return self::fixAbsoluteLinks($this->parsedContent);
 
 	}//getContent
 
