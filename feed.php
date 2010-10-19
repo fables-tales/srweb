@@ -16,12 +16,12 @@ $feed = CacheWrapper::getCacheItem('[feed_content]', MEMCACHE_TTL, function(){
 
 if ($feed !== NULL){
 
-	Header("Content-Type: application/xml; charset=ISO-8859-1");
+	header("Content-Type: application/xml; charset=ISO-8859-1");
 	echo $feed;
 
 } else {
 
-	Header("HTTP/1.1 500 Internal Server Error");
+	header("HTTP/1.1 500 Internal Server Error");
 
 }
 

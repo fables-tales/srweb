@@ -2,3 +2,5 @@ Sitemap: https://www.studentrobotics.org/sitemap.xml
 User-agent: *
 Disallow: /content/
 Disallow: /piwik/
+Disallow: /.git/
+Disallow: /ide/
