@@ -9,7 +9,7 @@ Documentation
 There are a number of sections in the documentation, offering help for the [IDE](/docs/IDE/), the [kit](/docs/kit/) and [programming](/docs/programming/). Under the [tutorials](/docs/tutorials/) section, a number of these things are combined to help you understand what you can, or need, to do. Navigation of the documentation can be done using the column to the left, where everything is arranged alphabetically in the aforementioned sub-sections.
 
 
-<div class="info">It would be advisable to start with the <a href="/docs/tutorials/walkthrough">walkthrough</a>; it will guide you through everything you need to know to get on your way to writing some brilliant code for your robot.</div>
+<div class="info" markdown="1">It would be advisable to start with the [walkthrough](/docs/tutorials/walkthrough); it will guide you through everything you need to know to get on your way to writing some brilliant code for your robot.</div>
 
 
 Within this documentation, you will come across a number of yellow boxes like this:
