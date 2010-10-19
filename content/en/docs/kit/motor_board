@@ -11,7 +11,7 @@ The Motor Board can be used to control a single 12V DC motor. Your kit contains 
 Board Diagram
 -------------
 
-![motor board diagram](images/content/kit/motor_board_diagram.png "The Motor Board")
+![motor board diagram](/images/content/kit/motor_board_diagram.png "The Motor Board")
 
 Indicators
 ----------
@@ -31,7 +31,7 @@ After you have started your code the `Motor power LED` should come on and the `C
 Case Dimensions
 ---------------
 
-![motor board case](images/content/kit/motor_board_case.png "The Motor Board Case")
+![motor board case](/images/content/kit/motor_board_case.png "The Motor Board Case")
 
 All dimensions are in mm.
 
@@ -56,6 +56,6 @@ Designs
 You can access the schematics and source code of the firmware on the motor board in the following places.
 You do not need this information to use the board but it may be of interest to some people.
 
- * [Full Schematics](resources/kit/motor/schematic.pdf)
+ * [Full Schematics](/resources/kit/motor/schematic.pdf)
  * [Firmware Source](https://www.studentrobotics.org/cgit/boards/motor-fw.git/)
  * [Hardware Designs](https://www.studentrobotics.org/cgit/boards/motor-hw.git/)

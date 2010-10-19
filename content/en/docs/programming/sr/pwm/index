@@ -6,7 +6,7 @@
 PWM
 ===
 
-A PWM board can have a number of servos plugged into them, with their positions controlled using the `pwm` object. As with `io` and `motor`, `pwm` is a list, with indexes based on [token ring](docs/kit/token_ring) ordering. The position can range from `0.0` to `100.0` inclusive:
+A PWM board can have a number of servos plugged into them, with their positions controlled using the `pwm` object. As with `io` and `motor`, `pwm` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position can range from `0.0` to `100.0` inclusive:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # pwm[N][SERVO_NUMBER] = POS

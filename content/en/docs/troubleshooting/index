@@ -8,6 +8,6 @@ Troubleshooting
 
 If you are experiencing problems with either the Student Robotics hardware, IDE or python library you should check here first to see if there is a simple solution. If you don't find the information you need in this section you can use the [forum](forum) to get help with your specific problem.
 
-1. [Hardware issues](docs/troubleshooting/hardware) &mdash; Common problems with the SR hardware and possible solutions.
-2. [IDE issues](docs/troubleshooting/ide) &mdash; Common problems with the SR IDE and possible solutions.
-3. [`sr` python library issues](docs/troubleshooting/python) &mdash; Common problems with the `sr` python library and possible solutions.
+1. [Hardware issues](/docs/troubleshooting/hardware) &mdash; Common problems with the SR hardware and possible solutions.
+2. [IDE issues](/docs/troubleshooting/ide) &mdash; Common problems with the SR IDE and possible solutions.
+3. [`sr` python library issues](/docs/troubleshooting/python) &mdash; Common problems with the `sr` python library and possible solutions.

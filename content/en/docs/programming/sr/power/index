@@ -12,7 +12,7 @@ There are a few things that can be done with the power board, namely changing us
 power.something...
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[LEDs](docs/programming/sr/power/#leds) {#leds}
+[LEDs](/docs/programming/sr/power/#leds) {#leds}
 ------
 
 There are 3 user-changeable LEDs on the power board, located at the bottom-left of the screen. They are numbered 0, 1 and 2 respectively. To turn an LED on, you set its value high (1); to turn it off, you set its value low (0):
@@ -31,12 +31,12 @@ power.led[2] = not power.led[2]
 Bear in mind that the last example (toggling) will read the value from the board before setting it again, which may be slow. If you're toggling an LED, it will be quicker to store its value in a variable somewhere.
 
 
-[Beeping](docs/programming/sr/power/#beeping) {#beeping}
+[Beeping](/docs/programming/sr/power/#beeping) {#beeping}
 -------
 
 The power board can beep at frequencies ranging from 20Hz to 20000Hz. It can play one note at a time (monophonic) and notes can be queued.
 
-### [Single Note](docs/programming/sr/power/#single_note) {#single_note}
+### [Single Note](/docs/programming/sr/power/#single_note) {#single_note}
 
 To produce a note at 440Hz (middle A) for half a second, you would use the following:
 
@@ -44,7 +44,7 @@ To produce a note at 440Hz (middle A) for half a second, you would use the follo
 power.beep(440, 0.5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### [Multiple Queued Notes](docs/programming/sr/power/#multiple_notes) {#multiple_notes}
+### [Multiple Queued Notes](/docs/programming/sr/power/#multiple_notes) {#multiple_notes}
 
 However, _power.beep()_ can also accept a list of tuples containing a frequency-duration pair; this allows for some Python tricks to be used to great effect:
 
