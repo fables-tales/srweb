@@ -70,7 +70,7 @@ function _getOutputForPage($p, $base_uri){
 
 		$output .= '<div class="newsInfo">' .
 			'<a href="' . $link . '">permalink</a> | ' .
-				'<a href="content/default/' . str_replace($base_uri, '', $link) . '">original</a>' .
+				'<a href="/content/default/' . str_replace($base_uri, '', $link) . '">original</a>' .
 			'</div>';
 
 		$output .= '</div>';

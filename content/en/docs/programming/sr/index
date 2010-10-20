@@ -22,11 +22,11 @@ from sr import *
 
 ...at the top of your code (before you use any of its functionality, basically). You then have access to the following already-instantiated objects:
 
-* [motor](docs/programming/sr/motor/)
-* [power](docs/programming/sr/power/)
-* [pwm](docs/programming/sr/pwm/)
-* [io](docs/programming/sr/io/)
-* [vision](docs/programming/sr/vision/)
+* [motor](/docs/programming/sr/motor/)
+* [power](/docs/programming/sr/power/)
+* [pwm](/docs/programming/sr/pwm/)
+* [io](/docs/programming/sr/io/)
+* [vision](/docs/programming/sr/vision/)
 
 They can just be used in you code like the example above. Note that the objects _motor_, _io_, and _pwm_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
 

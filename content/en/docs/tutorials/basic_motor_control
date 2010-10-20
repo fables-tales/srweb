@@ -8,12 +8,12 @@ Basic Motor Control
 
 The aim of this tutorial is to get a motor turning with your kit. To complete this tutorial, you'll need the following:
 
-* The [power board](docs/kit/power_board)
+* The [power board](/docs/kit/power_board)
 * The battery (charged, of course)
 * The cable to connect the battery to the power board
 * A motor (see specification below)
 * 2 lengths of a suitable gauge of wire for your motor
-* A [motor board](docs/kit/motor_board)
+* A [motor board](/docs/kit/motor_board)
 * A green _camcon_ connector to plug the motor and motor board together
 * 2 SRIC cables (Ethernet cables)
 * The USB hub
@@ -24,7 +24,7 @@ The aim of this tutorial is to get a motor turning with your kit. To complete th
 * Wire strippers
 * A small slotted/flat blade screwdriver (for the _camcon_ screws)
 
-You should be familiar with the setup for most of the above now (if you've read the [walkthrough](docs/tutorials/walkthrough)), so it's just the motor-related parts that need explaining.
+You should be familiar with the setup for most of the above now (if you've read the [walkthrough](/docs/tutorials/walkthrough)), so it's just the motor-related parts that need explaining.
 
 
 Motor Specification
@@ -33,7 +33,7 @@ Motor Specification
 There is a certain specification the motor(s) you use must meet. The criteria are as follows:
 
 * 12V motor
-* A stall current of no more than 5A (a [motor board](docs/kit/motor_board) can only provide 5A, above which it will current limit)
+* A stall current of no more than 5A (a [motor board](/docs/kit/motor_board) can only provide 5A, above which it will current limit)
 
 
 Connecting a Motor
@@ -41,7 +41,7 @@ Connecting a Motor
 
 To plug the motor into the kit, you'll need to solder an appropriate gauge of wire to the terminals on the motor, and connect the other ends to the _camcon_ connector. Like so:
 
-![Motor connected to Camcon](images/content/kit/motor_and_camcon.png)
+![Motor connected to Camcon](/images/content/kit/motor_and_camcon.png)
 
 <div class="info">You may want to insulate the motor's terminals with some insulation tape (or heat shrink tubing if you've got it) like in the image above.</div>
 
@@ -90,11 +90,11 @@ def main:
 		yield query.timeout(1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `motor[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](docs/programming/sr/motor/) page. But, to summarise:
+You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `motor[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](/docs/programming/sr/motor/) page. But, to summarise:
 
-<div class="info">`motor[0].target = x` will set the power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.</div>
+<div class="info">`motor[0].target = x` will set the power of the first [motor board](/docs/kit/motor_board) in the [token ring](/docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.</div>
 
-So, `motor[0].target = 50` sets the target power of the first [motor board](docs/kit/motor_board) in the [token ring](docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
+So, `motor[0].target = 50` sets the target power of the first [motor board](/docs/kit/motor_board) in the [token ring](/docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
 
 So, if you put the above code on your robot, you should be able to see a motor spin forwards, stop, spin backwards, stop, and then repeat...
 
@@ -192,4 +192,4 @@ Putting all of that together should mean you understand the above code. You migh
 Next Steps
 ----------
 
-From here, you might want to take a look at the [basic IO](docs/tutorials/basic_IO). You might also like to see if you can make the larger code example above more concise by creating functions for the repetitive parts. [This](http://www.tutorialspoint.com/python/python_functions.htm) tutorial seems good if you're interested.
+From here, you might want to take a look at the [basic IO](/docs/tutorials/basic_IO). You might also like to see if you can make the larger code example above more concise by creating functions for the repetitive parts. [This](http://www.tutorialspoint.com/python/python_functions.htm) tutorial seems good if you're interested.

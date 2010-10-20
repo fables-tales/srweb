@@ -6,7 +6,7 @@
 Walkthrough
 ===========
 
-The aim of this walkthrough is to take you through &mdash; step-by-step &mdash; the process of writing code and running it on the kit. We'll start off with a [_hello world_ program](http://en.wikipedia.org/wiki/Hello_world_program), the first program most programmers write in every language. As Student Robotics involves a lot of electronics, we'll use a slightly adapted _hello world_ program which flashes an LED on the [power board](docs/kit/power_board) instead.
+The aim of this walkthrough is to take you through &mdash; step-by-step &mdash; the process of writing code and running it on the kit. We'll start off with a [_hello world_ program](http://en.wikipedia.org/wiki/Hello_world_program), the first program most programmers write in every language. As Student Robotics involves a lot of electronics, we'll use a slightly adapted _hello world_ program which flashes an LED on the [power board](/docs/kit/power_board) instead.
 
 Once that's up and running, we'll continue to advance what the examples (additional tutorials) do up to a point where the vision software is used. You should, in theory, be able to do anything then (well, if you read the other documentation, anyway!).
 
@@ -19,23 +19,23 @@ Here goes...
 
 ### Writing the code
 
-To write code for your robot, you will need to use the Student Robotics [IDE](ide). An IDE, or Integrated Development Environment, is a suite of tools intended to help the developer with their programming tasks. For you, the SR IDE provides a code editor, file manager, and code checker. For more reference material on the IDE, please visit the [IDE section](docs/IDE/) under docs.
+To write code for your robot, you will need to use the Student Robotics [IDE](/ide). An IDE, or Integrated Development Environment, is a suite of tools intended to help the developer with their programming tasks. For you, the SR IDE provides a code editor, file manager, and code checker. For more reference material on the IDE, please visit the [IDE section](/docs/IDE/) under docs.
 
-Let's begin. In a new browser tab or window, open the [IDE](ide). You should be presented with a screen like this:
+Let's begin. In a new browser tab or window, open the [IDE](/ide). You should be presented with a screen like this:
 
-![Login Screen](images/content/tutorials/walkthrough/login.png)
+![Login Screen](/images/content/tutorials/walkthrough/login.png)
 
 Enter your login details and click _Log In_. (You should already have login details, they were given to you at KickStart.) You will now be presented with a screen something like the following (it may not be exactly the same):
 
-![project page](images/content/tutorials/walkthrough/project_page.png)
+![project page](/images/content/tutorials/walkthrough/project_page.png)
 
 You're on the _Projects_ page. On the left-hand side, you'll see a button labeled _New Project_; when you click it, a dialog box will appear asking for the project's name. Call it "walkthrough", and click _Save_:
 
-![new project](images/content/tutorials/walkthrough/new_project.png)
+![new project](/images/content/tutorials/walkthrough/new_project.png)
 
 OK, now we're ready to write some code! When the robot tries to run code (the _run_ button is pressed, or the robot's started automatically at the competition), it looks for a file called "robot.py". Let's create that file now. On the left-hand side you'll find a link to create a _New File_. Click it. You'll now be presented with a code editor to write the code in, like this:
 
-![new file / editor](images/content/tutorials/walkthrough/new_file_editor.png)
+![new file / editor](/images/content/tutorials/walkthrough/new_file_editor.png)
 
 In the editor, write (or paste!) the following:
 
@@ -52,7 +52,7 @@ def main():
 
 you should see something like this:
 
-![LED flashing code in editor](images/content/tutorials/walkthrough/flash_code_in_editor.png)
+![LED flashing code in editor](/images/content/tutorials/walkthrough/flash_code_in_editor.png)
 
 Let's dissect that to see what's going on:
 
@@ -71,7 +71,7 @@ power.led[0] = 0
 yield query.timeout(1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Briefly, these lines turn LED0 on, wait for a second, turn LED0 off, and wait for another second. This is then repeated (it's in a while loop). To read more detailed information about the `power` and `query` objects, see their respective pages [here](docs/programming/sr/power/) and [here](docs/programming/sr/query/).
+Briefly, these lines turn LED0 on, wait for a second, turn LED0 off, and wait for another second. This is then repeated (it's in a while loop). To read more detailed information about the `power` and `query` objects, see their respective pages [here](/docs/programming/sr/power/) and [here](/docs/programming/sr/query/).
 
 We're now ready to save the file. At the upper left-hand side of the screen, you'll see a button labeled _Save_. Click it, and you'll be presented with a dialogue box for saving the file. Choose our "walkthrough" project from the drop-down list, write a useful commit message &mdash; here's mine:
 
@@ -83,7 +83,7 @@ Flashes LED0 on for a second and then off for a second, then repeats.
 
 ...and give the file the name "robot.py":
 
-![hello world save as](images/content/tutorials/walkthrough/hello_world_save_as.png)
+![hello world save as](/images/content/tutorials/walkthrough/hello_world_save_as.png)
 
 Now click _Save_.
 
@@ -93,7 +93,7 @@ OK, so we've written some code, and we now need to test it on the kit. However, 
 
 If you head back to the project tab, you'll now see our "robot.py" listed as a file in the "walkthrough" project. On the left-hand side, you'll see a button labeled _Export Project_. When you click this, the IDE will perform some checks on your code. If the code is fine, you'll be presented with a browser dialogue box offering a file "robot.zip" for download (this is for Firefox &mdash; other browsers will look different, but the idea is the same):
 
-![robot.zip download](images/content/tutorials/walkthrough/robot_zip_download.png)
+![robot.zip download](/images/content/tutorials/walkthrough/robot_zip_download.png)
 
 All you need to do now is save the file on to the root (as in `G:\` or `H:\` or whatever the drive letter is) of the robot's memory stick. You may have to overwrite an existing "robot.zip" if one already exists (or you could rename it if there's space).
 
@@ -106,7 +106,7 @@ You should now _safely remove_ the memory stick from the computer and prepare th
 
 To run the _hello world_ program, all you need is the following:
 
-* The [power board](docs/kit/power_board)
+* The [power board](/docs/kit/power_board)
 * The battery (charged, of course)
 * The cable to connect the battery to the power board
 * The USB hub
@@ -131,15 +131,15 @@ OK, we're ready to run the code.
 
 If you've followed all of the above, you should now be ready to see a flashing LED on the power board.
 
-Turn the power board switch on and allow the system to boot. You should see the SR logo on the display. When it's finished booting, you can press the _run_ button on the power board. If you see a flashing LED (on for a second, off for a second), feel free to bask in the glory of having successfully programmed your Student Robotics kit. Well done! If you don't, try and [troubleshoot](docs/troubleshooting/) the issue.
+Turn the power board switch on and allow the system to boot. You should see the SR logo on the display. When it's finished booting, you can press the _run_ button on the power board. If you see a flashing LED (on for a second, off for a second), feel free to bask in the glory of having successfully programmed your Student Robotics kit. Well done! If you don't, try and [troubleshoot](/docs/troubleshooting/) the issue.
 
 
 Next Steps
 ----------
 
-Now you've written a basic program for your kit and know how to get your code on it, we can move towards some more advanced (and more interesting) programs. If you head back to the [tutorials](docs/tutorials/) page, you'll find a list of other tutorials to do. The recommended one to do next would be [Basic Motor Control](docs/tutorials/basic_motor_control).
+Now you've written a basic program for your kit and know how to get your code on it, we can move towards some more advanced (and more interesting) programs. If you head back to the [tutorials](/docs/tutorials/) page, you'll find a list of other tutorials to do. The recommended one to do next would be [Basic Motor Control](/docs/tutorials/basic_motor_control).
 
-But, if you're feeling happy about the steps necessary to get your robot running, feel free to just use the [API reference](docs/programming/sr/). The subsections contain a lot of information on using a particular object &mdash; including examples &mdash; so, in theory, that should be all you need.
+But, if you're feeling happy about the steps necessary to get your robot running, feel free to just use the [API reference](/docs/programming/sr/). The subsections contain a lot of information on using a particular object &mdash; including examples &mdash; so, in theory, that should be all you need.
 
 
 

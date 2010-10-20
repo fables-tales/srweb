@@ -48,6 +48,9 @@ foreach($orderedLanguages as $l){
 
 }//foreach
 
+/* Some smarty variables that are accessible to all templates */
+$smarty->assign('live_site', LIVE_SITE);
+
 /*
  * Some pages need to be treated differently (they use a different template, for
  * example); this is handled here.
