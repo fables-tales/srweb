@@ -13,6 +13,7 @@
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
 
+	{if $live_site}
 	{literal}
 
 	<script type="text/javascript">
@@ -43,6 +44,7 @@
 	<!-- End Piwik Tag -->
 
 	{/literal}
+	{/if}
 
 
 </head>

@@ -10,6 +10,9 @@ ini_set('display_errors', 1);
  * ==================================
  */
 
+/* This should always be set to false except on the live site */
+define('LIVE_SITE',	false);
+
 /* Memcache(d) --
  * for the site to function, memcached is required (including the memcache)
  * PHP module. It is used to prevent needless processing for the RSS feed
