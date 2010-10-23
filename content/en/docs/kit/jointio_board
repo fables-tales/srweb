@@ -42,15 +42,13 @@ Specification
 |  Parameter                               |   Value   |
 |------------------------------------------|-----------|
 | Power Output Voltage                     | 3.3V      |
-| Maximum Total Output Current[^2]         | 1A        |
+| Maximum 3.3V Rail Output Current         | 200mA     |
 | Maximum Current Per Output               | 100mA     |
 | Output High Voltage                      | 3.3V      |
 | Output Low Voltage                       | 0V        |
 | Maximum Input Voltage                    | 12V       |
 | Maximum Measurable Input Voltage         | 3.3V      |
 | Input Digital Threshold Voltage          | 1.65V     |
-
-[^2]: The output current available from the power output connection depends on how much current is being drawn from the outputs. The total current drawn from all outputs and the power output must not exceed this value.
 
 Designs
 -------
