@@ -22,6 +22,14 @@ Indicators
 | Power           | The board is powered   | On
 | SRIC Activity   | The board is transferring data | Off
 | Token           | The token-ring is functioning | On
+| 3.3V Power      | The 3.3V rail is active | Off
+| Input           | Shows the perceived logic level of the input[^1] | N/A
+| Output          | Shows the state of the output | Off
+
+[^1]:
+    The logic threshold is set to 1.65V (3.3V / 2).
+    Anything higher than this will cause the corresponding LED to illuminate and the input to be read as `true` in code.
+    Anything less than the threshold will turn the LED off and be read as `false` in the code.
 
 Case Dimensions
 ---------------
@@ -34,7 +42,7 @@ Specification
 |  Parameter                               |   Value   |
 |------------------------------------------|-----------|
 | Power Output Voltage                     | 3.3V      |
-| Maximum Total Output Current[^1]         | 1A        |
+| Maximum Total Output Current[^2]         | 1A        |
 | Maximum Current Per Output               | 100mA     |
 | Output High Voltage                      | 3.3V      |
 | Output Low Voltage                       | 0V        |
@@ -42,7 +50,7 @@ Specification
 | Maximum Measurable Input Voltage         | 3.3V      |
 | Input Digital Threshold Voltage          | 1.65V     |
 
-[^1]: The output current available from the power output connection depends on how much current is being drawn from the outputs. The total current drawn from all outputs and the power output must not exceed this value.
+[^2]: The output current available from the power output connection depends on how much current is being drawn from the outputs. The total current drawn from all outputs and the power output must not exceed this value.
 
 Designs
 -------
