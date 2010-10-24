@@ -6,4 +6,46 @@
 Kit
 ===
 
-This section provides the specification for the Student Robotics hardware, as well as some other kit-related details. View the pages for the individual pieces of kit in the menu to the left for more information.
+The Student Robotics kit supplied free of charge to each team consists of various modules designed by us along with some ancillary parts to allow easy use of the modules.
+
+The Modules
+-----------
+
+We provide modules, known as 'boards', in each kit.
+These modules can be plugged together and as a whole form the basis for controlling your robot.
+The boards provided are as follows; more details can be found on their individual pages.
+
+ * [Power Board](/docs/kit/power_board)
+ * [Motor Board x2](/docs/kit/motor_board)
+ * [JointIO Board](/docs/kit/jointio_board)
+ * [Servo Board](/docs/kit/servo_board)
+
+Ancillary Parts
+---------------
+
+As well as the aforementioned boards the kit also contains the following items.
+
+|        Part       | Qty |  Specification                       | Part Number(s)   | Notes
+|-------------------|-----|--------------------------------------|------------------|------
+| USB Hub           | 1   | 7-Port, Powered                      | [Ebuyer 130519][EB-130519] | The Hub will come with a pre-assembled power cable to allow it to be powered from the power board
+| USB Webcam        | 1   | Logitech ???                         | |
+| Battery           | 1   | 12V, 3.2Ah SLA                       | [RS 537-5472][RS-537-5472] |
+| Battery Charger   | 1   | 12V, 4A                              | No specific supplier |
+| Cat5 Patch Lead   | 3   | 0.3m, Red, Gree, Blue                | [CommsExpress Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
+| Cat5 Patch Lead   | 4   | 0.5m, Purple, Yellow, Pink, Orange   | [CommsExpress Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
+| Cat5 Patch Lead   | 2   | 1m, Black                            | [CommsExpress Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable (To run up flag pole)
+| RJ54 Coupler      | 1   |                                      | [CommsExpress RJ54 Inline Coupler][CE-RJ54-Coupler] | To connect in place of the IR Board at the top of the flag pole
+| Battery Cable     | 1   | 0.5m, 30A                            | [Farnell 3653018][F-3653018], [Farnell 3653006][F-3653006], [Farnell 1793033][F-1793033], [RS 208-2470][RS-208-2470] | Pre-assembled
+| Hook-up Wire      | 1   | 0.65m, 0.75mm<sup>2</sup>, Blue      | [Farnell 1465870][F-1465870] | To connect motors to the motor boards
+| CamCon            | 8   | 2 way, 12A                           | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
+
+[EB-130519]: http://www.ebuyer.com/product/130519
+[RS-537-5472]: http://www.xgoat.com/p/rs/537-5472
+[CE-RJ45-Lead]: http://www.comms-express.com/products/booted-rj45-patch-leads/
+[CE-RJ54-Coupler]: http://www.comms-express.com/products/rj45-utp-inline-coupler/
+[F-3653018]: http://www.xgoat.com/p/farnell/3653018
+[F-3653006]: http://www.xgoat.com/p/farnell/3653006
+[F-1793033]: http://www.xgoat.com/p/farnell/1793033
+[RS-208-2470]: http://www.xgoat.com/p/rs/208-2470
+[F-1465870]: http://www.xgoat.com/p/farnell/1465870
+[F-3882275]: http://www.xgoat.com/p/farnell/3882275
