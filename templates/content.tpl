@@ -39,7 +39,7 @@
 	  piwikTracker.trackPageView();
 	  piwikTracker.enableLinkTracking();
 	  } catch( err ) {}
-	</script><noscript><p><img src="http://www.studentrobotics.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+	</script>
 	<!-- End Piwik Tag -->
 
 	{/literal}
@@ -48,7 +48,11 @@
 </head>
 
 <body>
-
+<!-- More Piwik stuff -->
+{if $live_site}
+<noscript><p><img src="http://www.studentrobotics.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+{/if}
+<!-- End More Piwik Stuff -->
 <div id="pageWrapper">
 
 	{include file=$header_file}
