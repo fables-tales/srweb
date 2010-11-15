@@ -78,7 +78,7 @@
 			<h2><a href='{$root_uri}news/newsrwebsite'>Réunion de démarrage de SR Grenoble!</a></h2>
 			<p>Grâce au projet ACE (accès aux études scientifiques et à l'égalité des chances), nous pouvons annoncer le démarrage de l'organisation Student Robotics en Grenoble.
 
-Une réunion de démarrage est prévue le Vendredi 19 Novembre, 12h, dans la salle B004, à [ENSE3 Site Ampère](http://ense3.grenoble-inp.fr/adminsite/photo.jsp?ID_PHOTO=1200389728770). C'est ouvert a tout le monde - quoi que soit votre filière, année ou niveau d'expérience.
+Une réunion de démarrage est prévue le Vendredi 19 Novembre, 12h, dans la salle B004, à <a href="http://ense3.grenoble-inp.fr/adminsite/photo.jsp?ID_PHOTO=1200389728770">ENSE3 Site Ampère</a>. C'est ouvert a tout le monde - quoi que soit votre filière, année ou niveau d'expérience.
 			<a href="{$root_uri}about/reunion_demarrage">En Savoir Plus</a> 
 </p>
 
