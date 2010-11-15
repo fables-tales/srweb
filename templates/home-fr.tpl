@@ -75,10 +75,11 @@
 
 		<div id="latestNews">
 
-			<h2><a href='{$root_uri}news/newsrwebsite'>Student Robotics Grenoble Commence!</a></h2>
-			<p>Nous avons créé des «doings» (Anglais pour l'action de faire quelquechose) à Southampton parce que nous préférons beaucoup de réaliser des projets pendant nos réunions!
-			Vendredi 15 Octobre, 16h-19h, Salle de Réunion de C-Velec, Venez quand vous voulez.
-			<a href="{$root_uri}about/premier_doing">En Savoir Plus</a> 
+			<h2><a href='{$root_uri}news/newsrwebsite'>Réunion de démarrage de SR Grenoble!</a></h2>
+			<p>Grâce au projet ACE (accès aux études scientifiques et à l'égalité des chances), nous pouvons annoncer le démarrage de l'organisation Student Robotics en Grenoble.
+
+Une réunion de démarrage est prévue le Vendredi 19 Novembre, 12h, dans la salle B004, à [ENSE3 Site Ampère](http://ense3.grenoble-inp.fr/adminsite/photo.jsp?ID_PHOTO=1200389728770). C'est ouvert a tout le monde - quoi que soit votre filière, année ou niveau d'expérience.
+			<a href="{$root_uri}about/reunion_demarrage">En Savoir Plus</a> 
 </p>
 
 		</div>
