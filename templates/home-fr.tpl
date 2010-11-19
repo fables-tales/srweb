@@ -5,7 +5,7 @@
 <head>
 	<title>Student Robotics</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="keywords" content="student, robotics, robot, competition, southampton" />
+	<meta name="keywords" content="student, robotics, robot, srobo, competition, southampton" />
 	<meta name="description" content="Student Robotics is an exciting competition between sixth form schools and colleges in the Southampton area to build fully autonomous robots. " />
 	<meta name="google-site-verification" content="GizX0DcCqEeGihd9CyYaqM1bVXUB-lhB9rhm53UdRC8" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
