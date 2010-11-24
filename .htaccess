@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /~chris/srweb
+RewriteBase /~rbarlow/srweb
 
 RewriteCond %{REQUEST_FILENAME}	!-f
 RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
