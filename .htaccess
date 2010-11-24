@@ -1,6 +1,9 @@
 RewriteEngine On
-RewriteBase /~rbarlow/srweb
+RewriteBase /~chris/srweb
 
 RewriteCond %{REQUEST_FILENAME}	!-f
 RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
+RewriteCond %{REQUEST_URI} 	!^(/piwik(.*))$
+RewriteCond %{REQUEST_URI} 	!^(/ide(.*))$
+RewriteCond %{REQUEST_URI} 	!^(/password(.*))$
 RewriteRule ^(.+)$ 	index.php?page=$1	[L,QSA]
