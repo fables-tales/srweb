@@ -35,8 +35,8 @@ As well as the aforementioned boards the kit also contains the following items.
 | Cat5 Patch Lead   | 4   | 0.5m<br />Purple, Yellow, Pink, Orange | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
 | Cat5 Patch Lead   | 2   | 1m<br />Black                        | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable (To run up flag pole)
 | RJ54 Coupler      | 1   |                                      | [CommsExpress<br />RJ54 Inline Coupler][CE-RJ54-Coupler] | To connect in place of the IR Board at the top of the flag pole
-| Battery Cable     | 1   | 0.5m<br />30A                        | [Farnell 3653018][F-3653018]<br />[Farnell 3653006][F-3653006]<br />[Farnell 1793033][F-1793033]<br />[RS 208-2470][RS-208-2470] | Pre-assembled
-| Blue Hook-up Wire | 1   | 0.65m<br />0.75mm<sup>2</sup>        | [Farnell 1465870][F-1465870] | To connect motors to the motor boards
+| Battery Cable     | 1   | 0.5m<br />2mm<sup>2</sup><br />30A   | [Farnell 3653018][F-3653018]<br />[Farnell 3653006][F-3653006]<br />[Farnell 1793033][F-1793033]<br />[RS 208-2470][RS-208-2470] | Pre-assembled
+| Blue Hook-up Wire | 1   | 0.65m<br />0.75mm<sup>2</sup><br />6A | [Farnell 1465870][F-1465870] | To connect motors to the motor boards
 | CamCon            | 8   | 2 way<br />12A                       | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
 
 [EB-130519]: http://www.ebuyer.com/product/130519
