@@ -39,7 +39,7 @@ As well as the aforementioned boards the kit also contains the following items.
 | Blue Hook-up Wire | 1   | 0.65m<br />0.75mm<sup>2</sup><br />6A | [Farnell 1465870][F-1465870] | To connect motors to the motor boards
 | Red Power Wire    | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A || [Farnell 1465872][F-1465872] | To connect power from the power board to the motor/servo boards
 | Black Power Wire  | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A || [Farnell 1465869][F-1465869] | To connect power from the power board to the motor/servo boards
-| CamCon            | 8   | 2 way<br />12A                       | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
+| CamCon            | 10  | 2 way<br />12A                       | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
 
 [EB-130519]: http://www.ebuyer.com/product/130519
 [RS-537-5472]: http://www.xgoat.com/p/rs/537-5472
