@@ -56,3 +56,8 @@ div.docs div#content div.warning {
 	background: none;
 	padding: 10px;
 }
+
+div.docs div#content p img {
+	display: inline;
+	margin: 0;
+}
