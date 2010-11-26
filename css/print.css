@@ -1,3 +1,7 @@
+div#pageWrapper, div#footer {
+	width: auto;
+}
+
 div#header form, div#header ul {
 	display: none;
 }
