@@ -11,6 +11,14 @@ div#footer span.rss {
 	display: none;
 }
 
+a:link:after, a:visited:after {
+	content:" [" attr(href) "] ";
+}
+div#header a:link:after, div#header a:visited:after,
+div.content h2 a:link:after, div.content h2 a:visited:after {
+	content: none;
+}
+
 div.content {
 	margin-top: 10px;
 }
