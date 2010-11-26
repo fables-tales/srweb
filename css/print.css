@@ -50,3 +50,9 @@ div.docs div#content {
 	width: auto;
 	margin-left: 0;
 }
+
+div.docs div#content div.info,
+div.docs div#content div.warning {
+	background: none;
+	padding: 10px;
+}
