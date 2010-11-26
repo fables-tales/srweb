@@ -1,0 +1,40 @@
+div#header form, div#header ul {
+	display: none;
+}
+
+div#header a {
+	float: none;
+	margin-top: 0;
+}
+
+div#footer span.rss {
+	display: none;
+}
+
+div.content {
+	margin-top: 10px;
+}
+
+div.content h1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	margin-left: 440px;
+	font-size: 38px;
+	text-align: right;
+}
+
+div.docs {
+	overflow: visible;
+}
+
+div#docsNav {
+	display: none;
+}
+div.docs div#content {
+	float: none;
+	border: none;
+	width: auto;
+	margin-left: 0;
+}
