@@ -28,7 +28,7 @@ As well as the aforementioned boards the kit also contains the following items.
 |        Part       | Qty |  Specification                       | Part Number(s)   | Notes
 |-------------------|-----|--------------------------------------|------------------|------
 | USB Hub           | 1   | 7-Port<br />Powered                  | [Ebuyer 130519][EB-130519] | The Hub will come with a pre-assembled power cable to allow it to be powered from the power board
-| USB Webcam        | 1   | Logitech ???                         | |
+| USB Webcam        | 1   | Logitech C500                        | [Ebuyer 170140][EB-170140] |
 | Battery (SLA)     | 1   | 12V<br />3.2Ah                       | [RS 537-5472][RS-537-5472] |
 | Battery Charger   | 1   | 12V<br />4A                          | No specific supplier |
 | Cat5 Patch Lead   | 3   | 0.3m<br />Red, Green, Blue           | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
@@ -46,6 +46,7 @@ As well as the aforementioned boards the kit also contains the following items.
 | CamCon            | 10  | 2 way<br />12A                        | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
 
 [EB-130519]: http://www.ebuyer.com/product/130519
+[EB-170140]: http://www.ebuyer.com/product/170140
 [RS-537-5472]: http://www.xgoat.com/p/rs/537-5472
 [CE-RJ45-Lead]: http://www.comms-express.com/products/booted-rj45-patch-leads/
 [CE-RJ54-Coupler]: http://www.comms-express.com/products/rj45-utp-inline-coupler/
