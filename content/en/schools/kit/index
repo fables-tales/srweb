@@ -18,7 +18,7 @@ This year, we've made the leap to [Beagleboards](http://beagleboard.org/) which
 should dramatically improve the situation: faster code running on the
 robots, faster robot boot times, and we'll even attach a 480x272
 multi&ndash;purpose colour display! As well as this, the rest of the
-kit (motor boards, PWM boards and JointIO boards) is being redesigned
+kit (motor boards, servo boards and JointIO boards) is being redesigned
 to be even better and much more difficult to break!
 
 More information about the kit is available in the [documentation](/docs/kit).
