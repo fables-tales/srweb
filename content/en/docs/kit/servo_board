@@ -6,7 +6,7 @@
 Servo Board
 ===========
 
-The Servo Board can be used to control up to 8 RC servos (6 independently).
+The Servo Board can be used to control up to 8 RC servos.
 Many devices are available that can be controlled as servos such as RC motor speed controllers and these can also be used with the board.
 
 Board Diagram
@@ -36,11 +36,9 @@ Specification
 | Absolute Maximum Input Voltage           | 16V       |
 | Output Voltage                           | 5V        |
 | Maximum Output Current[^1]               | 5A        |
-| Number of separate servo channels        | 6         |
-| Number of duplicate servo channels[^2]   | 2         |
+| Number of servo channels                 | 8         |
 
 [^1]: Shared between all 8 outputs
-[^2]: Channels 5 & 6 are duplicated onto channels 7 & 8. I.E. 5 & 7 output the same signals.
 
 Designs
 -------
