@@ -22,6 +22,7 @@ Indicators
 | Power           | The board is powered   | On
 | SRIC Activity   | The board is transferring data | Off
 | Token           | The token-ring is functioning | On
+| 5V Power        | The servos are powered | Off
 
 Case Dimensions
 ---------------
