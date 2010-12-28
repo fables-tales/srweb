@@ -28,6 +28,7 @@ As well as the aforementioned boards the kit also contains the following items.
 |        Part       | Qty |  Specification                       | Part Number(s)   | Notes
 |-------------------|-----|--------------------------------------|------------------|------
 | USB Hub           | 1   | 4-Port<br />Powered                  | [Akasa AK-HB-03BK][AK-HB-03BK] | The Hub will come with a pre-assembled power cable to allow it to be powered from the power board
+| USB Hub Power Cable | 1 | 0.6m                                 | [RS 356-195][RS-356-195]<br />[RS 356-195][RS-356-195]<br />[Farnell ][F-1717047] | Pre-assembled
 | USB Webcam        | 1   | Logitech C500                        | [Ebuyer 170140][EB-170140] |
 | Battery (SLA)     | 1   | 12V<br />3.2Ah                       | [RS 537-5472][RS-537-5472] |
 | Battery Charger   | 1   | 12V<br />4A                          | No specific supplier |
@@ -46,6 +47,9 @@ As well as the aforementioned boards the kit also contains the following items.
 | CamCon            | 10  | 2 way<br />12A                        | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
 
 [AK-HB-03BK]: http://www.akasa.com.tw/update.php?tpl=product/product.detail.tpl&no=181&type=Card%20Reader/Hub&type_sub=USB%20Hub&model=AK-HB-03BK
+[RS-356-195]: http://www.xgoat.com/p/rs/356-195
+[RS-356-195]: http://www.xgoat.com/p/rs/356-195
+[F-1717047]: http://www.xgoat.com/p/farnell/1717047
 [EB-170140]: http://www.ebuyer.com/product/170140
 [RS-537-5472]: http://www.xgoat.com/p/rs/537-5472
 [CE-RJ45-Lead]: http://www.comms-express.com/products/booted-rj45-patch-leads/
