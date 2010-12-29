@@ -22,6 +22,18 @@
      id="defs2927">
     <inkscape:path-effect
        is_visible="true"
+       id="path-effect3043"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3039"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect3019"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
        id="path-effect3120"
        effect="spiro" />
     <inkscape:path-effect
@@ -243,9 +255,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="713.87394"
-     inkscape:cy="307.67888"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="524.6224"
+     inkscape:cy="163.279"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -278,7 +290,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -671,14 +683,14 @@
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="796.5722"
-       y="700.453"
+       x="797.24408"
+       y="686.27979"
        id="text4758"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4760"
-         x="796.5722"
-         y="700.453">Power Switch</tspan></text>
+         x="797.24408"
+         y="686.27979">Power Switch</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
@@ -890,10 +902,10 @@
          y="1034.6456">Right Knob</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 744.09449,694.48817 49.6063,0"
+       d="m 744.09449,680.31494 49.6063,0"
        id="path6088"
        inkscape:path-effect="#path-effect6090"
-       inkscape:original-d="m 744.09449,694.48817 49.6063,0"
+       inkscape:original-d="m 744.09449,680.31494 49.6063,0"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
@@ -1267,5 +1279,59 @@
        id="path3118"
        d="m 928.34646,846.85038 0,-155.90551 -24.80315,-24.80315"
        style="fill:none;stroke:#000000;stroke-width:0.9992126;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart);stroke-miterlimit:4;stroke-dasharray:0.9992126,0.9992126;stroke-dashoffset:0" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3013"
+       y="733.46454"
+       x="76.875679"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       xml:space="preserve"><tspan
+         y="733.46454"
+         x="76.875679"
+         id="tspan3015"
+         sodipodi:role="line">Button 0</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:original-d="m 207.28346,745.86613 -17.71653,-17.71654 -37.20473,0"
+       inkscape:path-effect="#path-effect3019"
+       id="path3017"
+       d="m 207.28346,745.86613 -17.71653,-17.71654 -37.20473,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="797.24408"
+       y="715.74799"
+       id="text3021"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="797.24408"
+         y="715.74799"
+         id="tspan3029">Button 1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3025"
+       y="737.00787"
+       x="797.24408"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       xml:space="preserve"><tspan
+         y="737.00787"
+         x="797.24408"
+         sodipodi:role="line"
+         id="tspan3031">Button 2</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 641.33858,861.02361 10.62992,0 10.62993,-10.62993 0,-28.34645 97.44094,-90.35433 33.66142,0"
+       id="path3037"
+       inkscape:path-effect="#path-effect3039"
+       inkscape:original-d="m 641.33858,861.02361 10.62992,0 10.62993,-10.62993 0,-28.34645 97.44094,-90.35433 33.66142,0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:original-d="m 641.33858,822.04723 14.17323,0 118.70079,-111.61418 19.48819,0"
+       inkscape:path-effect="#path-effect3043"
+       id="path3041"
+       d="m 641.33858,822.04723 14.17323,0 118.70079,-111.61418 19.48819,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)" />
   </g>
 </svg>
