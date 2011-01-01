@@ -45,6 +45,8 @@ As well as the aforementioned boards the kit also contains the following items.
 | Blue Hook-up Wire | 1   | 3m<br />0.5mm<sup>2</sup><br />4A     | [Farnell 1285923][F-1285923] | General purpose wire
 | Green Hook-up Wire | 1  | 3m<br />0.5mm<sup>2</sup><br />4A     | [Farnell 1285926][F-1285926] | General purpose wire
 | CamCon            | 10  | 2 way<br />12A                        | [Farnell 3882275][F-3882275] | To connect 12V from the power board to the motor and servo boards and to connect motors to the motor boards
+| MiniCamCon 4way   | 3   | 4 way<br />10A                        | [Farnell 1717049][F-1717049] | To connect power from the jointio board to your custom electronics
+| MiniCamCon 8way   | 3   | 8 way<br />10A                        | [Farnell 1717053][F-1717053] | To connect io from the jointio board to your custom electronics
 
 [AK-HB-03BK]: http://www.akasa.com.tw/update.php?tpl=product/product.detail.tpl&no=181&type=Card%20Reader/Hub&type_sub=USB%20Hub&model=AK-HB-03BK
 [RS-356-195]: http://www.xgoat.com/p/rs/356-195
@@ -66,3 +68,5 @@ As well as the aforementioned boards the kit also contains the following items.
 [F-1285923]: http://www.xgoat.com/p/farnell/1285923
 [F-1285926]: http://www.xgoat.com/p/farnell/1285926
 [F-3882275]: http://www.xgoat.com/p/farnell/3882275
+[F-1717049]: http://www.xgoat.com/p/farnell/1717049
+[F-1717053]: http://www.xgoat.com/p/farnell/1717053
