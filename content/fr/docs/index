@@ -1,5 +1,5 @@
 //TITLE:	Documentation
-//DESCRIPTION:	An introduction to student robotics for Schools and Colleges.
+//DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
@@ -10,24 +10,24 @@
 Documentation
 =============
 
-There are a number of sections in the documentation, offering help for the [IDE](/docs/IDE/), the [kit](/docs/kit/) and [programming](/docs/programming/). Under the [tutorials](/docs/tutorials/) section, a number of these things are combined to help you understand what you can, or need, to do. Navigation of the documentation can be done using the column to the left, where everything is arranged alphabetically in the aforementioned sub-sections.
+Il y a un certain nombre de parties dans cette documentation, offrant d'aide pour l'[IDE](/docs/IDE/), le [kit](/docs/kit/) et la [programmation](/docs/programming/). Dans la partie [tutoriels](/docs/tutorials/), un certain nombre de ces choses sont combinées pour vous aider à comprendre ce que vous pouvez, ou avez besoin, de faire. Navigation de la documentation peut être fait en utilisant la colonne de gauche, où tout est en ordre alphabétique dans les sous-sections susmentionnés.
 
 
-<div class="info">It would be advisable to start with the <a href="/docs/tutorials/walkthrough">walkthrough</a>; it will guide you through everything you need to know to get on your way to writing some brilliant code for your robot.</div>
+<div class="info">Il serait recommandé de commencer par la <a href="/docs/tutorials/walkthrough">procédure pas à pas</a>, il vous guidera à travers tout ce dont vous avez besoin de savoir pour commencer à écrire du code pour votre robot.</div>
 
 
-Within this documentation, you will come across a number of yellow boxes like this:
+Dans cette documentation, vous regarderez un certain nombre de cases jaunes comme ceci:
 
 ~~~
-# code example
+# code exemple
 ~~~
 
-These are code examples provided to help you.
+Ceux sont des exemples de code, fournis pour vous aider.
 
-From time to time, you may come across some warnings such as the following:
+De temps en temps, vous regarderez des avertissements tels que les suivants:
 
-<div class="warning">Charge Your Batteries!</div>
+<div class="warning">Chargez Vos Batteries!</div>
 
-It would be advisable to take note of these, especially that one! You will also come across some blue boxes providing information, similar the following:
+Il serait recommande de prêter attention aux ceux-là, en particulier celui-là! Vous regardere aussi des cases bleues qui fournissent l'information, comme le suivant:
 
-<div class="info">Some useful information... like the information given in the information box above.</div>
+<div class="info">Quelques informations utiles ... comme les informations fournies dans la boîte d'information ci-dessus.</div>
