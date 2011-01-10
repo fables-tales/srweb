@@ -1,0 +1,62 @@
+//TITLE:	Carte 'Moteur'
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Carte 'Moteur'
+==============
+
+Vouz pouvez utiliser une carte 'Moteur' pour contrôler un seul moteur 12V (Courant Continu). Votre kit contient deux Cartes 'Moteur' afin de vous permettre de contrôler mouvement de votre robot, mais vous n'êtes pas limité à les utiliser pour ce but.
+
+Schéma
+------
+
+![motor board diagram](/images/content/kit/motor_board_diagram.png "La Carte Moteur")
+
+Indicateurs
+-----------
+
+|   DEL           | Signification          | État initial (après ayant été allumé)
+|-----------------|------------------------|----------------------
+| Power           | La carte est alimenté  | On
+| SRIC Activity   | La carte transfert les données | Off
+| Token           | L'Anneau à jeton marche | On
+| Motor Power     | Le moteur est alimenté, et tourna quand commandé | Off
+| Current Limit   | La charge commande trop de courant | Off
+| Feedback        | Non défini             | Off
+| Motor           | Luminosité indique puissance, DEL indique la direction | Off
+
+Après avoir démarré votre code, la DEL `Motor power` devrait allumer, et `Current Limit` rester "off".
+
+Dimensions de la boîte
+----------------------
+
+![motor board case](/images/content/kit/motor_board_case.png "Boîte de la Carte Moteur")
+
+Toutes dimensions en mm.
+
+Specifications
+--------------
+
+|  Paramètre                           |   Valeur  |
+|--------------------------------------|-----------|
+| Tension d'Entrée Maximum             | 16V       |
+| Tension de Sortie                    | 12V       |
+| Courant de Sortie Maximum            | 5A        |
+| Courant de Sortie Limite*            | 5.5A      |
+| PWM** Fréquence                      | 324Hz     |
+| PWM Gamme du rapport cyclique        | 0-99%     |
+| PWM rapport cyclique échelons (par direction) | 100       |
+
+*Il est fortement conseillé de bien respecter la limite de courant de la carte moteur, ou un comportement étrange peut être observé.
+**PWM (Pulse Width Modulation) est aussi connu sous le nom «MLI» (Modulation de largeur d'impulsions)
+
+Schémas / Conceptions
+---------------------
+
+Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte E/S avec les liens suivants.
+Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut intéresser quelques gens.
+
+ * [Schématiques Complètes](/resources/kit/motor/schematic.pdf)
+ * [Source Microprogramme](https://www.studentrobotics.org/cgit/boards/motor-fw.git/)
+ * [Conceptions Électroniques](https://www.studentrobotics.org/cgit/boards/motor-hw.git/)
