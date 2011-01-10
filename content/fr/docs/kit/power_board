@@ -1,0 +1,71 @@
+//TITLE:	Carte 'Alimentation'
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Carte 'Alimentation'
+====================
+
+La Carte 'Alimentation' est le cœur du kit électronique.
+Il exécute le code que vous écrivez dans l'IDE, et contrôle l'ensemble des autres cartes dans le kit.
+Votre kit comprend une seule Carte 'Alimentation', qui est relié dans l'[Anneau à Jeton](docs/kit/token_ring). Il est relié aussi à un hub USB, qui permet la webcam et la clé USB d'être reliés au kit.
+Pour s'assurer que votre robot est sans danger avant que votre code s'exécute et s'il existe des problèmes, la carte 'Alimentation' n'alimente que les moteurs et autres appareils électroniques que vous développez quand votre code python s'exécute.
+
+Schéma
+------
+
+![power board diagram](/images/content/kit/power_board_diagram.png "La Carte Alimentation")
+
+Indicateurs
+-----------
+
+|   DEL           | Signification                  | État initial (après ayant été allumé)
+|-----------------|--------------------------------|----------------------
+| 3.3V            | La carte est alimenté          | On
+| 5V              | Le BeagleBoard est alimenté    | On
+| Charging        | Le batterie se recharge        | Off
+| Motor Rail      | Le Rail 'Moteur' est alimenté  | Off
+| Token           | L'Anneau à jeton marche        | On
+| SRIC Activity   | La carte transfert les données | Off
+| Blown Fuse      | Le fusible principal a sauté, ou manque | Off
+| User            | Contrôlable du code            | Off
+
+*Malheureusement, en raison de la conception de la carte, la DEL "Charging" s'allume seulement quand la batterie est en charge et la carte d'alimentation est alimenté.
+Si la carte d'alimentation est éteint, puis la DEL "Charging" ne s'allume pas, mais la batterie se charge et les DEL / cadran sur le chargeur devront le montrer.
+
+Dimensions de la boîte
+----------------------
+
+![power board case](/images/content/kit/power_board_case.png "Boîte de la Carte d'Alimentation")
+
+Toutes dimensions en mm.
+
+Specifications
+--------------
+
+|  Paramètre                           |   Valeur  |
+|--------------------------------------|-----------|
+| Tension d'Entrée Maximum             | 16V       |
+| Commutation Courant Maximum au Rail Moteur | 25A       |
+| Tension de Sortie Maximum du Hub USB | 1A        |
+| Courant Max du Batterie Fusible      | 15A       |
+| Courant Max du Chargeur Fusible      | 5A        |
+| Écran Résolution                     | 480x272   |
+| Écran Fréquence de rafraîchissement  | 69Hz      |
+| Processeur                           | 720MHz ARM Cortex A8 |
+| RAM                                  | 256MB     |
+
+Schémas / Conceptions
+---------------------
+
+Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte E/S avec les liens suivants.
+Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut intéresser quelques gens.
+
+ * [Schématiques Complètes](/resources/kit/power/schematic.pdf)
+ * [Source Microprogramme](https://www.studentrobotics.org/cgit/boards/power-fw.git/)
+ * [Conceptions Électroniques](https://www.studentrobotics.org/cgit/boards/power-hw.git/)
+ * [BeagleBoard](http://beagleboard.org/) - Nous utilisons la version C4 de ce carte
+ * [BeagleBoard SE](https://www.studentrobotics.org/cgit/sr-oe.git/) - Ångström avec quelques modifications par nous.
+ * [Logiciel Vision](https://www.studentrobotics.org/cgit/robovis.git/)
+ * [Environnement Python](https://www.studentrobotics.org/cgit/pyenv.git/)
+ * [Environnement Graphique](https://www.studentrobotics.org/cgit/kit-gui.git/)
