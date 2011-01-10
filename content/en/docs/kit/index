@@ -36,7 +36,7 @@ As well as the aforementioned boards the kit also contains the following items.
 | Cat5 Patch Lead   | 3   | 0.3m<br />Red, Green, Blue           | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
 | Cat5 Patch Lead   | 4   | 0.5m<br />Purple, Yellow, Pink, Orange | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
 | Cat5 Patch Lead   | 2   | 1m<br />Black                        | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable (To run up flag pole)
-| RJ54 Coupler      | 1   |                                      | [CommsExpress<br />RJ54 Inline Coupler][CE-RJ54-Coupler] | To connect in place of the IR Board at the top of the flag pole
+| RJ45 Coupler      | 1   |                                      | [CommsExpress<br />RJ45 Inline Coupler][CE-RJ45-Coupler] | To connect in place of the IR Board at the top of the flag pole
 | Battery Cable     | 1   | 0.5m<br />2mm<sup>2</sup><br />30A   | [Farnell 3653018][F-3653018]<br />[Farnell 3653006][F-3653006]<br />[Farnell 1793033][F-1793033]<br />[RS 208-2470][RS-208-2470] | Pre-assembled
 | Blue Hook-up Wire | 1   | 0.65m<br />0.75mm<sup>2</sup><br />6A | [Farnell 1465870][F-1465870] | To connect motors to the motor boards
 | Red Power Wire    | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A  | [Farnell 1465872][F-1465872] | To connect power from the power board to the motor/servo boards
@@ -57,7 +57,7 @@ As well as the aforementioned boards the kit also contains the following items.
 [EB-170140]: http://www.ebuyer.com/product/170140
 [RS-537-5472]: http://www.xgoat.com/p/rs/537-5472
 [CE-RJ45-Lead]: http://www.comms-express.com/products/booted-rj45-patch-leads/
-[CE-RJ54-Coupler]: http://www.comms-express.com/products/rj45-utp-inline-coupler/
+[CE-RJ45-Coupler]: http://www.comms-express.com/products/rj45-utp-inline-coupler/
 [F-3653018]: http://www.xgoat.com/p/farnell/3653018
 [F-3653006]: http://www.xgoat.com/p/farnell/3653006
 [F-1793033]: http://www.xgoat.com/p/farnell/1793033
