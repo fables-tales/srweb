@@ -1,0 +1,29 @@
+//TITLE:	Écrivant les bons messages de commit
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Écrivant les bons Messages de Commit
+============================
+
+Écrivant les bons messages de commit est simple; malheureusement, il est beaucoup plus facile d'écrire les messages paresseux. Néanmoins, avec un peu de discipline, il deviendra naturel au fil du temps. Un bon message de commit a deux parties:
+
+1. un sommaire de **ce que vous avez fait**
+2. une explication de **pourquoi vous l'avez fait** ou **quelle problème il résout**
+
+Et il devra y avoir une ligne blanche entre les deux. Voici un exemple:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ajout d'une fonction pour obtenir le plus proche "blob" de couleur
+
+Refactorisation qui retourne un objet "blob" qui est le plus proche visible au
+logiciel de vision; rend la sélection / ciblage d'un blob plus facile.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Combien vous écrivez dépend de la quantité de code que vous avez écrit.
+Plus d'information sur ce qu'il faut écrire peut être trouvée sur [ce site] (http://lbrandy.com/blog/2009/03/writing-better-commit-messages/) (en).
+Il est de bonne pratique de produire des petites commits qui ne font qu'une seule chose.
+Si vous avez besoin de plus d'une ligne (80 caractères ou moins) pour résumer les changements, le commit fait trop!
+
+C'est non essentiel dans l'IDE, mais c'est une bonne idée de mettre en forme vos messages de commit d'une certaine manière.
+Comme mentionné ci-dessus vous devriez laisser une ligne blanche entre le résumé et le message principal. [Ce site] (http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) (en) explique le raisonnement derrière cela, et beaucoup d'autres conventions de mettre en forme les messages de commit.
