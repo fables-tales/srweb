@@ -1,0 +1,39 @@
+//TITLE:	Vision
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Vision
+======
+
+La logiciel de vision &mdash; en utilisant la webcam fourni &mdash; cherche les taches de couleur. Chaque tache a les propriétés suivantes:
+
+* `.x` coordonnée du coin en haut à gauche de la tache dans l'image webcam
+* `.y` coordonnée du coin en haut à gauche de la tache dans l'image webcam
+* `.mass` nombre de pixels que la tache s'occupe
+* `.color` &mdash; une de {`RED`, `GREEN`, `BLUE`} (rouge, vert, bleu)
+* `.width` largeur de la tache
+* `.height` hauteur de la tache
+
+Notez que deux autres variables globales sont disponibles pour le largeur et le hauteur de l'image webcam - `VISION_WIDTH` et `VISION_HEIGHT`, respectivement.
+
+Ordinateurs utilisent un système de coordonnée par laquelle l'origine est dans le coin au haut et gauche. Alors, si vous imaginez une image 100x100, le coin au haut à gauche aurait des coordonnées `(0,0)`; le coin en bas à droite aurait les coordonnées `(99,99)` ; le coin en haut à droite, `(99,0)`, et le coin en bas à gauche, `(0,99)`.
+
+Pour accéder à toutes ces informations sur les taches, vous aurez besoin àattendre qu'un événement vision se produit à quelque part dans votre code, vous le ferez en utilisant la déclaration `yield`
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# attend ici pour un événement vision, stockant l'objet de l'événement
+ev = yield vision
+
+# vérifie si l'événement était un événement vision
+if ev.was(vision):
+
+        # faire quelquechose avec les taches 
+        # (en ce cas, imprimer coordonnées de la tache rouge)
+        for blob in ev.vision.blobs:
+
+                if blob.colour == RED:
+                        print "Tache rouge trouvée à " + str(blob.x) + ", " + str(blob.y)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La liste de propriétés ci-dessus s'appliquent à un objet `blob`, pour que nous puissions avoir imprimé une de ces propriétés ci-dessus.
