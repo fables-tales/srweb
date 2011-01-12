@@ -1,0 +1,64 @@
+//TITLE:	IO (Carte E/S)
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+IO (Carte E/S)
+==============
+
+La Carte E/S fournit 8 broches pour les entrées (analogiques et numériques) et 4 sorties numériques. Comme pour `pwm` et `motor`, `io` est une liste, avec des indices basés sur le classement dans [anneau à jeton](/docs/kit/token_ring).
+
+
+[Numérique v. Analogique](/docs/programming/sr/io/#digital_vs_analogue) {#digital_vs_analogue}
+-------------------------
+
+Une valeur numérique en général, est une qui peut prendre un certain nombre de valeurs discrètes. En contraste, une valeur analogique n'est pas restreint par ces étapes distinctes, avec un nombre infini de valeurs possibles entre deux (différents) points donnés des valeurs.
+
+Toutefois, pour représenter une valeur analogique dans un ordinateur, elle doit être représentée numériquement. Utilisant un CAN (10-bit), nous représentons une valeur analogique de 0 V à 3,3 V en tant que valeur numérique variant de 0 à 1023. Dans le code, cependant, nous vous donnons une valeur entre `0.0` and `3.3`, calculée en utilisant la valeur numérique (0 à 1023). Il est important à comprendre que cette confusion peut se produire lorsqu'une valeur _analogique_ particulièrement précise ne peut être atteint.
+
+Ici, une broche numérique fait référence à une broche qui prend une valeur _binaire_; c-à-d, soit un `0` ou un `1` (bas ou haut).
+
+
+[Entrée](/docs/programming/sr/io/#input) {#input}
+-------
+
+Vous pouvez lire une broche d'entrée **numérique** avec le code suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# io[IO_BOARD_NUMBER].input[PIN_NO].d
+
+# pour lire carte E/S 0 broche numérique 0...
+pin0 = io[0].input[0].d
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`pin0` contiendra un `1` ou un `0` selon que la broche était en haut (3,3V) ou bas (0V), respectivement.
+
+Vous pouvez lire une broche d'entrée **analogique** avec le code suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# io[IO_BOARD_NUMBER].input[PIN_NO].a
+
+# pour lire carte E/S 0 broche analogique 0...
+pin0 = io[0].input[2].a
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[Sortie](/docs/programming/sr/io/#output) {#output}
+--------
+
+Vous pouvez seulement définir sorties numériques (il n'y a pas de sortie analogique, à moins que vous soyez créatif avec un peu d'électronique supplémentaire, naturellement). Pour définir une broche de sortie numérique, vous utiliseriez le code suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# io[IO_BOARD_NUMBER].output[PIN_NO].d = VALUE
+
+# pour définir broche 1 de la carte E/S 0's en haut:
+io[0].output[1].d = 1
+
+# pour définir broche 1 de la carte E/S 0's en bas:
+io[0].output[1].d = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+[IO Événements](/docs/programming/sr/io/#IOEvents) {#IOEvents}
+-----------
+Il est possible de patienter à une ligne particulière dans votre code jusqu'à une certaine condition soit remplie (une entrée numérique changeant, par exemple). Comme ça fonctionne avec d'autres parties du module, il est mentionné ailleurs sous le [page `query`](/docs/programming/sr/query/).
