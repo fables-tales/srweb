@@ -1,0 +1,15 @@
+//TITLE:	Programmation
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Programmation de Votre Robot
+============================
+
+Robots qui implémentent le kit SR sont programmés avec [Python](/docs/programming/python/). C'est rendu possible avec une bibliothèque Python personnalisé, `sr`; cliquez [ici](/docs/programming/sr/) plus plus d'informations. Les pages de cette section devrait contenir toutes les informations dont vous avez besoin de savoir pour réussir à programmer votre robot.
+
+* Sous la section [Python](/docs/programming/python/), quelques fonctions plus complexes de Python sont expliquées d'une façon suffisamment détaillée pour vous permettre de programmer un robot. Liens vers des tutoriels sont fournis à introduire un nouveau programmateur à Python.
+
+* Sous la section [sr](/docs/programming/sr/) est une reference pour l'API du module Student Robotics, qui interface avec les cartes.
+
+Cette section est purement une référence pour l'écriture de code, pas la façon d'utiliser l'IDE, par exemple, ou comment mettre le code sur votre robot. Pour le matériel de référence pour des sujets comme ça, veuiller consulter la [IDE Documentation](/docs/IDE/).
