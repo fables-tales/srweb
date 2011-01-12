@@ -1,0 +1,64 @@
+//TITLE:	Carte d'Alimentation
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Carte d'Alimentation (Power)
+============================
+
+Il y a quelques petites choses qui peuvent être effectué avec la carte d'alimentation, nommément modifier une DEL d'utilisateur et bip sonore. Tant que il n'y a qu'une seule carte d'alimentation, il n'est pas accédé comme une liste similaire de _motor_. par exemple:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+power.quelquechose...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[DELs](/docs/programming/sr/power/#leds) {#leds}
+------
+
+Il y a 3 DELs d'utilisateur (qui sont modifiables) sur la carte d'alimentation, situé en bas à gauche de l'écran. Ils sont numérotées 0, 1 et 2 respectivement. Pour allumer une DEL, vous mettez sa valeur haute (1); pour l'éteindre, vous mettez sa valeur basse (0):
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# allumer DEL 0
+power.led[0] = 1
+
+# éteindre DEL 1
+power.led[1] = 0
+
+# renverse l'état de DEL 2
+power.led[2] = not power.led[2]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gardez à l'esprit que le dernier exemple (renversement) lira la valeur de la carte d'alimentation avant de le changer, qui peut être lent. Si vous voulez renverser une DEL, ce sera plus rapide de stocker sa valeur dans une variable.
+
+
+[Bips](/docs/programming/sr/power/#beeping) {#beeping}
+-------
+
+La carte d'alimentation peut produire des bips sonores à des frequences entre 20Hz et 20000Hz. Il peut jouer qu'une seule note à la fois (monophonique) et les notes peuvent être mis en attente.
+
+### [Une Seule Note](/docs/programming/sr/power/#single_note) {#single_note}
+
+Pour produire une note à 440Hz («A» central) pour une demi-seconde, vous utiliseriez le suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+power.beep(440, 0.5)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### [Notes Multiples dans une Queue](/docs/programming/sr/power/#multiple_notes) {#multiple_notes}
+
+Toutefois, _power.beep()_ peut accepter aussi une liste d'uplets contenant un couple fréquence-durée, ce qui permet les astuces de Python à être utilisés très efficacement:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# bip à 100Hz pour 1s, puis à 200Hz pour 2s
+power.beep( [(100, 1), (200, 2)] )
+
+# série d'échelons de 100Hz à 1000Hz, fréquence augmente par 100Hz chaque seconde.
+power.beep( [ (x*100, 0.1) for x in range(1, 10) ] )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Notez que **la taille maximale du queue** est **10 notes** (couples fréquence-durée). Cela veut dire que pour jouer une séquence de plus de 10 notes, vous aurez besoin d'utiliser la méthode _beep_queue()_ avec un `yield` pour alimenter le queue quand nécessaire.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# attendre qu'il n'y ait que 3 notes dans le queue bip
+yield query.power.beep_queue(3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
