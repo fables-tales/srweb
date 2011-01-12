@@ -13,7 +13,7 @@ The vision software looks &mdash; using the provided webcam &mdash; for blobs of
 * `.mass` number of pixels the blob occupies
 * `.color` &mdash; one of {`RED`, `GREEN`, `BLUE`}
 * `.width` of the blob
-* `.height` if the blob
+* `.height` of the blob
 
 Note that two other global variables are available for the the width and height of the webcam image &mdash; `VISION_WIDTH` and `VISION_HEIGHT`, respectively. 
 

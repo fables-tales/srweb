@@ -89,7 +89,7 @@ This is where the confusing bit occurs &mdash; for the `query.(...)` objects, th
 
 ### [More Complex Logic Expressions](/docs/programming/sr/query/#complex) {#complex}
 
-Logic expressions can also be use with `yield`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
+Logic expressions can also be used with `yield`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # OR:

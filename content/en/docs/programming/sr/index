@@ -28,7 +28,7 @@ from sr import *
 * [io](/docs/programming/sr/io/)
 * [vision](/docs/programming/sr/vision/)
 
-They can just be used in you code like the example above. Note that the objects _motor_, _io_, and _pwm_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
+They can be used in your code just like the example above. Note that the objects _motor_, _io_, and _pwm_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 motor[0].target = 50   # WILL work, if motor 0 exists

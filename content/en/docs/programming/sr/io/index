@@ -27,7 +27,7 @@ You can read a **digital** input pin with the following code:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # io[IO_BOARD_NUMBER].input[PIN_NO].d
 
-# to read JoinIO board 0's digital pin 0...
+# to read JointIO board 0's digital pin 0...
 pin0 = io[0].input[0].d
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -38,7 +38,7 @@ You can read an **analogue** input pin with the following code:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # io[IO_BOARD_NUMBER].input[PIN_NO].a
 
-# to read JoinIO board 0's analogue pin 2...
+# to read JointIO board 0's analogue pin 2...
 pin0 = io[0].input[2].a
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
