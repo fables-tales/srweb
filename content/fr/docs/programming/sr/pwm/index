@@ -1,0 +1,25 @@
+//TITLE:	PWM (Servomoteur)
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+PWM (Servomoteur)
+=================
+
+Une carte servomoteur (anciennement appelée la carte PWM, donc le mot réservé `pwm` dans la bibliothèque SR) peut être rélié à plusieurs servomoteurs, avec leurs positions contrôlées en utilisant l'objet `pwm`. Comme avec `io` et `motor`, `pwm` est une liste, avec des indices basés sur le classement dans l'[anneau à jeton](/docs/kit/token_ring). La gamme de positions est de `0.0` à `100.0` inclusivement:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# pwm[N][SERVO_NUMBER] = POS
+
+# mettez la position de servomoteur 1 (de carte servomoteur 0) à 50.0
+pwm[0][1] = 50.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vous pouvez obtenir la position actuelle d'un servomoteur d'une façon similaire:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# variable = pwm[N][SERVO_NUMBER]
+
+# stockez la position de servomoteur 0 (de carte servomoteur 0) en 'abeilles'
+abeilles = pwm[0][0]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
