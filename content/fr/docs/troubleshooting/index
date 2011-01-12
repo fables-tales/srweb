@@ -1,0 +1,13 @@
+//TITLE:	Troubleshooting
+//DESCRIPTION:	Aide avec des problèmes communs, rencontrés lors de l'utilisation la kit SR
+//KEYWORDS:	troubleshooting, faq, problèmes, aide
+//CONTENT_TYPE: markdown
+
+Troubleshooting
+===============
+
+Si vous rencontrez des problèmes avec le matériel, l'IDE ou la bibliothèque python de Student Robotics, vous devriez d'abord vérifier ici pour voir s'il y a une solution simple. Si vous ne trouvez pas l'information dont vous avez besoin dans cette section, vous pouvez utiliser la [forum](forum) demander de l'aide avec votre problème spécifique.
+
+1. [Problèmes Matériels](/docs/troubleshooting/hardware) &mdash; Problèmes communs avec les matériels de SR, et des solutions possibles.
+2. [Problèmes IDE](/docs/troubleshooting/ide) &mdash; Problèmes communs avec l'IDE SR, et des solutions possibles.
+3. [Problèmes bibliothèque python `sr`](/docs/troubleshooting/python) &mdash; Problèmes communs avec la bibliothèque python `sr`, et des solutions possibles.
