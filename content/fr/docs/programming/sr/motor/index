@@ -1,0 +1,46 @@
+//TITLE:	Moteur
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Moteur
+======
+
+L'objet _motor_ est utilisé pour contrôler une liste de moteurs. Comme pour _io_ et _pwm_, _motor_ est une liste. Pour faire quelque chose avec la **première** carte moteur dans [l'anneau à jeton](docs/kit/token_ring), vouz utiliseriez:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+motor[0].quelquechose...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+...parce que les indices sont basés de 0 (calcul commence de 0, pas 1).
+
+
+Réglage de la puissance moteur
+------------------------------
+
+Puissance consommé par un moteur est contrôlée en utilisant [PWM (ou MLI - Modulation de Largeur d'Impulsion)](http://fr.wikipedia.org/wiki/Modulation_de_largeur_d'impulsion) avec «100% puissance» étant un [rapport cyclique](http://fr.wikipedia.org/wiki/Rapport_cyclique) de 1. Vous réglez la puissance avec une valeur entière entre -100 et 100 inclusivement (où une valeur négative met le moteur en marche arrière). Le champ qui modifie la puissance cible s'appelle _target_:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# moteur 0 à 100% marche avant
+motor[0].target = 100
+
+# moteur 0 à 100% marche arrière
+motor[1].target = -100
+
+# moteur 0 à 50% marche avant
+motor[0].target = 50
+
+# arrêtez moteur 1
+motor[1].target = 0
+
+# le suivant met moteur 0 à 50% marche avant pour 2.5 secondes:
+motor[0].target = 25
+yield query.timeout(2.5)       # attend 2.5 secondes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vous pouvez lire la valeur cible actuelle d'un moteur en utilisant le même champ:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# lire la valeur de puissance de la cible
+currentTarget = motor[0].target
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
