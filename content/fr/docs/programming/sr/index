@@ -1,0 +1,46 @@
+//TITLE:	Module SR
+//DESCRIPTION:	Introduction au module qui nous fournissons
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Module SR
+=========
+
+Student Robotics a écrit un module &mdash; _sr_  &mdash; qu'on utilise pour interfacer avec les cartes. Il gère toutes les interactions de bas niveau, afin que vous ne devrez pas. Pour régler la sortie de moteur 0 à -30%, par exemple, vous écririez:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+motor[0].target = -30
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+_-30_ serait mouvement vers l'arrière (si vous avez bien relié votre moteur) &mdash; 30% puissance en arrière.
+
+Pour accéder à cette fonctionnalité, tout ce que vous devez faire est d'écrire:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+...en haut de votre code (avant que vous utilisez sa fonctionnalité du module, basiquement). Puis, vous avez accès au objets suivants, qui sont déjà initialisés:
+
+* [motor](/docs/programming/sr/motor/) (Carte Moteur)
+* [power](/docs/programming/sr/power/) (Carte d'Alimentation)
+* [pwm](/docs/programming/sr/pwm/) (Carte Servomoteur)
+* [io](/docs/programming/sr/io/) (Carte E/S)
+* [vision](/docs/programming/sr/vision/) (Webcam)
+
+Ils peuvent être utilisés dans votre code comme dans l'exemple ci-dessus. Remarquez que les objets _motor_, _io_, et _pwm_ étendre la _list_ classe Python. Pour cette raison, ils ont besoin d'être consulté comme tel. Voici quelques exemples:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+motor[0].target = 50   # MARCHERA, si moteur 0 existe
+motor[1].target = -20  # MARCHERA, si moteur 1 existe
+motor.target = 42      # NE MARCHERA PAS
+
+# le ci-dessus est similaire au situation pour 'io' and 'pwm'
+
+
+power.led[0] = 1       # MARCHERA
+power.led = 0          # NE MARCHERA PAS
+power[0].led[0] = 1    # NE MARCHERA PAS
+
+# le ci-dessus est similaire au situation pour 'vision'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
