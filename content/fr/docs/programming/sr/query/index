@@ -1,0 +1,149 @@
+//TITLE:	Query (Interrogation)
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Query (Interrogation) {#query}
+=====================
+
+Souvent, vous devrez attendre qu'un événement particulier se produise; Often, you will need to wait on a particular event to occur; qu'une broche d'entrée devient haute, par exemple. Pour ce faire, vous aurez besoin d'utiliser `yield` (lisez [ici](/docs/programming/python/yield_and_coroutines) pour en savoir plus). L'API a été plutôt modifié cette année, ce qui rend certaines choses un peu plus clair. En Python, c'est possible de remplacer les opérateurs (des choses comme `*`, `+`, `<` et `==`, par exemple). Nous avons utilisé cette fonction pour rendre l'attente de conditions composés plus comprehensible, comme expliqué ci-dessous.
+
+[Interrogations E/S](/docs/programming/sr/query/#IOQueries) {#IOQueries}
+------------
+
+Vous pouvez faire plusieurs choses avec `yield` et `io`:
+
+Une entrée numérique change sa valeur (haut à bas, bas à haut):
+
+~~~
+# attend que l'entrée numérique 3 sur carte E/S 0 change sa valeur
+yield query.io[0].input[3].d
+~~~
+
+Attendant une valeur numérique particulière:
+
+~~~
+# attend que l'entrée numérique 3 sur carte E/S 0 devient '1'
+yield query.io[0].input[3].d == 1
+~~~
+
+Attendant qu'une broche analogique dépasse une certaine valeur:
+
+~~~
+# attend que l'entrée analogique 1 sur carte E/S 0 dépasse 1V
+yield query.io[0].input[1].a > 1
+~~~
+
+Attendant qu'une broche analogique descend sous une certaine valeur:
+
+~~~
+# attend que l'entrée analogique 1 sur carte E/S 0 descend sous 2.5V
+yield query.io[0].input[2].a < 2.5
+~~~
+
+Code situé après ces `yield`s dans le flux du programme ne seront pas exécutés jusqu'à la condition spécifiée a été atteint. Alors, par exemple, si votre robot avait le code suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main():
+
+        # mettre la broche de sortie 0 haut
+        io[0].output[0].d = 1
+
+        # attend jusqu'à l'entrée numérique 0 devient haut
+        yield query.io[0].input[0].d == 1
+
+        # mettre la broche de sortie 0 bas
+        io[0].output[0] = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+...quand c'était exécuté, broche de sortie 0 serait haute et ce resterait haute jusqu'à l'instant quand la broche numérique d'entrée 0 devient haute. Lorsque cela se produit, le code suivant s'exécutera &mdash; réglant la sortie de broche 0 en bas.
+
+Notez que vous ne pouvez pas attendre une entrée analogique en utilisant le comparaison égaux (`==`). Please note that you cannot wait on an analogue input using the equals (`==`) comparison. En raison de le nature de la conversion analogique-numérique (comme expliqué dans le [section E/S](/docs/programming/sr/io#digital_vs_analogue)) il ne serait pas logique de le faire.
+
+
+[Interrogations Vision](/docs/programming/sr/query/#vision_queries) {#vision_queries}
+----------------
+
+D'obtenir des événements de vision est facile. Voici tout ce que vous devez faire:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# attend un événement de vision
+ev = yield query.vision
+
+if ev.was(vision):
+        for blob in ev.vision.blobs:
+                ...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Voir la [page sur vision](/docs/programming/sr/vision/) pour plus d'informations.
+
+[Combinant les Interrogations Ensemble](/docs/programming/sr/query/#combining_queries) {#combining_queries}
+----------------------------
+
+Quand vous écrivez `query.io[0].input[0].d == 0` (par exemple), l'opérateur primordial entre en jeu. Mais avant qu'on explique cela, une autre explication est nécessaire. Quand vous écrivez `abc = 1 == 1`, la valeur contenue dans `abc` est `True` («Vrai»). `abc` est attribué la valeur de l'expression logique `1 == 1` &mdash;  la valeur booléenne, `True` («Vrai»). (Si cela vous surprend, veuillez lire un [tutoriel](/docs/programming/python/).) 
+
+Voici la partie peu clair &mdash; pour les objets `query.(...)`, les opérateurs sont supplantées de façon qu'ils ne comparent plus des valeurs, donc ils ne retournent pas une valeur booléenne, mais un autre objet. the operators are overridden so that they no longer compare values; they therefore don't return a boolean value, but another object instead. Parce que cet objet n'est qu'une représentation d'une condition qui pourrait être satisfaite, ces conditions pouvez être regroupées.
+
+
+### [Expressions Logiques Plus Complexes](/docs/programming/sr/query/#complex) {#complex}
+
+Expressions Logiques peuvent aussi être utilisée avec `yield`. Vous pourriez, par exemple, attendez que deux conditions sont satisfaites ou peut-être l'une d'une gamme de conditions. Voici quelques exemples:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# OU (OR):
+yield query.io[0].input[3].d == 1, query.io[0].input[2].d == 0
+yield query.io[0].input[3].a > 2, query.io[0].input[3].a < 3
+
+        
+# ET (AND):
+yield (query.io[0].input[3].d == 1) & (query.io[0].input[2].d == 0)
+
+# alternativement:
+yield And( query.io[0].input[3].d == 1, query.io[0].input[2].d == 0 )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ET nécessite que les deux entrées sont `True` («Vrai») pour continuer avec l'exécution. OU nécessite que les juste une entrée (ou les deux) est `True` («Vrai») pour continuer avec l'exécution.
+
+Toutefois, si vous décidez de le faire, vous devrez (peut-être) trouver celle qui s'est produite (si vous utilisez OU, de toute façon). Pour le faire, vous pouvez utiliser quelque chose comme ce qui suit:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ev = yield query.io[0].input[1].a > 1.6, (query.io[0].input[2].d == 1) & (query.io[0].input[3].d == 0)
+if 2 in ev.io[0].pins:
+
+    # ev.io[N].pins est une liste de broches impliquées dans l'événement
+    # ev.io[N].vals est un tableau des valeurs des broches
+    # e.g. ev.io[0].vals[2] donne la valeur de la broche lorsque l'événement s'est produit
+    # la valeur de ev.io[0].vals[0] est incompréhensible
+
+    print ev.io[0].vals[2]
+
+elif 1 in ev.io[0].pins:
+    # ev.io.vals[1] est une tension de type (float)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+### [Expressions Logiques Même Plus Complexes](/docs/programming/sr/query/#more_complex) {#more_complex}
+
+Jusqu'ici, nous avons principalement utilisé `io` pour ces expressions d'interrogation. C'est possible de combiner différents types d'objets d'interrogation en une seule expression. Il est possible de, disons, d'attendre pour un interrupteur à être fermée pour un maximum de 10 secondes, puis continuer avec votre code quoi qu'il en soit:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main:
+
+        # mettre moteur 0 à 20%, marche avant
+        motor[0].target = 20
+
+        # attend pour 10s, ou pour un interrupteur, celui qui est plus tôt
+        yield query.timeout(10), query.io[0].input[0].d == 1
+
+        # arrêter le moteur
+        motor[0].target = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fondamentalement, le code ci-dessus alimenterait un moteur pour un maximum de 10 secondes, mais s'arrêterait si la broche d'entrée 0 deviendrait haute (comme ce qui serait necessaire pour un sensor de secousses). Dans ce cas, nous avons combiné une interrogation `timeout` avec une interrogation `io`.
+
+
+
