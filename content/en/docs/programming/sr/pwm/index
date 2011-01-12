@@ -6,12 +6,12 @@
 PWM
 ===
 
-A PWM board can have a number of servos plugged into them, with their positions controlled using the `pwm` object. As with `io` and `motor`, `pwm` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position can range from `0.0` to `100.0` inclusive:
+A servo board (previously known as the PWM board, hence the `pwm` reserved word in the SR library) can have a number of servos plugged into them, with their positions controlled using the `pwm` object. As with `io` and `motor`, `pwm` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position can range from `0.0` to `100.0` inclusive:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # pwm[N][SERVO_NUMBER] = POS
 
-# set servo 1's position (on PWM board 0) to 50.0
+# set servo 1's position (on servo board 0) to 50.0
 pwm[0][1] = 50.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -20,6 +20,6 @@ You can get a servo's currently set position in a similar way:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # variable = pwm[N][SERVO_NUMBER]
 
-# store the position of PWM board 0's servo 0 in 'bees'
+# store the position of servo board 0's servo 0 in 'bees'
 bees = pwm[0][0]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
