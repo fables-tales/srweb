@@ -6,7 +6,7 @@
 Moteur
 ======
 
-L'objet _motor_ est utilisé pour contrôler une liste de moteurs. Comme pour _io_ et _pwm_, _motor_ est une liste. Pour faire quelque chose avec la **première** carte moteur dans [l'anneau à jeton](docs/kit/token_ring), vouz utiliseriez:
+L'objet _motor_ est utilisé pour contrôler une liste de moteurs. Comme pour _io_ et _pwm_, _motor_ est une liste. Pour faire quelque chose avec la **première** carte moteur dans [l'anneau à jeton](/docs/kit/token_ring), vouz utiliseriez:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 motor[0].quelquechose...

@@ -8,7 +8,7 @@ Power Board
 
 The Power Board is the central piece of the electronics kit.
 It runs the code that you write in the SR IDE and controls all of the other boards in the kit.
-Your kit includes a single Power Board which is connected into the [Token Ring](docs/kit/token_ring), it also has a USB hub connected to it which allows both the webcam and the USB memory stick to be plugged in.
+Your kit includes a single Power Board which is connected into the [Token Ring](/docs/kit/token_ring), it also has a USB hub connected to it which allows both the webcam and the USB memory stick to be plugged in.
 To ensure that your robot is safe before your code starts running and if there are any problems the power board only gives power to the motors and any electronics you develop when your python code is running.
 
 Board Diagram

@@ -8,7 +8,7 @@ Carte 'Alimentation'
 
 La Carte 'Alimentation' est le cœur du kit électronique.
 Il exécute le code que vous écrivez dans l'IDE, et contrôle l'ensemble des autres cartes dans le kit.
-Votre kit comprend une seule Carte 'Alimentation', qui est relié dans l'[Anneau à Jeton](docs/kit/token_ring). Il est relié aussi à un hub USB, qui permet la webcam et la clé USB d'être reliés au kit.
+Votre kit comprend une seule Carte 'Alimentation', qui est relié dans l'[Anneau à Jeton](/docs/kit/token_ring). Il est relié aussi à un hub USB, qui permet la webcam et la clé USB d'être reliés au kit.
 Pour s'assurer que votre robot est sans danger avant que votre code s'exécute et s'il existe des problèmes, la carte 'Alimentation' n'alimente que les moteurs et autres appareils électroniques que vous développez quand votre code python s'exécute.
 
 Schéma
