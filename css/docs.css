@@ -118,11 +118,21 @@ div.docs div#content blockquote p code {
 	font-weight:bolder;
 }
 
-div.docs div#content p img {
+div.content.docs div#content p img {
 	border:none;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+div.content.docs div#content p img.left {
+	float:left;
+	margin-right:20px;
+}
+
+div.content.docs div#content p img.right {
+	float:right;
+	margin-left:20px;
 }
 
 div.docs div#content p code {
