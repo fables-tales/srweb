@@ -1,3 +1,4 @@
-div#sponsors_index p {
+div#sponsors_index p,
+div.docs div#content p {
 	overflow:hidden;
 }
