@@ -1,0 +1,39 @@
+//TITLE:	Troubleshooting Matériels
+//DESCRIPTION:	Aide avec des problèmes communs, rencontrées avec les matériels SR
+//KEYWORDS:	troubleshooting, faq, problèmes, aide, matériel, kit
+//CONTENT_TYPE: markdown
+
+Troubleshooting Matériels
+=========================
+
+<div class="info" markdown="1">
+Chaque carte électronique de SR a une ou plusieurs DELs verts pour indiquer qu'elle est alimentée. Certains cartes contiennent plus d'une DEL d'alimentation verte car il y a des rails de puissance séparées, par exemple la carte moteur en a un à côté des connecteurs «SRIC» et un autre à côté du connecteur d'alimentation 12V de type «CamCon». La chose la plus important de vérifier avant toute autre chose est si la carte est alimentée. Si une carte n'est pas alimentée, ce n'est pas possible de retrouver des autres problèmes.
+
+Consultez la documentation de la carte (dans le menu à gauche) pour quelles DELs doivent être allumées après la mise sous tension.
+</div>
+
+Problèmes Généraux avec le Kit / Carte d'Alimentation
+-----------------------------------------------------
+
+Après avoir mis le kit sous tension, rien ne se passe - pas de lumière LED et la carte d'alimentation n'émet aucun bip
+:	La batterie peut être reliée à l'envers. Comme pour tous les connecteurs d'alimentation dans le kit SR la masse (fil noir) doit être à la droite lorsque vous regardez la prise avec les bornes à vis vers le haut et les fils vers votre corps.
+:	La batterie est peut-être usé. Branchez le chargeur à la carte d'alimentation alors que la batterie est connecté et le laisser pour une heure ou deux.
+:	La carte d'alimentation contient un fusible pour protéger le BeagleBoard à l'intérieur de cette boîte. Dans le cas où le fusible fait sauter, l'ensemble de la carte d'alimentation doit nous être retourné pour inspection et réparation. Si aucune des solutions ci-dessus ont marché pour vous, veuillez contacter votre mentor ou dites-nous sur le forum et nous organiserons un remplacement pour votre carte d'alimentation.
+
+Après avoir mis le kit sous tension, rien ne se passe, mais une seule DEL rouge est allumé sur la carte d'alimentation
+:	Cette DEL s'allume lorsque le fusible principal 15A est soit sauté ou n'est pas présente. Informez votre mentor, qui peut apporter un remplacement pendant leur prochaine visite, ou postez un message sur le forum afin que nous puissions vous poster un remplacement.
+
+
+Problèmes Carte Moteur
+----------------------
+
+En essayant de commander un moteur, rien ne se passe, et une DEL rouge dans le centre de la carte moteur s'allume
+:	Il y a un court-circuit entre les bornes de sortie de la carte moteur. Essayez de retirer le moteur de la carte moteur, et voir si la lumière rouge s'éteint. Si c'est le cas, vérifiez votre câblage comme les deux fils doivent être reliées ensemble quelque part. Si la lumière reste allumée veuillez informer votre mentor ou postez un message sur le forum.
+
+En essayant de commander un moteur, une DEL rouge dans le centre de la carte moteur s'allume, et le moteur est agité
+:	Le moteur que vous avez relié a un courant de calage («Stall Courant», sur les docs techniques en anglais) de plus de 5,5A. La carte moteur éteindra la sortie périodiquement afin de se protéger contre des dommages si un courant supérieur à 5,5A est détecté. Si vous essayez de changer la vitesse du moteur de 0 à (+/-)100, ou de pleine puissance dans un sens à pleine puissance dans l'autre, puis des courants importants peuvent circuler, donc essayez d'incrémenter de la vitesse du moteur progressivement. Si cela ne fonctionne pas, vous devrez obtenir un plus petit moteur avec une courant de calage de moins de 5,5A.
+:	Cela peut aussi se produire si la batterie vient de terminer de recharger et le moteur a un courant de calage de 5,5A précisément. Après la recharge de la batterie la tension sera de l'ordre de 13V qui entraînera une courant plus haut de circuler dans le moteur. Un moteur avec un courant de calage de 5,5A à 12V (2.18&Omega; résistance de bobinage) consommera 5.96A à 13V. Nous vous recommandons de chercher les moteurs avec un courant de calage non supérieure à 5A pour éviter ce problème. Si vous ne pouvez pas changer des moteurs une solution de contournement serait d'ajouter une résistance 0,2&Omega; en série avec le moteur, cette résistance doit être capable de dissiper au moins 6 W et il faut prendre soin car il devient chaud.
+
+Le moteur n'est pas aussi fort qu'il est lorsqu'il est relié directement à la batterie, et la DEL verte «Motor Power» est faible quand on allume le moteur
+:	Certains des brins du fil peuvent être cassé où le fil entre les connecteurs CamCon soit à la carte d'alimentation de la carte moteur. Retirez les fils des connecteurs, couper les brins effilochés et re-dénuder le fil.
+:	Le fil utilisé pour relier puissance de la carte d'alimentation à la carte moteur est trop fin. Veuillez vérifier que vous utilisez les fils fournis pour relier puissance aux cartes moteurs. Ces fils doivent être capables de conduire au moins 5A et Nous recommandons au minimum 20 AWG.
