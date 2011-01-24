@@ -1,0 +1,146 @@
+//TITLE:	Guide pas-à-pas
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Guide pas-à-pas
+===============
+
+Le but de cette démonstration est de vous guider - pas à pas - à travers du processus de l'écriture de code et de l'exécuter sur le kit. Nous allons commencer avec un [programme _hello world_](http://fr.wikipedia.org/wiki/Hello_world), le premier programme que la plupart des programmeurs écrivent dans chaque langage. Car Student Robotics consiste beaucoup de l'électronique, au lieu de ça nous allons utilisez un programme _hello world_ adapté, qui clignote une DEL sur la carte [d'alimentation](/docs/kit/power_board) à la place.
+
+Une fois que c'est en état de marche, nous allons continuer d'avancer ce que les exemples (tutoriels supplémentaires) font, jusqu'à un point où le logiciel de vision est utilisée. Puis, vous devriez, en théorie, être capable de faire n'importe quoi (alors, si vous lisez la documentation, quand même!).
+
+Hello World!
+------------
+
+Le but de notre programme _hello world_ est de clignoter une DEL. On va l'allumer pour 1 seconde, puis l'éteindre pour 1 seconde, etc., à l'infini. Cela devrait vous guider à travers de tout ce que vous devez faire pour écrire un programme de base pour votre robot (kit).
+
+Allons-y...
+
+### Écrivant le code
+
+Pour écrire du code pour votre robot, vous devez utiliser l'[IDE](/ide) de Student Robotics. Un IDE («Environnement de Développement Intégré») est l'ensemble d'une gamme d'outils destinés à aider les développeurs avec leurs tâches de programmation. Pour vous, l'IDE SR fournit un éditeur de code, gestionnaire de fichiers, et vérification de code. Pour plus des docs de référence sur l'IDE, veuillez lire la section [IDE](/docs/IDE/) de la documentation.
+
+Commençons. Dans un nouvel onglet ou fenêtre, ouvrez l'[IDE](/ide). Vous devriez être présenté avec un écran tel que ceci:
+
+![Login Screen](/images/content/tutorials/walkthrough/login.png)
+
+Saisissez vos données de connexion et cliquez sur _Log In_. (Vous devriez avoir déjà reçu données de connexion, ils ont été données à vous à KickStart.) Vous allez maintenant être présenté avec un écran quelque chose comme ce qui suit mais peut-être pas identique):
+
+![project page](/images/content/tutorials/walkthrough/project_page.png)
+
+Vous êtes sur la page _Projects_ («Projets»). Sur le côté gauche, il y a un bouton nommé _New Project_ («Nouveau Projet»);  lorsque vous le cliquez, une boîte de dialogue apparaîtra, demandant le nom du projet. Appelez le projet «Walkthrough», et cliquez sur _Save_ («Sauvegarde»):
+
+![new project](/images/content/tutorials/walkthrough/new_project.png)
+
+OK, maintenant nous sommes prêts à écrire du code! Lorsque le robot essaie d'exécuter du code (quand le bouton _run_ est appuyé, ou quand le robot est démarré automatiquement au concours) il cherche un fichier appelé «robot.py». Créons ce fichier maintenant. Sur le côté gauche vous trouverez un lien pour créer un _New File_ («Nouveau Fichier»). Cliquez sur ce lien. Vous allez maintenant être présenté avec un éditeur de code pour écrire du code, comme ceci:
+
+
+![new file / editor](/images/content/tutorials/walkthrough/new_file_editor.png)
+
+Dans l'éditeur, écrivez (ou collez!) le code suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main():
+	while True:
+		power.led[0] = 1
+		yield query.timeout(1)
+		power.led[0] = 0
+		yield query.timeout(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+vous devriez voir quelque chose comme ceci:
+
+![LED flashing code in editor](/images/content/tutorials/walkthrough/flash_code_in_editor.png)
+
+Examinons-cela pour voir ce qui se passe:
+
+Sur la première ligne, nous avons une déclaration `import`. Cela dit à Python (le langage de programmation dans lequel le code est écrit) d'obtenir le module SR. Faisant cela permet des objets tels que `power` et `query` (et quelques autres) à être utilisés dans votre code. Ce point est essentiel &mdash; sans elle, vous ne serez pas en mesure de contrôler votre robot!
+
+La prochaine ligne (non vide) dit '`def main:`'.  Voici comment une fonction (un peu comme une fonction en mathématiques, si vous avez utilisé une de celles) est définie. `main` est une fonction spéciale, parce que c'est celle que le kit va chercher quand il essaye d'exécuter votre code. Nous allons voir comment créer d'autres fonctions plus tard.
+
+'`while True:`' signifie effectivement une boucle infinie. Toute expression logique (ou tout ce qui peut évaluer à `True` ou `False`)  peut venir après le mot-clé `while`, et le corps du code dans la boucle `while` sera exécutée jusqu'à quand la condition devient `False`. Cependant, dans ce cas, il est toujours `True`, donc la boucle infinie. Notez l'indentation dans le code; c'est ainsi que Python connaît quel code appartient à quoi. Dans le code ci-dessus, tout à un niveau d'indentation ou plus est dans la fonction `main`; tout à deux niveaux fait partie du corps de la boucle `while`. Indentation is one of the main issues you'll come across that causes your program to act in unexpected ways or not at all. En bref, utilisez des tabs (c-à-d `[la touche TAB]`) pour indenter votre code.
+
+Le morceau restant du code (dans la boucle `while`) est le suivant:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+power.led[0] = 1
+yield query.timeout(1)
+power.led[0] = 0
+yield query.timeout(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+En bref, ces lignes allument DEL0, attendent une seconde, éteignent DEL0, et attendent une seconde en plus. Puis, c'est répétée (c'est dans une boucle while). Pour voir des informations plus détaillées sur les objets `power` et `query`, voir leurs pages respectives [ici](/docs/programming/sr/power/) et [ici](/docs/programming/sr/query/).
+
+Nous sommes maintenant prêts à enregistrer le fichier. Sur le côté supérieur gauche de l'écran, vous verrez un bouton nommé _Save_ («Sauvegarde»). Cliquez sur le bouton, et vous serez présenté avec une boîte de dialogue pour enregistrer le fichier. Choisissez notre projet «walkthrough» de la liste déroulante, et écrivez une message de commit utile &mdash; voici le mien:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ajout de "hello world" (DEL clignotant) dans robot.py
+
+Allume DEL0 pour une seconde, eteint la meme DEL, et repeter a l'infini.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+...et appelez le fichier «robot.py»:
+
+![hello world save as](/images/content/tutorials/walkthrough/hello_world_save_as.png)
+
+Maintenant, cliquez sur _Save_.
+
+Alors, nous avons écrit du code, et maintenant nous avons besoin de le tester sur le kit. Cependant, il ya d'autres choses à faire d'abord, comme mettant le code sur le clé USB.
+
+### Mettant le code sur le clé USB.
+
+Si vous retournez à l'onglet projet, vous allez maintenant voir notre «robot.py» figurant en tant que fichier dans le projet «walkthrough». Sur le côté gauche, vous verrez un bouton nommé _Export Project_. Lorsque vous cliquez sur cela, l'IDE effectue des vérifications sur votre code. Si le code est bon, vous serez présenté avec une boîte de dialogue du navigateur offrant un fichier «robot.zip» à télécharger (l'image montre Firefox &mdash; les autres navigateurs seront différents, mais l'idée est le même):
+
+![robot.zip download](/images/content/tutorials/walkthrough/robot_zip_download.png)
+
+Tout ce que vous devez faire maintenant est de sauvegarder le fichier sur la racine (comme 'G: \ `ou ` H: \ ` ou quoi que soit la lettre de lecteur) de la clé USB du robot. Vous pouvez avoir à remplacer un existant «robot.zip» si un existe déjà (ou vous pouvez le renommer si il y a d'espace).
+
+<div class="warning">Le code que vous voulez exécuter DOIT être dans le «robot.zip» exporté; autrement il ne sera pas utilisé.</div>
+
+Retirez la clé USB, _en toute sécurité_, de l'ordinateur et preparez le kit pour l'exécution du code.
+
+
+### Préparation du kit
+
+Pour exécuter le programme _hello world_ , vous avez besoin du suivant:
+
+* La [Carte d'Alimentation](/docs/kit/power_board)
+* La Batterie (chargée, naturellement)
+* Le fil qui relie la batterie à la carte d'alimentation
+* Le hub USB
+* Câble d'alimentation pour le hub USB
+* Le clé USB (avec le programme _hello world_)
+
+Pour le montage, suivez les étapes suivantes:
+
+1. Vérifiez que l'interrupteur d'alimentation de la carte d'alimentation est OFF
+2. Branchez le hub USB à la prise USB sur la carte d'alimentation
+3. Branchez le câble d'alimentation du hub USB à la carte d'alimentation et au hub
+4. Branchez la clé USB au hub
+5. Branchez le câble batterie à la batterie, en respectant la polarité (ROUGE au POSITIF, NOIR au NÉGATIF)
+6. Branchez l'autre bout du câble batterie à la carte d'alimentation
+
+<div class="warning">Vous DEVEZ utiliser le hub USB. Le BeagleBoard dans la boîte de la carte d'alimentation ne peut pas manipuler à basse vitesse des périphériques USB (comme une clé USB). NE branchez PAS la clé USB directement au BeagleBoard &mdash; ça ne marchera pas.</div>
+
+OK, nous sommes prêts à exécuter le code.
+
+
+### Exécution du code
+
+Si vous avez suivi tout ce qui précède, vous devriez maintenant être prêt à voir une DEL clignotante sur la carte d'alimentation.
+
+Allumez la carte d'alimentation et permettrez le système de démarrer. Vous devriez voir le logo SR sur l'écran. Quand il est fini de démarrer, vous pouvez appuyer sur le bouton _run_ de la carte d'alimentation. Si vous voyez une DEL clignotante (allumée pour une seconde, éteint pour une seconde), n'hésitez pas à se complaire dans la gloire d'avoir programmé votre kit SR. Bravo! Sinon, essayer de [résoudre](/docs/troubleshooting/) le problème.
+
+
+Étapes Suivantes
+----------------
+
+Maintenant que vous avez écrit un programme de base pour votre kit et vous savez comment exécuter votre code, nous pouvons commencer à écrire des programmes plus avancées (et plus intéressantes). Si vous retournez aux [tutoriels](/docs/tutorials/), vous trouverez une liste d'autres tutoriels à faire. Le prochain tutoriel que nous vous recommandons à faire est [Simple Gestion des Moteurs] (/docs/tutorials/basic_motor_control).
+
+Mais, si vous êtes satisfait sur les étapes nécessaires pour démarrer votre robot, n'hésitez pas d'utilisez la [référence API](/docs/programming/sr/). Les paragraphes contiennent beaucoup de détails sur l'utilisation d'un objet particulier &mdash; y compris des exemples &mdash; donc, en théorie, cela devrait être tout ce qu'il vous faut.
+
+
+
