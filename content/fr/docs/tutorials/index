@@ -1,0 +1,12 @@
+//TITLE:	Tutoriels
+//DESCRIPTION:	A range of tutorials to help you get on your way to building a great robot.
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Tutoriels
+=========
+
+Nous avons écrit un [guide pas-à-pas](/docs/tutorials/walkthrough) pour vous guider à travers du processus d'écrire, de transférer et d'exécuter votre code sur votre kit. C'est un bon endroit à commencer si vous ne savez pas ce que vous faites. **Après**  cela, vous pourriez vouloir lire les tutoriels suivants, énumérés par ordre de difficulté:
+
+1. [(Guide Pas-à-Pas)](/docs/tutorials/walkthrough) &mdash; vous devez commencer ici
+2. [Simple Commande des Moteurs](/docs/tutorials/basic_motor_control) &mdash; toute que vous devez connaître pour rouler vos moteurs
