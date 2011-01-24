@@ -57,6 +57,8 @@ You should be familiar with the setup for the rest of the kit used.
 Some Code
 --------
 
+<div class="warning">You might want to ensure the motor won't take the kit anywhere when you press the run button when testing some of the below code (unless it's in a robot, of course).</div>
+
 The example program we'll write will do a number of things with the motor: forwards and backwards, and different power settings, for example. Let's begin.
 
 To start off with, we'll just make a motor move forwards, then backwards, and then repeat.
@@ -187,7 +189,6 @@ So, taking `range(10, 80, 10)`, for example, would output `10` as the first elem
 
 Putting all of that together should mean you understand the above code. You might want to run the code on your kit to see if it does what you expect it to.
 
-<div class="warning">You might want to ensure the motor won't take the kit anywhere when you press the run button (unless it's in a robot, of course).</div>
 
 Next Steps
 ----------
