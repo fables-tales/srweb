@@ -111,6 +111,9 @@ div.docs div#content blockquote p {
 	font-style:italic;
 	margin-left:0px;
 	margin-bottom:0;
+	/* Fix what appears to be a rendering bug in FF. The italic letters
+	 * were being cut off on the right. */
+	padding-right: 6px;
 }
 
 div.docs div#content blockquote p code {
