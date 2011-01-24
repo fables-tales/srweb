@@ -147,7 +147,7 @@ def main:
 			motor[0].target = pwr
 			yield query.timeout(0.1)
 
-		# power "up" to -70 (from -10)
+		# power "down" to -10 (from -70)
 		for pwr in range(-70, 0, 10):
 			motor[0].target = pwr
 			yield query.timeout(0.1)
