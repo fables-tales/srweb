@@ -1,0 +1,197 @@
+//TITLE:	Basic Motor Control
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Simple Gestion des Moteurs
+==========================
+
+Le but de ce tutoriel est d'avoir un moteur qui tourne à cause de votre kit. Pour compléter ce tutoriel, vous aurez besoin des éléments suivants:
+
+* La [carte d'alimentation](/docs/kit/power_board)
+* La batterie (chargée, naturellement)
+* Le fil qui relie la batterie à la carte d'alimentation
+* Un moteur (voir des specifications ci-dessus)
+* 2 fils, d'un diamètre suffisant pur votre moteur
+* Une [carte moteur](/docs/kit/motor_board)
+* Un connecteur vert de type _camcon_ pour relier le moteur et la carte moteur ensemble
+* 2 câbles SRIC (câbles Ethernet)
+* Le Hub USB
+* Câble d'alimentation pour le hub USB
+* Le clé USB
+* Un fer à souder
+* De fil de soudage
+* Pince à dénuder
+* Un petit tournevis de bout plat (pour les vises _camcon_)
+
+Vous devriez maintenant être familier avec la configuration pour la plupart de ce qui précède (si vous avez lu la [guide pas à pas](/docs/tutorials/walkthrough)), donc ici, nous allons juste expliquer des choses liés avec des moteurs.
+
+
+Spécifications du moteur
+------------------------
+
+Il y a une certaine spécification du moteur que vous devez respectez. Les critères sont les suivants:
+
+* Moteur 12V
+* Un courant de calage de pas plus de 5A (une [carte moteur](/docs/kit/motor_board) peut seulement fournir 5A, au-dessus duquel elle limitera le courant sortant)
+
+
+Branchement d'un Moteur
+-----------------------
+
+Pour brancher le moteur au kit, vous aurez besoin de souder un fil de calibre approprié aux bornes du moteur, et relier l'autre extrémité au connecteur _camcon_. Comme:
+
+![Motor connected to Camcon](/images/content/kit/motor_and_camcon.png)
+
+<div class="info">Vous voudrez peut-être isoler les bornes du moteur avec du ruban adhésif isolant (ou gaine thermorétractable si vous l'avez) comme dans l'image ci-dessus.</div>
+
+Maintenant, vous devez relier le moteur à une de vos cartes moteurs. Vous aurez besoin de relier ce qui suit:
+
+* Votre moteur au prise du moteur sur la carte moteur;
+* Un des câbles SRIC du `OUT` («Sortie») de la carte d'alimentation au `IN` («Entrée») de la carte moteur, et l'autre du `IN` de la carte d'alimentation au `OUT` de la carte moteur;
+*  Le câble d'alimentation du moteur (2 _camcons_ verts reliés ensemble) au connecteur d'alimentation du moteur sur la carte moteur et à un des connecteurs d'alimentation des moteurs sur la carte d'alimentation.
+
+Vous devriez être familier avec la configuration pour le reste du kit utilisé.
+
+
+Un Peu de Code
+--------------
+
+<div class="warning">Attention! Quand vous testez le code suivant, le moteur va tourner. Assurez que votre montage ne détruira le kit lorsque vous appuyez sur le bouton `run`</div>
+
+Le programme exemple que nous écrirons fera un certain nombre de choses avec le moteur: marche avant et arrière, et des différents réglages de puissance, par exemple. Commençons.
+
+Pour commencer, nous allons juste tourner un moteur vers l'avant, puis vers l'arrière, puis répétez.
+
+
+### En Avant & Arrière
+
+Faire cela est en fait très facile, la seule chose que vous avez besoin de comprendre, c'est qu'un nombre positif est vers l'avant et un nombre négatif est vers l'arrière. 
+
+<div class="warning">La direction effective de mouvement d'un moteur, lorsqu'il est monté sur un robot, dépendra de son sens et le façon dont les fils sont reliés à la carte moteur. Si le moteur semble aller dans le mauvais sens, échangez le fil positif et négatif du moteur.</div>
+
+Voici le code:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main:
+
+	while True:
+
+		motor[0].target = 50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+
+		motor[0].target = -50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vous êtes familier avec les premières lignes, en fait, les lignes avec lesquels vous êtes peut-être pas familier sont les lignes `motor[0]...`. Pour une référence complète de l'objet `motor`, voir le page [`moteur`](/docs/programming/sr/motor/) du module `sr`. Mais, pour résumer:
+
+<div class="info">`motor[0].target = x` mettra la puissance de la première [carte moteur](/docs/kit/motor_board) dans [l'anneau à jeton](/docs/kit/token_ring) à `x`, où `x` est une valeur entre `-100` et `100`, inclusif &mdash; en autres mots: `-100` &le; `x` &le; `100`.</div>
+
+Donc, `motor[0].target = 50` fixe la puissance cible de la première [carte moteur](/docs/kit/motor_board) dans [l'anneau à jeton](/docs/kit/token_ring) à 50% vers l'avant (c-à-d un rapport cyclique de 0.5 vers l'avant). Comme on s'attendrait, `motor[0].target = -50` fixe la puissance de la première moteur dans l'anneau à jeton à 50% vers l'arrière. `motor[0].target = 0` donnera aucun puissance au moteur, et l'arrêtera.
+
+Donc, si vous mettez le code ci-dessus sur votre robot, vous verrez un moteur qui tourne vers l'avant, stop, tourne en arrière, stop, puis répéter...
+
+
+### Modifier la vitesse
+
+Maintenant, nous allons modifier le programme pour varier la vitesse du moteur. Notre objectif est de faire le marche avant et en arrière (comme ci-dessus), mais, avant de retourner au début de la boucle, nous augmentons la puissance jusqu'à 70%, puis à -70%, puis de nouveau à 0 (tous en étapes de 10% ).
+
+Voici le code:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+
+def main:
+
+	while True:
+
+		motor[0].target = 50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+
+		motor[0].target = -50
+		yield query.timeout(3)
+
+		motor[0].target = 0
+		yield query.timeout(1)
+
+		# ^^ code d'avant ^^
+
+		# augmente la puissance de 10 à 70
+		for pwr in range(10, 80, 10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# baisser la puissance de 70 à 10
+		for pwr in range(70, 0, -10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# arrête moteur 0 pour une seconde
+		motor[0].target = 0
+		query.timeout(1)
+
+		# augmenter la puissance de -10 à -70
+		for pwr in range(-10, -80, -10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# baisser la puissance de -70 à -10
+		for pwr in range(-70, 0, 10):
+			motor[0].target = pwr
+			yield query.timeout(0.1)
+
+		# arrête moteur 0 pour une seconde
+		motor[0].target = 0
+		query.timeout(1)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Encore, comme vous avez déjà vu la plupart de cela, il ne devrait pas être trop difficile à comprendre. Cependant, la boucle `for` peut être nouvelle. La boucle [`for`](http://docs.python.org/tutorial/controlflow.html#for-statements) accepte une `list` («liste») Python (une `list`, quand imprimée (avec `print`), s'affiche entre crochets comme ceci: `[1, 2, 3]`). Pour une introduction complète aux `list`es, jeter un oeil à [cet article WikiBooks (en)](http://en.wikibooks.org/wiki/Python_Programming/Lists). La boucle `for` itérera sur la `list` (c-à-d prendre chaque élément un par un) et le rendra disponible dans le corps de la boucle comme variable après le mot-clé `for`. Voici un exemple:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+for i in [1, 2, 3]:
+	print i
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le ci-dessus affichera:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1
+2
+3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Puis, il y a la fonction [`range()`](http://http://quentel.pierre.free.fr/python-trad/built-in-funcs.html). La fonction `range()` retourne une `list` avec son contenu dépendant des arguments qui lui sont passés. La Documentation Python explique très bien:
+
+> `range([debut, ]fin[, pas])` (notez: les crochets indiquent 'valeur facultatif')
+>
+> Si l'argument `pas` est omis, il prend par défaut la valeur `1`. Si l'argument 
+> `debut` est omis, il prend la valeur `0` par défaut. La forme complète retourne une
+> liste d'entiers simples `[debut, debut + pas, debut + 2 * pas, ...]`. Si `pas` est
+> positif,le dernier élément est le plus grand `debut + i * pas` inférieur à `fin`;
+> si `pas` est négatif, le dernier élément est le plus grand `debut + i * pas` plus
+> grand que `fin`.
+
+Donc, avec cette base, `range(3)` retournerait la liste `[0, 1, 2]` parce qu'il est un raccourci pour `range(0, 3, 1)`. De la citation, vous pouvez voir que cela retournerait une liste commençant avec `0`, et finissant par l'entier qui est un inférieur à `3`, donc le `[0, 1, 2]`.
+
+Donc, prenant `range(10, 80, 10)`, par exemple, sortirait `10` du premier élément, puis `20, 30, ...` jusqu'à `x=10+i*10` pour un `i` où `i` assure `x < fin` (qui, dans ce cas, est `80`). Donc, le `80` qu'on a utilisé pourrait également avoir été `77` ou même `71` et la `list` émis serait encore `[10, 20, 30, 40, 50, 60, 70]`.
+
+Mettant tout cela ensemble devrait signifier que vous comprenez le code ci-dessus. Vous pouvez exécuter le code sur votre kit pour voir si elle fait ce que vous attendez.
+
+
+Étapes Suivantes
+----------------
+
+D'ici, vous pourriez vouloir jeter un oeil aux [Simples Entrées/Sorties](/docs/tutorials/basic_IO). Vous pouvez aussi vouloir voir si vous pouvez rendre l'exemple ci-dessus plus concis en créant des fonctions pour les parties répétitives.
