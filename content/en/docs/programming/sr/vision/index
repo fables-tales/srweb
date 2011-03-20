@@ -37,3 +37,11 @@ if ev.was(vision):
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The list of properties above apply to a `blob` object, so we could have printed out any of those properties above.
+
+If you more simply want to print all the information about all the blobs you can replace the `for` section in the above code with:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        # print all the info about all the blobs
+        for blob in ev.vision.blobs:
+                print str(blob)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
