@@ -34,6 +34,18 @@ Indicators
 *Unfortunately due to the design of the electronics the charging LED will only light up when the battery is charging and the Power Board is switched on.
 If the Power Board is switched off then the charging LED will not light but the battery will charge and the LEDs/dial on the charger should show this.
 
+Controls
+--------
+
+| Control        | Use
+|----------------|----------------------------
+| Button 0       | Various, wait for it to ask!
+| Button 1       | Jump to the bottom of the display
+| Button 2       | Page down the display
+| Left Knob      | Horizontal scroll the display
+| Right Knob     | Vertical scroll the display
+
+
 Case Dimensions
 ---------------
 
