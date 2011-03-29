@@ -24,18 +24,18 @@ from sr import *
 
 * [motor](/docs/programming/sr/motor/)
 * [power](/docs/programming/sr/power/)
-* [pwm](/docs/programming/sr/pwm/)
+* [servo](/docs/programming/sr/servo/)
 * [io](/docs/programming/sr/io/)
 * [vision](/docs/programming/sr/vision/)
 
-They can be used in your code just like the example above. Note that the objects _motor_, _io_, and _pwm_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
+They can be used in your code just like the example above. Note that the objects _motor_, _io_, and _servo_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 motor[0].target = 50   # WILL work, if motor 0 exists
 motor[1].target = -20  # WILL work, if motor 1 exists
 motor.target = 42      # WON'T WORK
 
-# the above is similar to the situation for 'io' and 'pwm'
+# the above is similar to the situation for 'io' and 'servo'
 
 
 power.led[0] = 1       # WILL work
