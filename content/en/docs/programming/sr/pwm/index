@@ -1,25 +1,25 @@
-//TITLE:	Servo
+//TITLE:	PWM
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Servo
+PWM
 ===
 
-A servo board (previously known as the PWM board, hence the `pwm` reserved word in the SR library) can have a number of servos plugged into them, with their positions controlled using the `servo` object. As with `io` and `motor`, `servo` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position can range from `0.0` to `100.0` inclusive:
+A servo board (previously known as the PWM board, hence the `pwm` reserved word in the SR library) can have a number of servos plugged into them, with their positions controlled using the `pwm` object. As with `io` and `motor`, `pwm` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position can range from `0.0` to `100.0` inclusive:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# servo[N][SERVO_NUMBER] = POS
+# pwm[N][SERVO_NUMBER] = POS
 
 # set servo 1's position (on servo board 0) to 50.0
-servo[0][1] = 50.0
+pwm[0][1] = 50.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can get a servo's currently set position in a similar way:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# variable = servo[N][SERVO_NUMBER]
+# variable = pwm[N][SERVO_NUMBER]
 
 # store the position of servo board 0's servo 0 in 'bees'
-bees = servo[0][0]
+bees = pwm[0][0]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -6,7 +6,7 @@
 IO (JointIO)
 ============
 
-The JointIO board provides 8 pins for input (both analogue and digital) and 4 for digital output. As with `servo` and `motor`, `io` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering.
+The JointIO board provides 8 pins for input (both analogue and digital) and 4 for digital output. As with `pwm` and `motor`, `io` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering.
 
 
 [Digital vs. Analogue](/docs/programming/sr/io/#digital_vs_analogue) {#digital_vs_analogue}
