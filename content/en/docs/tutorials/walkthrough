@@ -107,6 +107,7 @@ You should now _safely remove_ the memory stick from the computer and prepare th
 To run the _hello world_ program, all you need is the following:
 
 * The [power board](/docs/kit/power_board)
+* A [SRIC](/docs/kit/token_ring) cable
 * The battery (charged, of course)
 * The cable to connect the battery to the power board
 * The USB hub
@@ -116,6 +117,7 @@ To run the _hello world_ program, all you need is the following:
 To assemble, follow these steps:
 
 1. Ensure the power board power switch in the OFF position
+1. Plug the single SRIC cable into both SRIC ports on the power board
 2. Plug the USB hub into the USB socket on the power board
 3. Plug the USB hub power cable into the power board and the hub
 4. Plug the memory stick into the USB hub
@@ -123,6 +125,11 @@ To assemble, follow these steps:
 6. Plug the other end of the battery cable into the power board
 
 <div class="warning">You MUST use the USB hub. The BeagleBoard in the power board case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
+
+<div class="info">
+You need to connect the power board to itself with the SRIC cable as it needs a complete token ring in order to work.
+Any completed ring would work, a single cable onto itself is merely the simplest.
+</div>
 
 OK, we're ready to run the code.
 
