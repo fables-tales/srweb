@@ -4,3 +4,4 @@ Disallow: /content/
 Disallow: /piwik/
 Disallow: /.git/
 Disallow: /ide/
+Disallow: /forum/
