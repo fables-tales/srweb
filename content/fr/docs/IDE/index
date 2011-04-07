@@ -1,4 +1,4 @@
-//TITLE:	IDE
+﻿//TITLE:	IDE
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,6 +6,6 @@
 L'IDE
 =====
 
-L'IDE («Environnement de Développement Intégré», ou «Integrated Development Environment» en Anglais) a été écrit spécialement pour Student Robotics. C'est un IDE en ligne, donc tous vos programmes doit être fait avec une connexion Internet. Cependant, c'est une bonne chose: tout votre code sera sur notre serveur afin que vous n'ayez pas besoin de vous inquiéter de perdre votre clé USB. (Mais veuillez ne le perdez pas!)
+L'IDE («Environnement de Développement Intégré», ou «Integrated Development Environment» en Anglais) a été écrit spécialement pour Student Robotics. C'est un IDE en ligne, donc tous vos programmes doivent être faits avec une connexion Internet. Cependant, c'est une bonne chose: tout votre code sera sur notre serveur afin qu'il n'y ait pas de soucis de clé USB. (Mais veuillez ne pas la perdre!)
 
 Pour accéder à l'IDE, il y a un lien dans le menu ci-dessus. Vous pouvez aussi cliquer [ici](https://www.studentrobotics.org/ide/).
