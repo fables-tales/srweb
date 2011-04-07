@@ -1,4 +1,4 @@
-//TITLE:	Carte E/S
+﻿//TITLE:	Carte E/S
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,8 +6,8 @@
 Carte E/S (Entrées/Sorties)
 ===========================
 
-La Carte E/S vous permet de relier notre kit avec vos propres électroniques. Il y a 8 entrées qui peuvent être configurés à lire des valeurs numériques ou analogiques, et 8 sorties qui sont capables de conduire des charges petites.
-La carte fournit aussi 3.3V pour alimenter quelques/toutes vos systèmes électroniques. Les entrées et sorties utilisent la logique 3.3V, donc vous devriez garder cela à l'esprit quand interfaçant avec la carte.
+La Carte E/S vous permet de relier notre kit avec vos propres composants électroniques. Il y a 8 entrées qui peuvent être configurées pour lire des valeurs numériques ou analogiques, et 8 sorties qui sont capables de délivrer de petites charges.
+La carte délivre aussi 3.3V pour alimenter vos systèmes électroniques. Les entrées et sorties utilisent la logique 3.3V, donc vous devrez garder cela à l'esprit quand vous ferez l'interface avec la carte.
 
 Schéma
 ------
@@ -28,35 +28,35 @@ Indicateurs
 
 [^1]:
     Le seuil logique est à 1,65 V (3,3V / 2).
-    Quelque chose de plus que cela provoquera la DEL correspondante à éclairer et l'entrée est lu comme «True» (vrai) dans le code.
-    Quelque chose de moins que le seuil éteindra la DEL, et sera lu comme «False» (faux) dans le code
+    Une valeur supérieure provoquera l'allumage de la DEL correspondante et l'entrée sera lue comme «True» (vrai) dans le code.
+    Une valeur inférieure au seuil éteindra la DEL, et sera lue comme «False» (faux) dans le code
 
 Dimensions de la boîte
 ----------------------
 
 ![jointio board case](/images/content/kit/jointio_board_case.png "Boîte de la carte E/S")
 
-Toutes dimensions en mm.
+Toutes les dimensions sont en mm.
 
 Specifications
 --------------
 
 |  Paramètre                               |   Valeur  |
 |------------------------------------------|-----------|
-| Tension de Puissance Sortie              | 3,3V      |
+| Tension de la Sortie                     | 3,3V      |
 | Courant Maximal du Rail 3,3V             | 200mA     |
-| Courant Maximal par Sortie               | 100mA     |
+| Courant Maximal de la Sortie             | 100mA     |
 | Tension Sortie "Haut"                    | 3,3V      |
 | Tension Sortie "Bas"                     | 0V        |
-| Maximum Tension à l'Entrée               | 12V       |
-| Maximum Tension à l'Entrée (Mesure)      | 3,3V      |
+| Tension maximale en entrée               | 12V       |
+| Tension maximale en entrée (Mesure)      | 3,3V      |
 | Seuil de Tension Numérique à l'Entrée    | 1,65V     |
 
 Schémas / Conceptions
 ---------------------
 
-Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte E/S avec les liens suivants.
-Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut intéresser quelques gens.
+Vous pouvez accéder aux schémas et au code source du microprogramme sur la carte E/S avec les liens suivants.
+Vous n'avez pas besoin de ces informations pour utiliser la carte, mais cela peut être intéressant.
 
  * [Schématiques Complètes](/resources/kit/jointio/schematic.pdf)
  * [Source Microprogramme](https://www.studentrobotics.org/cgit/boards/jointio-fw.git/)
