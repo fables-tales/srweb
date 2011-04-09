@@ -1,4 +1,4 @@
-//TITLE:	Carte 'Moteur'
+﻿//TITLE:	Carte 'Moteur'
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,7 +6,7 @@
 Carte 'Moteur'
 ==============
 
-Vouz pouvez utiliser une carte 'Moteur' pour contrôler un seul moteur 12V (Courant Continu). Votre kit contient deux Cartes 'Moteur' afin de vous permettre de contrôler mouvement de votre robot, mais vous n'êtes pas limité à les utiliser pour ce but.
+Vouz pouvez utiliser une carte 'Moteur' pour contrôler un seul moteur 12V (Courant Continu). Votre kit contient deux cartes 'Moteur' afin de vous permettre de contrôler les mouvements de votre robot, mais vous n'êtes pas obligés de les utiliser dans ce but.
 
 Schéma
 ------
