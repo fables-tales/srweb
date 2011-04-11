@@ -1,4 +1,4 @@
-//TITLE:	Anneau à Jeton
+﻿//TITLE:	Anneau à Jeton
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,16 +6,16 @@
 L'Anneau à Jeton («Token Ring»)
 ===============================
 
-Les cartes dans notre kit sont reliés entre eux en utilisant un [Réseau en anneau](http://fr.wikipedia.org/wiki/R%C3%A9seau_en_anneau). Cela signifie que toutes les connecteurs d'entrées/sorties sur les cartes doivent être reliés pour que le _jeton_ puisse circuler. Ce _jeton_ est tenu par la carte qui est actuellement autorisé à parler à la carte d'Alimentation, donc au BeagleBoard. Si la boucle n'est pas complète, le jeton ne circulera pas avec succès et le robot ne fonctionnera pas. Voici un exemple d'une schéma:
+Les cartes de notre kit sont reliées entre elles en utilisant un [Réseau en anneau](http://fr.wikipedia.org/wiki/R%C3%A9seau_en_anneau). Cela signifie que toutes les connecteurs d'entrées/sorties des cartes doivent être reliés pour que le _jeton_ puisse circuler. Ce _jeton_ est tenu par la carte qui est actuellement autorisée à parler à la carte d'Alimentation, donc au BeagleBoard. Si la boucle n'est pas complète, le jeton ne circulera pas et le robot ne fonctionnera pas. Voici un exemple de schéma:
 
 ![Simple Token Ring Example](/images/content/token_ring_diagram.png "Exemple simple d'un Anneau à Jeton")
 
 *"IN - Entrée", "OUT - Sortie", "Motor - Moteur", "Power Board - Carte d'Alimentation", "io - E/S", "Token - Jeton"
 
-Dans cet exemple, le jeton sera passée dans le sens anti-horaire, à partir de la carte d'alimentation (CA). (Il partira de la CA, à `io[0]`, puis `motor[0]`, `motor[1]`, CA, `io[0]`, etc...) Le jeton est laissé passer de la prise «OUT» de la CA, autour de l'anneau à son prise «IN».
+Dans cet exemple, le jeton sera passée dans le sens anti-horaire, à partir de la carte d'alimentation (CA). (Il partira de la CA, à `io[0]`, puis `motor[0]`, `motor[1]`, CA, `io[0]`, etc...) Le jeton est le laisser-passer de la prise «OUT» de la CA, autour de l'anneau à sa prise «IN».
 
-<div class="warning">Notez Bien: INs doivent seulement être reliés aux OUTs!</div>
+<div class="warning">Notez Bien: les IN doivent seulement être reliés aux OUT!</div>
 
-L'ordre dans lequel les cartes figurent dans les listes d'objets dans le [SR API](/docs/programming/sr/)  dépend de l'ordre duquel ils paraissent dans l'anneau. `motor[0]`, par exemple, serait le premier moteur à paraître dans la boucle, et `motor[1]` serait le deuxième. Alors, dans l'exemple ci-dessus, même si `io[0]` est la première carte dans la boucle, la première  carte moteur dans la boucle est encore `motor[0]`.
+L'ordre dans lequel les cartes figurent dans les listes d'objets dans le [SR API](/docs/programming/sr/)  dépend de l'ordre duquel ils paraissent dans l'anneau. `motor[0]`, par exemple, serait le premier moteur à paraître dans la boucle, et `motor[1]` serait le deuxième. Cependant, dans l'exemple ci-dessus, même si `io[0]` est la première carte dans la boucle, la première  carte moteur dans la boucle est encore `motor[0]`.
 
-<div class="warning">Si vous changez l'ordre dans lequel les cartes paraissent dans l'anneau, votre code peut-être à modifier aussi.</div>
+<div class="warning">Si vous changez l'ordre dans lequel les cartes paraissent dans l'anneau, vous devrez peut-être modifier votre code.</div>
