@@ -1,4 +1,4 @@
-//TITLE:	Carte 'Servomoteur'
+﻿//TITLE:	Carte 'Servomoteur'
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -7,7 +7,7 @@ Carte 'Servomoteur'
 ===================
 
 La Carte Servomoteur peut être utilisé pour contrôler jusqu'à 8 servomoteurs RC.
-De nombreux périphériques sont disponibles qui peuvent être contrôlés comme servomoteurs tels que les contrôleurs RC de vitesse du moteur et ceux-ci peuvent aussi être utilisés avec la carte.
+De nombreux périphériques sont disponibles, ils peuvent être contrôlés comme servomoteurs, tels que les contrôleurs RC de vitesse du moteur, et peuvent être utilisés avec la carte.
 
 Schéma
 ------
@@ -37,15 +37,15 @@ Specifications
 | Tension d'Entrée Maximum                 | 16V       |
 | Tension de Sortie                        | 5V        |
 | Courant de Sortie Maximum[^1]            | 5A        |
-| Nombre de chaînes servomoteur            | 8         |
+| Nombre de servomoteurs controlés            | 8         |
 
 [^1]: Partagé entre les 8 sorties
 
 Schémas / Conceptions
 ---------------------
 
-Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte E/S avec les liens suivants.
-Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut intéresser quelques gens.
+Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte servomoteur avec les liens suivants.
+Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut vous intéresser.
 
  * [Schématiques Complètes](/resources/kit/servo/schematic.pdf)
  * [Source Microprogramme](https://www.studentrobotics.org/cgit/boards/pwm-fw.git/)
