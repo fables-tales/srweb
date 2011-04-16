@@ -20,5 +20,8 @@ Installation Instructions for SRweb
 * modify the .htaccess file to use the correct 'RewriteBase' and ensure 
   mod_rewrite is installed and loaded in the main Apache configuration file.
 
+* ensure that mod_expires is installed and loaded in the main Apache
+  configuration file.
+
 
 That should be it! Hope that helped.
