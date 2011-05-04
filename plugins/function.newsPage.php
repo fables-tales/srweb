@@ -26,7 +26,7 @@ function smarty_function_newsPage($params, &$smarty)
 	//do some caching stuff
 	$output = CacheWrapper::getCacheItem('[news_page_' . $p . ']', $MEMCACHE_TTL, function() use (&$p, &$smarty){
 
-		return _getOutputForPage($p, $smarty->get_template_vars('base_uri'));
+		return _getOutputForPage($p, $smarty->get_template_vars('base_uri'), $smarty->get_template_vars('root_uri'));
 
 	});
 
@@ -35,7 +35,7 @@ function smarty_function_newsPage($params, &$smarty)
 }
 
 
-function _getOutputForPage($p, $base_uri){
+function _getOutputForPage($p, $base_uri, $root_uri){
 
 	$feed = getFeedContent();
 	$feed = str_replace(array('<![CDATA[', ']]>'), '', $feed);
@@ -70,7 +70,7 @@ function _getOutputForPage($p, $base_uri){
 
 		$output .= '<div class="newsInfo">' .
 			'<a href="' . $link . '">permalink</a> | ' .
-				'<a href="/content/default/' . str_replace($base_uri, '', $link) . '">original</a>' .
+				'<a href="' . $root_uri . 'content/default/' . str_replace($base_uri, '', $link) . '">original</a>' .
 			'</div>';
 
 		$output .= '</div>';
@@ -80,16 +80,16 @@ function _getOutputForPage($p, $base_uri){
 	$olderNewer = '<div class="olderNewer">';
 
 	if ($p == 1 && ITEMS_PER_PAGE < count($items)){
-		$olderNewer .= '<a class="older" href="news/?p=' . (int)($p+1) . '">Older News</a>';
+		$olderNewer .= '<a class="older" href="' . $root_uri . 'news/?p=' . (int)($p+1) . '">Older News</a>';
 
 	} elseif ($p == 1 && ITEMS_PER_PAGE >= count($items)){
 		$olderNewer .= '';
 
 	} elseif ($p > 1 && $p * ITEMS_PER_PAGE < count($items)){
-		$olderNewer .= '<a class="older" href="news/?p=' . (int)($p+1) . '">Older News</a>' . '<a class="newer" href="news/?p=' . (int)($p-1) . '">Newer News</a>';
+		$olderNewer .= '<a class="older" href="' . $root_uri . 'news/?p=' . (int)($p+1) . '">Older News</a>' . '<a class="newer" href="news/?p=' . (int)($p-1) . '">Newer News</a>';
 
 	} else {
-		$olderNewer .= '<a class="newer" href="news/?p=' . (int)($p-1) . '">Newer News</a>';
+		$olderNewer .= '<a class="newer" href="' . $root_uri . 'news/?p=' . (int)($p-1) . '">Newer News</a>';
 
 	}
 
