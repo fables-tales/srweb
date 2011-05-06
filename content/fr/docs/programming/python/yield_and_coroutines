@@ -1,4 +1,4 @@
-//TITLE:	Yield and Coroutines
+﻿//TITLE:	Yield and Coroutines
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,9 +6,9 @@
 Yields et Coroutines
 ====================
 
-`yield` est une des fonctions plus avances de Python. [La documentation officiel de `yield` - 'en'](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) n'explique pas ce fonction suffisament pour les besoins de votre code. Rudement, on peut penser qu'un `yield` est un type special d'un `return` (retour).
+`yield` est une des fonctions plus avancées de Python. [La documentation officiel de `yield` - 'en'](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) n'explique pas suffisament bien cette fonction pour les besoins de votre code. Grossièrement, on peut dire qu'un `yield` est un type special d'un `return` (retour).
 
-Souvent dans le code pour votre robot, vous devez attendre qu'un événement particulier se produise. En attente d'une entrée numérique au niveau haut, par exemple, serait fait en utilisant le mot `yield`:
+Souvent dans le code pour votre robot, vous devrez attendre qu'un événement particulier se produise. L'attente d'une entrée numérique au niveau haut, par exemple, serait fait en utilisant le mot `yield`:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 yield query.io[0].input[3].d == 1
@@ -21,7 +21,7 @@ Lisez les docs du [query](/docs/programming/sr/query/) pour en savoir plus.
 [Yield en générale](/docs/programming/python/yield_and_coroutines#general) {#general}
 ------------------
 
-C'est important de remarquer qu'un program en python qui utilise un `yield` comme ça ne fonctionnera pas sans le [module sr](/docs/programming/sr/); ceci est ici simplement si vous êtes intéressé. Généralement, `yield` est une instruction qui est intégrale aux [générateurs - `en`](http://docs.python.org/tutorial/classes.html#generators). Une générateur est une type de [coroutine](http://fr.wikipedia.org/wiki/Coroutine) où les appels suivants retournent des valeurs supplémentaires. Une fonction définie devient un générateur lorsque le mot-clé `yield` est utilisé:
+Il est important de remarquer qu'un programme en python qui utilise un `yield`, ne fonctionnera pas sans le [module sr](/docs/programming/sr/); ceci est présenté si vous êtes intéressé. Généralement, `yield` est une instruction qui est intrinsèque aux [générateurs - `en`](http://docs.python.org/tutorial/classes.html#generators). Un générateur est une type de [coroutine](http://fr.wikipedia.org/wiki/Coroutine) où les appels suivants retournent des valeurs supplémentaires. Une fonction définie devient un générateur lorsque le mot-clé `yield` est utilisé:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # c'est maintenant un générateur, il contient yield
@@ -36,7 +36,7 @@ gen = aGenerator()
 print gen  # produit quelque chose comme "<generator object func at 0x9d6fd74>"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Voici un exemple tres simple (attend _n_ seconds, dans ce cas) de ce qui se passe au fond:
+Voici un exemple tres simple (attend _n_ seconds, dans ce cas) de ce qui se passe au final:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import time
@@ -61,7 +61,7 @@ try:
 	while True:
 
                 tmp = gen.next()  # exécute test() jusqu'au prochain yield, 
-                                  # stockant la valeur retournée en tmp
+                                  # stocke la valeur retournée en tmp
 
                 time.sleep(tmp)
 
@@ -81,14 +81,14 @@ c
 fin du code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[Gestion d'Exceptions - en](http://docs.python.org/tutorial/errors.html#handling-exceptions) a été utilisé ci-dessus, que vous pouvez (ou non) les utiliser, en fonction de votre code. Mais, vous n'avez pas besoin de s'inquiéter de la façon dont tout cela fonctionne dans les coulisses (alors, quoi que ce soit en dessous de la commentaire "cette partie de la nôtre").
+[Gestion d'Exceptions - en](http://docs.python.org/tutorial/errors.html#handling-exceptions) a été utilisé ci-dessus, que vous pouvez (ou non) les utiliser, en fonction de votre code. Mais, vous n'avez pas besoin de vous inquiétez de la façon dont tout cela fonctionne en coulisses (cette partie est la nôtre).
 
-Toutefois, le code ci-dessus ne pas utiliser le module _sr_. Lors de la programmation de votre robot, vous pouvez utiliser des coroutines pour segmenter votre code en morceaux indépendants.
+Toutefois, le code ci-dessus n'utilise pas le module _sr_. Lors de la programmation de votre robot, vous pouvez utiliser des coroutines pour segmenter votre code en morceaux indépendants.
 
 [Coroutines](/docs/programming/python/yield_and_coroutines#coroutines) {#coroutines}
 ------------
 
-Au lieu d'avoir beaucoup de lignes selectives pour voir quelle événement s'est produit, checking to see what event has occurred, vous pouvez utiliser quelques [coroutines](http://en.wikipedia.org/wiki/Coroutine) &mdash; qui gèrent un ou deux evenements chacun &mdash; pour rendre l'exécution de votre code plus efficace.  Pour utiliser des coroutines de cette façon, le code qui s'exécute dans les coulisses a besoin de savoir d'eux. Il y a deux façons d'enregistrer un coroutine:
+Au lieu d'avoir beaucoup de lignes selectives pour voir quelle événement s'est produit, vous pouvez utiliser quelques [coroutines](http://en.wikipedia.org/wiki/Coroutine) &mdash; qui gèrent un ou deux evenements chacun &mdash; pour rendre l'exécution de votre code plus efficace.  Pour utiliser des coroutines de cette façon, le code qui s'exécute dans les coulisses a besoin de savoir d'eux. Il y a deux façons d'enregistrer un coroutine:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def aCoroutine():
@@ -111,7 +111,7 @@ def anotherCoroutine():
                 print "Je peut vous dire que je suis un robot avant que main() s'exécute!"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Notez bien que la communication entre les coroutines est très difficile, donc le code dans chaque coroutine devrait être indépendant. Si, par exemple, vous avez eu un bras qui se déplaçait en haut et en bas (pour quelque raison) et elle atteint ses limites de mouvement quand elle frappe des sensors au haut et au bas, vous pourriez mettre en place un coroutine qui: déplace le bras jusqu'à il frappe le sensor au haut, puis le déplace jusqu'à il frappe le sensor au bas, etc., dans un boucle infini. Cela serait bénéfique de s'exécuter indépendamment dans un coroutine.
+Notez bien que la communication entre les coroutines est très difficile, donc le code dans chaque coroutine doit être indépendant. Si, par exemple, vous avez un bras qui se déplaçe de haut en bas (pour quelque raison), la coroutine atteint ses limites de mouvement quand elle frappe des sensors en haut et en bas, vous pourriez mettre en place un coroutine qui: déplace le bras jusqu'à il frappe le sensor en haut, puis le déplace jusqu'à il frappe le sensor en bas, etc., dans un boucle infini. Cela serait mieux car le code s'exécute indépendamment dans un coroutine.
 
 
 
