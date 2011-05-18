@@ -106,7 +106,7 @@ class Content {
 	 * '/some/page' with 'ROOT_URI/some/page'
 	 */
 	private static function fixAbsoluteLinks($content) {
-		return preg_replace('/(href|src)="\/(.*)"/', '$1="'.ROOT_URI.'$2"', $content);
+		return preg_replace('/(href|src)="\/([^\"]*)/', '$1="'.ROOT_URI.'$2"', $content);
 	}
 
 	/*
