@@ -6,19 +6,24 @@
 The Kit
 =======
 
-This year's kit is currently under development and some fairly large changes are
-happening:
+We design, build, test, and ship a unique and powerful robotics kit to
+schools.  We don't stop there.  We then support its use in those
+schools.  This is made possible through the generosity of our sponsors
+[sponsors](/sponsors/) coupled with the enthusiasm of our team of
+volunteers.
 
-At the heart of last year's kit was what we affectionately referred to as
-_The Slug_: a now&ndash;discontinued, heavily&ndash;modified
-<abbr title="Network Attached Storage">NAS</abbr> device from Linksys. This
-system, although successful, was not very maintainable.
+For Student Robotics 2011 (which finished in April 2011) we thoroughly
+redesigned our electronics kit based on our years of experience with
+our previous kit in schools.  We produced a kit that was robust,
+powerful, and easy to use.
 
-This year, we've made the leap to [Beagleboards](http://beagleboard.org/) which
-should dramatically improve the situation: faster code running on the
-robots, faster robot boot times, and we'll even attach a 480x272
-multi&ndash;purpose colour display! As well as this, the rest of the
-kit (motor boards, servo boards and JointIO boards) is being redesigned
-to be even better and much more difficult to break!
+We are always aiming to push the boundaries of what teams can do with
+our kit.  The [BeagleBoard](http://beagleboard.org/) that sits at the
+heart of the new kit provides us with an excellent platform for us to
+build an intensely engrossing robotics experience on top of.  We have
+just begun to scratch the surface of what our software will allow
+teams to achieve.  Stay tuned.
 
-More information about the kit is available in the [documentation](/docs/kit).
+More information about the kit is available in the
+[documentation](/docs/kit) where, alongside the basic specification,
+you'll also find the schematics and source code for what we ship.
