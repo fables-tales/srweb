@@ -1,4 +1,4 @@
-//TITLE:	Lycées et Collèges
+﻿//TITLE:	Lycées et Collèges
 //DESCRIPTION:	Student Robotics: Un introduction pour les lycées et collèges.
 //KEYWORDS:	lycées, introduction, collèges
 //CONTENT_TYPE:	markdown
@@ -6,12 +6,12 @@
 Lycées et Collèges
 ==================
 
-Student Robotics arrange un concours robotique pour des équipes de lycéens
+Student Robotics organise un concours de robotique pour des équipes de lycéens
 (élèves qui, en générale, ont entre 16 et 18 ans). La plupart des ces équipes
 sont dans la région proche de Southampton, mais cette année, nous soutiendrons
-quelques équipes en Bristol, et la région Grenobloise. Les équipes qui ne sont pas trop
-loin de nous devraient être visités par un mentor de Student Robotics une fois par semaine,
-qui offrira les conseils et qui suivra le progrès de l'équipe.
+quelques équipes à Bristol, et dans la région Grenobloise. Les équipes qui ne sont pas trop
+loin de nous devraient être encadrée par un mentor de Student Robotics une fois par semaine,
+il offrira des conseils et suivra le progrès de l'équipe.
 
 [Le Concours](/schools/competition)
 --------------------------------------
@@ -28,9 +28,9 @@ qui offrira les conseils et qui suivra le progrès de l'équipe.
 </video>
 
 Généralement, le concours est basé dans une arène. En 2010, le jeu du
-concours était de ramasser des petits, colorés, cubes de bois, avec un deuxième but
+concours était de ramasser des petits cubes de bois colorés, avec un deuxième but
 - de monter une rampe pour ramasser un canard en plastique. Voici une vidéo accéléré
-(à la droite) de tout ce concours, qui peut vous donner une idée de l'échelle de notre
+(à droite) de tout ce concours, qui peut vous donner une idée de l'échelle de notre
 événement.
 
 Voulez-vous lire un petit peu plus à propos du [concours 2011](/schools/competition)?
@@ -40,32 +40,32 @@ Voulez-vous lire un petit peu plus à propos du [concours 2011](/schools/competi
 ----------------------
 
 Student Robotics comprend que l'argent est assez contraignant pour des activités
-similaires à ce que nous proposons. De résoudre cette problème, nous avons trouvés
-quelques [sponsors](/sponsors/) - auxquelles nous sommes vraiment reconnaissantes -
+similaires à ce que nous proposons. Pour résoudre ce problème, nous avons trouvé
+quelques [sponsors](/sponsors/) - auxquels nous sommes vraiment reconnaissants -
 et grâce à eux, [le kit](/schools/kit) pour chaque équipe est complètement gratuit. 
 C'est vrai - **gratuit**! Il faut que l'équipe achète quelques matériaux pour leur robot
 - par exemple, des moteurs, servos, et des matériaux nécessaires pour le chassis du robot.
-Et nous fournissons chaque équipe avec un budget de €85 pour ça.
+Cest pourquoi nous fournissons à chaque équipe un budget de 85€.
 
-Pourquoi pas jeter un coup d'œuil au [kit de 2011](/schools/kit)?
+Pourquoi ne pas jeter un coup d'œuil au [kit de 2011](/schools/kit)?
 
 [La Documentation](/schools/docs)
 ---------------------------------
 
-Au début, le kit semble d'être assez décourageant, mais veuillez garder à l'esprit que
-nous avons créé le kit d'être si facile que possible d'utiliser. Nous avons réalisé
-toute la conception de bas niveau, qui laisse la conception de haute niveau des
+Au début, le kit semble être assez décourageant, mais veuillez garder à l'esprit que
+nous avons créé le kit afin qu'il soit aussi facile que possible à utiliser. Nous avons réalisé
+toute la conception de bas niveau, qui laisse la conception de haut niveau des
 robots aux équipes. Ils doivent programmer leurs robots dans la language [Python](http://www.python.org/),
-avec des ressources françaises [ici](http://wiki.python.org/moin/FrenchLanguage). Python est une langage
-qui est également pertinante aux programmeurs nouveaux que les programmeurs expérimentés.
+avec des ressources françaises [ici](http://wiki.python.org/moin/FrenchLanguage). Python est un langage
+qui est aussi pertinant pour des programmeurs débutants que pour des programmeurs expérimentés.
 
-Pour régarder comment utiliser le kit, veuillez lire la [documentation](/docs/).
+Pour regarder comment utiliser le kit, veuillez lire la [documentation](/docs/).
 
 
 [Vous voulez participer?](/schools/joining)
 -------------------------------------
 
-Si notre projet vous intéresse, et vous voulez en savoir plus, veuillez
+Si notre projet vous intéresse, et que vous voulez en savoir plus, veuillez
 [nous contacter](/about/contactus), et demandez-nous ce que vous voulez.
 
 Découvrir comment [s'inscrire](/schools/joining).
