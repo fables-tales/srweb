@@ -195,7 +195,17 @@ function _parser_markdown($rawData)
 	return Markdown($rawData);
 }
 
+function _parser_php($rawData)
+{
+	ob_start();
+	eval(' ?>' . $rawData . '<?php ');
+	$retval = ob_get_contents();
+	ob_end_clean();
+	return $retval;
+}
+
 Content::registerParser('MARKDOWN', '_parser_markdown');
 Content::registerParser('MD', '_parser_markdown');
+Content::registerParser('PHP', '_parser_php');
 
 ?>
