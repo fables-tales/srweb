@@ -1,6 +1,10 @@
 Installation Instructions for SRweb
 ==================================
 
+* Grab submodules:
+
+	+ git submodule update --init
+
 * Install php-Smarty:
 
 	+ for yum: `sudo yum install php-Smarty`
