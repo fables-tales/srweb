@@ -26,7 +26,12 @@ if ($form->bound && $form->is_valid()) {
 	if ($form->has_errors())
 		echo '<p class="error">Please correct the following errors.</p>';
 	echo $form->open($_SERVER['REQUEST_URI']);
-	echo $form->as_table();
+
+	foreach($form->fields() as $name => $field) {
+		echo $field->label();
+		echo $field->html();
+	}
+
 	echo '<input type="submit" value="Submit" />';
 	echo $form->close();
 }

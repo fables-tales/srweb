@@ -110,6 +110,15 @@ input, textarea {
 	margin: 5px;
 }
 
+label {
+	display: block;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+input[type="submit"] {
+	display: block;
+}
 
 .clearboth {
 	clear:both;
@@ -158,6 +167,7 @@ div#header form fieldset input[type=submit]{
 	height:24px;
 	width:24px;
 	position:relative;
+	display: inline;
 }
 
 div#header ul {
