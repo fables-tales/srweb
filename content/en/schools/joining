@@ -24,12 +24,13 @@ if ($form->bound && $form->is_valid()) {
 	echo "<p>Thanks for subscribing to SR2012, we aim to contact you... SOME STUFF HERE</p>";
 } else {
 	if ($form->has_errors())
-		echo '<p class="error">Please correct the following errors.</p>';
+		echo '<p class="validation-error-msg">Please correct the following errors.</p>';
 	echo $form->open($_SERVER['REQUEST_URI']);
 
 	foreach($form->fields() as $name => $field) {
 		echo $field->label();
 		echo $field->html();
+		echo $field->errors();
 	}
 
 	echo '<input type="submit" value="Submit" />';
