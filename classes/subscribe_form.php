@@ -1,5 +1,7 @@
 <?php
 
+$csvfn = "subscribed_people.csv";
+
 require_once("phorms/phorms.php");
 require_once("ReCAPTCHA_Widget.class.php");
 require_once("ReCAPTCHA_Field.class.php");
@@ -19,5 +21,14 @@ class SubscribeForm extends Phorm_Phorm {
 }
 
 $form = new SubscribeForm();
+
+if ($form->bound and $form->is_valid()) {
+	if (($csvfile = fopen($csvfn, 'a')) !== False) {
+		$data = array($form->name->get_value(), $form->email->get_value(), $form->phone->get_value(),
+	                      $form->school_name->get_value(), $form->school_address->get_value(),
+		              $form->more_teams->get_value() ? '1':'0');
+		fputcsv($csvfile, $data);
+	}
+}
 
 ?>
