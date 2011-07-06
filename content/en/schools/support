@@ -8,7 +8,7 @@ Mentoring
 We aim to provide a regular mentoring service for schools that are close enough to one of our branches.
 The mentors are usually university students,
  and will provide support and guidance to the teams they mentor,
- aiming to provide both knowledge of the SR [kit](/docs/kit) and of building robots for SR competitions in general.
+ aiming to provide both knowledge of the SR [kit](/schools/kit) and of building robots for SR competitions in general.
 They also monitor the team's progress,
  and are the teams' primary point of contact with SR.
 
@@ -30,7 +30,7 @@ Documentation
 ==============
 
 As far as is possible,
- all the [kit](/docs/kit) that we provide to schools is open-source and fully documented online.
+ all the [kit](/schools/kit) that we provide to schools is open-source and fully [documented](/docs) online.
 The documentation is made available online for all the competitors,
  and includes both detailed schematics of the hardware,
  as well as walkthroughts for setting up their robots.
