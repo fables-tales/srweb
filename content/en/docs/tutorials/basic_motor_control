@@ -75,7 +75,7 @@ Here's the code:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
 
-def main:
+def main():
 
 	while True:
 
@@ -110,7 +110,7 @@ Here's the code:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
 
-def main:
+def main():
 
 	while True:
 

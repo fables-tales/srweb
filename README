@@ -137,21 +137,23 @@ Classes which can be applied to images (and also HTML5 videos) are as follows:
 
 
 
-Content should be placed in the 'content/${lang}/' directory. Anything in this
-directory will appear under the BASE_URI directory on the site. Subdirectories
-will also work.
+Content should be placed in the 'content/${lang}/' directory. Anything
+in this directory will appear under the BASE_URI directory on the
+site. Subdirectories will also work.
 
-Currently, language selection occurs based on the client's configuration (i.e. a
-browser preference setting). There is a 'content/default' symlink to the default
-language (currently English) and it is what pages are based upon. For the page to
-exist in another language, it must first exist in the default language. If an
-ISO standard language is set in the browser at a higher level of preference than
-the default, and the requested page exists in the more-prefered language, then
-that page will be served in the more-preferred language, and only when the correct
-mapping is set up in 'config.inc.php'.
+Currently, language selection occurs based on the client's
+configuration (i.e. a browser preference setting). There is a
+'content/default' symlink to the default language (currently English)
+and it is what pages are based upon. For the page to exist in another
+language, it must first exist in the default language. If an ISO
+standard language is set in the browser at a higher level of
+preference than the default, and the requested page exists in the
+more-prefered language, then that page will be served in the
+more-preferred language, and only when the correct mapping is set up
+in 'config.inc.php'.
 
-At the moment, only content files can be in multiple languages. The pages that
-can't be in different languages, currently, are as follows:
+At the moment, only content files can be in multiple languages. The
+pages that can't be in different languages, currently, are as follows:
 
   * the home page (i.e. 'templates/home.tpl')
   * the news page (i.e. 'templates/news.tpl')

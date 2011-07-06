@@ -58,7 +58,7 @@ Let's dissect that to see what's going on:
 
 On the first line, we have an `import` statement. This tells Python (the programming language the robot code is written in) to get the SR module. Doing so allows objects like `power` and `query` (and some others) to be used in your code. This is essential &mdash; without it, you will not be able to control your robot!
 
-The next (non-empty) line says '`def main:`'. This is how a function (a bit like a function in Maths, if you've used one of those) is defined. `main` is the name of the function defined. `main` is a special function, because it's the one the kit will look for when it tries to run your code. We'll look at creating other functions later.
+The next (non-empty) line says '`def main():`'. This is how a function (a bit like a function in Maths, if you've used one of those) is defined. `main` is the name of the function defined. `main` is a special function, because it's the one the kit will look for when it tries to run your code. We'll look at creating other functions later.
 
 '`while True:`' effectively means loop forever. Any logical expression (or anything that can evaluate to `True` or `False`) can come after the `while` keyword, and the body of code within the `while` loop will be executed until the condition becomes `False`. In this case, however, it is always `True`, hence the infinite loop. Notice the indentation in the code; this is how Python knows what code belongs to what. In the above code, everything at one level of indentation or more is in the `main` function; everything at two levels is a part of the `while` loop body. Indentation is one of the main issues you'll come across that causes your program to act in unexpected ways or not at all. In short, use tabs (as in the `[TAB]` key) to indent code.
 
@@ -107,6 +107,7 @@ You should now _safely remove_ the memory stick from the computer and prepare th
 To run the _hello world_ program, all you need is the following:
 
 * The [power board](/docs/kit/power_board)
+* A [SRIC](/docs/kit/token_ring) cable
 * The battery (charged, of course)
 * The cable to connect the battery to the power board
 * The USB hub
@@ -116,6 +117,7 @@ To run the _hello world_ program, all you need is the following:
 To assemble, follow these steps:
 
 1. Ensure the power board power switch in the OFF position
+1. Plug the single SRIC cable into both SRIC ports on the power board
 2. Plug the USB hub into the USB socket on the power board
 3. Plug the USB hub power cable into the power board and the hub
 4. Plug the memory stick into the USB hub
@@ -123,6 +125,11 @@ To assemble, follow these steps:
 6. Plug the other end of the battery cable into the power board
 
 <div class="warning">You MUST use the USB hub. The BeagleBoard in the power board case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
+
+<div class="info">
+You need to connect the power board to itself with the SRIC cable as it needs a complete token ring in order to work.
+Any completed ring would work, a single cable onto itself is merely the simplest.
+</div>
 
 OK, we're ready to run the code.
 

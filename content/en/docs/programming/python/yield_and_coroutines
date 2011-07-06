@@ -21,6 +21,10 @@ See the [query](/docs/programming/sr/query/) object for more information.
 [Yield in General](/docs/programming/python/yield_and_coroutines#general) {#general}
 ------------------
 
+<div class="info">
+This section makes extensive use of "yield 1" as a simple example of a yield statement. This is not valid SR syntax and will not function as a time delay on the robot.
+</div>
+
 It is important to note that this is not what `yield` does in a normal python program which doesn't involve the [sr module](/docs/programming/sr/); this is simply here for those of you that are interested.  More generally, `yield` is a statement used as a defining part of a Python [generator](http://docs.python.org/tutorial/classes.html#generators). A generator is a type of [coroutine](http://en.wikipedia.org/wiki/Coroutine) where subsequent calls return additional values. A defined function becomes a generator when the `yield` keyword is used:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

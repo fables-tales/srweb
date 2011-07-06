@@ -1,13 +1,17 @@
 Installation Instructions for SRweb
 ==================================
 
+* Grab submodules:
+
+	+ git submodule update --init
+
 * Install php-Smarty:
 
 	+ for yum: `sudo yum install php-Smarty`
 	+ for apt: `sudo apt-get install smarty`
 	+ (for both, ensure config.inc.php is set correctly)
 
-* ensure 'templates_compiled' is owned by apache user. There are a number 
+* ensure 'templates_compiled' is owned by apache user. There are a number
   of ways you can do this:
 
 	+ `chown $APACHEU:$APACHEG templates_compiled/` (where $APACHEU
@@ -17,8 +21,11 @@ Installation Instructions for SRweb
 	+ You could also chmod, but depending on the dir's location, that
           may not be the best way.
 
-* modify the .htaccess file to use the correct 'RewriteBase' and ensure 
+* modify the .htaccess file to use the correct 'RewriteBase' and ensure
   mod_rewrite is installed and loaded in the main Apache configuration file.
+
+* ensure that mod_expires is installed and loaded in the main Apache
+  configuration file.
 
 
 That should be it! Hope that helped.

@@ -1,0 +1,66 @@
+//TITLE:	Writing your own functions
+//DESCRIPTION:
+//KEYWORDS:
+//CONTENT_TYPE:	markdown
+
+Writing your own functions
+==========================
+
+Python allows you to group useful code that you're going to use over and over again into what's called a 'function'.
+In fact that's (sort of) what the 'main' block of your user code is.
+You might want to write a function that handles all the behaviour of your robot once it's got the info back from the vision system,
+ or perhaps something much smaller like a precise left turn.
+
+
+A simple function that calculates the square of a number:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def sqaure(num):
+    return num**2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This would be used by some other code as follows:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sq = sqaure(5)
+print sq  # prints: 25
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Another advantage of grouping your code like this is that if you decide you change the way that it works slightly,
+ (but still having it return the same answer) you can do this easily,
+ and the changed code will be used throughout your code, without having to change it in many, many places:
+
+The same function modified & printing a log message:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def sqaure(num):
+    print 'found the square of %d' % num
+    return num * num
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On your robot you'll need to distinguish between functions like that one,
+ which do something on their own, and those that want to [yield](/docs/programming/python/yield_and_coroutines) things.
+Those in the latter category are called 'generators', and need to be yielded in order to work.
+
+Here we have a generator called 'wait' that gets yielded from main.
+Note how the argument intended for main is passed as another argument to yield,
+ this is a Student Robotics implementation, and will not work in ordinary python:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def wait(time):
+    yield query.timeout(time)
+
+def main():
+   yield vision
+   # do vision stuff
+   yield wait, 5
+   # * waits for 5 seconds *
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**However**, if your functions don't want to yield, then you should call like ordinary functions:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def shout(about):
+    print about, "is awesome!"
+
+def main():
+   yield vision
+   # do vision stuff
+   shout('bacon')
+   # * prints: "bacon is awesome" *
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

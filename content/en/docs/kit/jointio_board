@@ -48,9 +48,13 @@ Specification
 | Maximum Current Per Output               | 100mA     |
 | Output High Voltage                      | 3.3V      |
 | Output Low Voltage                       | 0V        |
-| Maximum Input Voltage                    | 12V       |
+| Maximum Input Voltage                    | 12V[^2]   |
 | Maximum Measurable Input Voltage         | 3.3V      |
 | Input Digital Threshold Voltage          | 1.65V     |
+
+[^2]:
+    Applying greater than 3.3V to an input can affect readings from the other inputs.
+    It is strongly advised to keep all input signals in the range of 0-3.3V, you can use a potential divider to reduce higher voltages into that range.
 
 Designs
 -------

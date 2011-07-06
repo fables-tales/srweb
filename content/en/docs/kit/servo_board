@@ -27,7 +27,9 @@ Indicators
 Case Dimensions
 ---------------
 
-TBA
+![servo board case](/images/content/kit/servo_board_case.png "The Servo Board Case")
+
+All dimensions are in mm
 
 Specification
 -------------
@@ -48,5 +50,5 @@ You can access the schematics and source code of the firmware on the servo board
 You do not need this information to use the board but it may be of interest to some people.
 
  * [Full Schematics](/resources/kit/servo/schematic.pdf)
- * [Firmware Source](https://www.studentrobotics.org/cgit/boards/pwm-fw.git/)
+ * [Firmware Source](https://www.studentrobotics.org/cgit/boards/servo-fw.git/)
  * [Hardware Designs](https://www.studentrobotics.org/cgit/boards/pwm-hw.git/)
