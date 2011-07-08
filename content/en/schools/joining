@@ -1,12 +1,40 @@
 //TITLE:	Joining
 //DESCRIPTION:	
 //KEYWORDS:	
-//CONTENT_TYPE:	markdown
+//CONTENT_TYPE:	php
 
-Joining
-=======
+<?php
+// Form definition, validation and processing
+// Relative to 'classes'
+include("subscribe_form.php");
+?>
 
-If you would like to express interest in taking part in the competition, please
-do [get in contact with us](/about/contactus).
+<h1>Joining</h1>
 
-Unfortunately, this year's competition has now started &mdash; it is now too late to register your interest for SR 2011. Please do let us know that you'd like to take part in SR 2012, though.
+<p>If you are new to Student Robotics and would like to express interest in taking part in the competition, please do <a href="/about/contactus">get in contact with us</a>.</p>
+
+<h2>Subscribe to SR2012</h2>
+
+<p>This year there are sufficient spaces for 24 teams &mdash; to confirm a place, as either a new or returning team, please fill in the form below.</p>
+
+<?php
+
+if ($form->bound && $form->is_valid()) {
+	echo "<p>Thanks for subscribing to SR2012, we will contact you shortly to confirm your place.</p>";
+} else {
+	if ($form->has_errors())
+		echo '<p class="validation-error-msg">Please correct the following errors.</p>';
+	echo $form->open($_SERVER['REQUEST_URI']);
+
+	foreach($form->fields() as $name => $field) {
+		echo $field->label();
+		echo $field->html();
+		echo $field->errors();
+	}
+
+	echo '<input type="submit" value="Submit" />';
+	echo $form->close();
+}
+
+?>
+

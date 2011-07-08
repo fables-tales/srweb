@@ -2,3 +2,13 @@ div#sponsors_index p,
 div.docs div#content p {
 	overflow:hidden;
 }
+
+/* Subscription form */
+div.validation-advice {
+	display: inline;
+	color: red;
+	font-size: small;
+}
+p.validation-error-msg {
+	color: red;
+}
