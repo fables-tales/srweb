@@ -15,13 +15,14 @@ include("subscribe_form.php");
 
 <h2>Subscribe to SR2012</h2>
 
-<p>This year there are sufficient spaces for 24 teams &mdash; to confirm a place, as either a new or returning team, please fill in the form below.</p>
 
 <?php
 
 if ($form->bound && $form->is_valid()) {
 	echo "<p>Thanks for subscribing to SR2012, we will contact you shortly to confirm your place.</p>";
 } else {
+	echo "<p>This year there are sufficient spaces for 24 teams &mdash; to confirm a place, as either a new or returning team, please fill in the form below.</p>";
+
 	if ($form->has_errors())
 		echo '<p class="validation-error-msg">Please correct the following errors.</p>';
 	echo $form->open($_SERVER['REQUEST_URI']);
