@@ -20,7 +20,7 @@ class SubscribeForm extends Phorm_Phorm {
 		$this->email = new Phorm_Field_Email("Email Address", 40, 255, array('required'));
 		$this->phone = new Phorm_Field_Text("Phone Number", 40, 255);
 		$this->school_name = new Phorm_Field_Text("School Name", 40, 255, array('required'));
-		$this->school_address = new Phorm_Field_TextArea("School Address", 5, 40, array('required', sane_address));
+		$this->school_address = new Phorm_Field_TextArea("School Address", 5, 40, array('required', 'sane_address'));
 		$this->more_teams = new Phorm_Field_CheckBox("Would you like to enter two teams if there is free space?");
 		$this->captcha = new Phorm_Field_ReCAPTCHA("Please enter the text shown in the image below");
 
