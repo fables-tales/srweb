@@ -36,6 +36,11 @@ if ($form->bound and $form->is_valid()) {
 	                      $form->school_name->get_value(), $form->school_address->get_value(),
 		              $form->more_teams->get_value() ? '1':'0');
 		fputcsv($csvfile, $data);
+
+		/* Tell us about it */
+		$fd = fopen("/tmp/hash-srobo", "a");
+		fwrite($fd, $form->school_name->get_value() . " has just signed up to SR2012!\n");
+		fclose($fd);
 	}
 }
 
