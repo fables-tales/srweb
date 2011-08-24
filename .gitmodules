@@ -1,3 +1,6 @@
 [submodule "classes/phorms"]
 	path = classes/phorms
 	url = https://github.com/jordanlev/phorms.git
+[submodule "community-guidelines"]
+	path = community-guidelines
+	url = ../community-guidelines
