@@ -21,7 +21,7 @@ include("subscribe_form.php");
 if ($form->bound && $form->is_valid()) {
 	echo "<p>Thanks for subscribing to SR2012, we will contact you shortly to confirm your place.</p>";
 } else {
-	echo "<p>This year there is sufficient space for 24 teams.  12 of these places are currently available.  To confirm a place, as either a new or returning team, please fill in the form below.</p>";
+	echo "<p>This year there is sufficient space for 24 teams.  10 of these places are currently available.  To confirm a place, as either a new or returning team, please fill in the form below.</p>";
 
 	if ($form->has_errors())
 		echo '<p class="validation-error-msg">Please correct the following errors.</p>';
