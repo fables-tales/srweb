@@ -1,0 +1,101 @@
+//TITLE:	Batteries and Charging
+//DESCRIPTION:	
+//KEYWORDS:	
+//CONTENT_TYPE:	markdown
+
+Batteries and Charging
+======================
+
+<img src="/images/content/kit/imaxb6.jpg" alt="A photo of the imax B6 battery charger." title="An imax B6 battery charger" />
+The electronics kit contains two 2.2Amp hour lithium polymer batteries and an imax B6 battery charger. Lithium polymer batteries, similar to those used in mobile phones, are small and light for the amount of energy they contain. This is great for your robot but it is vital to treat such a high concentration of energy with respect. The battery charger controls the electrical current passed through the batteries to ensure they are charged safely.
+
+Warning
+-------
+LiPo batteries can get hot or catch fire when charging and in use.
+
+*   *Never leave in use or charging batteries unattended*
+*   Always use the correct charger
+*   Always follow the charging checklist precisely to make sure the charger is correctly configured
+*   Leave the charging leads connected to the battery charger at all times
+*   *Do not* charge a damaged battery
+
+Charging Checklist
+------------------
+This list must be followed carefully each time a battery is connected to the charger.
+
+1.   Plug in the mains adapter and plug it into the battery charger.
+1.   Connect the charging lead from the charger to the battery.
+1.   Connect the monitoring lead from the battery to the charger.
+1.   Configure the charger using the menu system as follows. After turning on the screen should show:
+
+<style>
+table.charger {
+    background-color: #007dc2;
+    color: white;
+    width: 10em;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #007dc2;
+}
+table.charger td {
+    border-color: #007dc2;
+}
+</style>
+
+<table class="charger">
+<tr><td>Program Select</td></tr>
+<tr><td>Lithium Battery</td></tr>
+</table>
+
+Press START to select lithium battery charging.
+
+<table class="charger">
+<tr><td>LiPo Charge</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+Press INC
+
+<table class="charger">
+<tr><td>LiPo Balance</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+Press START to select LiPo balance mode.
+
+<table class="charger">
+<tr><td colspan=2>LiPo Balance</td></tr>
+<tr><td>2.0A</td><td>11.1V(3S)</td></tr>
+</table>
+
+Press START. The current (bottom left) should start blinking. Press INC until it reads 2.2A then press START again to store the value.
+
+<table class="charger">
+<tr><td colspan=2>LiPo Balance</td></tr>
+<tr><td>2.2A</td><td>11.1V(3S)</td></tr>
+</table>
+
+Hold START for 3 seconds to confirm. The charger will try to detect the battery. It *must* show:
+
+<table class="charger">
+<tr><td>R:3SER</td><td>S:3SER</td></tr>
+<tr><td colspan=2>CONFIRM(ENTER)</td></tr>
+</table>
+
+*If different information is shown immediately power down the charger and contact Student Robotics.*
+
+Press START to commence charging
+
+<table class="charger">
+<tr><td>Li3s</td><td>1.2A</td><td>12.59V</td></tr>
+<tr><td>BAL</td><td>022:43</td><td>00682</td></tr>
+</table>
+
+The screen shows the charging current (here: 1.2A), the current voltage (here: 12.59V), the time elapsed (here: 22m43s) and the energy provided to the battery (here: 682 mAh).
+
+The charger will beep when the battery is fully charged. You must then:
+
+1.   Unplug the charger from the mains.
+1.   Unplug the charging lead from the charger to the battery.
+1.   Unplug the monitoring lead from the battery to the charger.
