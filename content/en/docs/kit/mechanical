@@ -13,20 +13,25 @@ You will almost certainly need to get extra parts to make a usable robot chassis
 
 | Item                    | Qty   | Part Number                
 |-------------------------|-------|------------
-| Threaded Bar, M6        | 1m    | [Screwfix 43605][SF-43605] 
-| Hex Nut M6              | 41    | [Screwfix 15346][SF-15346]
+| Threaded Bar M6         | 2x 1m | [Screwfix 43605][SF-43605]
+| Bolt Pan Head M3 12mm   | 100   |
+| Bolt Pan Head M4 20mm   | 100   |
+| Flat Washer M3          | 100   |
+| Flat Washer M4          | 100   |
+| Flat Washer M6          | 100   |
+| Hex Nut M3              | 100   |
+| Hex Nut M4              | 100   |
+| Hex Nut M6              | 100   | [Screwfix 15346][SF-15346]
+| Hex Nut M3 (Nyloc)      | 20    |
+| Hex Nut M4 (Nyloc)      | 20    |
+| Hex Nut M6 (Nyloc)      | 20    |
 | Butt hinge 51x29mm      | 4     | [Screwfix 18399][SF-18399]
-| Assortment of Springs   | 16    | [Screwfix 63863][SF-63863]
-| Bolt Pan Head M4 20mm   | 50    | [Screwfix 97740][SF-97740]
-| Bolt Pan Head M4 30mm   | 25    | [Screwfix 50074][SF-50074]
-| Hex Nut M4              | 83    | [Screwfix 17307][SF-17307]
-| Hex Nut M4 - Nyloc      | 20    | [Screwfix 64653][SF-64653]
-| Flat Washer M4          | 41    | [Screwfix 14391][SF-14391]
-| Cable Tie 140x3.6mm     | 100   | [Screwfix 19102][SF-19102]
-| Cable Tie Assortment    | 125   | [Screwfix 13826][SF-13826]
-| 10 Compartment Box      | 1     | [Screwfix 12880][SF-12880]
-| Green Paint             | 250ml | RAL 6018
-| Aluminium L section 3/4"x1.6mm | 4x 1.5m | N/A
+| Assortment of Springs   | 20    | [Screwfix 63863][SF-63863]
+| Cable Tie 2.5x100mm     | 100   |
+| Cable Tie 3.6x100mm     | 100   | [Screwfix 19102][SF-19102]
+| Cable Tie 4.8x200mm     | 100   |
+| 12 Compartment Box      | 1     | [Screwfix 12880][SF-12880]
+| Aluminium L section 3/4"x1.6mm | 4x 2m | N/A
 
 [SF-43605]: http://www.screwfix.com/prods/43605
 [SF-15346]: http://www.screwfix.com/prods/15346
