@@ -6,6 +6,8 @@
 Walkthrough
 ===========
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 The aim of this walkthrough is to take you through &mdash; step-by-step &mdash; the process of writing code and running it on the kit. We'll start off with a [_hello world_ program](http://en.wikipedia.org/wiki/Hello_world_program), the first program most programmers write in every language. As Student Robotics involves a lot of electronics, we'll use a slightly adapted _hello world_ program which flashes an LED on the [power board](/docs/kit/power_board) instead.
 
 Once that's up and running, we'll continue to advance what the examples (additional tutorials) do up to a point where the vision software is used. You should, in theory, be able to do anything then (well, if you read the other documentation, anyway!).

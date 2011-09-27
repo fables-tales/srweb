@@ -6,6 +6,8 @@
 Query {#query}
 =====
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 Often, you will need to wait on a particular event to occur; an input pin going high, for example. To do this, you will need to use `yield` (read [this](/docs/programming/python/yield_and_coroutines) to learn more). The API has changed slightly this year, making some things slightly clearer. In Python, it is possible to override operators (things like `*`, `+`, `<` and `==`, for example). We have used this feature to make compound waiting conditions more readable, as explained below.
 
 [IO Queries](/docs/programming/sr/query/#IOQueries) {#IOQueries}

@@ -6,6 +6,8 @@
 Hardware Troubleshooting
 ========================
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 <div class="info" markdown="1">
 Every piece of SR hardware has one or more green LEDs on it to indicate that it has power. Some boards contain more than one green power LED as there are separate power rails, e.g. the motor board has one next to the SRIC connectors and another next to the 12V camcon power connector. The most important thing to check before anything else is that a board has power. If a board does not have power then it is not possible to track down further problems.
 

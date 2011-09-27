@@ -6,6 +6,8 @@
 Python
 ======
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 Student Robotics robots are all programmed in [Python](http://www.python.org); to program a robot, it is important that you have a basic understanding of Python.
 
 There are a number of tutorials out there which might help you to learn to program in Python:

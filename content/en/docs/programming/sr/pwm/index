@@ -6,6 +6,8 @@
 PWM
 ===
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 A servo board (previously known as the PWM board, hence the `pwm` reserved word in the SR library) can have a number of servos plugged into it, with their positions controlled using the `pwm` object.
 As with `io` and `motor`, `pwm` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position of servos can range from `0.0` to `100.0` inclusive:
 
