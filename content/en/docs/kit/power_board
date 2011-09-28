@@ -10,7 +10,10 @@ Power Board
 The Power Board is the central piece of the electronics kit.
 It runs the code that you write in the SR IDE and controls all of the other boards in the kit.
 Your kit includes a single Power Board which is connected into the [Token Ring](/docs/kit/token_ring), it also has a USB hub connected to it which allows both the webcam and the USB memory stick to be plugged in.
-To ensure that your robot is safe before your code starts running and if there are any problems the power board only gives power to the motors and any electronics you develop when your python code is running.
+
+<div class="warning" markdown=1>
+The LiPo batteries do *not* support charging through the power board. They must be charged using the iMAX B6 charger provided. The power board is supplied with tape over the charger fuse slot and this should not be removed.
+</div>
 
 Board Diagram
 -------------
@@ -24,15 +27,12 @@ Indicators
 |-----------------|--------------------------------|----------------------
 | 3.3V            | The board is powered           | On
 | 5V              | The BeagleBoard is powered     | On
-| Charging        | The battery is charging*       | Off
-| Motor Rail      | The Motor Rail is powered      | Off
+| Charging        | The battery is flat            | Off
+| Motor Rail      | The Motor Rail is powered      | On
 | Token           | The token-ring is functioning  | On
 | SRIC Activity   | Data is being transferred      | Off
 | Blown Fuse      | The main fuse has blown or is missing | Off
 | User            | Controllable from user code    | Off
-
-*Unfortunately due to the design of the electronics the charging LED will only light up when the battery is charging and the Power Board is switched on.
-If the Power Board is switched off then the charging LED will not light but the battery will charge and the LEDs/dial on the charger should show this.
 
 Controls
 --------
@@ -62,7 +62,6 @@ Specification
 | Maximum Motor Rail Switching Current | 25A       |
 | Maximum USB Hub Output Current       | 1A        |
 | Main Battery Fuse Current            | 15A       |
-| Charger Fuse Current                 | 5A        |
 | Display Resolution                   | 480x272   |
 | Display Refresh Rate                 | 69Hz      |
 | Processor                            | 720MHz ARM Cortex A8 |
