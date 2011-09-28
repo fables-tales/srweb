@@ -6,6 +6,8 @@
 Power Board
 ===========
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 <img src="/images/content/kit/power_board.png" alt="A photo of an un-cased power board without LCD" title="An un-cased power board without LCD" class="right" />
 The Power Board is the central piece of the electronics kit.
 It runs the code that you write in the SR IDE and controls all of the other boards in the kit.

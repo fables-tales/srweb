@@ -6,6 +6,8 @@
 Programming Your Robot
 ======================
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 Robots that are made using the SR kit are programmed with [Python](/docs/programming/python/) which is made possible with a custom-built Python library, `sr`; see [here](/docs/programming/sr/) for more details. The pages under this section should contain all of the information you need to know to successfully code for your robot. 
 
 * Under the [Python](/docs/programming/python/) section, some of the more intricate features of Python are explained in sufficient detail to program a robot. Links to tutorials are also provided to introduce a new programmer to Python.

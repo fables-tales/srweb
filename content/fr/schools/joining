@@ -1,12 +1,41 @@
-//TITLE:	Participant
+//TITLE:	Joining
 //DESCRIPTION:
 //KEYWORDS:
-//CONTENT_TYPE:	markdown
+//CONTENT_TYPE:	php
 
-Participant
-===========
+<?php
+// Form definition, validation and processing
+// Relative to 'classes'
+include("subscribe_form.php");
+?>
 
-Si vous êtes un lycée dans le département de l'Isère, et vous avez envie de participer dans notre concours,
-[veuillez n'hésiter pas à nous contacter](/about/contactus) pour enregistrer votre intérêt.
+<h1>Joining</h1>
 
-Cette année, nous ne pouvons pas soutenir qu'une ou deux équipes, donc cela peut-être le cas que vous devez attendre jusqu'au debut de SR 2012 (qui commence en Septembre 2011).
+<p>If you are new to Student Robotics and would like to express interest in taking part in the competition, please do <a href="/about/contactus">get in contact with us</a>.</p>
+
+<h2>Subscribe to SR2012</h2>
+
+
+<?php
+
+if ($form->bound && $form->is_valid()) {
+	echo "<p>Thanks for subscribing to SR2012, we will contact you shortly to confirm your place.</p>";
+} else {
+	echo "<p>This year there is sufficient space for 24 teams.  5 of these places are currently available.  To confirm a place, as either a new or returning team, please fill in the form below.</p>";
+
+	if ($form->has_errors())
+		echo '<p class="validation-error-msg">Please correct the following errors.</p>';
+	echo $form->open($_SERVER['REQUEST_URI']);
+
+	foreach($form->fields() as $name => $field) {
+		echo $field->label();
+		echo $field->html();
+		echo $field->errors();
+	}
+
+	echo '<input type="submit" value="Submit" />';
+	echo $form->close();
+}
+
+?>
+

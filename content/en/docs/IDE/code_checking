@@ -6,5 +6,7 @@
 Code Checking
 =============
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 Your code is checked automatically everytime you click _Export Project_ in the _Projects_ tab. If you wish to check code before you export it, you can do so by clicking the _Check Code_ button also on the _Projects_ tab. If there are any errors with your code, the code checker will present a warning offering you the chance to view the errors.
 

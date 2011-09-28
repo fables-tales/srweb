@@ -6,6 +6,8 @@
 Writing Good Commit Messages
 ============================
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 Writing good commit messages is easy; sadly, writing lazy ones is even easier. With a bit of discipline, though, it will become natural over time. There are 2 parts to a good commit message:
 
 1. a summary of **what you've done**

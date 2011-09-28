@@ -6,6 +6,8 @@
 Python Troubleshooting
 ========================
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 When attempting to run a simple program the error "AttributeError: 'NoneType' object has no attribute 'next'" is seen
 :	The main function is treated as a generator by the SR library.
 	This means that it must contain at least one yield to work correctly.

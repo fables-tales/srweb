@@ -6,6 +6,8 @@
 Yield and Coroutines
 ====================
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 `yield` is one of the more advanced features of Python. [`yield`'s official documentation](http://docs.python.org/reference/simple_stmts.html#grammar-token-yield_stmt) isn't too useful for explaining what you need to use it for. Roughly, you can think of a `yield` as a special type of `return`.
 
 Very often, when writing code for your robot, you'll need to wait on a particular event to occur. Waiting for a digital input to go high, for example, would be done using the `yield` statement:

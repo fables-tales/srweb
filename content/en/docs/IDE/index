@@ -6,6 +6,8 @@
 The IDE
 =======
 
+<div class="warning">This documentation is currently out-of-date, and is in the process of being rewritten.  It should be completed within the next week or so.</div>
+
 The IDE (or Integrated Development Environment) has been written especially for Student Robotics. It is a web-based IDE which means all work needs to be done with an internet connection. This is a good thing, though: all of your code will be on our server so you don't need to worry about losing your memory stick. (But please don't lose it!)
 
 To get to the IDE, there is a link in the menu above. You can also click [here](https://www.studentrobotics.org/ide/).
