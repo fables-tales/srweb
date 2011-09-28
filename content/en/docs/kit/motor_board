@@ -23,11 +23,11 @@ Indicators
 | SRIC Activity   | The board is transferring data | Off
 | Token           | The token-ring is functioning | On
 | Motor Power     | The motor has power and will turn when instructed to | Off
-| Current Limit   | Too much current is being drawn from the output | Off
+| Current Limit   | Unused                 | Off
 | Feedback        | Undefined              | Off
 | Motor           | Brightness shows power, LED shows direction | Off
 
-After you have started your code the `Motor power LED` should come on and the `Current Limit LED` remain off.
+After you have started your code the `Motor power LED` should come on.
 
 Case Dimensions
 ---------------
@@ -44,12 +44,13 @@ Specification
 | Absolute Maximum Input Voltage       | 16V       |
 | Output Voltage                       | 12V       |
 | Maximum Output Current               | 5A        |
-| Output Current Limit*                | 5.5A      |
 | PWM Frequency                        | 324Hz     |
 | PWM Duty Cycle Range                 | 0-99%     |
 | PWM Duty Cycle Steps (per direction) | 100       |
 
-*It is strongly advised to operate well within the current limit of the motor board or strange behaviour may be observed.
+Unlike last year, the motor board does not have any current limiting.
+This means that there should be fewer problems with motors not operating correctly however care must be taken that the output is not over-loaded or shorted.
+If the output of a motor board is shorted then the main power fuse on the power board will blow.
 
 Designs
 -------
