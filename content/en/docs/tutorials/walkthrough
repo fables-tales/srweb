@@ -122,8 +122,6 @@ To assemble, follow these steps:
 5. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
 6. Plug the other end of the battery cable into the power board
 
-<div class="warning">You MUST use the USB hub. The BeagleBoard in the power board case cannot handle low-speed USB devices (like a memory stick). DO NOT plug the memory stick directly into the BeagleBoard &mdash; it will not work.</div>
-
 <div class="info">
 You need to connect the power board to itself with the SRIC cable as it needs a complete token ring in order to work.
 Any completed ring would work, a single cable onto itself is merely the simplest.
