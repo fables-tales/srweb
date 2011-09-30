@@ -10,3 +10,20 @@ div.docs div#content p {
 	font-family: "Register";
 	src: url("../fonts/register.ttf");
 }
+
+table.charger_lcd {
+    font-family: "Register";
+    font-size: 24pt;
+    line-height: 1em;
+    background-color: #007dc2;
+    color: white;
+    width: 280pt;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #007dc2;
+    text-align: left;
+}
+table.charger_lcd td {
+    border-color: #007dc2;
+}
