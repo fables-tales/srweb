@@ -24,7 +24,7 @@ Charging Checklist
 This list must be followed carefully each time a battery is connected to the charger.
 
 1.   Plug in the mains adapter and plug it into the battery charger.
-1.   Connect the charging lead from the charger to the battery.
+1.   Connect the charging lead from the charger to the battery. Ensure you plug the lead into the charger first and the battery second to avoid risk of shorting the battery.
 1.   Connect the monitoring lead from the battery to the charger.
 1.   Configure the charger using the menu system as follows. After turning on the screen should show:
 
@@ -33,51 +33,57 @@ This list must be followed carefully each time a battery is connected to the cha
 <tr><td style="text-align: right;">LiPo BATT</td></tr>
 </table>
 
-Press START to select lithium battery charging.
+If it does not repeatedly press `Batt.Type/Stop` until it does.
+
+Press `Start/Enter` to select lithium battery charging.
 
 <table class="charger_lcd">
 <tr><td>LiPo CHARGE</td></tr>
 <tr><td>0.1A&nbsp;&nbsp;&nbsp;&nbsp;3.7V(1S)</td></tr>
 </table>
 
-Press INC
+Press `Inc.` to select Balance charging.
 
 <table class="charger_lcd">
 <tr><td>LiPo BALANCE</td></tr>
 <tr><td>2.4A&nbsp;&nbsp;&nbsp;22.2V(6S)</td></tr>
 </table>
 
-Press START to select LiPo balance mode.
+Press `Start/Enter` to edit the charging current.
 
 <table class="charger_lcd">
 <tr><td>LiPo BALANCE</td></tr>
 <tr><td>2.2A&nbsp;&nbsp;&nbsp;11.1V(3S)</td></tr>
 </table>
 
-Press START. The current (bottom left) should start blinking. Press INC until it reads 2.2A then press START again to store the value.
+The current (bottom left) should start blinking.
+Use the `Inc.`/`Dec.` buttons until it reads `2.2A`.
+Press `Start/Enter` to store the value and to begin editing the battery voltage.
+Use the `Inc.`/`Dec.` buttons until it reads `11.1V(3S)`.
 
 <table class="charger_lcd">
 <tr><td>LiPo BALANCE</td></tr>
 <tr><td>2.2A&nbsp;&nbsp;&nbsp;11.1V(3S)</td></tr>
 </table>
 
-Hold START for 3 seconds to confirm. The charger will try to detect the battery. It *must* show:
+Hold `Start/Enter` for 3 seconds to confirm. The charger will try to detect the battery. It *must* show:
 
 <table class="charger_lcd">
 <tr><td>R:3SER&nbsp;&nbsp;S:3SER</td></tr>
 <tr><td>CONFIRM(ENTER)</td></tr>
 </table>
 
-*If different information is shown immediately power down the charger and contact Student Robotics.*
+The important thing to note here is that the number of cells detected by the charger (R) and the number of cells set by you (S) are both 3.
+*If either of these numbers are different immediately power down the charger and contact Student Robotics.*
 
-Press START to commence charging
+Press `Start/Enter` to commence charging
 
 <table class="charger_lcd">
 <tr><td>Li3S 2.2A 12.59V</td></tr>
 <tr><td>BAL 022:43 00682</td></tr>
 </table>
 
-The screen shows the charging current (here: 1.2A), the current voltage (here: 12.59V), the time elapsed (here: 22m43s) and the energy provided to the battery (here: 682 mAh).
+The screen shows the charging current (here: `2.2A`), the current voltage (here: `12.59V`), the time elapsed (here: `22m43s`) and the energy provided to the battery (here: `682mAh`).
 
 The charger will beep when the battery is fully charged. You must then:
 
