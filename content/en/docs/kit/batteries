@@ -89,5 +89,5 @@ The screen shows the charging current (here: `2.2A`), the current voltage (here:
 The charger will beep when the battery is fully charged. You must then:
 
 1.   Unplug the charger from the mains.
-1.   Unplug the charging lead from the charger to the battery.
+1.   Unplug the battery from the charging lead, do not unplug the charging lead from the charger with the battery still connected.
 1.   Unplug the monitoring lead from the battery to the charger.
