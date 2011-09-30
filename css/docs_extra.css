@@ -27,3 +27,9 @@ table.charger_lcd {
 table.charger_lcd td {
     border-color: #007dc2;
 }
+
+@media print {
+	table.charger_lcd {
+		font-family: monospace;
+	}
+}
