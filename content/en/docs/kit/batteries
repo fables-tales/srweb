@@ -36,6 +36,7 @@ This list must be followed carefully each time a battery is connected to the cha
 If it does not repeatedly press `Batt.Type/Stop` until it does.
 
 Press `Start/Enter` to select lithium battery charging.
+The following screen may be the first shown if the charger has been used previously.
 
 <table class="charger_lcd">
 <tr><td>LiPo CHARGE</td></tr>
