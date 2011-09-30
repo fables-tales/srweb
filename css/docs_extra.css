@@ -3,3 +3,10 @@
 div.docs div#content p {
 	overflow:hidden;
 }
+
+/* docs/kit/batteries */
+
+@font-face {
+	font-family: "Register";
+	src: url("../fonts/register.ttf");
+}
