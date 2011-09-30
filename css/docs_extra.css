@@ -1,0 +1,5 @@
+/* General */
+
+div.docs div#content p {
+	overflow:hidden;
+}
