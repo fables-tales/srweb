@@ -14,13 +14,13 @@ div.docs div#content p {
 table.charger_lcd {
     font-family: "Register";
     font-size: 24pt;
-    line-height: 1em;
+    line-height: 0.8em;
     background-color: #007dc2;
     color: white;
-    width: 280pt;
+    width: 298pt;
     text-align: center;
     border-style: solid;
-    border-width: 2px;
+    border-width: 16pt 10pt;
     border-color: #007dc2;
     text-align: left;
 }
