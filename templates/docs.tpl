@@ -68,6 +68,9 @@
 		</div>
 
 		<div id="content">
+			<div id="print_warning">
+				As you have printed this it is now out of date. Please visit<br /><strong>https://{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}</strong><br />for the latest documentation.
+			</div>
 			{getFromContent get="content"}
 		</div>
 		<p></p>

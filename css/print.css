@@ -61,3 +61,11 @@ div.docs div#content p img {
 	display: inline;
 	margin: 0;
 }
+
+div.docs div#content div#print_warning {
+	border: 4px solid red;
+	padding: 2px;
+	text-align: center;
+	color: red;
+	display: block;
+}

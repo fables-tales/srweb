@@ -143,3 +143,7 @@ div.docs div#content p code {
 	font-weight:bolder;
 	padding:5px;
 }
+
+div.docs div#content div#print_warning {
+	display: none;
+}
