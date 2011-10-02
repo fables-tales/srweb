@@ -6,5 +6,11 @@ RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/piwik(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/ide(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/password(.*))$
-RewriteCond %{REQUEST_URI}	!(resources/markers(.*))$
+
+# These rules are useful outside of optimus so must work when
+# the actual URI might have other stuff in front of it, i.e.
+# like when it's in a public_html
+RewriteCond %{REQUEST_URI}	!(resources/2012/markers(.*))$
+
+
 RewriteRule ^(.+)$ 	index.php?page=$1	[L,QSA]
