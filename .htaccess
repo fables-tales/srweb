@@ -6,4 +6,5 @@ RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/piwik(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/ide(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/password(.*))$
+RewriteCond %{REQUEST_URI}	!(resources/markers(.*))$
 RewriteRule ^(.+)$ 	index.php?page=$1	[L,QSA]
