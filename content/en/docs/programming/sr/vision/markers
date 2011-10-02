@@ -29,8 +29,8 @@ The table below lists the *libkoki* markers that your robot will know about and 
 | Bucket End  | 76-79 | 100mm x 100mm |
 
 
-You can download all of these markers, as PDFs, in a single [ZIP file](/resources/markers/sr-dev-markers.zip).
-Alternatively, you may download individual markers [here](/resources/markers/).
+You can download all of these markers, as PDFs, in a single [ZIP file](/resources/2012/markers/sr-dev-markers.zip).
+Alternatively, you may download individual markers [here](/resources/2012/markers/).
 The *Arena* markers, due to their size, need to be printed on A3 paper.
 All of the other markers can be printed on A4 paper, and are in a 4-up arrangement to help save paper.
 Please make sure your system is not scaling the PDFs when printing them.
