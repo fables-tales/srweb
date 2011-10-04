@@ -103,13 +103,20 @@
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uri}schools/kit/">The Kit</a></h3>
+					<h3><a href="{$root_uri}schools/key_dates">Key Dates</a></h3>
 					<p>
-						<a href="{$root_uri}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
-						Student Robotics design and build a range of easily&ndash;programmable boards
-						designed specifically for building robots. The teams receive the kit at Kickstart
-						and have about 7 months to build a competition&ndash;winning robot.
+						Tech Days:
+						<ul>
+							<li>3rd December</li>
+							<li>4th February</li>
+							<li>17th March</li>
+						</ul>
+						Competition:
+						<ul>
+							<li>14th &amp; 15th April</li>
+						</ul>
 					</p>
+
 				</div>
 
 				<div class="box clearboth">
@@ -124,11 +131,13 @@
 				</div>
 
 				<div class="box">
-					<h3><a href="{$root_uri}sponsors/">Our Sponsors</a></h3>
+					<h3><a href="{$root_uri}schools/kit/">The Kit</a></h3>
 					<p>
-						Student Robotics really couldn't happen if we didn't have our sponsors.
+						<a href="{$root_uri}schools/kit/"><img src="{$root_uri}images/template/kit_motor_board.jpg" alt="motor board prototpye" title="Motor Board Prototype" /></a>
+						Student Robotics design and build a range of easily&ndash;programmable boards
+						designed specifically for building robots. The teams receive the kit at Kickstart
+						and have about 7 months to build a competition&ndash;winning robot.
 					</p>
-
 				</div>
 
 			</div>
