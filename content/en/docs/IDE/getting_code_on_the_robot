@@ -1,6 +1,6 @@
 //TITLE:	Getting Code on the Robot
-//DESCRIPTION:
-//KEYWORDS:
+//DESCRIPTION:	Explains how to get code a user has written in the IDE onto their robot
+//KEYWORDS:	IDE, robot, export, zip
 //CONTENT_TYPE:	markdown
 
 Getting Code on the Robot
@@ -22,3 +22,7 @@ You can follow these steps when you've got some code you'd like to run:
 4. Plug it into your robot's USB hub
 
 Now you can turn on your robot (or kit) and press the _run_ button.
+
+<div class="info">
+You can also export the current project at any point using the keyboard shortcut Ctrl+E.
+</div>
