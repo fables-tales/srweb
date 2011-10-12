@@ -1,10 +1,10 @@
-//TITLE:	Motor
+//TITLE:	Motors
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Motor
-=====
+Motors
+======
 
 The _motors_ object is used to control a list of motors. As with _io_ and _servos_, _motors_ is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
 
