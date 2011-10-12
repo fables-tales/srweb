@@ -22,7 +22,7 @@ from sr import *
 
 ...at the top of your code (before you use any of its functionality, basically). You then have access to the following already-instantiated objects:
 
-* [motors](/docs/programming/sr/motor/)
+* [motors](/docs/programming/sr/motors/)
 * [power](/docs/programming/sr/power/)
 * [servos](/docs/programming/sr/servos/)
 * [io](/docs/programming/sr/io/)
