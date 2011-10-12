@@ -6,7 +6,7 @@
 Motor
 =====
 
-The _motors_ object is used to control a list of motors. As with _io_ and _pwm_, _motors_ is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
+The _motors_ object is used to control a list of motors. As with _io_ and _servos_, _motors_ is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 R.motors[0].something...
