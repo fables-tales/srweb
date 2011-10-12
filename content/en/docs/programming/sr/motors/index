@@ -6,10 +6,10 @@
 Motor
 =====
 
-The _motor_ object is used to control a list of motors. As with _io_ and _pwm_, _motor_ is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
+The _motors_ object is used to control a list of motors. As with _io_ and _pwm_, _motors_ is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-motor[0].something...
+R.motors[0].something...
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ...because indexes are 0-based (counting starts from 0, not 1).
@@ -21,26 +21,32 @@ Setting motor power
 Motor power is controlled using [PWM](http://en.wikipedia.org/wiki/Pulse-width_modulation) with 100% power being a [duty cycle](http://en.wikipedia.org/wiki/Duty_cycle) of 1. You set the power with an integer value between -100 and 100 inclusive (where a negative value puts the motor in reverse). The field to change the target power is _target_:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+import time
+
+R = Robot()
+
 # motor 0 to full power forward
-motor[0].target = 100
+R.motors[0].target = 100
 
 # motor 1 to full power reverse
-motor[1].target = -100
+R.motors[1].target = -100
 
 # motor 0 to half power forward
-motor[0].target = 50
+R.motors[0].target = 50
 
 # motor 1 stopped
-motor[1].target = 0
+R.motors[1].target = 0
 
 # the following will put motor 0 at 25% power (forwards) for 2.5 seconds:
-motor[0].target = 25
-yield query.timeout(2.5)       # wait for 2.5 seconds
+R.motors[0].target = 25
+time.sleep(2.5)       # wait for 2.5 seconds
+R.motors[0].target = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can read the current target value for a motor using the same field:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # get the current target power
-currentTarget = motor[0].target
+currentTarget = R.motors[0].target
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
