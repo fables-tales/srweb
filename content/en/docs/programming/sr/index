@@ -41,6 +41,4 @@ R.motors.target = 42      # WON'T WORK
 R.power.led[0] = 1       # WILL work
 R.power.led = 0          # WON'T WORK
 R.power[0].led[0] = 1    # WON'T WORK
-
-# the above is similar to the situation for 'vision'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
