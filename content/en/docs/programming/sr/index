@@ -20,7 +20,17 @@ To gain access to all of this functionality, all you need to do is write:
 from sr import *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-...at the top of your code (before you use any of its functionality, basically). You then have access to the following already-instantiated objects:
+...at the top of your code (before you use any of its functionality, basically).
+This imports the Student Robotics module that we've written to interface with our hardware.
+
+Then, within the `sr` module, there is a `Robot` class that should be instantiated, as follows:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from sr import *
+R = Robot()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Within your `Robot` (`R` in this case), you then have access to the following attributes:
 
 * [motors](/docs/programming/sr/motors/)
 * [power](/docs/programming/sr/power/)
@@ -28,7 +38,7 @@ from sr import *
 * [io](/docs/programming/sr/io/)
 * [vision](/docs/programming/sr/vision/)
 
-They can be used in your code just like the example above. Note that the objects _motors_, _io_, and _servos_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
+They can be used in your code just like the example above. Note that _motors_, _io_, and _servos_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 R.motors[0].target = 50   # WILL work, if motor 0 exists
