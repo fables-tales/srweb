@@ -9,7 +9,7 @@ SR Module
 Student Robotics has written a module &mdash; _sr_  &mdash; which is used to interface with the hardware. It handles all the low-level interactions so you don't have to. To set motor 0's target power to -30%, for example, you would simply write:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-motor[0].target = -30
+R.motors[0].target = -30
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 _-30_ would be backwards (depending upon which way you wired up the motor) &mdash; 30% power in reverse.
@@ -22,18 +22,18 @@ from sr import *
 
 ...at the top of your code (before you use any of its functionality, basically). You then have access to the following already-instantiated objects:
 
-* [motor](/docs/programming/sr/motor/)
+* [motors](/docs/programming/sr/motor/)
 * [power](/docs/programming/sr/power/)
 * [pwm](/docs/programming/sr/pwm/)
 * [io](/docs/programming/sr/io/)
 * [vision](/docs/programming/sr/vision/)
 
-They can be used in your code just like the example above. Note that the objects _motor_, _io_, and _pwm_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
+They can be used in your code just like the example above. Note that the objects _motors_, _io_, and _pwm_ extend the Python class _list_. Because of this, they need to be accessed as such. Here are some examples:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-motor[0].target = 50   # WILL work, if motor 0 exists
-motor[1].target = -20  # WILL work, if motor 1 exists
-motor.target = 42      # WON'T WORK
+R.motors[0].target = 50   # WILL work, if motor 0 exists
+R.motors[1].target = -20  # WILL work, if motor 1 exists
+R.motors.target = 42      # WON'T WORK
 
 # the above is similar to the situation for 'io' and 'pwm'
 
