@@ -6,7 +6,7 @@
 Writing your own functions
 ==========================
 
-Python allows you to group useful code that you're going to use over and over again into what's called a 'function'.
+Python allows you to group useful code that you're going to use over and over again into what's called a *function*.
 You might want to write a function that handles all the behaviour of your robot once it's got the info back from the vision system,
  or perhaps something much smaller like a precise left turn.
 
