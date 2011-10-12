@@ -25,10 +25,10 @@ Here, a digital pin refers to a pin that takes a _binary_ value; that is, either
 You can read a **digital** input pin with the following code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# io[IO_BOARD_NUMBER].input[PIN_NO].d
+# R.io[IO_BOARD_NUMBER].input[PIN_NO].d
 
 # to read JointIO board 0's digital pin 0...
-pin0 = io[0].input[0].d
+pin0 = R.io[0].input[0].d
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `pin0` will now contain a `1` or a `0` depending on whether the pin was high (3.3v) or low (0v), respectively.
@@ -36,10 +36,10 @@ pin0 = io[0].input[0].d
 You can read an **analogue** input pin with the following code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# io[IO_BOARD_NUMBER].input[PIN_NO].a
+# R.io[IO_BOARD_NUMBER].input[PIN_NO].a
 
 # to read JointIO board 0's analogue pin 2...
-pin0 = io[0].input[2].a
+pin0 = R.io[0].input[2].a
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -49,13 +49,13 @@ pin0 = io[0].input[2].a
 You can only set digital outputs (there's no analogue output, unless you get creative with some additional electronics, of course). To set a digital output pin, you would use the following:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# io[IO_BOARD_NUMBER].output[PIN_NO].d = VALUE
+# R.io[IO_BOARD_NUMBER].output[PIN_NO].d = VALUE
 
 # to set JointIO board 0's pin 1 high:
-io[0].output[1].d = 1
+R.io[0].output[1].d = 1
 
 # to set JointIO board 0's pin 1 low:
-io[0].output[1].d = 0
+R.io[0].output[1].d = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
