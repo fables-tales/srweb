@@ -52,3 +52,6 @@ R.power.led[0] = 1       # WILL work
 R.power.led = 0          # WON'T WORK
 R.power[0].led[0] = 1    # WON'T WORK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A number of examples in the documentation will assume you've instantiated the required `Robot` class and have called it `R`.
+From here in, if you see a `R.something`, the requirement of the `sr` import line and the instantiation of `Robot` as `R` is implicit.
