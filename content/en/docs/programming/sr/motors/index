@@ -6,7 +6,7 @@
 Motors
 ======
 
-The _motors_ object is used to control a list of motors. As with _io_ and _servos_, _motors_ is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
+The `motors` object is used to control a list of motors. As with `io` and `servos`, `motors` is a list. To do something with the **first motor** board in the [token ring](/docs/kit/token_ring), you would use:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 R.motors[0].something...
@@ -18,7 +18,7 @@ R.motors[0].something...
 Setting motor power
 -------------------
 
-Motor power is controlled using [PWM](http://en.wikipedia.org/wiki/Pulse-width_modulation) with 100% power being a [duty cycle](http://en.wikipedia.org/wiki/Duty_cycle) of 1. You set the power with an integer value between -100 and 100 inclusive (where a negative value puts the motor in reverse). The field to change the target power is _target_:
+Motor power is controlled using [PWM](http://en.wikipedia.org/wiki/Pulse-width_modulation) with 100% power being a [duty cycle](http://en.wikipedia.org/wiki/Duty_cycle) of 1. You set the power with an integer value between -100 and 100 inclusive (where a negative value puts the motor in reverse). The field to change the target power is `target`:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
