@@ -6,7 +6,7 @@
 Power
 =====
 
-There are a few things that can be done with the power board, namely changing user LEDs and beeping. As there is only one power board, it is not accessed like a list like _motor_ for example:
+There are a few things that can be done with the power board, namely changing user LEDs and beeping. As there is only one power board, it is not accessed like a list like `motors` for example:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 R.power.something...
