@@ -55,3 +55,11 @@ R.power[0].led[0] = 1    # WON'T WORK
 
 A number of examples in the documentation will assume you've instantiated the required `Robot` class and have called it `R`.
 From here in, if you see a `R.something`, the requirement of the `sr` import line and the instantiation of `Robot` as `R` is implicit.
+
+Match Parameters
+----------------
+
+The Robot instance contains information about the match that the robot is playing.  It has two attributes:
+
+ * `zone`: The number of the zone that the robot is associated with.  An integer from 0 to 3 inclusive.
+ * `mode`: Either "comp" or "dev".  When in a competition match, this will be "comp", and at all other times this will be "dev".
