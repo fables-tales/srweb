@@ -6,8 +6,8 @@
 Servos
 ======
 
-A servo board can have a number of servos plugged into it, with their positions controlled using the `R.servos` object.
-As with `R.io` and `R.motors`, `R.servos` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position of servos can range from `0.0` to `100.0` inclusive:
+A servo board can have a number of servos plugged into it, with their positions controlled using the `servos` object.
+As with `io` and `motors`, `servos` is a list, with indexes based on [token ring](/docs/kit/token_ring) ordering. The position of servos can range from `0.0` to `100.0` inclusive:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # R.servos[N][SERVO_NUMBER] = POS
