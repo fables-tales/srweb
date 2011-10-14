@@ -8,7 +8,7 @@ wait_for {#wait_for}
 
 Often, you will need to wait on a particular event to occur; an input pin going high, for example. To do this, you will need to use `wait_for`.  In Python, it is possible to override operators (things like `*`, `+`, `<` and `==`, for example).  We have used this feature to make compound waiting conditions more readable, as explained below.
 
-[IO Queries](/docs/programming/sr/query/#IOQueries) {#IOQueries}
+[IO Queries](/docs/programming/sr/io/wait_for#IOQueries) {#IOQueries}
 ------------
 
 There are a number of things you can `wait_for` with `R.io`:
@@ -62,7 +62,7 @@ R.io[0].output[0] = 0
 Please note that you cannot wait on an analogue input using the equals (`==`) comparison. Because of the nature of analogue-digital conversion (as explained in the [io section](/docs/programming/sr/io#digital_vs_analogue)) it wouldn't make sense to do so.
 
 
-[Combining Queries Together](/docs/programming/sr/query/#combining_queries) {#combining_queries}
+[Combining Queries Together](/docs/programming/sr/io/wait_for#combining_queries) {#combining_queries}
 ----------------------------
 
 When you write `R.io[0].input[0].query.d == 0` (for example), the operator overriding comes into play. But before that's explained, another explanation is necessary. When you write `abc = 1 == 1`, the value contained in `abc` afterwards is `True`. `abc` is assigned the value of the logical expression `1 == 1` &mdash; the boolean value, `True`. (If this is a surprise to you, then you should read a [tutorial](/docs/programming/python/).) 
@@ -70,7 +70,7 @@ When you write `R.io[0].input[0].query.d == 0` (for example), the operator overr
 This is where the confusing bit occurs &mdash; for the `(...).query.(...)` objects, the operators are overridden so that they no longer compare values; they therefore don't return a boolean value, but another object instead. Because this object is just a representation for a condition that could be met, these conditions can be joined together.
 
 
-### [More Complex Logic Expressions](/docs/programming/sr/query/#complex) {#complex}
+### [More Complex Logic Expressions](/docs/programming/sr/io/wait_for#complex) {#complex}
 
 Logic expressions can also be used with `wait_for`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
 
