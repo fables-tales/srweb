@@ -124,3 +124,18 @@ badger_present = badger == 1
 wait_for( badger_present )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Note that `badger_present` contains a query, rather than a boolean value.  It is only when the query is passed to `wait_for` that it is evaluated.
+
+[Named Queries](/docs/programming/sr/io/wait_for#named_queries) {#named_queries}
+----------------------------
+When combining queries together into logical expressions, accessing the results of the query can result in code that is difficult to read.  Therefore, the `wait_for` function can instead take keyword arguments:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+res = wait_for( badger = badger_present,
+                porcupine = ( R.io[0].input[2].query.a > 1.3 ) )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When `wait_for` is used in this way, it returns a different type of object.  Rather than returning a tuple of the results, as it did in the earlier examples, it returns a `namedtuple`.  The results of the query can be accessed using the names that you specified:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+if res.badger != None:
+   print "Badger badger badger badger!"
+elif res.porcupine != None:
+   print "Porcupine detected, with a voltage of", res.porcupine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
