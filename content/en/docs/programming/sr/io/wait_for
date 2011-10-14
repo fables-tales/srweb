@@ -11,7 +11,7 @@ Often, you will need to wait on a particular event to occur; an input pin going 
 [IO Queries](/docs/programming/sr/query/#IOQueries) {#IOQueries}
 ------------
 
-There are a number of things you can `wait_for` with `io`:
+There are a number of things you can `wait_for` with `R.io`:
 
 A digital input pin changing value (high to low, or low to high):
 
@@ -65,26 +65,22 @@ Please note that you cannot wait on an analogue input using the equals (`==`) co
 [Combining Queries Together](/docs/programming/sr/query/#combining_queries) {#combining_queries}
 ----------------------------
 
-When you write `query.io[0].input[0].d == 0` (for example), the operator overriding comes into play. But before that's explained, another explanation is necessary. When you write `abc = 1 == 1`, the value contained in `abc` afterwards is `True`. `abc` is assigned the value of the logical expression `1 == 1` &mdash; the boolean value, `True`. (If this is a surprise to you, then you should read a [tutorial](/docs/programming/python/).) 
+When you write `R.io[0].input[0].query.d == 0` (for example), the operator overriding comes into play. But before that's explained, another explanation is necessary. When you write `abc = 1 == 1`, the value contained in `abc` afterwards is `True`. `abc` is assigned the value of the logical expression `1 == 1` &mdash; the boolean value, `True`. (If this is a surprise to you, then you should read a [tutorial](/docs/programming/python/).) 
 
-This is where the confusing bit occurs &mdash; for the `query.(...)` objects, the operators are overridden so that they no longer compare values; they therefore don't return a boolean value, but another object instead. Because this object is just a representation for a condition that could be met, these conditions can be joined together.
+This is where the confusing bit occurs &mdash; for the `(...).query.(...)` objects, the operators are overridden so that they no longer compare values; they therefore don't return a boolean value, but another object instead. Because this object is just a representation for a condition that could be met, these conditions can be joined together.
 
 
 ### [More Complex Logic Expressions](/docs/programming/sr/query/#complex) {#complex}
 
-Logic expressions can also be used with `yield`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
+Logic expressions can also be used with `wait_for`. You could, for example, wait until two conditions are met or perhaps any one of a range of conditions. Here are some examples:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # OR:
-yield query.io[0].input[3].d == 1, query.io[0].input[2].d == 0
-yield query.io[0].input[3].a > 2, query.io[0].input[3].a < 3
-
+wait_for( R.io[0].input[3].query.d == 1, R.io[0].input[2].query.d == 0 )
+wait_for( Or( R.io[0].input[3].query.a > 2, R.io[0].input[3].query.a < 3 ) )
         
 # AND:
-yield (query.io[0].input[3].d == 1) & (query.io[0].input[2].d == 0)
-
-# alternatively:
-yield And( query.io[0].input[3].d == 1, query.io[0].input[2].d == 0 )
+wait_for( And( R.io[0].input[3].query.d == 1, R.io[0].input[2].query.d == 0 ) )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 AND means both inputs need to be `True` for execution to continue. OR means either one or both inputs need to be `True` for execution to continue.
@@ -92,41 +88,16 @@ AND means both inputs need to be `True` for execution to continue. OR means eith
 If you decide to do this, however, you may need to find out which one occurred (if you're using OR, anyway). To do this, you would use something like the following:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-ev = yield query.io[0].input[1].a > 1.6, (query.io[0].input[2].d == 1) & (query.io[0].input[3].d == 0)
-if 2 in ev.io[0].pins:
+res = wait_for( R.io[0].input[1].query.a > 1.6,
+                And( R.io[0].input[2].query.d == 1,
+                     R.io[0].input[3].query.d == 0 ) )
 
-    # ev.io[N].pins is a list of pins involved in the event
-    # ev.io[N].vals is an array of the pin values
-    # e.g. ev.io[0].vals[2] gives the value of the pin when the event happened
-    # the value of ev.io[0].vals[0] is meaningless
+if res[1] != None:
+    # res[1][0] is the value of R.io[0].input[2].d
+    # res[1][1] is the value of R.io[0].input[3].d
+    # (res[0] is None)
 
-    print ev.io[0].vals[2]
-
-elif 1 in ev.io[0].pins:
-    # ev.io.vals[1] is a voltage (float)
+elif res[0] == None:
+    # res[0] is the value of R.io[0].input[1].query.a
+    # res[1] is None (and so res[1][0] and res[1][1] don't exist)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-### [Even More Complex Logical Expressions](/docs/programming/sr/query/#more_complex) {#more_complex}
-
-So far, we've mainly used `io` for these querying expressions. It is possible to combine different types of querying objects into a single expression. It is possible to, say, wait for a switch to be closed for a maximum of 10 seconds and then carry on with your code regardless:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from sr import *
-
-def main():
-
-        # set motor 0 to 20% power ahead
-        motor[0].target = 20
-
-        # wait for 10s or a button to be pressed, whichever's sooner.
-        yield query.timeout(10), query.io[0].input[0].d == 1
-
-        # stop the motor
-        motor[0].target = 0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Basically, the above code would turn a motor on for a maximum of 10 seconds, but stop it if input pin 0 went high (that sounds suspiciously like a bump sensor to me). In this case, we combined a `timeout` query and an `io` query.
-
-
-
