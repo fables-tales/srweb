@@ -101,3 +101,26 @@ elif res[0] == None:
     # res[0] is the value of R.io[0].input[1].query.a
     # res[1] is None (and so res[1][0] and res[1][1] don't exist)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Aliasing](/docs/programming/sr/query/#aliasing) {#aliasing}
+----------------------------
+Writing things like this:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R.io[0].input[1].query.d
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+can get quite tiresome.  Luckily, you can create an alias for the above, like so:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+badger = R.io[0].input[1].query.d
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now you can use this new alias, `badger`, where you would have used `R.io[0].input[1].query.d`:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wait_for( badger == 1 )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can go even further than this.  Since `(...).query.(...)` combined with an operator return an object describing a query, you can remember the query itself in a variable.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+badger = R.io[0].input[1].query.d
+badger_present = badger == 1
+
+wait_for( badger_present )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Note that `badger_present` contains a query, rather than a boolean value.  It is only when the query is passed to `wait_for` that it is evaluated.
