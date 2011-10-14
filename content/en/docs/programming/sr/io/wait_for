@@ -1,61 +1,60 @@
-//TITLE:	Query
+//TITLE:	wait_for: Waiting for IO events
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Query {#query}
-=====
+wait_for {#wait_for}
+=================
 
-Often, you will need to wait on a particular event to occur; an input pin going high, for example. To do this, you will need to use `yield` (read [this](/docs/programming/python/yield_and_coroutines) to learn more). The API has changed slightly this year, making some things slightly clearer. In Python, it is possible to override operators (things like `*`, `+`, `<` and `==`, for example). We have used this feature to make compound waiting conditions more readable, as explained below.
+Often, you will need to wait on a particular event to occur; an input pin going high, for example. To do this, you will need to use `wait_for`.  In Python, it is possible to override operators (things like `*`, `+`, `<` and `==`, for example).  We have used this feature to make compound waiting conditions more readable, as explained below.
 
 [IO Queries](/docs/programming/sr/query/#IOQueries) {#IOQueries}
 ------------
 
-There are a number of things you can `yield` on with `io`:
+There are a number of things you can `wait_for` with `io`:
 
 A digital input pin changing value (high to low, or low to high):
 
 ~~~
 # Wait for digital input pin 3 on JointIO board 0 to change value
-yield query.io[0].input[3].d
+wait_for( R.io[0].input[3].query.d )
 ~~~
 
 Waiting for a particular digital value:
 
 ~~~
 # Wait for digital input 3 on JointIO board 0 to become digital '1'
-yield query.io[0].input[3].d == 1
+wait_for( R.io[0].input[3].query.d == 1 )
 ~~~
 
 Waiting for an analogue pin to exceed a particular value:
 
 ~~~
 # Wait for the reading of analogue input 3 on JointIO board 0 to exceed 1V
-yield query.io[0].input[1].a > 1
+wait_for( R.io[0].input[1].query.a > 1 )
 ~~~
 
 Waiting for an analogue pin to drop below a particular value:
 
 ~~~
 # Wait for the reading of analogue input 2 on JointIO board 0 to drop below 2.5V
-yield query.io[0].input[2].a < 2.5
+wait_for( R.io[0].input[2].query.a < 2.5 )
 ~~~
 
 Code situated after these yields in the program flow will not be executed until the specified condition has been met. So, for example, if your robot had the following code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
+R = Robot()
 
-def main():
+# set output pin 0 high
+R.io[0].output[0].d = 1
 
-        # set output pin 0 high
-        io[0].output[0].d = 1
+# wait until digital input 0 goes high
+wait_for( R.io[0].input[0].query.d == 1 )
 
-        # wait until digital input 0 goes high
-        yield query.io[0].input[0].d == 1
-
-        # set output pin 0 low
-        io[0].output[0] = 0
+# set output pin 0 low
+R.io[0].output[0] = 0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ...when it was run, output pin 0 would be high and it would stay high until digital input pin 0 went high. When this happens, the next bit of code will execute &mdash; setting output pin 0 low.
