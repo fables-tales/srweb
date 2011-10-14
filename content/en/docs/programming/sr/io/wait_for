@@ -62,22 +62,6 @@ R.io[0].output[0] = 0
 Please note that you cannot wait on an analogue input using the equals (`==`) comparison. Because of the nature of analogue-digital conversion (as explained in the [io section](/docs/programming/sr/io#digital_vs_analogue)) it wouldn't make sense to do so.
 
 
-[Vision Queries](/docs/programming/sr/query/#vision_queries) {#vision_queries}
-----------------
-
-Getting vision events is easy. All you need to do is:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# wait for a vision event to occur
-ev = yield query.vision
-
-if ev.was(vision):
-        for blob in ev.vision.blobs:
-                ...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-See the [vision page](/docs/programming/sr/vision/) for more information.
-
 [Combining Queries Together](/docs/programming/sr/query/#combining_queries) {#combining_queries}
 ----------------------------
 
