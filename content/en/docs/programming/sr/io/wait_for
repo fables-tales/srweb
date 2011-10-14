@@ -116,7 +116,7 @@ Now you can use this new alias, `badger`, where you would have used `R.io[0].inp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wait_for( badger == 1 )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You can go even further than this.  Since `(...).query.(...)` combined with an operator return an object describing a query, you can remember the query itself in a variable.
+You can go even further than this.  Since `(...).query.(...)` combined with an operator returns an object describing a query, you can remember the query itself in a variable.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 badger = R.io[0].input[1].query.d
 badger_present = badger == 1
