@@ -135,7 +135,7 @@ res = wait_for( badger = badger_present,
 When `wait_for` is used in this way, it returns a different type of object.  Rather than returning a tuple of the results, as it did in the earlier examples, it returns a `namedtuple`.  The results of the query can be accessed using the names that you specified:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if res.badger != None:
-   print "Badger badger badger badger!"
+     print "Badger badger badger badger!"
 elif res.porcupine != None:
-   print "Porcupine detected, with a voltage of", res.porcupine
+     print "Porcupine detected, with a voltage of", res.porcupine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
