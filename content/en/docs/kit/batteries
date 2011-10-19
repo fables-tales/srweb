@@ -95,8 +95,8 @@ The charger will beep when the battery is fully charged. You must then:
 1.   Unplug the battery from the charging lead, do not unplug the charging lead from the charger with the battery still connected.
 1.   Unplug the monitoring lead from the battery to the charger.
 
-Troubleshooting
----------------
+[Troubleshooting](/docs/kit/batteries#Troubleshooting) {#Troubleshooting}
+-----------------
 
 Charger beeps and displays `CONNECTION BREAK` during charging
 :	Either the charging or monitoring lead has come loose.
