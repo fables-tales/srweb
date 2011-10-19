@@ -59,7 +59,7 @@ div.docs div#content ol {
 	margin-bottom:15px;
 }
 
-div.docs div#content pre {
+pre code {
 	border:1px solid #FFE659;
 	background:#FFF4B8;
 	font-size:0.8em;
