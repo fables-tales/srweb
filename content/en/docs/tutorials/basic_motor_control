@@ -73,29 +73,30 @@ Here's the code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
+import time
 
-def main():
+R = Robot()
 
-	while True:
+while True:
 
-		motor[0].target = 50
-		yield query.timeout(3)
+    R.motors[0].target = 50
+    time.sleep(3.0)
 
-		motor[0].target = 0
-		yield query.timeout(1)
+    R.motors[0].target = 0
+    time.sleep(1.4)
 
-		motor[0].target = -50
-		yield query.timeout(3)
+    R.motors[0].target = -50
+    time.sleep(1)
 
-		motor[0].target = 0
-		yield query.timeout(1)
+    R.motors[0].target = 0
+    time.sleep(4)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `motor[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](/docs/programming/sr/motor/) page. But, to summarise:
+You're familiar with the first few lines; in fact, the only lines you may not be familiar with are the `R.motors[0]...` lines. For a comprehensive reference to the `motor` object, see the `sr` module's [`motor`](/docs/programming/sr/motor/) page. But, to summarise:
 
-<div class="info">`motor[0].target = x` will set the power of the first [motor board](/docs/kit/motor_board) in the [token ring](/docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.</div>
+<div class="info">`R.motors[0].target = x` will set the power of the first [motor board](/docs/kit/motor_board) in the [token ring](/docs/kit/token_ring) to `x`, where `x` is a value between `-100` and `100`, inclusive &mdash; in other words: `-100` &le; `x` &le; `100`.</div>
 
-So, `motor[0].target = 50` sets the target power of the first [motor board](/docs/kit/motor_board) in the [token ring](/docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `motor[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `motor[0].target = 0` will output no power to the motor and stop it.
+So, `R.motors[0].target = 50` sets the target power of the first [motor board](/docs/kit/motor_board) in the [token ring](/docs/kit/token_ring) to 50% forwards (i.e. a duty-cycle of 0.5 forwards). As you would expect, then, `R.motors[0].target = -50` will put the first motor in the token ring into reverse at 50% power. `R.motors[0].target = 0` will output no power to the motor and stop it.
 
 So, if you put the above code on your robot, you should be able to see a motor spin forwards, stop, spin backwards, stop, and then repeat...
 
@@ -108,52 +109,53 @@ Here's the code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from sr import *
+import time
 
-def main():
+R = Robot()
 
-	while True:
+while True:
 
-		motor[0].target = 50
-		yield query.timeout(3)
+    R.motors[0].target = 50
+    time.sleep(3.0)
 
-		motor[0].target = 0
-		yield query.timeout(1)
+    R.motors[0].target = 0
+    time.sleep(1.4)
 
-		motor[0].target = -50
-		yield query.timeout(3)
+    R.motors[0].target = -50
+    time.sleep(1)
 
-		motor[0].target = 0
-		yield query.timeout(1)
+    R.motors[0].target = 0
+    time.sleep(4)
 
-		# ^^ code from before ^^
+    # ^^ code from before ^^
 
-		# power up to 70 (from 10)
-		for pwr in range(10, 80, 10):
-			motor[0].target = pwr
-			yield query.timeout(0.1)
+    # power up to 70 (from 10)
+    for pwr in range(10, 80, 10):
+        R.motors[0].target = pwr
+        time.sleep(0.1)
 
-		# power down from 70 (to 10)
-		for pwr in range(70, 0, -10):
-			motor[0].target = pwr
-			yield query.timeout(0.1)
+    # power down from 70 (to 10)
+    for pwr in range(70, 0, -10):
+        R.motors[0].target = pwr
+        time.sleep(0.1)
 
-		# set power to 0 for a second
-		motor[0].target = 0
-		query.timeout(1)
+    # set power to 0 for a second
+    R.motors[0].target = 0
+    time.sleep(1)
 
-		# power "up" to -70 (from -10)
-		for pwr in range(-10, -80, -10):
-			motor[0].target = pwr
-			yield query.timeout(0.1)
+    # power "up" to -70 (from -10)
+    for pwr in range(-10, -80, -10):
+        R.motors[0].target = pwr
+        time.sleep(0.1)
 
-		# power "down" to -10 (from -70)
-		for pwr in range(-70, 0, 10):
-			motor[0].target = pwr
-			yield query.timeout(0.1)
+    # power "down" to -10 (from -70)
+    for pwr in range(-70, 0, 10):
+        R.motors[0].target = pwr
+        time.sleep(0.1)
 
-		# set power to 0 for a second
-		motor[0].target = 0
-		query.timeout(1)
+    # set power to 0 for a second
+    R.motors[0].target = 0
+    time.sleep(1)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
