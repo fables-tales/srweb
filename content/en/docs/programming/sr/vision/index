@@ -8,7 +8,7 @@ Vision
 
 The `sr` library contains support for detecting libkoki markers with the provided webcam.  Markers are attached to various items in the Student Robotics arena.  Each marker encodes a number in a machine-readable way, which means that robots can identify these objects.  For information on which markers codes are which, see the [markers page](/docs/programming/sr/vision/markers).  
 
-Using knowledge of the physical size of the different markers and the characteristics of the webcam, libkoki can calculate the position of markers in 3D space relative to the camera.  Therefore, if the robot can see a marker that is at a fixed location in the arena, a robot can calculate where exactly it is in the arena.
+Using knowledge of the physical size of the different markers and the characteristics of the webcam, libkoki can calculate the position of markers in 3D space relative to the camera.  Therefore, if the robot can see a marker that is at a fixed location in the arena, a robot can calculate its exact position in the arena.
 
 The `sr` library provides all of this power through a single function, `R.see`:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
