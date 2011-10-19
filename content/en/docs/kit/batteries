@@ -9,15 +9,18 @@ Batteries and Charging
 <img src="/images/content/kit/imaxb6.jpg" alt="A photo of the imax B6 battery charger." title="An imax B6 battery charger" />
 The electronics kit contains two 2.2Amp hour lithium polymer batteries and an imax B6 battery charger. Lithium polymer batteries, similar to those used in mobile phones, are small and light for the amount of energy they contain. This is great for your robot but it is vital to treat such a high concentration of energy with respect. The battery charger controls the electrical current passed through the batteries to ensure they are charged safely.
 
-Warning
--------
+<div class="warning">
+<p>
 LiPo batteries can get hot or catch fire when charging and in use.
-
-*   *Never leave in use or charging batteries unattended*
-*   Always use the correct charger
-*   Always follow the charging checklist precisely to make sure the charger is correctly configured
-*   Leave the charging leads connected to the battery charger at all times
-*   *Do not* charge a damaged battery
+</p>
+<ul>
+  <li>Never leave in use or charging batteries unattended</li>
+  <li>Always use the correct charger</li>
+  <li>Always follow the charging checklist precisely to make sure the charger is correctly configured</li>
+  <li>Leave the charging leads connected to the battery charger at all times</li>
+  <li>Do not charge a damaged battery</li>
+</ul>
+</div>
 
 Charging Checklist
 ------------------
