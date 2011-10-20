@@ -60,7 +60,7 @@ Let's dissect that to see what's going on:
 
 On the first line, we have an `import` statement. This tells Python (the programming language the robot code is written in) to get the SR module. Doing so allows objects like `Robot` (and some others) to be used in your code. This is essential &mdash; without it, you will not be able to control your robot!
 
-'`while True:`' effectively means loop forever. Any logical expression (or anything that can evaluate to `True` or `False`) can come after the `while` keyword, and the body of code within the `while` loop will be executed until the condition becomes `False`. In this case, however, it is always `True`, hence the infinite loop. Notice the indentation in the code; this is how Python knows what code belongs to what. Indentation is one of the main issues you'll come across that causes your program to act in unexpected ways or not at all. In short, use tabs (as in the `[TAB]` key) to indent code.
+'`while True:`' effectively means loop forever. Any logical expression (or anything that can evaluate to `True` or `False`) can come after the `while` keyword, and the body of code within the `while` loop will be executed until the condition becomes `False`. In this case, however, it is always `True`, hence the infinite loop. Notice the indentation in the code; this is how Python knows what code belongs to what. Indentation is one of the main issues you'll come across that causes your program to act in unexpected ways or not at all. In short, use four spaces (which, in the IDE, the `[TAB]` key will make for you) to indent code.
 
 The remaining chunk of code (from within the `while` loop) is as follows:
 
