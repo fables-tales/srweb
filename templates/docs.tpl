@@ -51,9 +51,9 @@
 	{literal}
 
 	<!-- Syntax highlighting using JS -->
-	<script type="text/javascript" src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+	<script type="text/javascript" src="https://yandex.st/highlightjs/6.1/highlight.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/sunburst.min.css" /><!-- stylesheet for syntax highlighting -->
+	<link rel="stylesheet" href="https://yandex.st/highlightjs/6.1/styles/sunburst.min.css" /><!-- stylesheet for syntax highlighting -->
 
 	<!-- Use jQuery to add a class 'python' to all <code> blocks -->
 	<script type="text/javascript">
