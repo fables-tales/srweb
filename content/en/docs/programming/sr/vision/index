@@ -77,7 +77,7 @@ A `Marker` object contains information about a *detected* marker.  It has the fo
 The `MarkerInfo` object contains information about a marker.   It has the following attributes:
 
  * `code`: The numeric code of the marker.
- * `type`: The type of object that this marker represents.  One of:
+ * `marker_type`: The type of object that this marker represents.  One of:
    * `MARKER_ARENA`
    * `MARKER_ROBOT`
    * `MARKER_TOKEN`
