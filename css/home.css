@@ -151,3 +151,28 @@ div.content div#boxWrapper div.box img {
 	margin-left:10px;
 	margin-bottom:5px;
 }
+
+div.box ul.ui-tabs-nav {
+	list-style: none;
+	padding: 0;
+	margin: 5px;
+}
+
+div.box ul.ui-tabs-nav li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+div.box ul.ui-tabs-nav li:before { content: "| "; }
+
+div.box ul.ui-tabs-nav li:first-child:before { content: ""; }
+
+div.box ul.ui-tabs-nav li a {
+	margin: 5px;
+}
+div.box ul.ui-tabs-nav li.ui-tabs-selected a {
+	font-weight: bold;
+}
+
+div.box div.ui-tabs-hide { display: none; }

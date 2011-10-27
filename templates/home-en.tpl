@@ -13,6 +13,17 @@
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+	{literal}
+	<script type="text/javascript">
+	  $(document).ready(function() {
+	    $("#date_tabs").tabs();
+	  });
+	</script>
+	{/literal}
+
 	{if $live_site}
 	{literal}
 
@@ -104,18 +115,32 @@
 
 				<div class="box">
 					<h3><a href="{$root_uri}schools/key_dates">Key Dates</a></h3>
-					<p>
-						Tech Days:
+					<div id="date_tabs">
 						<ul>
-							<li>3rd December</li>
-							<li>4th February</li>
-							<li>17th March</li>
+							<li><a href="#date_soton">Southampton</a></li>
+							<li><a href="#date_bristol">Bristol</a></li>
 						</ul>
+						<div id="date_soton">
+							Tech Days:
+							<ul>
+								<li>3rd December</li>
+								<li>4th February</li>
+								<li>17th March</li>
+							</ul>
+						</div>
+						<div id="date_bristol">
+							Tech Days:
+							<ul>
+								<li>TBC</li>
+							</ul>
+						</div>
+					</div>
+					<div>
 						Competition:
 						<ul>
 							<li>14th &amp; 15th April</li>
 						</ul>
-					</p>
+					</div>
 
 				</div>
 
