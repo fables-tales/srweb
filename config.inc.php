@@ -20,7 +20,7 @@ define('LIVE_SITE',	false);
  * smarty plugin will not. If you just start the memcache deamon (memcached)
  * then you probably won't need to change these settings
  */
-define('MEMCACHE_ENABLED',	true);
+define('MEMCACHE_ENABLED',	false);
 define('MEMCACHE_SERVER', 	'127.0.0.1');
 define('MEMCACHE_PORT',		11211);
 
@@ -60,6 +60,7 @@ $MENU_PAGES = array(
 	'Documentation'		=> 'schools/docs/',
 	'Forum'			=> 'forum/',
 	'Kit'			=> 'schools/kit/',
+	'Team Leaders'          => 'schools/team-leaders/',
 
 	'Docs'			=> 'docs/',
 
