@@ -4,9 +4,11 @@
 //CONTENT_TYPE:	php
 
 <?php
+/*
 // Form definition, validation and processing
 // Relative to 'classes'
 include("subscribe_form.php");
+//*/
 ?>
 
 <h1>Joining</h1>
@@ -15,9 +17,10 @@ include("subscribe_form.php");
 
 <h2>Subscribe to SR2012</h2>
 
+<p>SR2012 is now fully subscribed and <a href="/news/2011-10-19_sr2012_flying_start">underway</a>. Watch this space for joining details for SR2013.</p>
 
 <?php
-
+/*
 if ($form->bound && $form->is_valid()) {
 	echo "<p>Thanks for subscribing to SR2012, we will contact you shortly to confirm your place.</p>";
 } else {
@@ -36,6 +39,5 @@ if ($form->bound && $form->is_valid()) {
 	echo '<input type="submit" value="Submit" />';
 	echo $form->close();
 }
-
+//*/
 ?>
-
