@@ -13,6 +13,16 @@ include("subscribe_form.php");
 
 <p>If you are new to Student Robotics and would like to express interest in taking part in the competition, please do <a href="/about/contactus">get in contact with us</a>.</p>
 
+<h2>Teams</h2>
+
+<p>
+	Student Robotics teams are generally comprised of about 4-6 sixth&ndash;form and college students (ages 16-18),
+	plus an adult <a href="/schools/team-leaders/">team-leader</a> (usually a teacher).
+	If you'd like to enter a team with a different make-up,
+	please do <a href="/about/contactus">get in contact with us</a>,
+	but note that the presence of a responsible adult team-leader is required.
+</p>
+
 <h2>Subscribe to SR2012</h2>
 
 
