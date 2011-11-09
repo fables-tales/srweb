@@ -33,7 +33,7 @@ You're on the _Projects_ page. On the left-hand side, you'll see a button labele
 
 ![new project](/images/content/tutorials/walkthrough/new_project.png)
 
-OK, now we're ready to write some code! When the robot tries to run code (the _run_ button is pressed, or the robot's started automatically at the competition), it looks for a file called "robot.py". Let's create that file now. On the left-hand side you'll find a link to create a _New File_. Click it. You'll now be presented with a code editor to write the code in, like this:
+OK, now we're ready to write some code! When the robot tries to run code (the _run_ button is pressed, or the robot's started automatically at the competition), it looks for a file called "robot.py".  You'll find that the IDE has already created this file for you.  So, click on line that says "robot.py" in the middle of the IDE's webpage.  You'll now be presented with a code editor to write the code in, like this:
 
 ![new file / editor](/images/content/tutorials/walkthrough/new_file_editor.png)
 
