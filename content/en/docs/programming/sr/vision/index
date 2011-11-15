@@ -28,7 +28,7 @@ while True:
     print "I can see", len(markers), "markers:"
 
     for m in markers:
-        if m.info.type == MARKER_TOKEN:
+        if m.info.marker_type == MARKER_TOKEN:
             print " - Token {0} is {1} metres away".format( m.info.offset, m.dist )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
