@@ -40,6 +40,9 @@ Specification
 | Output Voltage                           | 5V        |
 | Maximum Output Current[^1]               | 5A        |
 | Number of servo channels                 | 8         |
+| Minimum on-time                          | 0.6ms     |
+| Maximum on-time                          | 2.4ms     |
+| Worst-case refresh rate                  | 50Hz      |
 
 [^1]: Shared between all 8 outputs
 
