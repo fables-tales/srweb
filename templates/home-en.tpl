@@ -123,7 +123,7 @@
 						<div id="date_soton">
 							<a href="{$root_uri}schools/tech_days">Tech Days</a>:
 							<ul>
-								<li><a href="{$root_uri}/events/sr2012/tech_day_03_12">3rd December</a></li>
+								<li><a href="{$root_uri}events/sr2012/tech_day_03_12">3rd December</a></li>
 								<li>4th February</li>
 								<li>17th March</li>
 							</ul>
