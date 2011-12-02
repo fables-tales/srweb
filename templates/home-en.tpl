@@ -121,7 +121,7 @@
 							<li><a href="#date_bristol">Bristol</a></li>
 						</ul>
 						<div id="date_soton">
-							Tech Days:
+							<a href="{$root_uri}schools/tech_days">Tech Days</a>:
 							<ul>
 								<li>3rd December</li>
 								<li>4th February</li>
