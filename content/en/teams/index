@@ -1,0 +1,35 @@
+//TITLE:	The Teams
+//DESCRIPTION:	Meet the SR teams and track their progress throughout the year
+//KEYWORDS:	teams schools competition progress photos
+//CONTENT_TYPE:	php
+
+<?php
+// Relative to 'classes'
+require_once("team_info.php");
+$teams = get_team_info();
+?>
+
+<h1>Meet the Teams</h1>
+
+<p>
+The SR2012 competiton is in full swing and here you can find a list of all the teams taking part.
+Each team will be updating the photos below as they go so you can easily track their progress.
+</p>
+
+<ul id="teams_container">
+<?php
+$i = 1;
+foreach ($teams as $team) {
+	echo "<li>";
+	echo "<a href=\"" . $team->team_id . "\">";
+	echo "<img src=\"http://cdn1.uk.yumping.info/emp/fotos/3/9/0/4/tm_dsc00816lake-district-fell-pony-centre.jpg\" alt=\"A pony\" />";
+	echo "<p class=\"team_name\">" . $team->team_name . "</p>";
+	echo "<p class=\"college_name\">" . $team->college_name . "</p>";
+	echo "</a>";
+	echo "</li>";
+	if ($i%5 == 0)
+		echo "<br class=\"clearboth\" />";
+	$i++;
+}
+?>
+</ul>

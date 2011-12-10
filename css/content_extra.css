@@ -11,3 +11,24 @@ div.validation-advice {
 p.validation-error-msg {
 	color: red;
 }
+
+/* Teams pages */
+/* /teams/ */
+ul#teams_container li {
+	list-style: none;
+	float: left;
+	margin: 8px;
+	width: 160px;
+}
+ul#teams_container li p.team_name {
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+}
+ul#teams_container li p.college_name {
+	color: #666;
+	font-size: 0.7em;
+	text-align: center;
+	margin: 0 0 2px 0;
+	line-height: 1em;
+}
