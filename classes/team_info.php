@@ -2,11 +2,27 @@
 
 require_once('classes/simplepie/simplepie.inc');
 
+/*
+ * Return array of team IDs. If $file_path is true then the array is
+ * indexed by team ID with the value set to the path of the status file.
+ */
+function get_team_list($file_path = False) {
+	$teams = glob(TEAM_STATUS_DIR."/*-status.json");
+	$team_ids = array_map(function($t) {
+	                      return preg_replace('/.*([A-Z]{3}[0-9]*)-status\.json/', '$1', $t);
+	                      },
+	                      $teams);
+	if ($file_path)
+		return array_combine($team_ids, $teams);
+	else
+		return $team_ids;
+}
+
 function get_team_info($team_id = False) {
 	if ($team_id === False) {
 		$teams = array();
-		foreach (glob(TEAM_STATUS_DIR."/*-status.json") as $fn) {
-			$team_id = preg_replace('/.*([A-Z]{3}[0-9]*)-status\.json/', '$1', $fn);
+		$team_files = get_team_list(true);
+		foreach ($team_files as $team_id => $fn) {
 			$json_text = file_get_contents($fn);
 			$teams[$team_id] = json_decode($json_text);
 			$teams[$team_id]->team_id = $team_id;

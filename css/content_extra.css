@@ -32,3 +32,22 @@ ul#teams_container li p.college_name {
 	margin: 0 0 2px 0;
 	line-height: 1em;
 }
+
+/* /teams/* */
+
+div.team-page img#team-img {
+        float: right;
+	clear: right;
+        margin: 0 0 20px 20px;
+}
+
+div.team-page p#college-name {
+        margin: -2.1em 0 0 0;
+        color: #fff;
+	font-size: 1.2em;
+	line-height: 1em;
+	float: right;
+	background-color: #666;
+	padding: 5px;
+	border-radius: 6px;
+}
