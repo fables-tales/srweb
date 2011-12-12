@@ -64,6 +64,7 @@
 		<h1>{$team->team_name} - ({$team->team_id})</h1>
 		<p id="college-name">{$team->college_name}</p>
 		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$team->image->url}" />
+		<p id="team-img-date">Last updated on {$team->image->date}</p>
 
 		{if $team->description->live != ""}
 		<h2>About {$team->team_name}</h2>
