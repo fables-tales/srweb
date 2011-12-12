@@ -8,6 +8,9 @@ require_once('classes/simplepie/simplepie.inc');
  */
 function get_team_list($file_path = False) {
 	$teams = glob(TEAM_STATUS_DIR."/*-status.json");
+	// gaurd against there being no teams.
+	if (empty($teams))
+		return array();
 	$team_ids = array_map(function($t) {
 	                      return preg_replace('/.*([A-Z]{3}[0-9]*)-status\.json/', '$1', $t);
 	                      },
