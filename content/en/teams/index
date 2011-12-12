@@ -22,9 +22,9 @@ $i = 1;
 foreach ($teams as $team) {
 	echo "<li>";
 	echo "<a href=\"" . $team->team_id . "\">";
-	echo "<img src=\"http://cdn1.uk.yumping.info/emp/fotos/3/9/0/4/tm_dsc00816lake-district-fell-pony-centre.jpg\" alt=\"A pony\" />";
+	echo "<img src=\"{$team->thumb}\" alt=\"{$team->team_name}'s robot.\" />";
 	echo "<p class=\"team_name\">" . $team->team_name . "</p>";
-	echo "<p class=\"college_name\">" . $team->college_name . "</p>";
+//		echo "<p class=\"college_name\">" . $team->college_name . "</p>";
 	echo "</a>";
 	echo "</li>";
 	if ($i%5 == 0)

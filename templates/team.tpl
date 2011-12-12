@@ -63,20 +63,22 @@
 
 		<h1>{$team->team_name} - ({$team->team_id})</h1>
 		<p id="college-name">{$team->college_name}</p>
-		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$team->image->url}" />
+		{if !empty($team->image) }
+		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$team->image}" />
 		<p id="team-img-date">Last updated on {$team->image->date}</p>
+		{/if}
 
-		{if $team->description->live != ""}
+		{if !empty($team->description) }
 		<h2>About {$team->team_name}</h2>
 		<p>
-		{$team->description->live|strip_tags:false}
+		{$team->description|strip_tags:false}
 		</p>
 		{/if}
 
-		{if $team->url->live != ""}
+		{if !empty($team->url) }
 		<h2>{$team->team_name} on the Web</h2>
 		<p>
-		<a href="{$team->url->live}">Visit the team's website</a>
+		<a href="{$team->url}">Visit the team's website</a>
 		</p>
 		{/if}
 
