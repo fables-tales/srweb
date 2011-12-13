@@ -131,7 +131,8 @@
 						<div id="date_bristol">
 							Tech Days:
 							<ul>
-								<li>TBC</li>
+								<li>11th February</li>
+								<li>10th March</li>
 							</ul>
 						</div>
 					</div>
