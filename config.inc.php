@@ -145,7 +145,7 @@ define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
 define('TEAM_STATUS_DIR',	ROOT_DIR . '/ide/settings');
-define('TEAM_STATUS_IMG',	ROOT_URI . '/images/teams');
+define('TEAM_STATUS_IMG',	'/images/teams');
 
 
 //404 log stuff
