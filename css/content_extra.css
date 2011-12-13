@@ -18,6 +18,7 @@ ul#teams_container li {
 	list-style: none;
 	float: left;
 	margin: 8px;
+	text-align: center;
 	width: 160px;
 }
 ul#teams_container li p.team_name {
