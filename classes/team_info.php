@@ -28,7 +28,7 @@ function get_team_list($file_path = False) {
 	if (empty($teams))
 		return array();
 	$team_ids = array_map(function($t) {
-	                      return preg_replace('/.*([A-Z]{3}[0-9]*)-status\.json/', '$1', $t);
+	                      return preg_replace('/.*?([A-Z0-9]+)-status\.json/', '$1', $t);
 	                      },
 	                      $teams);
 	if ($file_path)
