@@ -60,3 +60,17 @@ div.team-page p#college-name {
 	border-radius: 6px;
 	box-shadow: 0px 0px 10px silver;
 }
+
+div.team-page div#back-link {
+	margin-bottom: 10px;
+}
+
+div.team-page div#back-link a {
+	background-color: #666;
+	color: #fff;
+	font-weight: bold;
+	padding: 4px 10px;
+	top: 4px;
+	border-radius: 0 0 6px 6px;
+	position: relative;
+}

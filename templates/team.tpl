@@ -60,6 +60,9 @@
 
 
 	<div id="{$page_id}" class="content team-page">
+		<div id="back-link">
+			<a href="{$root_uri}/teams">&lArr; Back to all teams</a>
+		</div>
 
 		<h1>{$team->team_name} - ({$team->team_id})</h1>
 		<p id="college-name">{$team->college_name}</p>
