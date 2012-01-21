@@ -24,7 +24,8 @@ foreach ($teams as $team) {
 	echo "<a href=\"" . $team->team_id . "\">";
 	echo "<img src=\"{$team->thumb}\" alt=\"{$team->team_name}'s robot.\" />";
 	echo "<p class=\"team_name\">" . $team->team_name . "</p>";
-//		echo "<p class=\"college_name\">" . $team->college_name . "</p>";
+	if (!empty($team->college['name']))
+		echo "<p class=\"college_name\">" . $team->college['name'] . "</p>";
 	echo "</a>";
 	echo "</li>";
 	if ($i%5 == 0)
