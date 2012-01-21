@@ -65,7 +65,17 @@
 		</div>
 
 		<h1>{$team->team_name} - ({$team->team_id})</h1>
-		<p id="college-name">{$team->college_name}</p>
+		{if !empty($team->college) }
+		<p id="college-name">
+		{if !empty($team->college.URL) }
+		<a href="{$team->college.URL}" target="_blank">
+		{/if}
+		{$team->college.name}
+		{if !empty($team->college.URL) }
+		</a>
+		{/if}
+		</p>
+		{/if}
 		{if !empty($team->image) }
 		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$root_uri}{$team->image}" />
 		<p id="team-img-date">Last updated on {$team->image->date}</p>

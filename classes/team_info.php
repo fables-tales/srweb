@@ -1,6 +1,7 @@
 <?php
 
 require_once('classes/simplepie/simplepie.inc');
+require_once('classes/team_info_college_lut.php');
 
 class LiveStatusItem extends StdClass
 {
@@ -76,6 +77,10 @@ function _build_team_info($path, $team_id) {
 		$team->$item = empty($team_raw->$item->live) ? null : new LiveStatusItem($team_raw->$item->live);
 	}
 	$team->team_id = $team_id;
+
+	global $team_info_college_lut;
+	$team->college = array_key_exists($team_id, $team_info_college_lut) ? $team_info_college_lut[$team_id] : null;
+
 	return $team;
 }
 
