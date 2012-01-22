@@ -39,7 +39,7 @@ ul#teams_container li p.college_name {
 div.team-page img#team-img {
         float: right;
 	clear: right;
-        margin: 0 0 0 20px;
+        margin: 0 0 30px 30px;
 }
 
 div.team-page p#team-img-date {
@@ -47,6 +47,8 @@ div.team-page p#team-img-date {
 	clear: right;
 	font-size: 0.8em;
 	color: #666;
+	position: relative;
+	top: -30px;
 }
 
 div.team-page p#college-name {
