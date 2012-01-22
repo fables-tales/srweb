@@ -5,7 +5,7 @@ div.docs {
 
 div#docsNav {
 	width:180px;
-	margin-top:20px;
+	padding:20px 5px 0 0 ;
 	border-right:1px solid silver;
 	float:left;
 }
@@ -42,7 +42,7 @@ div#docsNav ul li ul li ul li {
 
 div.docs div#content {
 	float:left;
-	width:725px;
+	width:720px;
 	margin-top:20px;
 	border-left:1px solid silver;
 	margin-left:-1px;
