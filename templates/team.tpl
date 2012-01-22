@@ -106,6 +106,7 @@
 		<p></p>
 
 	</div>
+	<div id="original"></div>
 
 	{include file=$footer_file}
 
