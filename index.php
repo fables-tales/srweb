@@ -124,9 +124,19 @@ if ($page == 'home'){
 		//the physical file to serve, including the language in the path
 		$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
 
+		//do some caching stuff, generate the page if the cache is stale
+		$content = CacheWrapper::getCacheItem('[page_content:' . $fileToServe . ':' . filemtime($fileToServe) . ']', 86400/*1 day*/, function(){
+
+			global $fileToServe;
+			$c = new Content($fileToServe);
+			$c->getParsedContent();
+			return $c;
+
+		});
+
 		//before we go ahead and serve it, see if we can use what the
 		//user's browser has cached.
-		if (function_exists('apache_request_headers') && !$pageInDocs){
+		if (function_exists('apache_request_headers') && !$pageInDocs && $content->getMeta('CONTENT_TYPE') != 'php'){
 
 			$headers = apache_request_headers();
 
@@ -148,18 +158,6 @@ if ($page == 'home'){
 			}//if else isset if-mod-since
 
 		}//if function_exists
-
-
-		//do some caching stuff
-		$content = CacheWrapper::getCacheItem('[page_content:' . $fileToServe . ':' . filemtime($fileToServe) . ']', 86400/*1 day*/, function(){
-
-			global $fileToServe;
-			$c = new Content($fileToServe);
-			$c->getParsedContent();
-			return $c;
-
-		});
-
 
 		//if the file is a special redirection file, do the redirection
 		if ($content->getMeta('REDIRECT') != ""){
