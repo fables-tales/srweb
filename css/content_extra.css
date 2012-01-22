@@ -50,15 +50,10 @@ div.team-page p#team-img-date {
 }
 
 div.team-page p#college-name {
-        margin: -2.1em 0 0 0;
-        color: #fff;
-	font-size: 1.2em;
+        margin: -10px 0 0 0;
+        color: #666;
+	font-size: 0.7em;
 	line-height: 1em;
-	float: right;
-	background-color: #666;
-	padding: 5px;
-	border-radius: 6px;
-	box-shadow: 0px 0px 10px silver;
 }
 
 div.team-page div#back-link {
