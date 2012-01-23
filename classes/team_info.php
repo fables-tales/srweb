@@ -66,7 +66,7 @@ function _build_team_info($path, $team_id) {
 	$team_raw = json_decode($json_text);
 	$team = new StdClass();
 	if (empty($team_raw->image->live)) {
-		$team->thumb = '/images/template/sad_robot_160.jpg" title="Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/, CC BY 2.0)';
+		$team->thumb = null;
 		$team->image = null;
 	} else {
 		$team->thumb = new LiveStatusItem(_get_team_thumb($team_id));
