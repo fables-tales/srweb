@@ -71,6 +71,13 @@ function _build_team_info($path, $team_id) {
 	} else {
 		$team->thumb = new LiveStatusItem(_get_team_thumb($team_id));
 		$team->image = new LiveStatusItem(_get_team_image($team_id));
+		$age = intval(floor(time() - strtotime($team_raw->image->date)) / 86400);
+		if ($age == 0)
+			$team->image->date = "today";
+		elseif ($age == 1)
+			$team->image->date = "yesterday";
+		else
+			$team->image->date = sprintf("%d days ago", $age);
 	}
 	$team->team_name = empty($team_raw->name->live) ? "Team $team_id" : new LiveStatusItem($team_raw->name->live);
 	foreach (array('url', 'feed', 'description') as $item) {

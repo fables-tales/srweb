@@ -76,7 +76,7 @@
 		{/if}
 		{if !empty($team->image) }
 		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$root_uri}{$team->image}" />
-		<p id="team-img-date">Last updated on {$team->image->date}</p>
+		<p id="team-img-date">Last updated {$team->image->date}</p>
 		{/if}
 
 		{if !empty($team->description) }
