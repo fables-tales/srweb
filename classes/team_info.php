@@ -71,7 +71,7 @@ function _build_team_info($path, $team_id) {
 	} else {
 		$team->thumb = new LiveStatusItem(_get_team_thumb($team_id));
 		$team->image = new LiveStatusItem(_get_team_image($team_id));
-		$age = intval(floor(time() - strtotime($team_raw->image->date)) / 86400);
+		$age = intval(floor(time() - filemtime(ROOT_DIR.TEAM_STATUS_IMG.'/'.$team_id.'.png')) / 86400);
 		if ($age == 0)
 			$team->image->date = "today";
 		elseif ($age == 1)
