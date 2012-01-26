@@ -62,9 +62,32 @@
 	<div id="{$page_id}" class="content team-page">
 		<a class="link-top" href="{$root_uri}/teams">&lArr; Back to all teams</a>
 
-		<h1>{$team->team_name} - ({$team->team_id})</h1>
+		<h1>{$team->team_id}: {$team->team_name}</h1>
+
+		{if !empty($team->image) }
+		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$root_uri}{$team->image}" />
+		<p id="team-img-date">Last updated {$team->image->date}</p>
+		{/if}
+
+		{if !empty($team->description) }
+		<p>
+		{$team->description|strip_tags:false}
+		</p>
+		{/if}
+
+		<p id="team-name">
+		{if !empty($team->url) }
+		<a href="{$team->url}">
+		{/if}
+		Team {$team->team_id}
+		{if !empty($team->url) }
+		</a>
+		{/if}
+		</p>
+
 		{if !empty($team->college) }
 		<p id="college-name">
+		from
 		{if !empty($team->college.URL) }
 		<a href="{$team->college.URL}" target="_blank">
 		{/if}
@@ -72,24 +95,6 @@
 		{if !empty($team->college.URL) }
 		</a>
 		{/if}
-		</p>
-		{/if}
-		{if !empty($team->image) }
-		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$root_uri}{$team->image}" />
-		<p id="team-img-date">Last updated {$team->image->date}</p>
-		{/if}
-
-		{if !empty($team->description) }
-		<h2>About {$team->team_name}</h2>
-		<p>
-		{$team->description|strip_tags:false}
-		</p>
-		{/if}
-
-		{if !empty($team->url) }
-		<h2>{$team->team_name} on the Web</h2>
-		<p>
-		<a href="{$team->url}">Visit the team's website</a>
 		</p>
 		{/if}
 
@@ -101,7 +106,7 @@
 		</p>
 		{/if}
 
-		<a class="link-bottom" href="{$root_uri}/teams">&lArr; Back to all teams</a>
+		<div class="clearboth"><a class="link-bottom" href="{$root_uri}/teams">&lArr; Back to all teams</a></div>
 
 	</div>
 	<div id="original"></div>

@@ -51,11 +51,24 @@ div.team-page p#team-img-date {
 	top: -30px;
 }
 
+
+div.team-page p#team-name {
+	text-align: right;
+	font-style: italic;
+	margin: 0;
+}
+
+div.team-page p#team-name a {
+	margin-right: 30px;
+	font-weight: bold;
+}
+
 div.team-page p#college-name {
-        margin: -10px 0 0 0;
         color: #666;
 	font-size: 0.7em;
 	line-height: 1em;
+	text-align: right;
+	margin: 0;
 }
 
 div.team-page a.link-top, div.team-page a.link-bottom {
