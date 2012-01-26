@@ -14,6 +14,7 @@ require('classes/Menu.class.php');
 
 //get class from extracting metadata and content
 require('classes/Content.class.php');
+require_once('classes/team_info.php');
 
 require('classes/CacheWrapper.class.php');
 
@@ -82,57 +83,10 @@ if ($page == 'home'){
 	exit(0);
 
 } else {
+	/* Pages that require the header/footer */
 
 	$pageInDocs = preg_match('/docs\/.+/', $page);
-
-	//the physical file to serve, including the language in the path
-	$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
-
-	//before we go ahead and serve it, see if we can use what the
-	//user's browser has cached.
-	if (function_exists('apache_request_headers') && !$pageInDocs){
-
-		$headers = apache_request_headers();
-
-		//if the file hasn't changed since the client last saw it, send a 304
-		if (isset($headers['If-Modified-Since'])
-			&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
-
-			header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
-				filemtime($fileToServe)).' GMT', false, $page == "404" ? 404 : 304);
-
-			header('Connection: close');
-
-		} else {
-
-			//otherwise serve it
-			header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
-				filemtime($fileToServe)).' GMT');
-
-		}//if else isset if-mod-since
-
-	}//if function_exists
-
-
-	//do some caching stuff
-	$content = CacheWrapper::getCacheItem('[page_content:' . $fileToServe . ':' . filemtime($fileToServe) . ']', 86400/*1 day*/, function(){
-
-		global $fileToServe;
-		$c = new Content($fileToServe);
-		$c->getParsedContent();
-		return $c;
-
-	});
-
-
-	//if the file is a special redirection file, do the redirection
-	if ($content->getMeta('REDIRECT') != ""){
-		header("HTTP/1.1 302 Found");
-		header("Location: " . $content->getMeta('REDIRECT'));
-	}
-
-	//make the content object accessible in the templates (used by a custom smarty plugin)
-	$smarty->assign('content', $content);
+	$pageInTeams = ($page != 'teams/index' && preg_match('/teams\/.+/', $page));
 
 	$header_file = 'header-en.tpl';
 	foreach ($orderedLanguages as $l){
@@ -150,7 +104,6 @@ if ($page == 'home'){
 		}
 	}
 
-
 	//get ready to display the template
 	$smarty->assign('original', $language . '/' . $page);
 	$smarty->assign('content_dir', CONTENT_DIR);
@@ -160,11 +113,67 @@ if ($page == 'home'){
 	$smarty->assign('header_file', $header_file);
 	$smarty->assign('footer_file', $footer_file);
 
-	if ($pageInDocs){
+	if ($pageInTeams) {
 
+		$team_id = substr($page, strrpos($page, '/')+1);
+		$team = get_team_info($team_id);
+		$smarty->assign('team', $team);
+
+	} else {
+
+		//the physical file to serve, including the language in the path
+		$fileToServe = CONTENT_DIR . '/' . $language . '/' . $page;
+
+		//do some caching stuff, generate the page if the cache is stale
+		$content = CacheWrapper::getCacheItem('[page_content:' . $fileToServe . ':' . filemtime($fileToServe) . ']', 86400/*1 day*/, function(){
+
+			global $fileToServe;
+			$c = new Content($fileToServe);
+			$c->getParsedContent();
+			return $c;
+
+		});
+
+		//before we go ahead and serve it, see if we can use what the
+		//user's browser has cached.
+		if (function_exists('apache_request_headers') && !$pageInDocs && $content->getMeta('CONTENT_TYPE') != 'php'){
+
+			$headers = apache_request_headers();
+
+			//if the file hasn't changed since the client last saw it, send a 304
+			if (isset($headers['If-Modified-Since'])
+				&& (strtotime($headers['If-Modified-Since']) == filemtime($fileToServe))){
+
+				header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+					filemtime($fileToServe)).' GMT', false, $page == "404" ? 404 : 304);
+
+				header('Connection: close');
+
+			} else {
+
+				//otherwise serve it
+				header('Last-Modified: ' . gmdate('D, d M Y H:i:s',
+					filemtime($fileToServe)).' GMT');
+
+			}//if else isset if-mod-since
+
+		}//if function_exists
+
+		//if the file is a special redirection file, do the redirection
+		if ($content->getMeta('REDIRECT') != ""){
+			header("HTTP/1.1 302 Found");
+			header("Location: " . $content->getMeta('REDIRECT'));
+		}
+
+		//make the content object accessible in the templates (used by a custom smarty plugin)
+		$smarty->assign('content', $content);
+	}
+
+	if ($pageInDocs){
 		$smarty->assign('docsNav', constructDocsNavHierarchy());
 		$smarty->display('docs.tpl');
-
+	} elseif ($pageInTeams) {
+		$smarty->display('team.tpl');
 	} else
 		$smarty->display('content.tpl');
 
@@ -296,6 +305,18 @@ function getAllowedPages($directory) {
 }//getAllowedPages
 
 
+/*
+ * Returns a list of allowed team pages.
+ */
+function getAllowedTeams() {
+	$teams = get_team_list();
+	$teams = array_map(function($t) {
+	                   return 'teams/'.$t;
+	                   },
+	                   $teams);
+	return $teams;
+}
+
 
 /*
  * Returns the page to serve.
@@ -306,6 +327,7 @@ function getPage(){
 
 	//the 'default' directory is a symlink to the 'en' -- more explanatory
 	$allowed_pages = getAllowedPages(CONTENT_DIR . '/default');
+	$allowed_pages = array_merge($allowed_pages, getAllowedTeams());
 
 	if (isset($_GET['page'])){
 

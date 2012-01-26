@@ -11,3 +11,127 @@ div.validation-advice {
 p.validation-error-msg {
 	color: red;
 }
+
+/* Teams pages */
+/* /teams/ */
+ul#teams_container li {
+	list-style: none;
+	float: left;
+	margin: 8px;
+	text-align: center;
+	width: 160px;
+}
+ul#teams_container li p.team_name {
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+}
+ul#teams_container li p.college_name {
+	color: #666;
+	font-size: 0.7em;
+	text-align: center;
+	margin: 0 0 2px 0;
+	line-height: 1em;
+}
+
+/* /teams/* */
+
+div.team-page div#team-img {
+        float: right;
+        margin: 0 0 20px 30px;
+}
+
+div.team-page div#team-img p {
+	text-align: right;
+	font-size: 0.8em;
+	color: #666;
+	margin: 0;
+}
+
+
+div.team-page p#team-name {
+	text-align: right;
+	font-style: italic;
+	margin: 0;
+}
+
+div.team-page p#team-name a {
+	margin-right: 30px;
+	font-weight: bold;
+}
+
+div.team-page p#college-name {
+        color: #666;
+	font-size: 0.7em;
+	line-height: 1em;
+	text-align: right;
+	margin: 0;
+}
+
+
+div.team-page div.blog-post-date {
+        background:#0d1f61;
+        color:white;
+        float:left;
+        width:60px;
+        margin-top:5px;
+}
+
+div.team-page div.blog-post-date div {
+        text-align:center;
+	letter-spacing: 5px;
+	padding-left: 5px;
+	line-height: 1em;
+}
+
+div.team-page div.blog-post-date div.day {
+        font-size:40px;
+        margin-top:3px;
+        font-weight:bolder;
+}
+
+div.team-page div.blog-post-date div.month {
+        text-transform:uppercase;
+        font-size:16px;
+}
+
+div.team-page div.blog-post-date div.year {
+        font-size:14px;
+        margin-top:5px;
+        margin-bottom:4px;
+}
+
+div.team-page div.blog-post-content {
+        margin-left:70px;
+}
+
+div.team-page div.blog-post-content h3 {
+	margin-top: 0;
+}
+
+div.team-page div.blog-post-content h3 a {
+	/* Override 'inherit' set in main.css. Link colour.
+         * Ugly but I can't think of a way around it. */
+	color: #DE6400;
+}
+
+
+
+div.team-page a.link-top, div.team-page a.link-bottom {
+	display: inline-block;
+	background-color: silver;
+	color: #333;
+	font-weight: bold;
+	padding: 4px 10px;
+	text-shadow: 0 1px 2px #fff;
+}
+
+div.team-page a.link-top {
+	margin-bottom: 15px;
+	border-radius: 0 0 6px 6px;
+}
+
+div.team-page a.link-bottom {
+	margin-top: 5px;
+	border-radius: 6px 6px 0 0;
+}
