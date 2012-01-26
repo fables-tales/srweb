@@ -73,7 +73,7 @@
 
 		{if !empty($team->description) }
 		<p>
-		{$team->description|strip_tags:false}
+		{$team->description}
 		</p>
 		{/if}
 

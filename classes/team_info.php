@@ -79,9 +79,9 @@ function _build_team_info($path, $team_id) {
 		else
 			$team->image->date = sprintf("%d days ago", $age);
 	}
-	$team->team_name = empty($team_raw->name->live) ? "Team $team_id" : new LiveStatusItem($team_raw->name->live);
+	$team->team_name = empty($team_raw->name->live) ? "Team $team_id" : new LiveStatusItem(strip_tags($team_raw->name->live));
 	foreach (array('url', 'feed', 'description') as $item) {
-		$team->$item = empty($team_raw->$item->live) ? null : new LiveStatusItem($team_raw->$item->live);
+		$team->$item = empty($team_raw->$item->live) ? null : new LiveStatusItem(strip_tags($team_raw->$item->live));
 	}
 	$team->team_id = $team_id;
 
