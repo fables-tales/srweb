@@ -65,8 +65,10 @@
 		<h1>{$team->team_id}: {$team->team_name}</h1>
 
 		{if !empty($team->image) }
-		<img id="team-img" alt="Photograph of the progress made by team {$team->team_name}" src="{$root_uri}{$team->image}" />
-		<p id="team-img-date">Last updated {$team->image->date}</p>
+		<div id="team-img">
+			<img alt="Photograph of the progress made by team {$team->team_name}" src="{$root_uri}{$team->image}" />
+			<p>Last updated {$team->image->date}</p>
+		</div>
 		{/if}
 
 		{if !empty($team->description) }
@@ -100,10 +102,17 @@
 
 		{if isset($team->feed->latest)}
 		<h2>Latest Blog Post</h2>
+		<div class="blog-post-date">
+		<div class="day">{$team->feed->latest->date->day}</div>
+		<div class="month">{$team->feed->latest->date->month}</div>
+		<div class="year">{$team->feed->latest->date->year}</div>
+		</div>
+		<div class="blog-post-content">
 		<h3><a href="{$team->feed->latest->url}">{$team->feed->latest->title}</a></h3>
 		<p>
 		{$team->feed->latest->description}
 		</p>
+		</div>
 		{/if}
 
 		<div class="clearboth"><a class="link-bottom" href="{$root_uri}/teams">&lArr; Back to all teams</a></div>

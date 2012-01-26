@@ -118,6 +118,9 @@ function _fill_team_latest_post(&$team) {
 		$team->feed->latest->title = $item->get_title();
 		$team->feed->latest->url = $item->get_link();
 		$team->feed->latest->description = $item->get_description();
+		$team->feed->latest->date->day = $item->get_date("d");
+		$team->feed->latest->date->month = $item->get_date("M");
+		$team->feed->latest->date->year = $item->get_date("Y");
 	}
 }
 
