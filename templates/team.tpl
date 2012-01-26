@@ -60,7 +60,7 @@
 
 
 	<div id="{$page_id}" class="content team-page">
-		<a class="link-top" href="{$root_uri}/teams">&lArr; Back to all teams</a>
+		<a class="link-top" href="{$root_uri}teams">&lArr; Back to all teams</a>
 
 		<h1>{$team->team_id}: {$team->team_name}</h1>
 
@@ -115,7 +115,7 @@
 		</div>
 		{/if}
 
-		<div class="clearboth"><a class="link-bottom" href="{$root_uri}/teams">&lArr; Back to all teams</a></div>
+		<div class="clearboth"><a class="link-bottom" href="{$root_uri}teams">&lArr; Back to all teams</a></div>
 
 	</div>
 	<div id="original"></div>

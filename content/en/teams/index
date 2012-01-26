@@ -23,7 +23,7 @@ foreach ($teams as $team) {
 	echo "<li>";
 	echo "<a href=\"" . $team->team_id . "\">";
 	if (!empty($team->thumb))
-		echo "<img src=\"{$team->thumb}\" alt=\"{$team->team_name}'s robot.\" />";
+		echo "<img src=\"/{$team->thumb}\" alt=\"{$team->team_name}'s robot.\" />";
 	else
 		echo "<img src=\"/images/template/sad_robot_160.jpg\" title=\"Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/, CC BY 2.0)\" alt=\"{$team->team_name} haven't uploaded a photo\" />";
 	echo "<p class=\"team_name\">" . $team->team_name . "</p>";

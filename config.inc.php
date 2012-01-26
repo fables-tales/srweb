@@ -147,7 +147,7 @@ define('CONTENT_DIR', 		ROOT_DIR . '/content');
 define('TEAM_STATUS_DIR',	ROOT_DIR . '/ide/settings');
 // The following is used in both a template and a parsed page so ROOT_DIR
 // is prepended automatically in the parsed page and manually in the template
-define('TEAM_STATUS_IMG',	'/images/teams');
+define('TEAM_STATUS_IMG',	'images/teams');
 
 
 //404 log stuff
