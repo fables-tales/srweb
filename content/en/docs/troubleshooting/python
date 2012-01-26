@@ -6,7 +6,4 @@
 Python Troubleshooting
 ========================
 
-When attempting to run a simple program the error "AttributeError: 'NoneType' object has no attribute 'next'" is seen
-:	The main function is treated as a generator by the SR library.
-	This means that it must contain at least one yield to work correctly.
-	If you're trying out a very simple program just add a timeout yield e.g. `yield query.timeout(1)`
+Nothing to see here at the moment!
