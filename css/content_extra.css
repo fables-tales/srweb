@@ -109,6 +109,12 @@ div.team-page div.blog-post-content h3 {
 	margin-top: 0;
 }
 
+div.team-page div.blog-post-content h3 a {
+	/* Override 'inherit' set in main.css. Link colour.
+         * Ugly but I can't think of a way around it. */
+	color: #DE6400;
+}
+
 
 
 div.team-page a.link-top, div.team-page a.link-bottom {
