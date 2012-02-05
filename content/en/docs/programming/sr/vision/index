@@ -90,7 +90,7 @@ The `MarkerInfo` object contains information about a marker.   It has the follow
 ---------
 A `Point` object describes a position in three different ways.  These are accessed through the following attributes:
 
- * `image`: The pixel coordinates of the point in the image.  This has two attributes: `x` and `y`.
+ * `image`: The pixel coordinates of the point in the image, with the origin (0,0) in the top-left of the image.  This has two attributes: `x` and `y`.
  * `world`: The Cartesian coordinates of the point in 3D space in metres, with three attributes: `x`, `y`, and `z`.
  * `polar`: The polar coordinates of the point in 3D space.  This has three attributes:
    * `length`: The distance to the point.
