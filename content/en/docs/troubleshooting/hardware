@@ -23,6 +23,9 @@ After turning the kit on nothing happens, no LEDs light up and the power board d
 After turning the kit on nothing happens but a single red LED is lit on the power board
 :	This LED will light up when the main 15A fuse is either blown or not present. Either tell your mentor, who can bring a replacement on their next visit, or post a message on the forum so that we can mail out a replacement.
 
+The kit powers up and the splash screen shows but nothing happens when the start button is pressed
+:	The [token ring](/docs/kit/token_ring) may not be complete.  Even if there are no devices other than the power board in use, an RJ45 cable must connect the power board's SRIC IN and SRIC OUT ports together.
+
 
 Motor Board Problems
 --------------------
