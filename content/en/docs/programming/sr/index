@@ -56,10 +56,33 @@ R.power[0].led[0] = 1    # WON'T WORK
 A number of examples in the documentation will assume you've instantiated the required `Robot` class and have called it `R`.
 From here in, if you see a `R.something`, the requirement of the `sr` import line and the instantiation of `Robot` as `R` is implicit.
 
-Match Parameters
-----------------
+Other Robot Attributes
+----------------------
 
-The Robot instance contains information about the match that the robot is playing.  It has two attributes:
+As well as the attributes listed above, the Robot class also has the following attributes, which you may find useful:
 
- * `zone`: The number of the zone that the robot is associated with.  An integer from 0 to 3 inclusive.
- * `mode`: Either "comp" or "dev".  When in a competition match, this will be "comp", and at all other times this will be "dev".
+zone
+:    The number of the zone that the robot is associated with.  An integer from 0 to 3 inclusive.
+
+mode
+:    Either "comp" or "dev".  When in a competition match, this will be "comp", and at all other times this will be "dev".
+
+usbkey
+:   The path to the USB memory stick.
+    Your code is unzipped and run from a temporary directory, therefore files you create will be lost when the kit is turned off.
+    You can use this to easily read from and write to files on the stick itself.
+    Note that the USB memory stick is mounted synchronously, so any writes to it will block until complete and may slow down your code.
+
+:   An example of how the `usbkey` attribute might be used:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    from sr import *
+    import os
+
+    R = Robot()
+    print "The path to the USB key is:", R.usbkey
+    print "My file on the USB contains:"
+    f = open(os.path.join(R.usbkey, "my-file.txt"), "r")
+    print f.read()
+    f.close()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
