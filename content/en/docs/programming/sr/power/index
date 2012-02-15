@@ -57,3 +57,16 @@ R.power.beep( [ (x*100, 0.1) for x in range(1, 10) ] )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please note that there is a **maximum queue size** of **10 notes** (frequency-duration pairs).
+
+
+[Battery Status](/docs/programming/sr/power/#battery) {#battery}
+-------
+
+The power board can report both the battery voltage, in Volts, and the current being drawn from it, in Amps. You can access these values like so:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Print the battery voltage and current to the log
+print R.power.battery.voltage, R.power.battery.current
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A fully charged battery will measure 12.6V. The power board will signal a low battery at 10.4V and turn-off completely at 10V. The discharge curve is roughly linear between 11.4V and 10.4V.
