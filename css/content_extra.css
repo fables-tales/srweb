@@ -2,6 +2,10 @@ div#sponsors_index p {
 	overflow:hidden;
 }
 
+div#sponsors_index h3 {
+	clear:both;
+}
+
 /* Subscription form */
 div.validation-advice {
 	display: inline;

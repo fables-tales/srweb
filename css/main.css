@@ -132,6 +132,7 @@ div#pageWrapper {
 
 
 div#header {
+	float:right;
 	width:960px;
 }
 
@@ -159,20 +160,22 @@ div#header form fieldset input[type=text]{
 	margin: 0;
 }
 
-div#header form fieldset input[type=submit]{
-	/* Thanks to http://www.famfamfam.com/lab/icons/silk/ for the image */
-	background-image:url('../images/template/magnifier.png');
-	background-repeat:no-repeat;
-	background-position:center;
-	height:24px;
-	width:24px;
+div#header form fieldset input[type=image]{
+	height:16px;
+	width: 16px;
 	position:relative;
-	display: inline;
+	padding: 3px;
+	margin: 0;
+	top: 6px;
+}
+
+div#header div.ie6-wrapper {
+	float: right;
 }
 
 div#header ul {
 	clear:both;
-	float:right;
+	display: block;
 	margin-top:-8px;
 }
 
