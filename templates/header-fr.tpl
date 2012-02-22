@@ -4,7 +4,7 @@
 	<form action="{$root_uri}search.php" method="get">
 		<fieldset>
 			<input type="text" name="q" />
-			<input type="image" src="{$root_uri}images//template/magnifier.png" alt="Recherche" />
+			<input type="image" src="{$root_uri}images/template/magnifier.png" alt="Recherche" />
 		</fieldset>
 	</form>
 
