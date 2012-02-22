@@ -1,4 +1,4 @@
-//TITLE:	Carte 'Moteur'
+﻿//TITLE:	Carte 'Moteur'
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,7 +6,7 @@
 Carte 'Moteur'
 ==============
 
-Vouz pouvez utiliser une carte 'Moteur' pour contrôler un seul moteur 12V (Courant Continu). Votre kit contient deux Cartes 'Moteur' afin de vous permettre de contrôler mouvement de votre robot, mais vous n'êtes pas limité à les utiliser pour ce but.
+Vouz  pouvez utiliser une carte 'Moteur' pour ne contrôler qu'un seul moteur 12V (Courant Continu). Votre kit contient deux cartes 'Moteur' afin de permettre le contrôle des mouvements de votre robot, mais vous n'êtes pas obligés de les utiliser dans ce but.
 
 Schéma
 ------
@@ -21,21 +21,21 @@ Indicateurs
 | Power           | La carte est alimenté  | On
 | SRIC Activity   | La carte transfert les données | Off
 | Token           | L'Anneau à jeton marche | On
-| Motor Power     | Le moteur est alimenté, et tourna quand commandé | Off
-| Current Limit   | La charge commande trop de courant | Off
+| Motor Power     | Le moteur est alimenté, et tournera lorsqu'il sera commandé | Off
+| Current Limit   | La charge demande trop de courant | Off
 | Feedback        | Non défini             | Off
-| Motor           | Luminosité indique puissance, DEL indique la direction | Off
+| Motor           | La luminosité indique la puissance, la DEL indique la direction | Off
 
-Après avoir démarré votre code, la DEL `Motor power` devrait allumer, et `Current Limit` rester "off".
+Après avoir lancé votre code, la DEL `Motor power` devrait s'allumer, et la DEL `Current Limit` rester éteinte.
 
 Dimensions de la boîte
 ----------------------
 
 ![motor board case](/images/content/kit/motor_board_case.png "Boîte de la Carte Moteur")
 
-Toutes dimensions en mm.
+Toutes les dimensions sont en mm.
 
-Specifications
+Spécifications
 --------------
 
 |  Paramètre                           |   Valeur  |
@@ -54,8 +54,8 @@ Specifications
 Schémas / Conceptions
 ---------------------
 
-Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte E/S avec les liens suivants.
-Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut intéresser quelques gens.
+Vous pouvez accéder aux schéma et au code source du microprogramme sur la carte moteur avec les liens suivants.
+Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut vous intéresser.
 
  * [Schématiques Complètes](/resources/kit/motor/schematic.pdf)
  * [Source Microprogramme](https://www.studentrobotics.org/cgit/boards/motor-fw.git/)

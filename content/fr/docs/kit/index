@@ -1,4 +1,4 @@
-//TITLE:	Kit
+﻿//TITLE:	Kit
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,15 +6,14 @@
 Kit
 ===
 
-Student Robotics fournit un kit gratuitement à chaque équipe, et consiste de plusieurs modules, conçus par nous, avec des composants supplémentaires afin de rendre les modules plus faciles à utiliser. Nous fournissons un «kit mécanique» aussi, plus d'informations disponible [ici](/docs/kit/mechanical).
+Student Robotics fournit gratuitement un kit à chaque équipe. Il contient plusieurs modules que nous avons conçus et des composants rendant ces modules plus faciles à utiliser. Nous fournissons aussi un «kit mécanique», plus d'informations disponible [ici](/docs/kit/mechanical).
 
 Les Modules
 -----------
 
-Nous fournissons des modules, connus comme 'cartes', dans chaque kit.
-Ces modules peuvent être reliés, et ensemble forment une base pour contrôler votre robot.
-Les cartes fournis sont notés ci-dessous; plus des détails peuvent être trouvés sur leurs pages individuels.
-The boards provided are as follows; more details can be found on their individual pages.
+Nous fournissons des modules sous le nom de 'cartes', dans chaque kit.
+Ces modules peuvent être reliés, et forment ensemble une base pour contrôler votre robot.
+Les cartes fournies sont mentionnées ci-dessous; pour plus des détails consultez leurs pages individuels.
 
  * [Carte 'Alimentation'](/docs/kit/power_board)
  * [Carte 'Moteur' x2](/docs/kit/motor_board)
@@ -24,31 +23,31 @@ The boards provided are as follows; more details can be found on their individua
 Composants Supplémentaires
 --------------------------
 
-Ainsi que les cartes mentionnés ci-dessus, le kit contient également les éléments suivants.
+En plus des cartes mentionnées ci-dessus, le kit contient également les éléments suivants.
 
 |       Object      | Qté |  Spécifications                      | Référence(s)     | Remarques
 |-------------------|-----|--------------------------------------|------------------|----------
-| Hub USB           | 1   | 4-Ports<br />Alimenté                | [Akasa AK-HB-03BK][AK-HB-03BK] | Ce hub sera fourni avec un câble d'alimentation pre-assemblé, pour qu'elle puisse être alimenté par la carte 'Alimentation'
-| Hub USB câble d'alimentation | 1 | 0.6m                        | [RS 356-195][RS-356-195]<br />[RS 455-116][RS-455-116]<br />[Farnell 1717047][F-1717047] | Pre-assemblé
+| Hub USB           | 1   | 4-Ports<br />Alimenté                | [Akasa AK-HB-03BK][AK-HB-03BK] | Ce hub sera fourni avec un câble d'alimentation pré-assemblé, pour qu'il puisse être alimenté par la carte 'Alimentation'
+| Hub USB câble d'alimentation | 1 | 0.6m                        | [RS 356-195][RS-356-195]<br />[RS 455-116][RS-455-116]<br />[Farnell 1717047][F-1717047] | Pré-assemblé
 | USB Webcam        | 1   | Logitech C500                        | [Ebuyer 170140][EB-170140] |
 | Clé USB           | 1   | Kingston Datatraveler Gen2 2GB       | [Ebuyer 159052][EB-159052] |
 | Batterie (Plomb)  | 1   | 12V<br />3.2Ah                       | [RS 537-5472][RS-537-5472] |
 | Chargeur de Batterie | 1   | 12V<br />4A                       | Aucun fournisseur specifique |
 | Cordon Patch Cat5 | 3   | 0.3m<br />Rouge, Vert, Bleue         | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | Câble SRIC
 | Cordon Patch Cat5 | 4   | 0.5m<br />Violet, Jaune, Rose, Orange | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | Câble SRIC
-| Cordon Patch Cat5 | 2   | 1m<br />Noir                         | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | Câble SRIC (Pour câblage au mât de drapeau)
-| Coupleur RJ45     | 1   |                                      | [CommsExpress<br />RJ45 Inline Coupler][CE-RJ45-Coupler] | Pour relier au lieu de la carte 'Infrarouge' au haut du mât de drapeau
-| Fil Batterie      | 1   | 0.5m<br />2mm<sup>2</sup><br />30A   | [Farnell 3653018][F-3653018]<br />[Farnell 3653006][F-3653006]<br />[Farnell 1793033][F-1793033]<br />[RS 208-2470][RS-208-2470] | Pre-assemblé
+| Cordon Patch Cat5 | 2   | 1m<br />Noir                         | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | Câble SRIC (Pour le câblage de la carte infrarouge sur le mât du drapeau)
+| Coupleur RJ45     | 1   |                                      | [CommsExpress<br />RJ45 Inline Coupler][CE-RJ45-Coupler] | Pour relier la carte 'Infrarouge' au cable SRIC
+| Fil Batterie      | 1   | 0.5m<br />2mm<sup>2</sup><br />30A   | [Farnell 3653018][F-3653018]<br />[Farnell 3653006][F-3653006]<br />[Farnell 1793033][F-1793033]<br />[RS 208-2470][RS-208-2470] | Pré-assemblé
 | Fil Bleu          | 1   | 0.65m<br />0.75mm<sup>2</sup><br />6A | [Farnell 1465870][F-1465870] | Pour relier les moteurs aux cartes 'Moteur'
-| Fil d'Alimentation Rouge | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A  | [Farnell 1465872][F-1465872] | Pour relier puissance de la carte 'Alimentation' aux cartes 'Moteur' et 'Servomoteur'
-| File d'Alimentation Noir | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A  | [Farnell 1465869][F-1465869] | Pour relier puissance de la carte 'Alimentation' aux cartes 'Moteur' et 'Servomoteur'
+| Fil d'Alimentation Rouge | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A  | [Farnell 1465872][F-1465872] | Pour relier la carte 'Alimentation' aux cartes 'Moteur' et 'Servomoteur'
+| Fil d'Alimentation Noir | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A  | [Farnell 1465869][F-1465869] | Pour relier la carte 'Alimentation' aux cartes 'Moteur' et 'Servomoteur'
 | Fil Rouge         | 1   | 3m<br />0.5mm<sup>2</sup><br />4A     | [Farnell 1285930][F-1285930] | Fil multi-usage
 | Fil Noir          | 1  | 3m<br />0.5mm<sup>2</sup><br />4A     | [Farnell 1285922][F-1285922] | Fil multi-usage
 | Fil Bleu          | 1   | 3m<br />0.5mm<sup>2</sup><br />4A     | [Farnell 1285923][F-1285923] | Fil multi-usage
 | Fil Vert          | 1  | 3m<br />0.5mm<sup>2</sup><br />4A     | [Farnell 1285926][F-1285926] | Fil multi-usage
-| CamCon            | 10  | 2 contacts<br />12A                        | [Farnell 3882275][F-3882275] | Pour relier 12V de la carte 'Alimentation' aux cartes 'Moteur' et 'Servomoteur', et pour relier les moteurs aux cartes 'Moteur'
-| MiniCamCon 4way   | 3   | 4 contacts<br />10A                        | [Farnell 1717049][F-1717049] | Pour relier puissance de la carte 'E/S' à vos propres électroniques.
-| MiniCamCon 8way   | 3   | 8 contacts<br />10A                        | [Farnell 1717053][F-1717053] | Pour relier puissance de la carte 'E/S' à vos propres électroniques.
+| CamCon            | 10  | 2 contacts<br />12A                        | [Farnell 3882275][F-3882275] | Pour relier le 12V de la carte 'Alimentation' aux cartes 'Moteur' et 'Servomoteur', et pour relier les moteurs aux cartes 'Moteur'
+| MiniCamCon 4way   | 3   | 4 contacts<br />10A                        | [Farnell 1717049][F-1717049] | Pour relier en puissance la carte 'E/S' à vos propres composants électroniques.
+| MiniCamCon 8way   | 3   | 8 contacts<br />10A                        | [Farnell 1717053][F-1717053] | Pour relier la carte 'E/S' à vos propres composants électroniques (circuit commande).
 
 [AK-HB-03BK]: http://www.akasa.com.tw/update.php?tpl=product/product.detail.tpl&no=181&type=Card%20Reader/Hub&type_sub=USB%20Hub&model=AK-HB-03BK
 [RS-356-195]: http://www.xgoat.com/p/rs/356-195

@@ -1,4 +1,4 @@
-//TITLE: 	404 - Page Non Trouvée
+﻿//TITLE: 	404 - Page Non Trouvée
 //DESCRIPTION:	La page que vous avez demandé n'était pas trouvée.
 //KEYWORDS:	404, non trouvée
 //AUTHORS:	Andrew Busse
@@ -10,9 +10,8 @@
 
 404 &mdash; Page Non Trouvée
 ==========================
-Nous sommes désolés, mais la page que vous avez demandé n'était pas trouvée. Si vous avez tapé le lien vous-même, veuillez revérifier ce lien. Si vous avez suivi un lien d'ailleurs, veuillez leur faire savoir. Si c'était un lien de notre site, nous serons au courant la prochaine fois que nous regardons notre serveur, donc il devrait être fixé assez vite!
-
-En l'entretemps, vous pouvez essayer de rechercher ce que vous cherchez; il y a un champ de recherche dans le coin supérieur droit de la page.
+Nous sommes désolés, mais la page que vous avez demandé est introuvable. Si vous avez saisie le lien vous-même, veuillez le vérifier. Si le lien provient d'un site, veuillez leur faire savoir. Si le lien provient de notre site, nous en serons informés la prochaine fois que nous consulterons notre serveur, donc il devrait être rétabli au plus vite.
+En attendant, vous pouvez essayer de saisir votre requête dans la barre de recherche dans le coin supérieur droit de la page.
 
 <div markdown="1" class="left_img_attribution">
 [Danbo Brigade Chief](http://www.flickr.com/photos/stevekeys/3107679409/in/set-72157611904763809/) a été publié avec une [Creative Commons Attribution](http://creativecommons.org/licenses/by/2.0/deed.en_GB) (Paternité) licence par [Steve Keys](http://www.flickr.com/photos/stevekeys/).</div>

@@ -1,29 +1,28 @@
-//TITLE:	Écrivant les bons messages de commit
+﻿//TITLE:	Écrivant les bons messages de commit
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Écrivant les bons Messages de Commit
+Conseils pour écrire des Messages de Commit
 ============================
 
-Écrivant les bons messages de commit est simple; malheureusement, il est beaucoup plus facile d'écrire les messages paresseux. Néanmoins, avec un peu de discipline, il deviendra naturel au fil du temps. Un bon message de commit a deux parties:
+Écrire de bons messages de commit est simple. Malgré leur simplicité, les messages trop courts sont à bannir: avec un peu de discipline, il deviendra plus naturel d'écrire un bon message de commit. Celui-ci est composé de deux parties:
 
-1. un sommaire de **ce que vous avez fait**
+1. un résumé de **ce que vous avez fait**
 2. une explication de **pourquoi vous l'avez fait** ou **quelle problème il résout**
 
 Et il devra y avoir une ligne blanche entre les deux. Voici un exemple:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ajout d'une fonction pour obtenir le plus proche "blob" de couleur
+Ajout d'une fonction pour obtenir l'objet blob le plus proche du robot
 
-Refactorisation qui retourne un objet "blob" qui est le plus proche visible au
-logiciel de vision; rend la sélection / ciblage d'un blob plus facile.
+Refactorisation qui retourne un objet "blob" détecté, qui est le plus proche pour
+le logiciel de vision; rend la sélection / ciblage d'un blob plus facile.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Combien vous écrivez dépend de la quantité de code que vous avez écrit.
-Plus d'information sur ce qu'il faut écrire peut être trouvée sur [ce site - (en)](http://lbrandy.com/blog/2009/03/writing-better-commit-messages/).
-Il est de bonne pratique de produire des petites commits qui ne font qu'une seule chose.
-Si vous avez besoin de plus d'une ligne (80 caractères ou moins) pour résumer les changements, le commit fait trop!
+La longueur du commit dépend de la longueur de votre code (plus le code est long, plus le commit doit être détaillé).
+Pour plus d'information : [ce site - (en)](http://lbrandy.com/blog/2009/03/writing-better-commit-messages/).
+Il est tout de même utile de faire de petits commits car un commit ne peut pas excéder 80 caractères.
 
-C'est non essentiel dans l'IDE, mais c'est une bonne idée de mettre en forme vos messages de commit d'une certaine manière.
+Malgré le fait que ce ne soit pas essentiel dans l'IDE, il est conseillé de mettre en forme vos messages de commit.
 Comme mentionné ci-dessus vous devriez laisser une ligne blanche entre le résumé et le message principal. [Ce site - (en)] (http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) explique le raisonnement derrière cela, et beaucoup d'autres conventions de mettre en forme les messages de commit.

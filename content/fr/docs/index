@@ -1,33 +1,33 @@
-//TITLE:	Documentation
+﻿//TITLE:	Documentation
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-<div class="info">Attention! Nous sommes désolés, mais pour l'instant, la documentation et les règles sont disponibles en ANGLAIS SEULEMENT. Cela devrait changer dans les semaines suivantes. En l'entretemps, n'hésitez pas à <a href="/about/contactus">contacter nous</a> si vous avez des problèmes.
+<div class="info">Attention! Nous sommes désolés, mais pour l'instant, la documentation et les règles sont disponibles en ANGLAIS SEULEMENT. Cela devrait changer dans les semaines suivantes. En l'entretemps, n'hésitez pas à <a href="/about/contactus">nous contacter</a> si vous avez des problèmes.
 
 --Cordialement, L'équipe SR, 10/01/11</div>
 
 Documentation
 =============
 
-Il y a un certain nombre de parties dans cette documentation, offrant d'aide pour l'[IDE](/docs/IDE/), le [kit](/docs/kit/) et la [programmation](/docs/programming/). Dans la partie [tutoriels](/docs/tutorials/), un certain nombre de ces choses sont combinées pour vous aider à comprendre ce que vous pouvez, ou avez besoin, de faire. Navigation de la documentation peut être fait en utilisant la colonne de gauche, où tout est en ordre alphabétique dans les sous-sections susmentionnés.
+Il y a un certain nombre de parties dans cette documentation, offrant de l'aide pour l'[IDE](/docs/IDE/), le [kit](/docs/kit/) et la [programmation](/docs/programming/). Dans la partie [tutoriels](/docs/tutorials/), un certain nombre de ces choses sont combinées pour vous aider à comprendre ce dont vous avez besoin. La navigation dans la documentation peut être facilitée en utilisant la colonne de gauche, où tout est par ordre alphabétique dans les sous-sections susmentionnés.
 
 
-<div class="info">Il serait recommandé de commencer par la <a href="/docs/tutorials/walkthrough">procédure pas à pas</a>, il vous guidera à travers tout ce dont vous avez besoin de savoir pour commencer à écrire du code pour votre robot.</div>
+<div class="info">Il serait recommandé de commencer par la <a href="/docs/tutorials/walkthrough">procédure pas à pas</a>, elle vous guidera à travers tout ce dont vous avez besoin de savoir pour commencer à écrire un code pour votre robot.</div>
 
 
-Dans cette documentation, vous regarderez un certain nombre de cases jaunes comme ceci:
+Dans cette documentation, vous verrez un certain nombre de cases jaunes comme ceci:
 
 ~~~
 # code exemple
 ~~~
 
-Ceux sont des exemples de code, fournis pour vous aider.
+Ce sont des exemples de code, fournis pour vous aider.
 
-De temps en temps, vous regarderez des avertissements tels que les suivants:
+De temps en temps, vous verrez des avertissements tels que les suivants:
 
 <div class="warning">Chargez Vos Batteries!</div>
 
-Il serait recommande de prêter attention aux ceux-là, en particulier celui-là! Vous regardere aussi des cases bleues qui fournissent l'information, comme le suivant:
+Il serait recommande de prêter attention à ceux-là, en particulier celui-là! Vous verrez aussi des cases bleues qui fournissent des informations, comme les suivants:
 
 <div class="info">Quelques informations utiles ... comme les informations fournies dans la boîte d'information ci-dessus.</div>

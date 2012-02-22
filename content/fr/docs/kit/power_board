@@ -1,4 +1,4 @@
-//TITLE:	Carte 'Alimentation'
+﻿//TITLE:	Carte 'Alimentation'
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -7,9 +7,9 @@ Carte 'Alimentation'
 ====================
 
 La Carte 'Alimentation' est le cœur du kit électronique.
-Il exécute le code que vous écrivez dans l'IDE, et contrôle l'ensemble des autres cartes dans le kit.
-Votre kit comprend une seule Carte 'Alimentation', qui est relié dans l'[Anneau à Jeton](/docs/kit/token_ring). Il est relié aussi à un hub USB, qui permet la webcam et la clé USB d'être reliés au kit.
-Pour s'assurer que votre robot est sans danger avant que votre code s'exécute et s'il existe des problèmes, la carte 'Alimentation' n'alimente que les moteurs et autres appareils électroniques que vous développez quand votre code python s'exécute.
+Elle exécute le code que vous écrivez dans l'IDE, et contrôle l'ensemble des autres cartes du kit.
+Votre kit comprend une seule Carte 'Alimentation', qui est reliée dans l'[Anneau à Jeton](/docs/kit/token_ring). Elle est aussi relié à un hub USB, qui permet la connexion de la webcam et de la clé USB au kit.
+Pour s'assurer que votre robot ne court aucun danger avant que votre code s'exécute et qu'il n'y ait pas de problèmes, la carte 'Alimentation' n'alimente que les moteurs et autres appareils électroniques que vous utilisez quand votre code python s'exécute.
 
 Schéma
 ------
@@ -27,18 +27,18 @@ Indicateurs
 | Motor Rail      | Le Rail 'Moteur' est alimenté  | Off
 | Token           | L'Anneau à jeton marche        | On
 | SRIC Activity   | La carte transfert les données | Off
-| Blown Fuse      | Le fusible principal a sauté, ou manque | Off
+| Blown Fuse      | Le fusible principal a sauté, ou est absent | Off
 | User            | Contrôlable du code            | Off
 
-*Malheureusement, en raison de la conception de la carte, la DEL "Charging" s'allume seulement quand la batterie est en charge et la carte d'alimentation est alimenté.
-Si la carte d'alimentation est éteint, puis la DEL "Charging" ne s'allume pas, mais la batterie se charge et les DEL / cadran sur le chargeur devront le montrer.
+*Malheureusement, en raison de la conception de la carte, la DEL "Charging" s'allume seulement quand la batterie est en charge et la carte d'alimentation alimentée.
+Si la carte d'alimentation est éteinte, la DEL "Charging" ne s'allume pas, mais la batterie se charge et les DEL / cadran sur le chargeur doivent le montrer.
 
 Dimensions de la boîte
 ----------------------
 
 ![power board case](/images/content/kit/power_board_case.png "Boîte de la Carte d'Alimentation")
 
-Toutes dimensions en mm.
+Toutes les dimensions sont en mm.
 
 Specifications
 --------------
@@ -46,20 +46,20 @@ Specifications
 |  Paramètre                           |   Valeur  |
 |--------------------------------------|-----------|
 | Tension d'Entrée Maximum             | 16V       |
-| Commutation Courant Maximum au Rail Moteur | 25A       |
+| Courant de Commutation Maximum du Rail Moteur | 25A       |
 | Tension de Sortie Maximum du Hub USB | 1A        |
-| Courant Max du Batterie Fusible      | 15A       |
-| Courant Max du Chargeur Fusible      | 5A        |
-| Écran Résolution                     | 480x272   |
-| Écran Fréquence de rafraîchissement  | 69Hz      |
+| Courant Max du Fusible de la Batterie      | 15A       |
+| Courant Max du Fusible du Chargeur         | 5A        |
+| Résolution de l'Écran                      | 480x272   |
+| Fréquence de rafraîchissement de l'Écran   | 69Hz      |
 | Processeur                           | 720MHz ARM Cortex A8 |
 | RAM                                  | 256MB     |
 
 Schémas / Conceptions
 ---------------------
 
-Vous pouvez accéder aux schéma et le code source du microprogramme sur la carte E/S avec les liens suivants.
-Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut intéresser quelques gens.
+Vous pouvez accéder aux schéma et au code source du microprogramme de la carte power avec les liens suivants.
+Vous n'avez pas besoin de ces informations pour utiliser la carte, mais ça peut vous intéresser.
 
  * [Schématiques Complètes](/resources/kit/power/schematic.pdf)
  * [Source Microprogramme](https://www.studentrobotics.org/cgit/boards/power-fw.git/)

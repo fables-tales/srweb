@@ -1,16 +1,16 @@
-//TITLE:	Mettant Code sur le Robot
+﻿//TITLE:	Mettant Code sur le Robot
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Mettant Code sur le Robot
+Mettre le code sur le Robot
 =========================
 
-Pour mettre votre code sur votre robot, vous aurez besoin d'utiliser la clé USB fourni. Le code est transférée de l'IDE au clé USB, puis la clé USB est connecté au hub USB du robot. Vous pouvez suivre ces étapes lorsque vous avez un peu de code que vous voulez exécuter:
+Pour mettre votre code sur votre robot, vous aurez besoin d'utiliser la clé USB fournie. Le code est transféré de l'IDE à la clé USB, puis la clé USB est connectée au hub USB du robot. Lorsque vous voulez exécuter un code, suivez ces étapes:
 
-1. Sous l'onglet _Projects_, cliquez sur _export Project_ (cela vérifiera votre code, puis offrir un fichier à télécharger)
-2. Enregistrez le fichier (_robot.zip_) dans le dossier racine de la clé USB (comme dans 'F: \ `ou ` H: \ ' ou quelle que soit la lettre de votre lecteur système)
-3. Retirer la clé USB, _en toute sécurité_
-4. Branchez-le au hub USB de votre robot
+1. Sous l'onglet _Projects_, cliquez sur _export Project_ (cela vérifiera votre code, puis le fichier sera téléchargé).
+2. Enregistrez le fichier (_robot.zip_) dans le dossier racine de la clé USB (comme dans 'F: \ `, ` H: \ ' ou quelque soit la lettre de votre lecteur).
+3. Retirer la clé USB, en toute sécurité.
+4. Branchez-la au hub USB de votre robot.
 
 Maintenant, vous pouvez allumer votre robot (ou kit) et cliquez sur le bouton _run_.

@@ -1,10 +1,10 @@
-//TITLE:	Vérification de Code
+﻿//TITLE:	Vérification du Code
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Vérification de Code
+Vérification du Code
 ====================
 
-Votre code est vérifié automatiquement chaque fois que vous cliquez sur _Export Project_ dans l'onglet _Projects_ . Si vous souhaitez vérifier le code avant de l'exporter, vous pouvez le faire en cliquant sur le bouton _Check Code_ dans l'onglet _Projects_ . S'il y a des erreurs dans votre code, le vérificateur de code vous présentera avec un message d'avertissement, vous offrant la chance de voir les erreurs.
+Votre code est vérifié automatiquement chaque fois que vous cliquez sur _Export Project_ dans l'onglet _Projects_ . Si vous souhaitez vérifier le code avant de l'exporter, vous pouvez le faire en cliquant sur le bouton _Check Code_ dans l'onglet _Projects_ . S'il y a des erreurs, un message d'avertissement apparaîtra et vous permettra de voir les erreurs.
 

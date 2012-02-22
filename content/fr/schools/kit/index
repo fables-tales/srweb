@@ -1,4 +1,4 @@
-//TITLE:	Le Kit
+﻿//TITLE:	Le Kit
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -9,17 +9,17 @@ Le Kit
 Le kit de cette année est actuellement en cours de développement, et des
 changements assez importants se produisent:
 
-Au cœur du kit de l'an dernier, il y avait quelquechose que nous avons
+Au cœur du kit de l'an dernier, il y avait quelque chose que nous avons
 affectueusement appelé <abbr title="La Limace">_The Slug_</abbr>: un
 dispositif <abbr title="Network Attached Storage - stockage en réseau">«NAS»</abbr>
-de Linksys, maintenant dépassé, et fortement modifiée par nous. Ce système,
-quoiqu'il ait fonctionné, n'était pas très maintenable.
+de Linksys, maintenant dépassé, et fortement modifié par nos soin. Ce système,
+quoiqu'il ait fonctionné, n'était pas à garder dans la durée.
 
-Cette année, nous avons fait le saut vers [Beagleboards](http://beagleboard.org/),
-qui devraient améliorer la situation considérablement: des programmes qui
-s'éxecutent plus vite sur les robots, un temps de démarrage plus vite, et il y
-aura un écran couleur de 480x272! Ainsi que cela, le reste du kit (cartes
+Cette année, nous avons fait le choix des [Beagleboards](http://beagleboard.org/),
+qui devraient améliorer considérablement la situation: des programmes qui
+s'éxecutent plus vite sur les robots, un temps de démarrage plus rapide, et il y
+aura un écran couleur de 480x272! En plus de cela, le reste du kit (cartes
 moteur, servomoteur et <abbr title="Carte Entrées-Sorties">JointIO</abbr>)
-sera conçu d'être encore mieux, et beaucoup plus difficile à se casser!
+seront conçu pour être encore mieux, et beaucoup plus difficile à casser!
 
 Plus d'infos sur le kit sont disponible dans les [documents](/docs/kit).

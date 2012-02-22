@@ -1,11 +1,11 @@
-//TITLE:	Création d'un Projet
+﻿//TITLE:	Création d'un Projet
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
 
-Création d'un Nouveau Projet
+Création d'un nouveau projet
 ============================
 
-L'organisation de versions de code complètement différentes (c-à-d des versions que ne sont pas seulement des petits changements ) peut être realisé en utilisant de multiples projets. Vous pouvez exécuter qu'un projet sur votre robot à la fois. 
+L'élaboration de codes complètement différents (c-à-d des versions qui n'ont pas de rapports entre elles) peut être realisé en utilisant plusieurs projets. Vous ne pouvez exécuter qu'un seul projet à la fois sur votre robot. 
 
-Pour créer un nouveau projet, selectionnez l'onglet _Project_ et cliquez sur le bouton _New Project_. Vous sera présenté avec une boîte de dialogue, demandant le nom du projet (c'est mieux si le nom est significatif). Une fois que vous avez saisissé un nom, cliquez sur _Save_ et vous avez un projet neuf avec lequel vous pouvez jouer.
+Pour créer un nouveau projet, selectionnez l'onglet _Project_ et cliquez sur le bouton _New Project_. Une boîte de dialogue apparaîtra, demandant le nom du projet (c'est mieux si le nom est significatif). Une fois que vous avez saisis un nom, cliquez sur _Save_ et un nouveau projet est créé.

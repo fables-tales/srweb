@@ -1,4 +1,4 @@
-//TITLE:	Python
+﻿//TITLE:	Python
 //DESCRIPTION:	
 //KEYWORDS:	
 //CONTENT_TYPE:	markdown
@@ -6,14 +6,14 @@
 Python
 ======
 
-Tous les robots de Student Robotics sont programmés en [Python](http://www.python.org); pour programmer un robot, il faut que vous ayez au moins des compétences de base en Python.
+Tous les robots de Student Robotics sont programmés en [Python](http://www.python.org); pour programmer un robot, il faut que vous ayez certaines connaissances de base en Python.
 
 Les tutoriels suivants peuvent vous aider à apprendre à programmer en Python:
 
-* [Le Tutoriel Officiel](http://docs.python.org/tutorial/) -- Parcourez les deux premiers chapîtres, ce tutoriel commence en vigueur à partir de chapître 3 - ce tutoriel est assez long, et peut-être un peu écrasant. (Anglais)
+* [Le Tutoriel Officiel](http://docs.python.org/tutorial/) -- Parcourez les deux premiers chapîtres rapidement, ce tutoriel commence vraiment à partir de chapître 3 - ce tutoriel est assez long, et peut-être un peu lourd. (Anglais)
 
-* Une liste de tutoriels et documentation en français existe [ici](http://wiki.python.org/moin/BeginnersGuide/NonProgrammers). [A Byte of Python](http://www.swaroopch.com/notes/Python_fr:Fonctions) semble d'être assez bon.
+* Une liste de tutoriels et documentation en français existe [ici](http://wiki.python.org/moin/BeginnersGuide/NonProgrammers). [A Byte of Python](http://www.swaroopch.com/notes/Python_fr:Fonctions) semble être assez bon. Vous pouvez aussi trouver un bon tutoriel sur: "le site du zéro".
 
-* Si vous êtes un programmeur/se plus confirmé(e), essayez de commencer avec [Plongez au coeur de Python.](http://diveintopython.org/toc/index.html) Encore, c'est assez long, mais très bon.
+* Si vous êtes un programmeur/se plus confirmé(e), essayez de commencer avec [Plongez au coeur de Python.](http://diveintopython.org/toc/index.html) C'est assez long, mais très complet.
 
-Certains fonctions plus avancés &mdash; [yield](/docs/programming/python/yield_and_coroutines), par exemple &mdash; sont expliqués par nous ici. Il y aura des fonctions assez avancés, mais seulement un peu de compréhension est nécessaire pour les utiliser.
+Certaines fonctions plus avancées &mdash; [yield](/docs/programming/python/yield_and_coroutines), par exemple &mdash; vous sont expliqués par nos soins ici. Il y aura des fonctions assez avancés, mais seulement un peu de compréhension est nécessaire pour les utiliser.
