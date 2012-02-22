@@ -169,6 +169,10 @@ div#header form fieldset input[type=image]{
 	top: 6px;
 }
 
+div.ie6-prop-clear {
+	clear: both;
+}
+
 div#header div.ie6-wrapper {
 	float: right;
 }

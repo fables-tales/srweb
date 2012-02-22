@@ -8,6 +8,7 @@
 		</fieldset>
 	</form>
 
+	<div class="ie6-prop-clear"></div>
 	<div class="ie6-wrapper">
 	<ul>
 		<li><a href="{$root_uri}">Home</a></li>
