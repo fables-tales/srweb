@@ -103,7 +103,7 @@ $ACCEPTED_LANGUAGES = array(
 	'en'		=> 'en',
 	'en-gb'		=> 'en',
 	'en-us'		=> 'en',
-	'fr'		=> 'fr'	
+//	'fr'		=> 'fr'
 );
 
 
