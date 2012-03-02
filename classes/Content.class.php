@@ -23,9 +23,9 @@ class Content {
 	}
 
 	/*
-	 * Constructor. Takes a filename as an argument, grabs the meta 
-	 * fields from it, and stores the remaining content (discarding 
-	 * any additional comments before a line that does not start 
+	 * Constructor. Takes a filename as an argument, grabs the meta
+	 * fields from it, and stores the remaining content (discarding
+	 * any additional comments before a line that does not start
 	 * with '//').
 	 */
 	function __construct($filename){
@@ -50,7 +50,7 @@ class Content {
 			//commented header section -- assuming actual content now.
 			//store content
 			$this->content = stream_get_contents($fh);
-			
+
 		}//while
 
 		fclose($fh);
@@ -92,7 +92,7 @@ class Content {
 
 
 	/*
-	 * Returns true if $string is a comment line (i.e. the first 
+	 * Returns true if $string is a comment line (i.e. the first
 	 * non-whitespace characters are '//') and false if not.
 	 */
 	private static function isComment($string){
@@ -125,16 +125,16 @@ class Content {
 
 	/*
 	 * If the content is of a type that needs parsing, and if a method to
-	 * parse it exists, then this method will return the parsed content. 
-	 * If it doesn't need to/can't be parsed, the content will just be 
-	 * returned as plain text. (This is no bad thing: HTML, for example 
+	 * parse it exists, then this method will return the parsed content.
+	 * If it doesn't need to/can't be parsed, the content will just be
+	 * returned as plain text. (This is no bad thing: HTML, for example
 	 * can just be returned as itself.)
 	 */
 	function getParsedContent(){
 
 		if (!$this->contentHasBeenParsed){//it needs parsing
 
-			//uppercase content type. If content type not specified, default to markdown. 
+			//uppercase content type. If content type not specified, default to markdown.
 			//(quick way to stop PHP errors when empty place-holding files are used.)
 			$upper_content = isset($this->meta['CONTENT_TYPE']) ? strtoupper($this->meta['CONTENT_TYPE']) : 'MARKDOWN';
 
