@@ -2,6 +2,7 @@
 
 $csvfn = "subscribed_people.csv";
 
+require_once('pipebot/pipebot.php');
 require_once("phorms/phorms.php");
 require_once("ReCAPTCHA_Widget.class.php");
 require_once("ReCAPTCHA_Field.class.php");
@@ -38,9 +39,7 @@ if ($form->bound and $form->is_valid()) {
 		fputcsv($csvfile, $data);
 
 		/* Tell us about it */
-		$fd = fopen("/tmp/hash-srobo", "a");
-		fwrite($fd, $form->school_name->get_value() . " has just signed up to SR2012!\n");
-		fclose($fd);
+		Pipebot::say($form->school_name->get_value() . ' has just signed up to SR2012!');
 	}
 }
 

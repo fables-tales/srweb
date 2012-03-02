@@ -4,3 +4,6 @@
 [submodule "community-guidelines"]
 	path = community-guidelines
 	url = ../community-guidelines
+[submodule "classes/pipebot"]
+	path = classes/pipebot
+	url = git://srobo.org/pipebot.git
