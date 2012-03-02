@@ -35,9 +35,22 @@ class Content {
 		//open and read file
 		$fh = fopen($filename, 'r') or die("Can't open file: $filename");
 
+		$firstLine = TRUE;
+
 		while (!feof($fh)){
 
 			$line = fgets($fh);//read line
+
+			// Some things only happen on the first line, so special case
+			if ($firstLine){
+				$firstLine = FALSE;
+				// BOM search: UTF-8 *only*
+				$bom = "\xef\xbb\xbf";	// strlen = 3
+
+				if ($bom == substr($line, 0, 3)){
+					$line = substr($line, 3);
+				}
+			}
 
 			if (self::isComment($line)){
 
