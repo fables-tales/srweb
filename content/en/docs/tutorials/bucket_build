@@ -1,0 +1,100 @@
+//TITLE:	How to build a Pirate Ship
+//DESCRIPTION:
+//KEYWORDS:
+//CONTENTTYPE:	markdown
+
+Pirate Ship (bucket) Construction Guide
+=======================================
+
+The aim of this tutorial is to enable you to make your own bucket, similar to those that will be used at the competition.
+
+Materials
+---------
+
+* 4 B&Q single wheel swivel [castors](http://www.diy.com/nav/fix/hardware/ironmongery/castors/B-and-Q-Castor-Single-Wheel-Swivel-9370702), part number 3209745.
+* A 395mm by 255mm piece of 6mm MDF.
+* A 1m long 15mm diameter pine rod
+* A 210mm piece of TODO: DIMENSIONS pine.
+* A [9l Really Useful Box](http://www.reallyusefulproducts.co.uk/uk/html/onlineshop/rub/b09_0litre.php) (RUB).
+* Printed [markers](/docs/programming/sr/vision/markers) for the ends and sides of the box.
+
+It should be fine to use other materials for the wooden parts of the bucket,
+ but the ones at the competition will be made using wooden components.
+
+<div class="info">
+Note that the markers for the sides and ends of the box need to be paired correctly,
+ as detailed in the <a href="/docs/rules">rules</a>.
+As a reminder &mdash; the lowest numbered side goes with the lowest numbered end, and so on.
+</div>
+
+Some general tips when making things:
+
+* Be absolutely certain that your measurements are correct before cutting anything.
+  The rule is "measure twice, cut once".
+* If you're unsusre about how to cut something, prototype it by testing on a scrap piece.
+
+TODO: insert more tips above?
+
+Prepare the base
+----------------
+
+The castors should be mounted on the MDF sheet,
+ inset from the corners by TODO DISTANCE,
+ as shown in the diagram below:
+
+TODO: make a better diagram in iknscape/whatever once we have the actual dimensions
+TODO: what size are the holes in the castors?
+TODO: what size/length bolts/screws do they want to use?
+
+~~~~~~~~~~~~
+
+  +-----------------------+
+  |                       |
+  |   o               o   |
+  |                       |
+  |                       |
+  |   o               o   |
+  |                       |
+  +-----------------------+
+
+~~~~~~~~~~~~
+
+
+Attach the base
+---------------
+
+The MDF sheet should be attached to the (outside) bottom of the RUB,
+ TODO: how? using bolts? What size/length?
+
+
+Prepare the inside
+------------------
+
+Drill a 15mm hole (TODO: all the way through?) in the pine block.
+TODO: which way? or is it square?
+
+Check that the hole you've drilled allows the pine rod to sit in it.
+TODO: is this just a tight fit, or is it held in place by glue/bolts?
+
+Attach the inside
+-----------------
+
+The pine block should be placed in the middle of the RUB, acrross the width.
+It should just fill the width, and its edges should be (TODO: (335 - pine width) / 2 == ?)mm from the ends.
+
+Be sure to place it in with the hole that you drilled oriented vertically,
+ and then bolt (TODO what size/length?) it in place.
+TODO: is this through the MDF too, or is the base of the RUB enough to hold it?
+TODO: if the latter, then the inside needs to be done before the bottom!
+
+
+Final Steps
+-----------
+
+Attach the markers you've printed to the ends and sides of the bucket.
+Take care that you don't crumple the markers,
+ and that you don't cover the borders of the markers when attaching them.
+
+Put the pine rod into the hole drilled for it and admire your new Pirate Ship!
+
+TODO: insert image of our pirate ship, and cue Blue Peter.
