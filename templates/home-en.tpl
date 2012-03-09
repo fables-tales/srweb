@@ -125,7 +125,7 @@
 							<ul>
 								<li><a href="{$root_uri}events/sr2012/tech_day_03_12">3rd December</a></li>
 								<li><a href="{$root_uri}events/sr2012/2012-02-04-soton_tech_day_2">4th February</a></li>
-								<li>17th March</li>
+								<li><a href="{$root_uri}events/sr2012/2012-03-17-soton_tech_day_3">17th March</a></li>
 							</ul>
 						</div>
 						<div id="date_bristol">
