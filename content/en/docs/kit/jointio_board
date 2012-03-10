@@ -6,6 +6,7 @@
 JointIO Board
 ===========
 
+<img src="/images/content/kit/jointio_board.png" alt="A photo of an un-cased jointio board" title="An un-cased jointio board" class="right" />
 The JointIO Board allows you to connect the SR kit to your own electronics. It has 8 inputs which can be configured to read either digital or analogue values and 8 digital outputs capable of driving small loads.
 The board also provides 3.3V to power some/all of your electronics. Both the inputs and outputs of the board use 3.3V logic so you should keep this in mind when interfacing with the board.
 
