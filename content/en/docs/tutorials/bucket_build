@@ -14,7 +14,7 @@ Materials
 * 4 B&Q single wheel swivel [castors](http://www.diy.com/nav/fix/hardware/ironmongery/castors/B-and-Q-Castor-Single-Wheel-Swivel-9370702), part number 3209745.
 * A 395mm by 255mm piece of 6mm MDF.
 * A 1m long 15mm diameter pine rod
-* A 210mm piece of TODO: DIMENSIONS pine.
+* A 210mm piece of pine.
 * A [9l Really Useful Box](http://www.reallyusefulproducts.co.uk/uk/html/onlineshop/rub/b09_0litre.php) (RUB).
 * Printed [markers](/docs/programming/sr/vision/markers) for the ends and sides of the box.
 
@@ -31,70 +31,55 @@ Some general tips when making things:
 
 * Be absolutely certain that your measurements are correct before cutting anything.
   The rule is "measure twice, cut once".
-* If you're unsusre about how to cut something, prototype it by testing on a scrap piece.
-
-TODO: insert more tips above?
-
-Prepare the base
-----------------
-
-The castors should be mounted on the MDF sheet,
- inset from the corners by TODO DISTANCE,
- as shown in the diagram below:
-
-TODO: make a better diagram in iknscape/whatever once we have the actual dimensions
-TODO: what size are the holes in the castors?
-TODO: what size/length bolts/screws do they want to use?
-
-~~~~~~~~~~~~
-
-  +-----------------------+
-  |                       |
-  |   o               o   |
-  |                       |
-  |                       |
-  |   o               o   |
-  |                       |
-  +-----------------------+
-
-~~~~~~~~~~~~
+* If you're unsure about how to cut something, prototype it by testing on a scrap piece.
 
 
-Attach the base
----------------
+Preparing the Pine Block
+------------------------
 
-The MDF sheet should be attached to the (outside) bottom of the RUB,
- TODO: how? using bolts? What size/length?
+Drill a 15mm diameter hole halfway through the pine block.
+This should be large enough to fit the pine rod inside.
+If it is loose it can be glued in place later.
+
+Preparing the RUB and MDF Base
+-------------------------------
+
+The RUB should have holes drilled in the bottom to accomodate
+ the bolts to hold the casters in place and for screws to affix the MDF
+ base to the RUB and the pine block.
+ 
+This image shows the positioning of the casters and screws.
+ 
+[![Click for larger image](/images/content/tutorials/bucket_build/2_small.jpg)](/images/content/tutorials/bucket_build/2.jpg)
 
 
-Prepare the inside
-------------------
+Attaching the base and inside block
+-----------------------------------
 
-Drill a 15mm hole (TODO: all the way through?) in the pine block.
-TODO: which way? or is it square?
+The Pine block should be placed in the middle the RUB, across the width 
+ with the hole for the rod facing upwards.
+ It should just fill the width with a small gap either side of the box.
 
-Check that the hole you've drilled allows the pine rod to sit in it.
-TODO: is this just a tight fit, or is it held in place by glue/bolts?
+The MDF sheet should then be attached through the bottom of the RUB into
+ the block of pine with 5 screws, this should firmly join the RUB, pine
+ block and MDF bottom together.
 
-Attach the inside
------------------
+Attaching the Casters
+---------------------
 
-The pine block should be placed in the middle of the RUB, acrross the width.
-It should just fill the width, and its edges should be (TODO: (335 - pine width) / 2 == ?)mm from the ends.
+The 4 casters need to be attached to the MDF, through the RUB with bolts.
+This will also secure the MDF bottom to the pirate ship.
 
-Be sure to place it in with the hole that you drilled oriented vertically,
- and then bolt (TODO what size/length?) it in place.
-TODO: is this through the MDF too, or is the base of the RUB enough to hold it?
-TODO: if the latter, then the inside needs to be done before the bottom!
+[![Click for larger image](/images/content/tutorials/bucket_build/6_small.jpg)](/images/content/tutorials/bucket_build/6.jpg)
 
 
 Final Steps
 -----------
 
+[<img class="left" src="/images/content/tutorials/bucket_build/5_small.jpg" />](/images/content/tutorials/bucket_build/5.jpg)
 Attach the markers you've printed to the ends and sides of the bucket.
 Take care that you don't crumple the markers,
  and that you don't cover the borders of the markers when attaching them.
-
 Put the pine rod into the hole drilled for it and admire your new Pirate Ship!
 
-TODO: insert image of our pirate ship, and cue Blue Peter.
+
