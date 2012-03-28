@@ -7,3 +7,6 @@
 [submodule "classes/pipebot"]
 	path = classes/pipebot
 	url = git://srobo.org/pipebot.git
+[submodule "tickets"]
+	path = tickets
+	url = ../ticket-access.git
