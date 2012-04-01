@@ -1,0 +1,96 @@
+//TITLE:	How to build a Pirate Ship
+//DESCRIPTION: A tutorial on how to build a Pirate Ship
+//KEYWORDS:
+//CONTENTTYPE:	markdown
+
+Pirate Ship (bucket) Construction Guide
+=======================================
+
+The aim of this tutorial is to enable you to make your own bucket, similar to those that will be used at the competition.
+
+Materials
+---------
+
+* 4 B&Q single wheel swivel [castors](http://www.diy.com/nav/fix/hardware/ironmongery/castors/B-and-Q-Castor-Single-Wheel-Swivel-9370702), part number 3209745.
+* A 300mm by 200mm piece of 6mm MDF.
+* A 1m long 15mm diameter pine dowel
+* A 200mm by 43mm by 68mm piece of pine.
+* A [9l Really Useful Box](http://www.reallyusefulproducts.co.uk/uk/html/onlineshop/rub/b09_0litre.php) (RUB).
+* Printed [markers](/docs/programming/sr/vision/markers) for the ends and sides of the box.
+* 16 * M4 or M5 round head bolts at least 15mm long, plus nylocks and washers
+* 5 * M4 or M5 coutersunk wood screws, at least 20mm long
+
+It should be fine to use other materials for the wooden parts of the bucket,
+ but the ones at the competition will be made using wooden components.
+
+<div class="info" markdown="1">
+Note that the markers for the sides and ends of the box need to be paired correctly,
+ as detailed in the [rules](/docs/rules).
+As a reminder &mdash; the lowest numbered side goes with the lowest numbered end, and so on.
+</div>
+
+Some general tips when making things:
+
+* Be absolutely certain that your measurements are correct before cutting anything.
+  The rule is "measure twice, cut once".
+* If you're unsure about how to cut something, prototype it by testing on a scrap piece.
+
+
+Preparing the Pine Block
+------------------------
+
+A 16mm (or so) diameter hole should be drilled all the way through the shortest
+ length of the pine block.
+This should be just large enough to fit the pine dowel inside.
+
+Preparing the RUB and MDF Base
+-------------------------------
+
+The MDF base should have holes drilled in the bottom for the castor
+ bolts to fit through. The outermost holes are inset by ~1cm from the
+ edge of the MDF.
+
+The MDF should be placed as centrally as possible to drill the holes in
+ the box for the castors, lining them up with the holes in the MDF.
+
+The RUB should also have holes drilled in the bottom for screws to affix
+ the MDF base to the RUB and the pine block. The positioning of these
+ should be relative to screw positions on the MDF Sheet as described below.
+
+This image shows the positioning of the casters and screws.
+
+[![Click for larger image](/images/content/tutorials/bucket_build/2_small.jpg)](/images/content/tutorials/bucket_build/2.jpg)
+
+
+Attaching the base and inside block
+-----------------------------------
+
+The Pine block should be placed in the middle of the RUB, across the width
+ with the hole that you drilled oriented vertically.
+It will have some clearance at the ends, and should be placed centrally.
+
+The MDF sheet should then be attached through the bottom of the RUB into
+ the block of pine with 5 screws.
+Four of these are at 2cm in from the edges of the MDF, and are ~3cm apart.
+
+The pine dowel should be inserted into the hole and the fifth central
+ screw should be screwed into the base of the pine dowel.
+
+Attaching the Casters
+---------------------
+
+The 4 casters need to be attached to the MDF, through the RUB with the
+ bolts.
+This will also further secure the MDF bottom to the pirate ship.
+
+[![Click for larger image](/images/content/tutorials/bucket_build/6_small.jpg)](/images/content/tutorials/bucket_build/6.jpg)
+
+
+Final Steps
+-----------
+
+[<img class="left" src="/images/content/tutorials/bucket_build/5_small.jpg" />](/images/content/tutorials/bucket_build/5.jpg)
+Attach the markers you've printed to the ends and sides of the bucket.
+Take care that you don't crumple the markers,
+ and that you don't cover the borders of the markers when attaching them.
+You can then admire your newly built Pirate Ship!
