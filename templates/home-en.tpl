@@ -129,7 +129,7 @@
 							</ul>
 						</div>
 						<div id="date_bristol">
-							Tech Days:
+							<a href="{$root_uri}schools/tech_days">Tech Days:</a>
 							<ul>
 								<li><a href="{$root_uri}events/sr2012/2012-02-11-bristol_tech_day">11th February</a></li>
 								<li><a href="{$root_uri}events/sr2012/2012-03-10-bristol_tech_day_2">10th March</a></li>
