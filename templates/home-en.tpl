@@ -137,9 +137,9 @@
 						</div>
 					</div>
 					<div>
-						Competition:
+						<a href="{$root_uri}schools/competition">Competition:</a>
 						<ul>
-							<li>14th &amp; 15th April</li>
+							<li><a href="{$root_uri}events/sr2012/2012-04-14-competition">14th &amp; 15th April</a></li>
 						</ul>
 					</div>
 
