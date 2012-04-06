@@ -11,6 +11,7 @@ orig=`git log --pretty=format:%h -1`
 git stash
 git fetch origin
 git merge origin/master
+git submodule update --recursive
 git stash pop
 
 newhash=`git log --pretty=format:%h -1`
