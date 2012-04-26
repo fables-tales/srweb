@@ -1,3 +1,8 @@
+div#news_2012-04-16_sr2012_comp_happened iframe.youtube {
+	display: block;
+	margin: 0 auto;
+}
+
 div#sponsors_index p {
 	overflow:hidden;
 }
