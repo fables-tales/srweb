@@ -4,11 +4,11 @@
 //CONTENT_TYPE:	php
 
 <?php
-/*
+
 // Form definition, validation and processing
 // Relative to 'classes'
 include("subscribe_form.php");
-//*/
+
 ?>
 
 <h1>Joining</h1>
@@ -25,16 +25,14 @@ include("subscribe_form.php");
 	but note that the presence of a responsible adult team-leader is required.
 </p>
 
-<h2>Subscribe to SR2012</h2>
-
-<p>SR2012 is now fully subscribed and <a href="/news/2011-10-19_sr2012_flying_start">underway</a>. Watch this space for joining details for SR2013.</p>
+<h2>Subscribe to SR2013</h2>
 
 <?php
-/*
+
 if ($form->bound && $form->is_valid()) {
-	echo "<p>Thanks for subscribing to SR2012, we will contact you shortly to confirm your place.</p>";
+	echo "<p>Thanks for subscribing to SR2013, we will contact you shortly to confirm your place.</p>";
 } else {
-	echo "<p>This year there is sufficient space for 24 teams.  5 of these places are currently available.  To confirm a place, as either a new or returning team, please fill in the form below.</p>";
+	echo "<p>This year there is sufficient space for 36 teams.  To confirm a place, as either a new or returning team, please fill in the form below.</p>";
 
 	if ($form->has_errors())
 		echo '<p class="validation-error-msg">Please correct the following errors.</p>';
@@ -49,5 +47,5 @@ if ($form->bound && $form->is_valid()) {
 	echo '<input type="submit" value="Submit" />';
 	echo $form->close();
 }
-//*/
+
 ?>
