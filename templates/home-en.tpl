@@ -94,10 +94,14 @@
 					</div>
 					<div>
 						<a href="{$root_uri}schools/kickstart">Kickstart:</a>
-						<p><i>To be announced.</i></p>
+						<ul>
+							<li>13<sup>th</sup> October</li>
+						</ul>
 
 						<a href="{$root_uri}schools/competition">Competition:</a>
-						<p><i>To be announced.</i></p>
+						<ul>
+							<li>13<sup>th</sup> &amp; 14<sup>th</sup> April</li>
+						</ul>
 
 					</div>
 
