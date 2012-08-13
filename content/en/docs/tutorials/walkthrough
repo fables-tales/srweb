@@ -119,8 +119,8 @@ To assemble, follow these steps:
 2. Plug the single SRIC cable into both SRIC ports on the power board
 3. Plug the USB hub into the USB socket on the power board
 4. Plug the memory stick into the USB hub
-5. Connect the battery cable to the battery, observing polarity (RED to POSITIVE, BLACK to NEGATIVE)
-6. Plug the other end of the battery cable into the power board
+5. Connect the battery cable to the battery.
+6. Plug the other end of the battery cable into the power board.
 
 <div class="info">
 You need to connect the power board to itself with the SRIC cable as it needs a complete token ring in order to work.
