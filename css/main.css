@@ -57,12 +57,17 @@ dt {
 	font-weight: bold;
 	line-height: 1.5em;
 	margin-top: 10px;
+	margin-left: 5px;
 }
 dd {
 	margin: 5px 0 10px 20px;
 	border-left: 1px solid silver;
 	border-bottom: 1px dotted silver;
 	padding: 5px;
+}
+
+dd p {
+	margin-left: 0 !important;
 }
 
 sup {
