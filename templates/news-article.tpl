@@ -9,6 +9,7 @@
 	<meta name="description" content="{getFromContent get='description'}" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/main.css" />
 	<link rel="stylesheet" type="text/css" href="{$root_uri}css/news-article.css" />
+	<link rel="stylesheet" type="text/css" href="{$root_uri}css/content_extra.css" />
 	<link rel="stylesheet" type="text/css" media="print" href="{$root_uri}css/print.css" />
 	<link rel="alternate" type="application/rss+xml" title="SR RSS" href="{$root_uri}feed.php" />
 	<link rel="shortcut icon" href="{$root_uri}images/template/favicon.ico" />
@@ -24,11 +25,14 @@
 
 
 	<div id="{$page_id}" class="content">
+		<a class="link-top" href="{$root_uri}news">&lArr; Back to News</a>
 
 		<span class="pubdate">Published: {$pubDate|date_format:"%e %B %Y"}</span>
 
 		{getFromContent get="content"}
 		<p></p>
+
+		<div class="clearboth"><a class="link-bottom" href="{$root_uri}news">&lArr; Back to News</a></div>
 
 	</div>
 
