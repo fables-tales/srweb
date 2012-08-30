@@ -87,6 +87,7 @@ if ($page == 'home'){
 
 	$pageInDocs = preg_match('/docs\/.+/', $page);
 	$pageInTeams = ($page != 'teams/index' && preg_match('/teams\/.+/', $page));
+	$pageInNews = ($page != 'news/index' && preg_match('/news\/.+/', $page));
 
 	$header_file = 'header-en.tpl';
 	foreach ($orderedLanguages as $l){
@@ -172,6 +173,9 @@ if ($page == 'home'){
 	if ($pageInDocs){
 		$smarty->assign('docsNav', constructDocsNavHierarchy());
 		$smarty->display('docs.tpl');
+	} elseif ($pageInNews) {
+		$smarty->assign('pubDate', strtotime($content->getPubDate()));
+		$smarty->display('news-article.tpl');
 	} elseif ($pageInTeams) {
 		$smarty->display('team.tpl');
 	} else

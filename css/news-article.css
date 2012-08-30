@@ -1,0 +1,9 @@
+div.content {
+	padding-top: 10px;
+}
+
+div.content span.pubdate {
+	font-weight: bold;
+	color: gray;
+	float: right;
+}
