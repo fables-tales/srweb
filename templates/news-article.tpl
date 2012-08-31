@@ -31,7 +31,14 @@
 		{getFromContent get="content"}
 		<p></p>
 
-		<div class="clearboth"><a class="link-bottom-left" href="{$root_uri}news">Back to News</a></div>
+		<div class="clearboth">
+{if !empty($prevNext->prev)}
+			<a class="link-bottom-left" href="{$prevNext->prev->url}">Older: {$prevNext->prev->title|truncate:40}</a>
+{/if}
+{if !empty($prevNext->next)}
+			<a class="link-bottom-right" href="{$prevNext->next->url}">Newer: {$prevNext->next->title|truncate:40}</a>
+{/if}
+		</div>
 
 	</div>
 

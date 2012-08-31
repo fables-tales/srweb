@@ -16,6 +16,9 @@ require('classes/Menu.class.php');
 require('classes/Content.class.php');
 require_once('classes/team_info.php');
 
+//get class for getting a list of news articles
+require('createfeed.inc.php');
+
 require('classes/CacheWrapper.class.php');
 
 //get instance of smarty
@@ -174,7 +177,40 @@ if ($page == 'home'){
 		$smarty->assign('docsNav', constructDocsNavHierarchy());
 		$smarty->display('docs.tpl');
 	} elseif ($pageInNews) {
+		// Get links to prev/next news item
+		$feed = getFeedContent();
+		$feed = str_replace(array('<![CDATA[', ']]>'), '', $feed);
+		$xml = new SimpleXMLElement($feed);
+		$items = $xml->xpath('/rss/channel/item');
+
+		// Construct the URL used in the RSS feed to identify the requested news item
+		$thisNewsURL = BASE_URI . $page;
+
+		$articleIndex = -1;
+
+		foreach ($items as $key => $value) {
+			if ($value->link == $thisNewsURL) {
+				$articleIndex = $key;
+				break;
+			}
+		}
+
+		$prevNext = new StdClass();
+
+		if ($articleIndex > 0) {
+			// There's an article newer than this one
+			$prevNext->next->title = $items[$articleIndex-1]->title;
+			$prevNext->next->url = $items[$articleIndex-1]->link;
+		}
+		if ($articleIndex < count($items) - 1) {
+			// There's an article older than this one
+			$prevNext->prev->title = $items[$articleIndex+1]->title;
+			$prevNext->prev->url = $items[$articleIndex+1]->link;
+		}
+
+		$smarty->assign('prevNext', $prevNext);
 		$smarty->assign('pubDate', strtotime($content->getPubDate()));
+
 		$smarty->display('news-article.tpl');
 	} elseif ($pageInTeams) {
 		$smarty->display('team.tpl');
