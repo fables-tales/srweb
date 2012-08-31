@@ -79,7 +79,7 @@
 		</div>
 		{/if}
 
-		<div class="clearboth"><a class="link-bottom" href="{$root_uri}teams">&lArr; Back to all teams</a></div>
+		<div class="clearboth"><a class="link-bottom-left" href="{$root_uri}teams">&lArr; Back to all teams</a></div>
 
 	</div>
 	<div id="original"></div>
