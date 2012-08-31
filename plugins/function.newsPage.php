@@ -79,18 +79,17 @@ function _getOutputForPage($p, $base_uri, $root_uri){
 
 	$olderNewer = '<div class="clearboth">';
 
-	if ($p == 1 && ITEMS_PER_PAGE < count($items)){
-		$olderNewer .= '<a class="link-bottom-left" href="' . $root_uri . 'news/?p=' . (int)($p+1) . '">Older News</a>';
+	$newNewsLink = '<a class="link-bottom-right" href="' . $root_uri . 'news/?p=' . (int)($p-1) . '">Newer News</a>';
+	$oldNewsLink = '<a class="link-bottom-left" href="' . $root_uri . 'news/?p=' . (int)($p+1) . '">Older News</a>';
 
+	if ($p == 1 && ITEMS_PER_PAGE < count($items)){
+		$olderNewer .= $oldNewsLink;
 	} elseif ($p == 1 && ITEMS_PER_PAGE >= count($items)){
 		$olderNewer .= '';
-
 	} elseif ($p > 1 && $p * ITEMS_PER_PAGE < count($items)){
-		$olderNewer .= '<a class="link-bottom-left" href="' . $root_uri . 'news/?p=' . (int)($p+1) . '">Older News</a>' . '<a class="link-bottom-right" href="news/?p=' . (int)($p-1) . '">Newer News</a>';
-
+		$olderNewer .= $oldNewsLink . $newNewsLink;
 	} else {
-		$olderNewer .= '<a class="link-bottom-right" href="' . $root_uri . 'news/?p=' . (int)($p-1) . '">Newer News</a>';
-
+		$olderNewer .= $newNewsLink;
 	}
 
 	$olderNewer .= '</div>';
