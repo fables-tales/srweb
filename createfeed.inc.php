@@ -3,8 +3,10 @@
 /*
  * Returns the content of the feed to be served. This function is
  * used both with and without caching functionality (see above).
+ * If fullDesc is true then the description field contains the full article
+ * rather than the short description.
  */
-function getFeedContent(){
+function getFeedContent($fullDesc=False){
 
 	require_once('config.inc.php');
 	require_once('classes/Content.class.php');
@@ -38,7 +40,10 @@ function getFeedContent(){
 				$output .= "<title><![CDATA[" . $newsItem->getMeta('TITLE') . "]]></title>";
 				$output .= "<link>" . BASE_URI . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</link>";
 				$output .= "<guid>" . BASE_URI . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</guid>";
-				$output .= "<description><![CDATA[" . $newsItem->getParsedContent() . "]]></description>";
+				if ($fullDesc)
+					$output .= "<description><![CDATA[" . $newsItem->getParsedContent() . "]]></description>";
+				else
+					$output .= "<description><![CDATA[" . $newsItem->getMeta('DESCRIPTION') . "]]></description>";
 				$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getPubDate())) . "</pubDate>";
 
 				$output .= "</item>";
