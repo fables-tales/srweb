@@ -38,7 +38,7 @@ function getFeedContent(){
 				$output .= "<title><![CDATA[" . $newsItem->getMeta('TITLE') . "]]></title>";
 				$output .= "<link>" . BASE_URI . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</link>";
 				$output .= "<guid>" . BASE_URI . str_replace(CONTENT_DIR . '/en/', '', $newsItem->filename) . "</guid>";
-				$output .= "<description><![CDATA[" . $newsItem->getMeta('DESCRIPTION') . "]]></description>";
+				$output .= "<description><![CDATA[" . $newsItem->getParsedContent() . "]]></description>";
 				$output .= "<pubDate>" . date(DATE_RSS, strtotime($newsItem->getPubDate())) . "</pubDate>";
 
 				$output .= "</item>";
