@@ -24,14 +24,14 @@
 
 
 	<div id="{$page_id}" class="content">
-		<a class="link-top" href="{$root_uri}news">&lArr; Back to News</a>
+		<a class="link-top" href="{$root_uri}news">Back to News</a>
 
 		<span class="pubdate">Published: {$pubDate|date_format:"%e %B %Y"}</span>
 
 		{getFromContent get="content"}
 		<p></p>
 
-		<div class="clearboth"><a class="link-bottom-left" href="{$root_uri}news">&lArr; Back to News</a></div>
+		<div class="clearboth"><a class="link-bottom-left" href="{$root_uri}news">Back to News</a></div>
 
 	</div>
 

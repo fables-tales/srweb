@@ -357,6 +357,14 @@ div.content a.link-bottom-left, div.content a.link-bottom-right {
 	border-radius: 6px 6px 0 0;
 }
 
+div.content a.link-top:before, div.content a.link-bottom-left:before {
+	content:'\21D0  ';
+}
+
+div.content a.link-bottom-right:after {
+	content:' \21D2 ';
+}
+
 div#original {
 	height:auto;
 	padding:2px;
