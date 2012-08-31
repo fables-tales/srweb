@@ -56,6 +56,9 @@ function _getOutputForPage($p, $base_uri, $root_uri){
 			$content->getParsedContent()
 		);
 
+		// Make first heading a link to the news article page
+		$contentHTML = preg_replace('/<h2>(.*)<\/h2>/', '<h2><a href="' . $link . '">$1</a></h2>', $contentHTML, 1);
+
 		$timestamp = strtotime($content->getMeta('PUB_DATE'));
 
 		$output .= '<div class="newsItem">';
