@@ -95,7 +95,7 @@
 					<div>
 						<a href="{$root_uri}schools/kickstart">Kickstart:</a>
 						<ul>
-							<li>13<sup>th</sup> October</li>
+							<li>3<sup>rd</sup> November</li>
 						</ul>
 
 						<a href="{$root_uri}schools/competition">Competition:</a>
