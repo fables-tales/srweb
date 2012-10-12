@@ -10,6 +10,8 @@ Student Robotics robots are all programmed in [Python](http://www.python.org); t
 
 There are a number of tutorials out there which might help you to learn to program in Python:
 
+* [Our tutorial](/docs/tutorials/python), called _Python: A whirlwind tour_. This was written especially for Student Robotics competitors, and explains the basics while trying not to overwhelm you.
+
 * [The Official Tutorial](http://docs.python.org/tutorial/) -- the good stuff starts at chapter 3, but you should at least skim the stuff before it; there is a lot there and it may be a little overwhelming.
 
 * A number of tutorials for beginners are linked to from [here](http://wiki.python.org/moin/BeginnersGuide/NonProgrammers). [Byte of Python](http://www.swaroopch.com/notes/Python_en:Functions) seems like a good one.
