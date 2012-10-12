@@ -2,7 +2,7 @@
 //KEYWORDS: tech day, student, robot, robotics, mentor, documentation, docs, forum
 //CONTENT_TYPE:    markdown
 
-Mentoring
+Mentoring     {#Mentoring}
 =========
 
 We aim to provide a regular mentoring service for schools that are close enough to one of our branches.
@@ -15,7 +15,7 @@ They also monitor the team's progress,
 Throughout the year we also run intensive sessions knowns as "[Tech Days](/schools/tech_days)",
  which bring together all the teams an mentors from an area to help teams make lots of progress.
 
-Forums
+Forums    {#Forums}
 ======
 
 Student Robotics hosts private forums where all the teams
@@ -26,7 +26,7 @@ We have found that this is a remarkably productive way of solving problems with 
 Near the beginning of the competition,
  students and teachers are given their login details which allow access to both the forums and the IDE.
 
-Documentation
+Documentation    {#Documentation}
 ==============
 
 As far as is possible,
@@ -38,7 +38,13 @@ There is also a guide to [programming](/docs/programming) in [Python](http://pyt
  the programming language used for students to program their robots,
  and examples on what their code should look like.
 
-The IDE
+Budget    {#Budget}
+======
+&pound;75 is provided by Student Robotics for each team to buy the extra bits & pieces they need to build the perfect robot.
+This is not the maximum that teams are allowed to spend but it should be enough to buy motors,
+ wheels and any other components needed to make the robot extra special.
+
+The IDE    {#IDE}
 =======
 
 We provide a web-based Integrated Development Environment
