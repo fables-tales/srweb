@@ -3,7 +3,6 @@ RewriteBase /~chris/srweb
 
 RewriteCond %{REQUEST_FILENAME}	!-f
 RewriteCond %{REQUEST_URI} 	!^(/community-guidelines(.*))$
-RewriteCond %{REQUEST_URI} 	!^(/voting(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/piwik(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/ide(.*))$
