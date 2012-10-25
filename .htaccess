@@ -6,6 +6,7 @@ RewriteCond %{REQUEST_URI} 	!^(/community-guidelines(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/trac(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/piwik(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/ide(.*))$
+RewriteCond %{REQUEST_URI} 	!^(/userman(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/password(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/robogit(.*))$
 RewriteCond %{REQUEST_URI} 	!^(/tickets(.*))$
