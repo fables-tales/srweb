@@ -37,14 +37,14 @@
 
 		<div id="topBanner">
 			<img src="{$root_uri}images/content/srobo_website_robot.png" alt="Image of Robot" />
-	
+
 			<h1>Welcome to Student Robotics</h1>
-	
-			<p>Student Robotics is an exciting competition, held at 
-			the University of Southampton, between teams of students from sixth 
-			form schools and colleges, to build fully autonomous robots. Led by 
-			a group of students from the University of Southampton, participating 
-			teams will have to design, build and test their robots, ready to compete 
+
+			<p>Student Robotics is an exciting competition, held at
+			the University of Southampton, between teams of students from sixth
+			form schools and colleges, to build fully autonomous robots. Led by
+			a group of students from the University of Southampton, participating
+			teams will have to design, build and test their robots, ready to compete
 			against other teams.</p>
 		</div>
 
