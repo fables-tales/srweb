@@ -70,3 +70,5 @@ print R.power.battery.voltage, R.power.battery.current
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A fully charged battery will measure 12.6V. The power board will signal a low battery at 10.4V and turn off completely at 10V. The discharge curve is roughly linear between 11.4V and 10.4V.
+
+Note that, due to a manufacturing defect, the current measurement function does not work (or at least won't work as expected) on the SR13.F board revision.
