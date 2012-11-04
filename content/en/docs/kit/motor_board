@@ -14,6 +14,10 @@ Board Diagram
 
 ![motor board diagram](/images/content/kit/motor_board_diagram.png "The Motor Board")
 
+Note that there are now two revisions of the motor board in the wild.
+The 'SR13.F' revision does not have the feedback connector and associated components.
+It also lacks the current limiting components (the current limiting has been disabled on SR11.F boards too).
+
 Indicators
 ----------
 
@@ -48,9 +52,9 @@ Specification
 | PWM Duty Cycle Range                 | 0-99%     |
 | PWM Duty Cycle Steps (per direction) | 100       |
 
-Unlike last year, the motor board does not have any current limiting.
-This means that there should be fewer problems with motors not operating correctly however care must be taken that the output is not over-loaded or shorted.
-If the output of a motor board is shorted then the main power fuse on the power board will blow.
+It was found that the design of the current limiting circuit was not sufficiently robust so it was disabled, therefore the motor board does not have any current limiting.
+There should be fewer problems with motors not operating correctly, however care must be taken that the output is not over-loaded or shorted.
+If the output of a motor board is shorted then the main power fuse on the power board will blow and you may damage the motor board itself, so take great care.
 
 Designs
 -------
