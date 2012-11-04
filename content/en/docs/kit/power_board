@@ -20,6 +20,9 @@ Board Diagram
 
 ![power board diagram](/images/content/kit/power_board_diagram.png "The Power Board")
 
+Note that there are now two revisions of the power board in the wild.
+The 'SR13.F' revision does not have the charger connector and fuse.
+
 Indicators
 ----------
 
@@ -52,6 +55,8 @@ Case Dimensions
 ![power board case](/images/content/kit/power_board_case.png "The Power Board Case")
 
 All dimensions are in mm. Don't forget that the CAT5 cables stick out slightly and the USB cable more so.
+
+Note that the case for the SR13.F board revision is 115mm wide, not 113mm wide.
 
 Specification
 -------------
