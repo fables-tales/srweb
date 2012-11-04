@@ -11,35 +11,38 @@ You will almost certainly need to get extra parts to make a usable robot chassis
 
 | Item                    | Qty   | Part Number                
 |-------------------------|-------|------------
-| Threaded Bar M6         | 2x 1m | [Screwfix 43605][SF-43605]
-| Bolt Pan Head M3 12mm   | 100   |
-| Bolt Pan Head M4 20mm   | 100   |
-| Flat Washer M3          | 100   |
-| Flat Washer M4          | 100   |
-| Flat Washer M6          | 100   |
-| Hex Nut M3              | 100   |
-| Hex Nut M4              | 100   |
-| Hex Nut M6              | 100   | [Screwfix 15346][SF-15346]
-| Hex Nut M3 (Nyloc)      | 20    |
-| Hex Nut M4 (Nyloc)      | 20    |
-| Hex Nut M6 (Nyloc)      | 20    |
-| Butt hinge 51x29mm      | 4     | [Screwfix 18399][SF-18399]
-| Assortment of Springs   | 20    | [Screwfix 63863][SF-63863]
-| Cable Tie 2.5x100mm     | 100   |
-| Cable Tie 3.6x100mm     | 100   | [Screwfix 19102][SF-19102]
-| Cable Tie 4.8x200mm     | 100   |
-| 12 Compartment Box      | 1     | [Screwfix 12880][SF-12880]
-| Aluminium L section 3/4"x1.6mm | 4x 2m | N/A
+| Threaded Bar M6         | 2x 1m | [Farnell 1419417][F-1419417]
+| Bolt Pan Head M3 12mm   | 100   | [Farnell 1420391][F-1420391]
+| Bolt Pan Head M4 20mm   | 100   | [Farnell 1419996][F-1419996]
+| Flat Washer M3          | 100   | [Farnell 1623987][F-1623987]
+| Flat Washer M4          | 100   | [Farnell 1623991][F-1623991]
+| Flat Washer M6          | 100   | [Farnell 1377500][F-1377500]
+| Hex Nut M3              | 100   | [Farnell 1419447][F-1419447]
+| Hex Nut M4              | 100   | [Farnell 1419449][F-1419449]
+| Hex Nut M6              | 50    | [Farnell 1419451][F-1419451]
+| Hex Nut M3 (Nyloc)      | 20    | [Farnell 1420431][F-1420431]
+| Hex Nut M4 (Nyloc)      | 20    | [Farnell 1420432][F-1420432]
+| Hex Nut M6 (Nyloc)      | 20    | [Farnell 1420435][F-1420435]
+| Cable Tie 2.5x100mm     | 100   | [CableTiesOnline TR1][CTO-TR1]
+| Cable Tie 3.6x140mm     | 100   | [CableTiesOnline TR2][CTO-TR2]
+| Cable Tie 4.8x200mm     | 100   | [CableTiesOnline TR5][CTO-TR5]
+| 12 Compartment Box      | 1     | [Farnell 3861867][F-3861867]
+| Aluminium L section 3/4"x1.6mm | 4x 2m | [AluminiumWarehouse][AW]
 
-[SF-43605]: http://www.screwfix.com/prods/43605
-[SF-15346]: http://www.screwfix.com/prods/15346
-[SF-18399]: http://www.screwfix.com/prods/18399
-[SF-63863]: http://www.screwfix.com/prods/63863
-[SF-97740]: http://www.screwfix.com/prods/97740
-[SF-50074]: http://www.screwfix.com/prods/50074
-[SF-17307]: http://www.screwfix.com/prods/17307
-[SF-64653]: http://www.screwfix.com/prods/64653
-[SF-14391]: http://www.screwfix.com/prods/14391
-[SF-19102]: http://www.screwfix.com/prods/19102
-[SF-13826]: http://www.screwfix.com/prods/13826
-[SF-12880]: http://www.screwfix.com/prods/12880
+[F-1419417]: http://xgoat.com/p/farnell/1419417
+[F-1420391]: http://xgoat.com/p/farnell/1420391
+[F-1419996]: http://xgoat.com/p/farnell/1419996
+[F-1623987]: http://xgoat.com/p/farnell/1623987
+[F-1623991]: http://xgoat.com/p/farnell/1623991
+[F-1377500]: http://xgoat.com/p/farnell/1377500
+[F-1419447]: http://xgoat.com/p/farnell/1419447
+[F-1419449]: http://xgoat.com/p/farnell/1419449
+[F-1419451]: http://xgoat.com/p/farnell/1419451
+[F-1420431]: http://xgoat.com/p/farnell/1420431
+[F-1420432]: http://xgoat.com/p/farnell/1420432
+[F-1420435]: http://xgoat.com/p/farnell/1420435
+[CTO-TR1]: http://www.cabletiesonline.co.uk/cable-ties/cable-ties-100mm-x-2-5mm/prod_400.html
+[CTO-TR2]: http://www.cabletiesonline.co.uk/cable-ties/cable-ties-140mm-x-3-6mm/prod_401.html
+[CTO-TR5]: http://www.cabletiesonline.co.uk/cable-ties/cable-ties-200mm-x-4-8mm/prod_404.html
+[F-3861867]: http://xgoat.com/p/farnell/3861867
+[AW]: http://www.aluminiumwarehouse.co.uk/Aluminium-Angle/c120_124/p14960/Aluminium_Angle_(6063T6)_<small><sup>3</sup>/<sub>4</sub></small>_in_x_<small><sup>3</sup>/<sub>4</sub></small>_in_x_<small><sup>1</sup>/<sub>16</sub></small>_in/product_info.html
