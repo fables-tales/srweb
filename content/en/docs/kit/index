@@ -35,7 +35,7 @@ As well as the aforementioned boards the kit also contains the following items.
 | Battery Charger Supply | 1 | 12V 5A                            | N/A |
 | Cat5 Patch Lead   | 3   | 0.3m                                 | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
 | Cat5 Patch Lead   | 4   | 0.5m                                 | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
-| Cat5 Patch Lead   | 2   | 1m                                   | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable (To run up flag pole)
+| Cat5 Patch Lead   | 2   | 1m                                   | [CommsExpress<br />Booted RJ45 Patch Lead][CE-RJ45-Lead] | SRIC Cable
 | Battery Cable     | 1   | 0.5m<br />2mm<sup>2</sup><br />30A   | [Farnell 3653018][F-3653018]<br />[Farnell 3653006][F-3653006]<br />[Farnell 1793033][F-1793033] | Pre-assembled
 | Blue Hook-up Wire | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A | [Farnell 1465870][F-1465870] | To connect motors to the motor boards
 | Red Power Wire    | 1   | 1.5m<br />0.75mm<sup>2</sup><br />6A | [Farnell 1465872][F-1465872] | To connect power from the power board to the motor/servo boards
