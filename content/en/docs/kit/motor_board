@@ -33,6 +33,8 @@ Indicators
 
 After you have started your code the `Motor power LED` should come on.
 
+Note that the red Motor LED (which indicates a forward/positive drive) on the 'SR13.F' revision motor board does not function due to an assembly defect, this does not affect the primary function of the board.
+
 Case Dimensions
 ---------------
 
