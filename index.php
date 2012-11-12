@@ -199,11 +199,13 @@ if ($page == 'home'){
 
 		if ($articleIndex > 0) {
 			// There's an article newer than this one
+			$prevNext->next = new StdClass();
 			$prevNext->next->title = $items[$articleIndex-1]->title;
 			$prevNext->next->url = $items[$articleIndex-1]->link;
 		}
 		if ($articleIndex < count($items) - 1) {
 			// There's an article older than this one
+			$prevNext->prev = new StdClass();
 			$prevNext->prev->title = $items[$articleIndex+1]->title;
 			$prevNext->prev->url = $items[$articleIndex+1]->link;
 		}
