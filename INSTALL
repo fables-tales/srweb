@@ -1,6 +1,12 @@
 Installation Instructions for SRweb
 ==================================
 
+SRweb is a website, and as such you'll need a working webserver to run it.
+This guide generally expects you've got [Apache](http://httpd.apache.org/)
+available, and that you know roughly how to configure it.
+To help with this, there's an Apache install guide here:
+https://www.studentrobotics.org/trac/wiki/ApacheInstallGuide
+
 * Grab submodules:
 
 	+ git submodule update --init
@@ -18,6 +24,7 @@ Installation Instructions for SRweb
 	  and $APACHEG are the Apache user and Apache group, respectively)
 	+ `setfacl -m u:$APACHEU:rwx templates_compiled/` to allow r/w/x
 	  access to the apache user aswell as the owner.
+	  The `install.sh` script provided can perform this option for you.
 	+ You could also chmod, but depending on the dir's location, that
           may not be the best way.
 
