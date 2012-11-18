@@ -3,7 +3,7 @@
 require_once('classes/simplepie/simplepie.inc');
 require_once('classes/team_info_college_lut.php');
 
-class LiveStatusItem extends StdClass
+class LiveStatusItem extends stdClass
 {
 	public $content;
 
@@ -64,7 +64,7 @@ function get_team_info($team_id = False) {
 function _build_team_info($path, $team_id) {
 	$json_text = file_get_contents($path);
 	$team_raw = json_decode($json_text);
-	$team = new StdClass();
+	$team = new stdClass();
 	if (empty($team_raw->image->live)) {
 		$team->thumb = null;
 		$team->image = null;
