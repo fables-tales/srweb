@@ -39,20 +39,32 @@ By default, the `R.see` function will take a photo at a resolution of 800x600.  
 # Take a photo at 1280 x 1024
 markers = R.see( res=(1280,1024) )
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The following resolutions are supported:
+There are currently two kinds of webcam issued with SR kit: the Logitech C500 and C270. They support the following resolutions:
 
- * 160 x 120
- * 176 x 144
- * 320 x 240
- * 352 x 288
- * 640 x 360
- * 640 x 400
- * 640 x 480
- * **800 x 600** (Default)
- * 960 x 720
- * 1280 x 720
- * 1280 x 800
- * 1280 x 1024
+
+|   Resolution			| C500	|  C270
+|-------------------------------|-------|----------
+|  160 x 120			| yes	| yes
+|  176 x 144			| yes	| yes
+|  320 x 176			|	| yes
+|  320 x 240			| yes	| yes
+|  352 x 288			| yes	| yes
+|  432 x 240			|	| yes
+|  544 x 288			|	| yes
+|  640 x 360			| yes	|
+|  640 x 400			| yes	|
+|  640 x 480			| yes	| yes
+|  752 x 416			|	| yes
+|  800 x 448			|	| yes
+| **800 x 600* (Default)	| yes	| yes
+|  864 x 480			|	| yes
+|  960 x 544			|	| yes
+|  960 x 720			| yes	| yes
+|  1280 x 576			|	| yes
+|  1280 x 720			| yes	| yes
+|  1280 x 800			| yes	|
+|  1280 x 960			| 	| yes
+|  1280 x 1024			| yes	|
 
 There are advantages and disadvantages to switching resolution.  Smaller images will process faster, but markers will be less likely to be detected within them.  Addtionally, the act of changing resolution takes a significant amount of time.  The optimum resolution to use in a given situation is best determined through experiment.
 
