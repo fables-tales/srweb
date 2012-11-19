@@ -100,9 +100,8 @@ marker_type
 
     * `MARKER_ARENA`
     * `MARKER_ROBOT`
+    * `MARKER_PEDESTAL`
     * `MARKER_TOKEN`
-    * `MARKER_BUCKET_SIDE`
-    *  `MARKER_BUCKET_END`
 
 offset
 :   The offset of the numeric code of the marker from the lowest numbered marker of its type.  (e.g. Markers 28 and 29, which are the lowest numbered markers that represent robots, have offsets of 0 and 1 respectively.)
