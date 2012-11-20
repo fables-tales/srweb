@@ -16,24 +16,28 @@ The SR2013 competiton is in full swing and here you can find a list of all the t
 Each team will be updating the photos below as they go so you can easily track their progress.
 </p>
 
-<ul id="teams_container">
 <?php
-$i = 1;
-foreach ($teams as $team) {
-	echo "<li>";
-	echo "<a href=\"" . $team->team_id . "\">";
-	if (!empty($team->thumb))
-		echo "<img src=\"/{$team->thumb}\" alt=\"{$team->team_name}'s robot.\" />";
-	else
-		echo "<img src=\"/images/template/sad_robot_160.jpg\" title=\"Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/, CC BY 2.0)\" alt=\"{$team->team_name} haven't uploaded a photo\" />";
-	echo "<p class=\"team_name\">" . $team->team_name . "</p>";
-	if (!empty($team->college['name']))
-		echo "<p class=\"college_name\">" . $team->college['name'] . "</p>";
-	echo "</a>";
-	echo "</li>";
-	if ($i%5 == 0)
-		echo "<br class=\"clearboth\" />";
-	$i++;
+if (count($teams) == 0) {
+	echo "<p>No teams have entered a status yet.</p>";
+} else {
+	echo '<ul id="teams_container">';
+	$i = 1;
+	foreach ($teams as $team) {
+		echo "<li>";
+		echo "<a href=\"" . $team->team_id . "\">";
+		if (!empty($team->thumb))
+			echo "<img src=\"/{$team->thumb}\" alt=\"{$team->team_name}'s robot.\" />";
+		else
+			echo "<img src=\"/images/template/sad_robot_160.jpg\" title=\"Photo by Steve Keys (http://www.flickr.com/photos/stevekeys/, CC BY 2.0)\" alt=\"{$team->team_name} haven't uploaded a photo\" />";
+		echo "<p class=\"team_name\">" . $team->team_name . "</p>";
+		if (!empty($team->college['name']))
+			echo "<p class=\"college_name\">" . $team->college['name'] . "</p>";
+		echo "</a>";
+		echo "</li>";
+		if ($i%5 == 0)
+			echo "<br class=\"clearboth\" />";
+		$i++;
+	}
+	echo '</ul>';
 }
 ?>
-</ul>
