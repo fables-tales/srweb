@@ -32,7 +32,7 @@ Motor Specification
 There is a certain specification the motor(s) you use must meet. The criteria are as follows:
 
 * 12V motor
-* A stall current of no more than 5A (a [motor board](/docs/kit/motor_board) can only provide 5A, above which it will current limit)
+* A stall current of no more than 5A (a [motor board](/docs/kit/motor_board) can only provide 5A, above which it will break and possibly emit smoke)
 
 
 Connecting a Motor
