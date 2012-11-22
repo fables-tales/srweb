@@ -137,14 +137,13 @@ define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
 	? substr($BASE_URI, 0, -1)
 	: $BASE_URI);
 
-
 //extract the current directory
 define('ROOT_DIR',		dirname(__FILE__));
 define('TEMPLATE_DIR', 		ROOT_DIR . '/templates');
 define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
 define('CACHE_DIR',		ROOT_DIR . '/cache');
 define('CONTENT_DIR', 		ROOT_DIR . '/content');
-define('TEAM_STATUS_DIR',	ROOT_DIR . '/ide/settings');
+define('TEAM_STATUS_DIR', 	ROOT_DIR . '/ide/settings/team-status');
 // The following is used in both a template and a parsed page so ROOT_DIR
 // is prepended automatically in the parsed page and manually in the template
 define('TEAM_STATUS_IMG',	'images/teams');
