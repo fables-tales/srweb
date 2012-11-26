@@ -6,15 +6,10 @@
 The competition
 ===============
 
-The competition game for 2012,
- as announced at [KickStart](/schools/kickstart),
- is called *Pirate Plunder*.
-It has considerably more scope for interesting robot activity than our previous games.
-Autonomous robots will be racing to collect cube-shaped tokens,
- and get them back to the bucket in their home zone.
-Robots can also steal each other's buckets,
- leading to an variety of possible tactics.
-The full rules of the game can be found in our [documentation pages](/docs/rules).
+The 2013 competition will see over thirty teams vying for the prestigious title of Student Robotics Champion.
+The challenge this year, entitled *A Strange Game*, will see an ambitious and quirky mix of robots all looking to dominate a game of naughts and crosses.
+Each robot, equipped with six rather large cardboard boxes, will attempt to take-over squares in a 3x3 grid in the centre of an arena. The more squares owned in a row or column, the more points a robot scores.
+For details about the game, the scoring method and more, head over to [this year's competition rules](/docs/rules).
 
 Event
 -----
@@ -29,6 +24,14 @@ Every robot will have many chances in the arena,
  but at the end of the day only one will emerge victorious.
 
 For 2012 the competition will be held on the weekend of the 14th and 15th of April, 2012.
+
+2012
+----
+
+The 2012 competition, *Pirate Plunder*, considerably increased the scope for interesting activity compared to our previous games.
+Autonomous robots raced to collect cube-shaped tokens and get them back to the bucket in their home zone.
+Robots could also steal each other's buckets, leading to an variety of possible tactics.
+The [full rules](/resources/2012/rulebook.pdf) of the 2012 game are available for those interested.
 
 2011
 ----
