@@ -85,7 +85,9 @@
 						</ul>
 						<div id="date_soton">
 							<a href="{$root_uri}schools/tech_days">Tech Days</a>:
-							<p><i>To be announced.</i></p>
+							<ul>
+								<li><a href="{$root_uri}events/sr2013/2012-12-01-soton_tech_day_1">1<sup>st</sup> December</a></li>
+							</ul>
 						</div>
 						<div id="date_bristol">
 							<a href="{$root_uri}schools/tech_days">Tech Days:</a>
