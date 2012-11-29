@@ -105,7 +105,6 @@
 						</ul>
 
 						<a href="{$root_uri}schools/competition">Competition:</a>
-						<br/><em>Preliminary dates</em><br/>
 						<ul>
 							<li>13<sup>th</sup> &amp; 14<sup>th</sup> April</li>
 						</ul>
