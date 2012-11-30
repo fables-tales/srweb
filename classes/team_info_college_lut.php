@@ -18,8 +18,8 @@ $_GRD = array('URL' => 'http://www.gordano.n-somerset.sch.uk/',		'name' => 'Gord
 $_GRS = array('URL' => 'http://www.greshams.com/',					'name' => 'Gresham\'s');
 $_GMR = array('URL' => 'http://www.farn-ct.ac.uk/',					'name' => 'Farnborough');
 $_HAM = array('name' => 'Hampshire home schooled');
-$_HDT = array('URL' => 'http://www.headington.org/',				'name' => 'Headington School');
 $_HRS = array('URL' => 'http://www.hrsfc.ac.uk/',					'name' => 'Hills Road Sixth Form College');
+$_HSO = array('URL' => 'http://www.headington.org/',				'name' => 'Headington School Oxford');
 $_HZW = array('URL' => 'http://www.hazelwick.w-sussex.sch.uk/',		'name' => 'Hazelwick Comprehensive School');
 $_JMS = array('URL' => 'http://www.johnmason.oxon.sch.uk/',			'name' => 'John Mason School');
 $_MAI = array('URL' => 'http://www.gym-indersdorf.de/',				'name' => 'Gymnasium Markt Indersdorf');
@@ -59,8 +59,10 @@ $team_info_college_lut = array(
 	'GRS'  => $_GRS,
 	'GMR'  => $_GMR,
 	'HAM'  => $_HAM,
-	'HDT'  => $_HDT,
 	'HRS'  => $_HRS,
+	'HRS2' => $_HRS,
+	'HSO'  => $_HSO,
+	'HSO2' => $_HSO,
 	'HZW'  => $_HZW,
 	'JMS'  => $_JMS,
 	'MAI'  => $_MAI,
@@ -69,15 +71,18 @@ $team_info_college_lut = array(
 	'PAG'  => $_PAG,
 	'PLE'  => $_PLE,
 	'PSC'  => $_PSC,
+	'PSC2' => $_PSC,
 	'QEH'  => $_QEH,
 	'QMC'  => $_QMC,
 	'RES'  => $_RES,
 	'RMS'  => $_RMS,
 	'SEN'  => $_SEN,
+	'SEN2' => $_SEN,
 	'STA'  => $_STA,
 	'STM'  => $_STM,
 	'SWI'  => $_SWI,
 	'TTN'  => $_TTN,
+	'TWG'  => $_TWG,
 );
 
 ?>
