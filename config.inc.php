@@ -1,9 +1,20 @@
 <?php
 
+//extract the current directory
+define('ROOT_DIR',		dirname(__FILE__));
+
+// Include the local config, ignoring any errors from it not existing.
+@include_once(ROOT_DIR.'/local.config.inc.php');
+
+function default_define($name, $value) {
+    if (!defined($name)) {
+        define($name, $value);
+    }
+}
+
 /*//{enable, server default} error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
 
 /* ====== CUSTOMISABLE DEFINES ======
  * Edit below to adapt to your system
@@ -11,7 +22,7 @@ ini_set('display_errors', 1);
  */
 
 /* This should always be set to false except on the live site */
-define('LIVE_SITE',	false);
+default_define('LIVE_SITE',	false);
 
 /* Memcache(d) --
  * for the site to function, memcached is required (including the memcache)
@@ -20,9 +31,9 @@ define('LIVE_SITE',	false);
  * smarty plugin will not. If you just start the memcache deamon (memcached)
  * then you probably won't need to change these settings
  */
-define('MEMCACHE_ENABLED',	false);
-define('MEMCACHE_SERVER', 	'127.0.0.1');
-define('MEMCACHE_PORT',		11211);
+default_define('MEMCACHE_ENABLED',	false);
+default_define('MEMCACHE_SERVER', 	'127.0.0.1');
+default_define('MEMCACHE_PORT',		11211);
 
 
 /* The pages that you wish to appear in the menu should be listed here.
@@ -115,11 +126,11 @@ $ACCEPTED_LANGUAGES = array(
  */
 
 /* The directory 'Smarty.class.php' can be found in */
-define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
+default_define('SMARTY_DIR', 		'/usr/share/php/Smarty/');
 
 
 /* The location of files relative to the directory this file is in */
-define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
+default_define('ROOT_URI',  dirname($_SERVER['PHP_SELF']) != '/'
 	? dirname($_SERVER['PHP_SELF']) . '/'
 	: '/');
 
@@ -133,25 +144,23 @@ $BASE_URI = !empty($_SERVER['HTTPS'])
 	: 'http://' . $_SERVER['HTTP_HOST']
 		. dirname($_SERVER['PHP_SELF']) . '/';
 
-define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
+default_define('BASE_URI', (substr($BASE_URI, -2, 2) == '//')
 	? substr($BASE_URI, 0, -1)
 	: $BASE_URI);
 
-//extract the current directory
-define('ROOT_DIR',		dirname(__FILE__));
-define('TEMPLATE_DIR', 		ROOT_DIR . '/templates');
-define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
-define('CACHE_DIR',		ROOT_DIR . '/cache');
-define('CONTENT_DIR', 		ROOT_DIR . '/content');
-define('TEAM_STATUS_DIR', 	ROOT_DIR . '/ide/settings/team-status');
+default_define('TEMPLATE_DIR', 		ROOT_DIR . '/templates');
+default_define('COMPILED_TEMPLATE_DIR', ROOT_DIR . '/templates_compiled');
+default_define('CACHE_DIR',		ROOT_DIR . '/cache');
+default_define('CONTENT_DIR', 		ROOT_DIR . '/content');
+default_define('TEAM_STATUS_DIR', 	ROOT_DIR . '/ide/settings/team-status');
 // The following is used in both a template and a parsed page so ROOT_DIR
 // is prepended automatically in the parsed page and manually in the template
-define('TEAM_STATUS_IMG',	'images/teams');
+default_define('TEAM_STATUS_IMG',	'images/teams');
 
 
 //404 log stuff
-define('LOG404_ENABLED',	true);
-define('LOG404_FILE',		'/tmp/404log');
+default_define('LOG404_ENABLED',	true);
+default_define('LOG404_FILE',		'/tmp/404log');
 
 date_default_timezone_set("Europe/London");
 
