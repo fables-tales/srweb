@@ -24,6 +24,10 @@ ini_set('display_errors', 1);
 /* This should always be set to false except on the live site */
 default_define('LIVE_SITE',	false);
 
+/* Whether the signups page (currently /schools/joining) shows a signup form,
+ * or a message that the SR year is underway & to check back later */
+default_define('ENABLE_SIGNUP', false);
+
 /* Memcache(d) --
  * for the site to function, memcached is required (including the memcache)
  * PHP module. It is used to prevent needless processing for the RSS feed
