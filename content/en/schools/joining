@@ -15,7 +15,11 @@ if (ENABLE_SIGNUP) {
 
 <h1>Joining</h1>
 
-<p>If you are new to Student Robotics and would like to express interest in taking part in the competition, please do <a href="/about/contactus">get in contact with us</a>.</p>
+<p>
+	If you are new to Student Robotics and would like to express interest in taking part in the competition,
+	please do <a href="/about/contactus">get in contact with us</a>.
+	You can also have a look at the <a href="/teams/">teams</a> that are competing this year.
+</p>
 
 <h2>Teams</h2>
 

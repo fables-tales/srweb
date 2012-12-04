@@ -70,6 +70,7 @@ $MENU_PAGES = array(
 	'Home' 			=> 'home',
 
 	'Schools &amp; Colleges'=> 'schools/',
+	'Competing Teams'=> 'teams/',
 	'Competition'		=> 'schools/competition',
 	'Joining'		=> 'schools/joining',
 	'Documentation'		=> 'schools/docs/',
