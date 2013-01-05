@@ -87,7 +87,7 @@
 							<a href="{$root_uri}schools/tech_days">Tech Days</a>:
 							<ul>
 								<li><a href="{$root_uri}events/sr2013/2012-12-01-soton_tech_day_1">1<sup>st</sup> December</a></li>
-								<li>9<sup>th</sup> February</li>
+								<li><a href="{$root_uri}events/sr2013/2013-02-09-soton_tech_day_2">9<sup>th</sup> February</a></li>
 								<li>16<sup>th</sup> March (<em>provisional</em>)</li>
 							</ul>
 						</div>
