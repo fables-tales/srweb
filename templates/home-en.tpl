@@ -83,6 +83,7 @@
 							<li><a href="#date_soton">Southampton</a></li>
 							<li><a href="#date_bristol">Bristol</a></li>
 							<li><a href="#date_oxford">Oxford</a></li>
+							<li><a href="#date_munich">Munich</a></li>
 						</ul>
 						<div id="date_soton">
 							<a href="{$root_uri}schools/tech_days">Tech Days</a>:
@@ -104,6 +105,12 @@
 							<a href="{$root_uri}schools/tech_days">Tech Days:</a>
 							<ul>
 								<li><a href="{$root_uri}events/sr2013/2013-02-23-oxford_tech_day_1">23<sup>rd</sup> February</a></li>
+							</ul>
+						</div>
+						<div id="date_munich">
+							<a href="{$root_uri}schools/tech_days">Tech Days:</a>
+							<ul>
+								<li><a href="{$root_uri}events/sr2013/2013-02-09-munich_tech_day_1">9<sup>th</sup> February</a></li>
 							</ul>
 						</div>
 
