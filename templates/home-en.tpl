@@ -43,9 +43,9 @@
 			<p>Student Robotics is an exciting competition, held at
 			the University of Southampton, between teams of students from sixth
 			form schools and colleges, to build fully autonomous robots. Led by
-			a group of students from the University of Southampton, participating
-			teams will have to design, build and test their robots, ready to compete
-			against other teams.</p>
+			a group of students from the Universities of Southampton and
+			Bristol, participating teams will have to design, build and test 
+			their robots, ready to compete against other teams.</p>
 		</div>
 
 		<div id="latestNews">
